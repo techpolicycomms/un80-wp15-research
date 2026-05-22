@@ -122,6 +122,23 @@ npm run build:dashboard   # rebuild dashboard locally
 
 ---
 
+## Adding GitHub reviewers (Talea, Nestor, others)
+
+1. Repo → **Settings** → **Collaborators** (or **Manage access**)
+2. **Add people** → enter GitHub username or UN email linked to GitHub
+3. Role: **Write** (can review/merge PRs) or **Read** (review only via PR comments with read access)
+4. Optional: add as [code owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) in `.github/CODEOWNERS` for automatic review requests
+
+Example `CODEOWNERS` (create when usernames are known):
+
+```
+* @techpolicycomms/talea-username @techpolicycomms/nestor-username
+data/ @techpolicycomms/talea-username
+reports/ @techpolicycomms/nestor-username
+```
+
+---
+
 ## Troubleshooting
 
 | Symptom | Likely cause | Fix |
