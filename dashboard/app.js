@@ -50,6 +50,10 @@ async function loadDashboard() {
       value: String(data.overlap_signal_count),
       label: "Overlap signals tracked",
     },
+    {
+      value: String(data.social_signal_count ?? 0),
+      label: "Social signals tracked",
+    },
   ];
 
   const cardsRoot = document.getElementById("metric-cards");

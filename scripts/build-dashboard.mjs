@@ -19,6 +19,13 @@ const baseline = JSON.parse(
 const tap = yaml.parse(readFileSync(join(root, "data/tap-use-cases.yaml"), "utf8"));
 const tracker = yaml.parse(readFileSync(join(root, "data/action-tracker.yaml"), "utf8"));
 const overlap = yaml.parse(readFileSync(join(root, "data/overlap-signals.yaml"), "utf8"));
+let socialSignalCount = 0;
+try {
+  const social = yaml.parse(readFileSync(join(root, "data/social-signals.yaml"), "utf8"));
+  socialSignalCount = social.signals?.length ?? 0;
+} catch {
+  /* optional */
+}
 
 const dashboardData = {
   generated_at: new Date().toISOString(),
@@ -26,7 +33,9 @@ const dashboardData = {
   baseline,
   tap,
   tracker,
+  overlap,
   overlap_signal_count: overlap.signals?.length ?? 0,
+  social_signal_count: socialSignalCount,
   portfolio_count: tap.portfolio?.length ?? 0,
 };
 

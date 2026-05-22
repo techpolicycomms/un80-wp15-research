@@ -40,9 +40,19 @@ Machine-readable definitions: [workflows.json](./workflows.json)
 
 ---
 
+## 4. UN80 Social Monitor
+
+- **Schedule:** `0 7 * * 3` (Wed 07:00 UTC)
+- **Prompt:** [social-monitor.prompt.md](./social-monitor.prompt.md)
+- **Docs:** [SOCIAL-MONITORING.md](../docs/SOCIAL-MONITORING.md)
+
+**Import:** [Open prefill → Social Monitor](https://cursor.com/automations/new?prefill=eyJuYW1lIjoiVU44MCBTb2NpYWwgTW9uaXRvciIsImRlc2NyaXB0aW9uIjoiV2VkIHB1YmxpYyBzb2NpYWwgc2NhbiDigJQgWCwgRmFjZWJvb2ssIFlvdVR1YmUgZm9yIFVOIGFnZW5jaWVzIG9uIFdQMTUgdG9waWNzIiwid29ya2Zsb3ciOnsiYXV0aG9yVGV4dCI6IkxvYWQgYC5jdXJzb3Ivc2tpbGxzL3VuODAtc29jaWFsLW1vbml0b3IvU0tJTEwubWRgIGFuZCBgZGF0YS91bi1hZ2VuY2llcy1zb2NpYWwueWFtbGAuIFJ1biBucG0gcnVuIGZldGNoOnlvdXR1YmUuIFJldmlldyBwdWJsaWMgWCBhbmQgRmFjZWJvb2sgZnJvbSByZWdpc3RyeS4gV3JpdGUgZGF0YS9zb2NpYWwtbW9uaXRvci9ZWVlZLU1NLURELXNvY2lhbC55YW1sLCB1cGRhdGUgZGF0YS9zb2NpYWwtc2lnbmFscy55YW1sLCBvcGVuIFBSLCB1cGRhdGUgTm90aW9uIFdQMTUgTGl2aW5nIEFuYWx5c2lzIHBhZ2UuIiwiZ2l0Q29uZmlnIjp7ImJyYW5jaCI6Im1haW4iLCJyZXBvc2l0b3J5IjoidGVjaHBvbGljeWNvbW1zL3VuODAtd3AxNS1yZXNlYXJjaCJ9LCJtZW1vcnlFbmFibGVkIjp0cnVlLCJ0cmlnZ2VycyI6W3siY3JvblRyaWdnZXIiOnsiY3JvbkV4cHJlc3Npb24iOiIwIDcgKiAqIDMifX1dfX0)
+
+---
+
 ## Checklist
 
-- [ ] All three automations saved
+- [ ] All **four** automations saved
 - [ ] Webhook URL + API key in local `.env`
 - [ ] Notion MCP connected in Cursor
 - [ ] Test: `./scripts/trigger-webhook-example.sh`
