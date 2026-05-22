@@ -19,6 +19,12 @@
       "url": "https://cursor.com/automations/50fd2872-5154-49ee-a71f-31c3ffc0a058",
       "trigger": "cron: 0 8 1 * *",
       "enabled": true
+    },
+    "social_monitor": {
+      "automation_id": "7b162585-6d97-4e1c-8476-6f2548b9315c",
+      "url": "https://cursor.com/automations/7b162585-6d97-4e1c-8476-6f2548b9315c",
+      "trigger": "cron: 0 7 * * 3",
+      "enabled": true
     }
   },
   "landscape_monitor": {
