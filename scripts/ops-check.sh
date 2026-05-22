@@ -13,8 +13,13 @@ npm run validate
 npm run build:dashboard
 echo ""
 
+echo "→ Media monitor (feeds + coverage)"
+npm run fetch:monitor || true
+npm run build:dashboard
+echo ""
+
 echo "→ Key files"
-for f in data/ict-spend-baseline.json data/action-tracker.yaml data/tap-use-cases.yaml; do
+for f in data/ict-spend-baseline.json data/action-tracker.yaml data/tap-use-cases.yaml data/un-agencies-social.yaml; do
   test -f "$f" && echo "  OK  $f" || echo "  MISSING  $f"
 done
 echo ""
@@ -22,6 +27,8 @@ echo ""
 echo "→ Secondary source scans"
 count=$(find data/secondary-sources -name '*.yaml' 2>/dev/null | wc -l | tr -d ' ')
 echo "  $count scan file(s) in data/secondary-sources/"
+social=$(find data/social-monitor -name '*.yaml' 2>/dev/null | wc -l | tr -d ' ')
+echo "  $social monitor file(s) in data/social-monitor/"
 echo ""
 
 echo "→ Webhook config (local only)"
@@ -37,9 +44,10 @@ echo "  Dashboard:  https://techpolicycomms.github.io/un80-wp15-research/"
 echo "  GitHub:     https://github.com/techpolicycomms/un80-wp15-research"
 echo "  Notion hub: https://www.notion.so/36805383491f813fa227f709c187584a"
 echo ""
-echo "→ Cursor automations (verify Active in UI)"
+echo "→ Cursor automations (verify Active in Cursor UI)"
 echo "  Landscape:  https://cursor.com/automations/9267c6a1-fd79-4d72-81ca-6415647ab198"
 echo "  Webhook:    https://cursor.com/automations/132e3dc9-f9c7-4b80-97e0-8ad28449282a"
 echo "  Briefing:   https://cursor.com/automations/50fd2872-5154-49ee-a71f-31c3ffc0a058"
+echo "  Social:     IMPORT REQUIRED — see automations/prefill-urls.md §4"
 echo ""
 echo "Done."

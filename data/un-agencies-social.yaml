@@ -1,83 +1,336 @@
-# Official UN system social channels — public monitoring registry
-# Scope: public posts only; official/verified accounts; WP15 topics (ICT, digital, innovation)
+# UN system public monitoring registry — social, news, and official channels
+# Scope: public posts and press releases only; WP15 Actions 61 & 62
 meta:
   updated: "2026-05-22"
+  version: 2
   disclaimer: Public secondary monitoring only — not agreed UN position
-  topics:
-    - ict_consolidation
-    - shared_services
-    - digital_transformation
-    - innovation
-    - digital_id
-    - ai_governance
+  platforms: [news, youtube, x, facebook, linkedin, instagram]
+  system_feeds:
+    - id: un-news-all
+      name: UN News (all topics)
+      type: news
+      url: https://news.un.org/feed/subscribe/en/news/all/rss.xml
+      relevance: both
+    - id: un-global-pulse
+      name: UN Global Pulse
+      type: news
+      url: https://www.unglobalpulse.org/feed/
+      relevance: action_62
 
 agencies:
+  # --- Tier 1: ICT / digital backbone (Action 61 priority) ---
   - id: un-secretariat
-    name: United Nations
+    name: United Nations Secretariat
+    tier: 1
+    relevance: both
     x_handle: UN
     x_url: https://x.com/UN
     facebook_page: unitednations
     facebook_url: https://www.facebook.com/unitednations
-    youtube_handle: "@UN"
-    youtube_channel_id: UC6iUAIV5y-2-vr7JxA7S8Q
-    youtube_rss: https://www.youtube.com/feeds/videos.xml?channel_id=UC6iUAIV5y-2-vr7JxA7S8Q
-    relevance: both
+    linkedin_url: https://www.linkedin.com/company/united-nations
+    instagram_url: https://www.instagram.com/unitednations
+    youtube_channel_id: UC33RSmZqyKnCy9dkoqaN-zQ
+    youtube_rss: https://www.youtube.com/feeds/videos.xml?user=UnitedNations
+    news_rss: null
 
   - id: unicc
     name: UN International Computing Centre
+    tier: 1
+    relevance: action_61
     x_handle: UNICC
     x_url: https://x.com/UNICC
     facebook_url: https://www.facebook.com/UNICC.org
-    youtube_channel_id: null
+    linkedin_url: https://www.linkedin.com/company/unicc
     youtube_rss: null
-    relevance: action_61
-    notes: Primary shared ICT services provider; prioritize X/Facebook for service announcements
+    news_rss: https://www.unicc.org/feed/
+    notes: Primary shared ICT services provider
 
   - id: un-dco
     name: UN Office for Digital and Emerging Technology
+    tier: 1
+    relevance: action_62
     x_handle: UNDigitalEmerg
     x_url: https://x.com/UNDigitalEmerg
-    facebook_url: null
-    youtube_channel_id: null
-    relevance: action_62
+    linkedin_url: https://www.linkedin.com/company/united-nations-office-for-digital-and-emerging-technology
+    youtube_rss: null
+    news_rss: null
 
+  - id: un-oict
+    name: UN Office of Information and Communications Technology
+    tier: 1
+    relevance: action_61
+    x_handle: UN_OICT
+    x_url: https://x.com/UN_OICT
+    linkedin_url: https://www.linkedin.com/company/united-nations-oict
+    youtube_rss: null
+    news_rss: null
+
+  - id: itu
+    name: International Telecommunication Union
+    tier: 1
+    relevance: both
+    x_handle: ITU
+    x_url: https://x.com/ITU
+    facebook_url: https://www.facebook.com/ITU
+    linkedin_url: https://www.linkedin.com/company/itu
+    youtube_rss: null
+    news_rss: null
+    notes: Add ITU RSS when URL verified; agent reviews X/LinkedIn
+
+  # --- Tier 2: Major funds & programmes (both actions) ---
   - id: unicef
     name: UNICEF
+    tier: 2
+    relevance: both
     x_handle: UNICEF
     x_url: https://x.com/UNICEF
     facebook_page: unicef
     facebook_url: https://www.facebook.com/unicef
-    youtube_channel_id: UCJ6M7D4L9H8V8F5Q8Q8Q8Q8
-    youtube_rss: https://www.youtube.com/feeds/videos.xml?channel_id=UCTF8fW9aRu8uH4jaHqJq8wQ
-    relevance: both
-    notes: Channel ID verified via public RSS in fetch script
+    linkedin_url: https://www.linkedin.com/company/unicef
+    instagram_url: https://www.instagram.com/unicef
+    youtube_channel_id: UC-PhoMIVWsstY-VVtUIe-Og
+    youtube_rss: https://www.youtube.com/feeds/videos.xml?channel_id=UC-PhoMIVWsstY-VVtUIe-Og
+    news_rss: null
 
   - id: who
     name: World Health Organization
+    tier: 2
+    relevance: both
     x_handle: WHO
     x_url: https://x.com/WHO
     facebook_page: WHO
     facebook_url: https://www.facebook.com/WHO
-    youtube_channel_id: UCZzQ4Z8Z8Z8Z8Z8Z8Z8Z8Z8
-    youtube_rss: https://www.youtube.com/feeds/videos.xml?channel_id=UC07-ZzniZ2-Q8i285GjpS-A
-    relevance: both
+    linkedin_url: https://www.linkedin.com/company/world-health-organization
+    youtube_channel_id: UCT7a_fVlSrjOs9jyvtH-uhA
+    youtube_rss: https://www.youtube.com/feeds/videos.xml?channel_id=UCT7a_fVlSrjOs9jyvtH-uhA
+    news_rss: https://www.who.int/rss-feeds/news-english.xml
 
   - id: wfp
     name: World Food Programme
+    tier: 2
+    relevance: both
     x_handle: WFP
     x_url: https://x.com/WFP
     facebook_page: WorldFoodProgramme
     facebook_url: https://www.facebook.com/WorldFoodProgramme
-    youtube_rss: https://www.youtube.com/feeds/videos.xml?channel_id=UCr7cMBQeB8H4TzxzMee56Zg
-    relevance: both
+    linkedin_url: https://www.linkedin.com/company/wfp
+    instagram_url: https://www.instagram.com/wfp
+    youtube_rss: null
+    news_rss: null
+    notes: YouTube handle resolution pending; agent reviews X/Facebook
 
   - id: unhcr
     name: UNHCR
+    tier: 2
+    relevance: both
     x_handle: UNHCR
     x_url: https://x.com/UNHCR
     facebook_page: UNHCR
-    youtube_rss: https://www.youtube.com/feeds/videos.xml?channel_id=UCj5ClOWcWQX2R1Dq6N2vG9A
+    facebook_url: https://www.facebook.com/UNHCR
+    linkedin_url: https://www.linkedin.com/company/unhcr
+    youtube_channel_id: UCEsqtq4czNXTQdtlf5qKlYA
+    youtube_rss: https://www.youtube.com/feeds/videos.xml?channel_id=UCEsqtq4czNXTQdtlf5qKlYA
+    news_rss: null
+
+  - id: undp
+    name: UNDP
+    tier: 2
     relevance: both
+    x_handle: UNDP
+    x_url: https://x.com/UNDP
+    facebook_page: UNDP
+    facebook_url: https://www.facebook.com/UNDP
+    linkedin_url: https://www.linkedin.com/company/undp
+    youtube_rss: https://www.youtube.com/feeds/videos.xml?channel_id=UCkt7CZkWK4B2hPDyaKquX2w
+    news_rss: null
+    notes: YouTube via @UNDPClimate channel
+
+  - id: unops
+    name: UNOPS
+    tier: 2
+    relevance: action_61
+    x_handle: UNOPS
+    x_url: https://x.com/UNOPS
+    facebook_url: https://www.facebook.com/UNOPS
+    linkedin_url: https://www.linkedin.com/company/unops
+    youtube_rss: null
+    news_rss: null
+
+  - id: un-women
+    name: UN Women
+    tier: 2
+    relevance: both
+    x_handle: UN_Women
+    x_url: https://x.com/UN_Women
+    facebook_page: UNWomen
+    facebook_url: https://www.facebook.com/UNWomen
+    linkedin_url: https://www.linkedin.com/company/un-women
+    youtube_channel_id: UCVuYWigp4VwOsJhrcfYDlXw
+    youtube_rss: https://www.youtube.com/feeds/videos.xml?channel_id=UCVuYWigp4VwOsJhrcfYDlXw
+    news_rss: null
+
+  - id: unfpa
+    name: UNFPA
+    tier: 2
+    relevance: both
+    x_handle: UNFPA
+    x_url: https://x.com/UNFPA
+    facebook_url: https://www.facebook.com/UNFPA
+    linkedin_url: https://www.linkedin.com/company/unfpa
+    youtube_rss: null
+    news_rss: null
+
+  - id: unocha
+    name: UN OCHA
+    tier: 2
+    relevance: both
+    x_handle: UNOCHA
+    x_url: https://x.com/UNOCHA
+    facebook_url: https://www.facebook.com/UNOCHA
+    linkedin_url: https://www.linkedin.com/company/unocha
+    youtube_rss: null
+    news_rss: null
+
+  # --- Tier 3: Specialized agencies & innovation-relevant ---
+  - id: unesco
+    name: UNESCO
+    tier: 3
+    relevance: action_62
+    x_handle: UNESCO
+    x_url: https://x.com/UNESCO
+    facebook_page: UNESCO
+    facebook_url: https://www.facebook.com/UNESCO
+    linkedin_url: https://www.linkedin.com/company/unesco
+    youtube_rss: https://www.youtube.com/feeds/videos.xml?user=UNESCO
+    news_rss: null
+
+  - id: fao
+    name: FAO
+    tier: 3
+    relevance: both
+    x_handle: FAO
+    x_url: https://x.com/FAO
+    facebook_url: https://www.facebook.com/FAO
+    linkedin_url: https://www.linkedin.com/company/fao
+    youtube_channel_id: UCM93UMoQKlj_8wTACRvl1iQ
+    youtube_rss: https://www.youtube.com/feeds/videos.xml?channel_id=UCM93UMoQKlj_8wTACRvl1iQ
+    news_rss: null
+
+  - id: ilo
+    name: ILO
+    tier: 3
+    relevance: both
+    x_handle: ILO
+    x_url: https://x.com/ILO
+    facebook_url: https://www.facebook.com/ILO
+    linkedin_url: https://www.linkedin.com/company/ilo
+    youtube_rss: null
+    news_rss: null
+
+  - id: unep
+    name: UNEP
+    tier: 3
+    relevance: both
+    x_handle: UNEP
+    x_url: https://x.com/UNEP
+    facebook_url: https://www.facebook.com/unep
+    linkedin_url: https://www.linkedin.com/company/unep
+    youtube_rss: null
+    news_rss: null
+
+  - id: unctad
+    name: UNCTAD
+    tier: 3
+    relevance: action_62
+    x_handle: UNCTAD
+    x_url: https://x.com/UNCTAD
+    facebook_url: https://www.facebook.com/UNCTAD
+    linkedin_url: https://www.linkedin.com/company/unctad
+    youtube_rss: null
+    news_rss: null
+
+  - id: wipo
+    name: WIPO
+    tier: 3
+    relevance: action_62
+    x_handle: WIPO
+    x_url: https://x.com/WIPO
+    facebook_url: https://www.facebook.com/WIPO
+    linkedin_url: https://www.linkedin.com/company/wipo
+    youtube_rss: null
+    news_rss: null
+
+  - id: iaea
+    name: IAEA
+    tier: 3
+    relevance: action_61
+    x_handle: iaeaorg
+    x_url: https://x.com/iaeaorg
+    facebook_url: https://www.facebook.com/iaeaorg
+    linkedin_url: https://www.linkedin.com/company/iaea
+    youtube_rss: null
+    news_rss: null
+
+  - id: ifad
+    name: IFAD
+    tier: 3
+    relevance: both
+    x_handle: IFAD
+    x_url: https://x.com/IFAD
+    linkedin_url: https://www.linkedin.com/company/ifad
+    youtube_rss: null
+    news_rss: null
+
+  - id: wmo
+    name: WMO
+    tier: 3
+    relevance: both
+    x_handle: WMO
+    x_url: https://x.com/WMO
+    linkedin_url: https://www.linkedin.com/company/wmo
+    youtube_rss: null
+    news_rss: null
+
+  - id: icao
+    name: ICAO
+    tier: 3
+    relevance: action_61
+    x_handle: ICAO
+    x_url: https://x.com/ICAO
+    linkedin_url: https://www.linkedin.com/company/icao
+    youtube_rss: null
+    news_rss: null
+
+  - id: imo
+    name: IMO
+    tier: 3
+    relevance: action_61
+    x_handle: IMOHQ
+    x_url: https://x.com/IMOHQ
+    linkedin_url: https://www.linkedin.com/company/imo
+    youtube_rss: null
+    news_rss: null
+
+  - id: un-global-pulse
+    name: UN Global Pulse
+    tier: 3
+    relevance: action_62
+    x_handle: UNGlobalPulse
+    x_url: https://x.com/UNGlobalPulse
+    linkedin_url: https://www.linkedin.com/company/un-global-pulse
+    youtube_rss: null
+    news_rss: null
+    notes: Covered by system feed un-global-pulse
+
+  - id: ungp
+    name: UN Global Compact
+    tier: 3
+    relevance: both
+    x_handle: globalcompact
+    x_url: https://x.com/globalcompact
+    linkedin_url: https://www.linkedin.com/company/united-nations-global-compact
+    youtube_rss: null
+    news_rss: null
 
 monitoring_keywords:
   - digital transformation
@@ -88,9 +341,15 @@ monitoring_keywords:
   - innovation
   - digital identity
   - interoperability
-  - ICT
+  - ict
+  - technology accelerator
+  - unicc
 
 platform_notes:
-  youtube: Fetched via public RSS feeds (no API key required)
-  x: Agent reviews public posts from official handles; production use may require X API Basic tier
-  facebook: Agent reviews public page posts; Meta Graph API optional for scale
+  news: Automated via RSS (system feeds + agency news_rss)
+  youtube: Automated via public RSS where channel_id verified
+  x: Agent reviews public posts from official handles each Wed run
+  facebook: Agent reviews public page posts each Wed run
+  linkedin: Agent reviews public company posts (no RSS; registry URLs)
+  instagram: Agent spot-checks public accounts for major announcements
+  reliefweb: Agent manual review at reliefweb.int/updates (RSS bot-blocked)

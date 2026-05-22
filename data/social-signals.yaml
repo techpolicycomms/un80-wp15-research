@@ -1,29 +1,217 @@
-# Social signal rollup — updated by social monitor automation
 meta:
-  last_updated: "2026-05-22"
+  last_updated: 2026-05-22
   disclaimer: Public official posts only — DRAFT
-
+  total_signals: 16
 signals:
   - id: soc-2026-05-22-001
-    date: "2026-05-22"
+    date: 2026-05-22
     platform: registry
     agency: UN International Computing Centre
     title: Monitoring baseline — UNICC official channels registered
     url: https://x.com/UNICC
-    matched_keywords: [shared services, ict]
+    matched_keywords:
+      - shared services
+      - ict
     relevance: action_61
-    summary: >-
-      Social monitor registry established for UNICC X and Facebook. Automation
-      will capture WP15-relevant public posts on subsequent Wed runs.
-
+    summary: Social monitor registry established for UNICC X and Facebook.
+      Automation will capture WP15-relevant public posts on subsequent Wed runs.
   - id: soc-2026-05-22-002
-    date: "2026-05-22"
+    date: 2026-05-22
     platform: registry
     agency: United Nations
     title: Monitoring baseline — UN official X, Facebook, YouTube
     url: https://x.com/UN
-    matched_keywords: [digital transformation]
+    matched_keywords:
+      - digital transformation
     relevance: both
-    summary: >-
-      Primary UN accounts registered for cross-cutting digital transformation
+    summary: Primary UN accounts registered for cross-cutting digital transformation
       and ICT-related public announcements.
+  - id: soc-2026-05-22-003
+    date: 2026-05-22
+    platform: news
+    agency: UN International Computing Centre
+    title: UNICC Hosts AI-Driven Crisis Simulation During Geneva Cyber Week
+    url: https://www.unicc.org/news/2026/05/15/unicc-hosts-ai-driven-crisis-simulation-during-geneva-cyber-week/
+    matched_keywords:
+      - unicc
+    priority: high
+    relevance: action_61
+    summary: The post UNICC Hosts AI-Driven Crisis Simulation During Geneva Cyber
+      Week appeared first on UNICC . ]]>
+  - id: soc-2026-05-22-004
+    date: 2026-05-22
+    platform: news
+    agency: UN International Computing Centre
+    title: UNICC Biennial Report 2024-2025
+    url: https://www.unicc.org/wp-content/uploads/2026/05/UNICC-2024-2025-Biennial-Report-1.pdf#new_tab
+    matched_keywords:
+      - unicc
+    priority: high
+    relevance: action_61
+    summary: The post UNICC Biennial Report 2024-2025 appeared first on UNICC . ]]>
+  - id: soc-2026-05-22-005
+    date: 2026-05-22
+    platform: news
+    agency: UN International Computing Centre
+    title: UN Virtual Worlds Day Calls for AI and Emerging Tech to Support Better
+      City and Community Life
+    url: https://www.unicc.org/news/2026/05/13/un-virtual-worlds-day-calls-for-ai-and-emerging-tech-to-support-better-city-and-community-life/
+    matched_keywords:
+      - unicc
+      - ai
+    priority: high
+    relevance: action_61
+    summary: The post UN Virtual Worlds Day Calls for AI and Emerging Tech to
+      Support Better City and Community Life appeared first on UNICC . ]]>
+  - id: soc-2026-05-22-006
+    date: 2026-05-22
+    platform: news
+    agency: UN International Computing Centre
+    title: UN Innovation Update (April 2026)
+    url: https://www.uninnovation.network/innovation-library/un-innovation-update-april-2026#new_tab
+    matched_keywords:
+      - unicc
+      - innovation
+    priority: high
+    relevance: action_61
+    summary: The post UN Innovation Update (April 2026) appeared first on UNICC . ]]>
+  - id: soc-2026-05-22-007
+    date: 2026-05-22
+    platform: news
+    agency: UN International Computing Centre
+    title: "Inspiring the Next Generation of Women in Tech: Girls in ICT Day"
+    url: https://www.unicc.org/news/2026/04/23/gict-day-celebration-2026/
+    matched_keywords:
+      - unicc
+      - ict
+    priority: high
+    relevance: action_61
+    summary: "The post Inspiring the Next Generation of Women in Tech: Girls in ICT
+      Day appeared first on UNICC . ]]>"
+  - id: soc-2026-05-22-008
+    date: 2026-05-22
+    platform: news
+    agency: UN International Computing Centre
+    title: UNICC Recognized with Multiple UN-SWAP Awards for Sustained Performance
+      on Gender Equality
+    url: https://www.unicc.org/news/2026/02/13/unicc-recognized-with-multiple-un-swap-awards-for-sustained-performance-on-gender-equality/
+    matched_keywords:
+      - unicc
+    priority: high
+    relevance: action_61
+    summary: The post UNICC Recognized with Multiple UN-SWAP Awards for Sustained
+      Performance on Gender Equality appeared first on UNICC . ]]>
+  - id: soc-2026-05-22-009
+    date: 2026-05-22
+    platform: news
+    agency: UN International Computing Centre
+    title: Enabling Secure and Resilient UN Operations in Bonn
+    url: https://www.unicc.org/news/2026/02/03/enabling-secure-and-resilient-un-operations-in-bonn/
+    matched_keywords:
+      - unicc
+    priority: high
+    relevance: action_61
+    summary: The post Enabling Secure and Resilient UN Operations in Bonn appeared
+      first on UNICC . ]]>
+  - id: soc-2026-05-22-010
+    date: 2026-05-22
+    platform: news
+    agency: UN International Computing Centre
+    title: "UN Today: UNICC 55 Years of Shared Innovation"
+    url: https://untoday.org/december-2025-january-2026/#new_tab
+    matched_keywords:
+      - unicc
+      - innovation
+    priority: high
+    relevance: action_61
+    summary: "The post UN Today: UNICC 55 Years of Shared Innovation appeared first
+      on UNICC . ]]>"
+  - id: soc-2026-05-22-011
+    date: 2026-05-22
+    platform: news
+    agency: World Health Organization
+    title: Seventy-ninth World Health Assembly honours global champions advancing
+      primary health care
+    url: https://www.who.int/news/item/20-05-2026-seventy-ninth-world-health-assembly-honours-global-champions-advancing-primary-health-care
+    matched_keywords:
+      - innovation
+      - digital
+    priority: medium
+    relevance: both
+    summary: <p>Today, the World Health Assembly recognized individuals and
+      institutions whose contributions to global health have gone far beyond the
+      call of duty. <a
+      href="https://www.who.int/news-room/feature-stories/detail/primary-health-care-champions-celebrated-at-the-seventy-ninth-worl
+  - id: soc-2026-05-22-012
+    date: 2026-05-22
+    platform: news
+    agency: World Health Organization
+    title: Director-General presents Award for Global Health to four distinguished
+      leaders
+    url: https://www.who.int/news/item/18-05-2026-director-general-presents-award-for-global-health-to-four-distinguished-leaders
+    matched_keywords:
+      - innovation
+      - ict
+    priority: medium
+    relevance: both
+    summary: <p>At the Seventy-ninth World Health Assembly in Geneva, WHO
+      Director-General Dr Tedros Adhanom Ghebreyesus has presented four
+      distinguished leaders with the Award for Global Health, recognizing their
+      lifetime achievements and exceptional contributions to improving the
+      health and
+  - id: soc-2026-05-22-013
+    date: 2026-05-22
+    platform: news
+    agency: World Health Organization
+    title: WHO warns nicotine pouch brands targeting youth as sales surge
+    url: https://www.who.int/news/item/15-05-2026-who-warns-nicotine-pouch-brands-targeting-youth-as-sales-surge
+    matched_keywords:
+      - ict
+    priority: low
+    relevance: both
+    summary: The World Health Organization (WHO) warns about the rapid growth and
+      aggressive marketing of nicotine pouches, especially targeting youth, amid
+      limited regulation worldwide. Nicotine pouches pose significant health
+      risks and governments are urged to implement strong regulatory me
+  - id: soc-2026-05-22-014
+    date: 2026-05-22
+    platform: news
+    agency: UN Global Pulse
+    title: "Transforming Development: AI, Innovation &#038; Partnerships for the
+      Sustainable Development Goals (SDGs)"
+    url: https://www.unglobalpulse.org/transforming-development-ai-innovation-partnerships-for-the-sustainable-development-goals-sdgs/
+    matched_keywords:
+      - innovation
+    priority: medium
+    relevance: both
+    summary: "Transforming Development: AI, Innovation &#038; Partnerships for the
+      Sustainable Development Goals (SDGs)"
+  - id: soc-2026-05-22-015
+    date: 2026-05-22
+    platform: news
+    agency: UN News (all topics)
+    title: Haitian children ‘paying the highest price’ amid surge in gang recruitment
+    url: https://news.un.org/feed/view/en/story/2026/05/1167570
+    matched_keywords:
+      - ict
+    priority: low
+    relevance: both
+    summary: As gangs continue to “terrorise” communities in Haiti, children are the
+      ones paying the highest price, the UN Special Representative for Children
+      and Armed Conflict warned on Thursday.
+  - id: soc-2026-05-22-016
+    date: 2026-05-22
+    platform: news
+    agency: UN News (all topics)
+    title: "Building the smart city: Promise, pitfalls and the people at its heart"
+    url: https://news.un.org/feed/view/en/story/2026/05/1167564
+    matched_keywords:
+      - innovation
+      - technology
+      - digital
+    priority: medium
+    relevance: both
+    summary: From AI-powered transit systems to digital twins and flood-proof parks,
+      cities are embracing technology at an unprecedented scale. But as
+      innovation accelerates, experts warn that inclusion, trust and security
+      will determine who truly benefits.

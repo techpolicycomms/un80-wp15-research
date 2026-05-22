@@ -20,9 +20,29 @@ const tap = yaml.parse(readFileSync(join(root, "data/tap-use-cases.yaml"), "utf8
 const tracker = yaml.parse(readFileSync(join(root, "data/action-tracker.yaml"), "utf8"));
 const overlap = yaml.parse(readFileSync(join(root, "data/overlap-signals.yaml"), "utf8"));
 let socialSignalCount = 0;
+let monitorMeta = {};
 try {
   const social = yaml.parse(readFileSync(join(root, "data/social-signals.yaml"), "utf8"));
   socialSignalCount = social.signals?.length ?? 0;
+} catch {
+  /* optional */
+}
+try {
+  const registry = yaml.parse(readFileSync(join(root, "data/un-agencies-social.yaml"), "utf8"));
+    monitorMeta = {
+    agencies_registered: registry.agencies?.length ?? 0,
+    system_feeds: (registry.system_feeds ?? registry.meta?.system_feeds ?? []).length,
+  };
+  const today = new Date().toISOString().slice(0, 10);
+  const coveragePath = join(root, "data/social-monitor", `${today}-coverage.yaml`);
+  try {
+    const cov = yaml.parse(readFileSync(coveragePath, "utf8"));
+    monitorMeta.feeds_ok = cov.meta?.feeds_ok;
+    monitorMeta.feeds_total = cov.meta?.feeds_total;
+    monitorMeta.agent_review_agencies = cov.meta?.agent_review_agencies;
+  } catch {
+    /* run npm run check:monitor */
+  }
 } catch {
   /* optional */
 }
@@ -36,6 +56,7 @@ const dashboardData = {
   overlap,
   overlap_signal_count: overlap.signals?.length ?? 0,
   social_signal_count: socialSignalCount,
+  monitor: monitorMeta,
   portfolio_count: tap.portfolio?.length ?? 0,
 };
 
