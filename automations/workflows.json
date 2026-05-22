@@ -109,5 +109,21 @@
     "sources_inbox_data_source_id": "c3ac8601-780a-4ae4-bc0c-2d1b04f198f5",
     "automation_log_database_id": "230e22d23f4c-4cd0-bcd2-2d43312fac2f",
     "automation_log_data_source_id": "cc79cb1c-a897-488b-b913-02ff159f05ef"
+  },
+  "linear": {
+    "team": "ITUInnovation-hub",
+    "team_key": "ITU",
+    "project_id": "89189b31-fef8-4aea-9e4f-94980dc33752",
+    "project_name": "UN80 WP15 Research Hub",
+    "project_url": "https://linear.app/ituinnovation-hub/project/un80-wp15-research-hub-1b948218cb9e",
+    "config_file": "data/linear-config.yaml",
+    "skill": ".cursor/skills/un80-linear-sync/SKILL.md",
+    "tracking_issues": {
+      "social_monitor_import": "ITU-121",
+      "boss_approval": "ITU-122",
+      "x_api": "ITU-123",
+      "webhook_rotation": "ITU-124",
+      "linear_sync": "ITU-125"
+    }
   }
 }

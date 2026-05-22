@@ -9,6 +9,7 @@ Live automations are **Active** in Cursor. This document is the day-to-day guide
 | GitHub repo | https://github.com/techpolicycomms/un80-wp15-research |
 | Dashboard | https://techpolicycomms.github.io/un80-wp15-research/ |
 | Notion hub | https://www.notion.so/36805383491f813fa227f709c187584a |
+| **Linear project** | https://linear.app/ituinnovation-hub/project/un80-wp15-research-hub-1b948218cb9e |
 | Cursor automations | https://cursor.com/automations |
 
 ## Live automations (May 2026)
@@ -139,6 +140,26 @@ reports/ @techpolicycomms/nestor-username
 
 ---
 
+## Linear project management
+
+**Board:** [UN80 WP15 Research Hub](https://linear.app/ituinnovation-hub/project/un80-wp15-research-hub-1b948218cb9e) · Full guide: [docs/LINEAR.md](./LINEAR.md)
+
+| System | Role |
+|--------|------|
+| **Linear** | Issues, milestones, blockers, automation run log |
+| **Notion** | Editorial review (briefings, scans, sources) |
+| **GitHub** | Data, reports, PRs, dashboard CI |
+
+**Weekly (with Monday landscape review):**
+
+1. Open Linear project → filter **In Progress** / **Backlog**
+2. Check tracking issues [ITU-121](https://linear.app/ituinnovation-hub/issue/ITU-121) (Social Monitor), [ITU-122](https://linear.app/ituinnovation-hub/issue/ITU-122) (boss approval)
+3. Confirm each automation run created a `[run] … — YYYY-MM-DD` issue with PR link
+
+**Enable Linear MCP** on all four Cursor automations (with Notion MCP).
+
+---
+
 ## Troubleshooting
 
 | Symptom | Likely cause | Fix |
@@ -148,6 +169,7 @@ reports/ @techpolicycomms/nestor-username
 | Dashboard stale | No push to `main` after data change | Merge data PR; wait for GitHub Actions |
 | Webhook 401 | Wrong API key | Regenerate key in Cursor; update `.env` |
 | Notion not updated | Notion MCP not enabled on automation | Enable Notion MCP in automation Tools |
+| Linear not updated | Linear MCP not enabled on automation | Enable Linear MCP; see `docs/LINEAR.md` |
 
 ---
 

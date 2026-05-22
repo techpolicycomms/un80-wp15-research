@@ -21,6 +21,14 @@ Load and follow `.cursor/skills/un80-social-monitor/SKILL.md` and `data/un-agenc
 9. Update Notion **WP15 Living Analysis** page with social + news signals section
 10. Log run in Notion **Automation log** (data source `cc79cb1c-a897-488b-b913-02ff159f05ef`)
 
+## Linear (enable Linear MCP)
+
+Follow `.cursor/skills/un80-linear-sync/SKILL.md`:
+
+1. Create `[run] Social & news monitor — YYYY-MM-DD` with labels `automation`, `social`
+2. Attach PR, coverage report path, signal counts; **Done** when run complete
+3. If ITU-121 acceptance criteria met (4th automation saved), close **ITU-121**
+
 ## Constraints
 
 - Public official accounts and press releases only — no private data
