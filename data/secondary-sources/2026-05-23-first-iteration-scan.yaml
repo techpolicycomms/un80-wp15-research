@@ -1,0 +1,96 @@
+meta:
+  scan_date: "2026-05-23"
+  automation: first-iteration-review
+  disclaimer: DRAFT — public secondary sources only
+
+findings:
+  - source:
+      title: UNICC UNIQCloud — private cloud for the UN system
+      url: https://www.unicc.org/what-we-do/uniqcloud/
+      type: organization
+    relevance: action_61
+    topic: shared_cloud_consolidation
+    summary: >-
+      UNIQCloud (launched Jan 2025) is UNICC's OpenStack-based private cloud operating
+      exclusively from UN data centres with UN-managed cybersecurity. Offers vendor
+      independence, predictable pricing via Management Committee approval, and
+      complements hybrid strategies — direct evidence of mature shared cloud backbone
+      for Action 61 consolidation proposal.
+    confidence: high
+
+  - source:
+      title: UNICC — UNIQCloud launch announcement
+      url: https://www.unicc.org/news/2025/01/30/unicc-introduces-uniqcloud-a-private-cloud-solution-tailored-for-the-un-and-international-organizations/
+      type: press_release
+    relevance: action_61
+    topic: cloud_strategy
+    summary: >-
+      UNICC positions UNIQCloud under its Strategic Framework 2024–2030 as the leading
+      digital and cybersecurity partner for 100+ UN and international organizations,
+      reinforcing consolidation around shared facilities rather than fragmented
+      entity-level cloud contracts.
+    confidence: high
+
+  - source:
+      title: UN Office for Digital and Emerging Technologies (ODET)
+      url: https://www.un.org/odet
+      type: un_system
+    relevance: both
+    topic: system_digital_coordination
+    summary: >-
+      ODET (established 1 Jan 2025) is the UN system-wide focal point for digital
+      issues, covering AI governance, digital public infrastructure, open source, and
+      digital transformation. Provides strategic context for both ICT consolidation
+      governance (Action 61) and TAP's innovation acceleration role (Action 62).
+    confidence: high
+
+  - source:
+      title: UN Digital Cooperation Portal (Global Digital Compact)
+      url: https://unctad.org/news/un-launches-new-portal-digital-cooperation
+      type: un_system
+    relevance: action_62
+    topic: innovation_ecosystem
+    summary: >-
+      ODET-led portal aggregates digital cooperation initiatives aligned to the Global
+      Digital Compact, using AI to map related activities. Supports TAP's goal of
+      demand sensing and portfolio coordination across entities rather than siloed
+      innovation projects.
+    confidence: medium
+
+  - source:
+      title: UNICC RFP 2026 — IT consultancy (ServiceNow, ManageEngine, open source)
+      url: https://www.ungm.org/Public/Notice/293265
+      type: procurement
+    relevance: action_61
+    topic: shared_platform_services
+    summary: >-
+      UNICC soliciting long-term agreements for enterprise platform consultancy
+      (ServiceNow, ManageEngine, open source) on as-needed basis — indicates ongoing
+      pooled procurement for common workplace and ITSM platforms relevant to office
+      software and systems consolidation categories.
+    confidence: medium
+
+  - source:
+      title: WIPO internal oversight — understanding of UNICC shared services model
+      url: https://www.wipo.int/documents/d/about-wipo/docs-en-oversight-iaod-audit-c2-understanding-of-united-nations-international-computing-centre.pdf
+      type: audit_public
+    relevance: action_61
+    topic: shared_services_governance
+    summary: >-
+      Public audit briefing describes UNICC's inter-organization mandate (since 1971),
+      80+ service lines, cost-recovery governance via MoU/SDA/BCR structure, and
+      client Management Committee role — useful reference for how consolidated ICT
+      services are contracted and governed across entities.
+    confidence: high
+
+  - source:
+      title: UN Global Pulse — AI, innovation and partnerships for SDGs
+      url: https://www.unglobalpulse.org/transforming-development-ai-innovation-partnerships-for-the-sustainable-development-goals-sdgs/
+      type: un_system
+    relevance: action_62
+    topic: ai_innovation
+    summary: >-
+      UN Global Pulse public work on AI and innovation partnerships aligns with TAP
+      portfolio themes (shared digital/AI solutions, expertise pooling) and the
+      endorsed modern conferencing / collaboration use case space.
+    confidence: medium
