@@ -1,0 +1,53 @@
+meta:
+  scan_date: "2026-05-22"
+  automation: manual-landscape-run
+  disclaimer: DRAFT — public secondary sources only
+
+findings:
+  - source:
+      title: UN International Computing Centre — About ICC
+      url: https://www.unicc.org/about/
+      type: organization
+    relevance: action_61
+    topic: shared_ict_services
+    summary: >-
+      ICC is an inter-organization facility providing shared ICT services to UN
+      system organizations. Action 61 consolidation proposal explicitly builds on
+      ICC experience for pooling cloud, network, and office software services.
+    confidence: high
+
+  - source:
+      title: UN International Computing Centre — Services
+      url: https://www.unicc.org/services/
+      type: organization
+    relevance: action_61
+    topic: service_catalog_overlap
+    summary: >-
+      ICC offers a broad catalog (cloud, cybersecurity, connectivity, workplace
+      technologies). Baseline assessment finding of overlap in core services aligns
+      with parallel entity-level contracts alongside shared facilities like ICC.
+    confidence: high
+
+  - source:
+      title: UN Digital & Technology Network
+      url: https://www.un.org/en/un-digital-cooperation-office/digital-technology-network
+      type: un_system
+    relevance: action_62
+    topic: innovation_ecosystem
+    summary: >-
+      UN-wide network for digital cooperation and innovation connects entities
+      working on digital transformation — relevant context for TAP's role as a
+      system-wide innovation accelerator and portfolio mechanism.
+    confidence: medium
+
+  - source:
+      title: ID2020 Alliance — Digital identity principles (public overview)
+      url: https://id2020.org/
+      type: standards_initiative
+    relevance: action_62
+    topic: digital_id
+    summary: >-
+      Endorsed TAP portfolio includes digital ID solutions. Public digital identity
+      principles and privacy-by-design frameworks inform interoperability and
+      governance considerations for UN system digital ID use cases.
+    confidence: medium

@@ -1,6 +1,10 @@
 # UN80 WP15 Research Hub
 
-Automated research, monitoring, and reporting for **UN80 Work Package 15** — ICT consolidation (Action 61) and the Technology Accelerator Platform (Action 62).
+**Public repo** (public secondary data only): [github.com/techpolicycomms/un80-wp15-research](https://github.com/techpolicycomms/un80-wp15-research)
+
+**Dashboard (GitHub Pages):** https://techpolicycomms.github.io/un80-wp15-research/
+
+**Notion hub:** https://www.notion.so/36805383491f813fa227f709c187584a
 
 > **Scope:** Public secondary data only. All outputs are **DRAFT working documents** and do not represent agreed UN positions.
 
