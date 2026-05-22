@@ -1,4 +1,26 @@
 {
+  "status": "operational",
+  "operational_since": "2026-05-22",
+  "live_automations": {
+    "landscape_monitor": {
+      "automation_id": "9267c6a1-fd79-4d72-81ca-6415647ab198",
+      "url": "https://cursor.com/automations/9267c6a1-fd79-4d72-81ca-6415647ab198",
+      "trigger": "cron: 0 6 * * 1",
+      "enabled": true
+    },
+    "webhook_ingest": {
+      "automation_id": "132e3dc9-f9c7-4b80-97e0-8ad28449282a",
+      "url": "https://cursor.com/automations/132e3dc9-f9c7-4b80-97e0-8ad28449282a",
+      "trigger": "webhook",
+      "enabled": true
+    },
+    "briefing_compiler": {
+      "automation_id": "50fd2872-5154-49ee-a71f-31c3ffc0a058",
+      "url": "https://cursor.com/automations/50fd2872-5154-49ee-a71f-31c3ffc0a058",
+      "trigger": "cron: 0 8 1 * *",
+      "enabled": true
+    }
+  },
   "landscape_monitor": {
     "name": "UN80 Weekly Landscape Monitor",
     "description": "Weekly public secondary source scan for UN80 WP15 Action 61/62",

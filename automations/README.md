@@ -1,10 +1,12 @@
 # Cursor Automations for UN80 WP15 Research
 
-Three automations cover the research loop: **monitor** (cron), **ingest** (webhook), and **compile** (cron + optional webhook).
+**Status: Operational** (since 22 May 2026) — see [docs/OPERATIONS.md](../docs/OPERATIONS.md) for the team runbook.
+
+Three automations cover the research loop: **monitor** (cron), **ingest** (webhook), and **compile** (cron).
 
 ## Prerequisites
 
-1. GitHub repo: `techpolicycomms/un80-wp15-research` (private recommended)
+1. GitHub repo: `techpolicycomms/un80-wp15-research` (public — secondary data only)
 2. Connect repo in [Cursor Automations](https://cursor.com/automations) or Agents Window
 3. Enable **Memories** on monitor and compiler automations
 4. Attach **Notion MCP** on compiler automation for Notion sync
