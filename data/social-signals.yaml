@@ -1,0 +1,29 @@
+# Social signal rollup — updated by social monitor automation
+meta:
+  last_updated: "2026-05-22"
+  disclaimer: Public official posts only — DRAFT
+
+signals:
+  - id: soc-2026-05-22-001
+    date: "2026-05-22"
+    platform: registry
+    agency: UN International Computing Centre
+    title: Monitoring baseline — UNICC official channels registered
+    url: https://x.com/UNICC
+    matched_keywords: [shared services, ict]
+    relevance: action_61
+    summary: >-
+      Social monitor registry established for UNICC X and Facebook. Automation
+      will capture WP15-relevant public posts on subsequent Wed runs.
+
+  - id: soc-2026-05-22-002
+    date: "2026-05-22"
+    platform: registry
+    agency: United Nations
+    title: Monitoring baseline — UN official X, Facebook, YouTube
+    url: https://x.com/UN
+    matched_keywords: [digital transformation]
+    relevance: both
+    summary: >-
+      Primary UN accounts registered for cross-cutting digital transformation
+      and ICT-related public announcements.

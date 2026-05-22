@@ -22,8 +22,9 @@ This hub supports UN80 WP15 by turning recurring research into a **repeatable pi
 1. **Monitor** — weekly scan of public sources (ICC, UN digital initiatives, interoperability standards) relevant to ICT consolidation and TAP
 2. **Ingest** — on-demand submission of curated public links via webhook
 3. **Compile** — monthly draft briefings for Member State / CEB updates, mirrored to Notion
-4. **Visualize** — dashboard fed from structured data in `data/`
-5. **Review** — every automation opens a GitHub PR; humans merge and approve before anything is treated as final
+4. **Monitor social** — weekly X, Facebook, YouTube scan for UN agencies on WP15 topics
+5. **Visualize** — dashboard fed from structured data in `data/`
+6. **Review** — every automation opens a GitHub PR; humans merge and approve before anything is treated as final
 
 Aligned to the WP15 pre-briefing: >$2B annual UN system ICT spend, baseline across 28 entities, TAP portfolio (digital ID, expertise on demand, modern conferencing).
 
@@ -69,6 +70,11 @@ This is a **pilot of Cursor Automations** applied to UN80 research workflow desi
 | [UN80 Weekly Landscape Monitor](https://cursor.com/automations/9267c6a1-fd79-4d72-81ca-6415647ab198) | Cron — Mon 06:00 UTC | Public source scan → PR |
 | [UN80 Webhook Source Ingest](https://cursor.com/automations/132e3dc9-f9c7-4b80-97e0-8ad28449282a) | Webhook | Team source submissions → PR |
 | [UN80 Monthly Briefing Compiler](https://cursor.com/automations/50fd2872-5154-49ee-a71f-31c3ffc0a058) | Cron — 1st of month 08:00 UTC | Draft briefing → PR + Notion |
+| **UN80 Social Monitor** | Cron — Wed 07:00 UTC | X / Facebook / YouTube → PR + Notion living analysis |
+
+**Living analysis artifact:** [`reports/2026-05-wp15-living-analysis.md`](./reports/2026-05-wp15-living-analysis.md) — synced to Notion page *WP15 Living Analysis (auto-updated)* by automations. Setup: [docs/notion-living-analysis-setup.md](./docs/notion-living-analysis-setup.md)
+
+Import the 4th automation: [automations/prefill-urls.md §4](./automations/prefill-urls.md)
 
 Prompts and workflow metadata: [`automations/`](./automations/) · Machine-readable IDs: [`automations/workflows.json`](./automations/workflows.json)
 

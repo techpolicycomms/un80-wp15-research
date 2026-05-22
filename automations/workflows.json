@@ -82,6 +82,22 @@
     "tools": ["open_pull_request", "memories", "mcp_notion"],
     "prefill_url": "https://cursor.com/automations/new?prefill=eyJuYW1lIjoiVU44MCBNb250aGx5IEJyaWVmaW5nIENvbXBpbGVyIiwiZGVzY3JpcHRpb24iOiJNb250aGx5IE1lbWJlciBTdGF0ZSBicmllZmluZyBkcmFmdCArIE5vdGlvbiBzeW5jIiwid29ya2Zsb3ciOnsiYXV0aG9yVGV4dCI6IkNvbXBpbGUgYnJpZWZpbmcgcGVyIGF1dG9tYXRpb25zL2JyaWVmaW5nLWNvbXBpbGVyLnByb21wdC5tZC4gTm90aW9uIEJyaWVmaW5ncyBEQiBkYXRhIHNvdXJjZTogNTlkYzA2NzItZDc0ZS00ZTdiLWJiZmEtOWQzOWZmZTQwMmUyLiBIdWIgcGFnZTogMzY4MDUzODMtNDkxZi04MTNmLWEyMjctZjcwOWMxODc1ODRhLiIsImdpdENvbmZpZyI6eyJicmFuY2giOiJtYWluIiwicmVwb3NpdG9yeSI6InRlY2hwb2xpY3ljb21tcy91bjgwLXdwMTUtcmVzZWFyY2gifSwibWVtb3J5RW5hYmxlZCI6dHJ1ZSwidHJpZ2dlcnMiOlt7ImNyb25UcmlnZ2VyIjp7ImNyb25FeHByZXNzaW9nIjoiMCA4IDEgKiAqIn19LHsid2ViaG9va1RyaWdnZXIiOnt9fV19fQ"
   },
+  "social_monitor": {
+    "name": "UN80 Social Monitor",
+    "description": "Wed public social scan — X, Facebook, YouTube for UN agencies",
+    "schedule": "cron: 0 7 * * 3",
+    "workflow": {
+      "authorText": "See automations/social-monitor.prompt.md",
+      "gitConfig": {
+        "repository": "techpolicycomms/un80-wp15-research",
+        "branch": "main"
+      },
+      "memoryEnabled": true,
+      "triggers": [{ "cronTrigger": { "cronExpression": "0 7 * * 3" } }]
+    },
+    "tools": ["open_pull_request", "memories", "mcp_notion"],
+    "prefill_url": "https://cursor.com/automations/new?prefill=eyJuYW1lIjoiVU44MCBTb2NpYWwgTW9uaXRvciIsImRlc2NyaXB0aW9uIjoiV2VkIHB1YmxpYyBzb2NpYWwgc2NhbiDigJQgWCwgRmFjZWJvb2ssIFlvdVR1YmUgZm9yIFVOIGFnZW5jaWVzIG9uIFdQMTUgdG9waWNzIiwid29ya2Zsb3ciOnsiYXV0aG9yVGV4dCI6IkxvYWQgYC5jdXJzb3Ivc2tpbGxzL3VuODAtc29jaWFsLW1vbml0b3IvU0tJTEwubWRgIGFuZCBgZGF0YS91bi1hZ2VuY2llcy1zb2NpYWwueWFtbGAuIFJ1biBucG0gcnVuIGZldGNoOnlvdXR1YmUuIFJldmlldyBwdWJsaWMgWCBhbmQgRmFjZWJvb2sgZnJvbSByZWdpc3RyeS4gV3JpdGUgZGF0YS9zb2NpYWwtbW9uaXRvci9ZWVlZLU1NLURELXNvY2lhbC55YW1sLCB1cGRhdGUgZGF0YS9zb2NpYWwtc2lnbmFscy55YW1sLCBvcGVuIFBSLCB1cGRhdGUgTm90aW9uIFdQMTUgTGl2aW5nIEFuYWx5c2lzIHBhZ2UuIiwiZ2l0Q29uZmlnIjp7ImJyYW5jaCI6Im1haW4iLCJyZXBvc2l0b3J5IjoidGVjaHBvbGljeWNvbW1zL3VuODAtd3AxNS1yZXNlYXJjaCJ9LCJtZW1vcnlFbmFibGVkIjp0cnVlLCJ0cmlnZ2VycyI6W3siY3JvblRyaWdnZXIiOnsiY3JvbkV4cHJlc3Npb24iOiIwIDcgKiAqIDMifX1dfX0"
+  },
   "notion_ids": {
     "hub_page_id": "36805383-491f-813f-a227-f709c187584a",
     "hub_url": "https://www.notion.so/36805383491f813fa227f709c187584a",

@@ -1,0 +1,17 @@
+meta:
+  scan_date: "2026-05-22"
+  automation: test-run-seed
+  platforms: [youtube, x, facebook]
+  disclaimer: DRAFT — public posts only
+
+registry_coverage:
+  agencies_registered: 7
+  platforms: [x, facebook, youtube]
+
+signals: []
+
+notes: >-
+  First social monitor run established agency registry. YouTube RSS fetch from
+  local environment returned 0 items (network/channel ID resolution). The Cursor
+  cloud agent on Wed 07:00 UTC will fetch from public feeds and review X/Facebook
+  using the agent web tools. See data/un-agencies-social.yaml.

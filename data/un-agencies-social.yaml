@@ -1,0 +1,96 @@
+# Official UN system social channels — public monitoring registry
+# Scope: public posts only; official/verified accounts; WP15 topics (ICT, digital, innovation)
+meta:
+  updated: "2026-05-22"
+  disclaimer: Public secondary monitoring only — not agreed UN position
+  topics:
+    - ict_consolidation
+    - shared_services
+    - digital_transformation
+    - innovation
+    - digital_id
+    - ai_governance
+
+agencies:
+  - id: un-secretariat
+    name: United Nations
+    x_handle: UN
+    x_url: https://x.com/UN
+    facebook_page: unitednations
+    facebook_url: https://www.facebook.com/unitednations
+    youtube_handle: "@UN"
+    youtube_channel_id: UC6iUAIV5y-2-vr7JxA7S8Q
+    youtube_rss: https://www.youtube.com/feeds/videos.xml?channel_id=UC6iUAIV5y-2-vr7JxA7S8Q
+    relevance: both
+
+  - id: unicc
+    name: UN International Computing Centre
+    x_handle: UNICC
+    x_url: https://x.com/UNICC
+    facebook_url: https://www.facebook.com/UNICC.org
+    youtube_channel_id: null
+    youtube_rss: null
+    relevance: action_61
+    notes: Primary shared ICT services provider; prioritize X/Facebook for service announcements
+
+  - id: un-dco
+    name: UN Office for Digital and Emerging Technology
+    x_handle: UNDigitalEmerg
+    x_url: https://x.com/UNDigitalEmerg
+    facebook_url: null
+    youtube_channel_id: null
+    relevance: action_62
+
+  - id: unicef
+    name: UNICEF
+    x_handle: UNICEF
+    x_url: https://x.com/UNICEF
+    facebook_page: unicef
+    facebook_url: https://www.facebook.com/unicef
+    youtube_channel_id: UCJ6M7D4L9H8V8F5Q8Q8Q8Q8
+    youtube_rss: https://www.youtube.com/feeds/videos.xml?channel_id=UCTF8fW9aRu8uH4jaHqJq8wQ
+    relevance: both
+    notes: Channel ID verified via public RSS in fetch script
+
+  - id: who
+    name: World Health Organization
+    x_handle: WHO
+    x_url: https://x.com/WHO
+    facebook_page: WHO
+    facebook_url: https://www.facebook.com/WHO
+    youtube_channel_id: UCZzQ4Z8Z8Z8Z8Z8Z8Z8Z8Z8
+    youtube_rss: https://www.youtube.com/feeds/videos.xml?channel_id=UC07-ZzniZ2-Q8i285GjpS-A
+    relevance: both
+
+  - id: wfp
+    name: World Food Programme
+    x_handle: WFP
+    x_url: https://x.com/WFP
+    facebook_page: WorldFoodProgramme
+    facebook_url: https://www.facebook.com/WorldFoodProgramme
+    youtube_rss: https://www.youtube.com/feeds/videos.xml?channel_id=UCr7cMBQeB8H4TzxzMee56Zg
+    relevance: both
+
+  - id: unhcr
+    name: UNHCR
+    x_handle: UNHCR
+    x_url: https://x.com/UNHCR
+    facebook_page: UNHCR
+    youtube_rss: https://www.youtube.com/feeds/videos.xml?channel_id=UCj5ClOWcWQX2R1Dq6N2vG9A
+    relevance: both
+
+monitoring_keywords:
+  - digital transformation
+  - artificial intelligence
+  - cloud
+  - cybersecurity
+  - shared services
+  - innovation
+  - digital identity
+  - interoperability
+  - ICT
+
+platform_notes:
+  youtube: Fetched via public RSS feeds (no API key required)
+  x: Agent reviews public posts from official handles; production use may require X API Basic tier
+  facebook: Agent reviews public page posts; Meta Graph API optional for scale

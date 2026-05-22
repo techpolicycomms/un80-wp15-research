@@ -6,6 +6,7 @@
   "scripts": {
     "validate": "node scripts/validate-data.mjs",
     "build:dashboard": "node scripts/build-dashboard.mjs",
+    "fetch:youtube": "node scripts/fetch-youtube-social.mjs",
     "serve:dashboard": "npx --yes serve dashboard/dist -p 3456"
   },
   "devDependencies": {
