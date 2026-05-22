@@ -1,0 +1,75 @@
+{
+  "landscape_monitor": {
+    "name": "UN80 Weekly Landscape Monitor",
+    "description": "Weekly public secondary source scan for UN80 WP15 Action 61/62",
+    "workflow": {
+      "authorText": "You maintain the UN80 WP15 research repository (public secondary data only).\n\nLoad and follow `.cursor/skills/un80-landscape-monitor/SKILL.md`.\n\n1. Read data/secondary-sources/, data/overlap-signals.yaml, Memories\n2. Search approved public sources for Action 61 and Action 62 evidence\n3. Write data/secondary-sources/YYYY-MM-DD-scan.yaml (schema in data/schemas/secondary-source.schema.json)\n4. Update overlap-signals.yaml only if warranted\n5. Run npm install && npm run validate && npm run build:dashboard\n6. Open PR if material changes; add row to Notion Landscape scans DB (data source a3741a6d-60d3-46e3-a8d5-9e0bb80a47df)\n\nDRAFT only. Public secondary sources. Not agreed UN position.",
+      "gitConfig": {
+        "repository": "techpolicycomms/un80-wp15-research",
+        "branch": "main"
+      },
+      "memoryEnabled": true,
+      "triggers": [
+        { "cronTrigger": { "cronExpression": "0 6 * * 1" } }
+      ]
+    },
+    "tools": ["open_pull_request", "memories", "mcp_notion"],
+    "prefill_url": "https://cursor.com/automations/new?prefill=eyJuYW1lIjoiVU44MCBXZWVrbHkgTGFuZHNjYXBlIE1vbml0b3IiLCJkZXNjcmlwdGlvbiI6IldlZWtseSBwdWJsaWMgc2Vjb25kYXJ5IHNvdXJjZSBzY2FuIGZvciBVTjgwIFdQMTUgQWN0aW9uIDYxLzYyIiwid29ya2Zsb3ciOnsiYXV0aG9yVGV4dCI6IkxvYWQgYC5jdXJzb3Ivc2tpbGxzL3VuODAtbGFuZHNjYXBlLW1vbml0b3IvU0tJTEwubWRgLiBTY2FuIHB1YmxpYyBzb3VyY2VzOyB1cGRhdGUgZGF0YS9zZWNvbmRhcnktc291cmNlcy87IG9wZW4gUFIgaWYgbWF0ZXJpYWwgY2hhbmdlcy4iLCJnaXRDb25maWciOnsiYnJhbmNoIjoibWFpbiIsInJlcG9zaXRvcnkiOiJ0ZWNocG9saWN5Y29tbXMvdW44MC13cDE1LXJlc2VhcmNoIn0sIm1lbW9yeUVuYWJsZWQiOnRydWUsInRyaWdnZXJzIjpbeyJjcm9uVHJpZ2dlciI6eyJjcm9uRXhwcmVzc2lvbiI6IjAgNiAqICogMSJ9fV19fQ"
+  },
+  "webhook_ingest": {
+    "name": "UN80 Webhook Source Ingest",
+    "description": "Event-driven ingest of curated public sources",
+    "workflow": {
+      "authorText": "Handle webhook JSON per automations/webhook-ingest.prompt.md.\n\nOn source_submission: validate payload, append to data/secondary-sources/, npm run validate, open PR, add Notion Sources inbox row (data source c3ac8601-780a-4ae4-bc0c-2d1b04f198f5).\n\nOn manual_refresh: validate + rebuild dashboard only.\n\nOn survey_wave_complete: log in Memories only — no raw survey data.\n\nPublic secondary only. DRAFT.",
+      "gitConfig": {
+        "repository": "techpolicycomms/un80-wp15-research",
+        "branch": "main"
+      },
+      "memoryEnabled": true,
+      "triggers": [{ "webhookTrigger": {} }]
+    },
+    "tools": ["open_pull_request", "memories", "mcp_notion"],
+    "webhook_payload_example": {
+      "event": "source_submission",
+      "payload": {
+        "title": "Example public source",
+        "url": "https://www.unicc.org/",
+        "topic": "shared_ict_services",
+        "relevance": "action_61",
+        "summary": "Why this source matters",
+        "submitted_by": "research-team"
+      }
+    },
+    "prefill_url": "https://cursor.com/automations/new?prefill=eyJuYW1lIjoiVU44MCBXZWJob29rIFNvdXJjZSBJbmdlc3QiLCJkZXNjcmlwdGlvbiI6IldlYmhvb2sgaW5nZXN0IGZvciBjdXJhdGVkIHB1YmxpYyBzb3VyY2VzIiwid29ya2Zsb3ciOnsiYXV0aG9yVGV4dCI6IkhhbmRsZSB3ZWJob29rIEpTT04gcGVyIGF1dG9tYXRpb25zL3dlYmhvb2staW5nZXN0LnByb21wdC5tZCBpbiByZXBvLiBWYWxpZGF0ZSwgaW5nZXN0IFlBTUwsIG9wZW4gUFIsIHVwZGF0ZSBOb3Rpb24gU291cmNlcyBpbmJveCAoZGF0YSBzb3VyY2UgYzNhYzg2MDEtNzgwYS00YWU0LWJjMGMtMmQxYjA0ZjE5OGY1KS4iLCJnaXRDb25maWciOnsiYnJhbmNoIjoibWFpbiIsInJlcG9zaXRvcnkiOiJ0ZWNocG9saWN5Y29tbXMvdW44MC13cDE1LXJlc2VhcmNoIn0sIm1lbW9yeUVuYWJsZWQiOnRydWUsInRyaWdnZXJzIjpbeyJ3ZWJob29rVHJpZ2dlciI6e319XX19"
+  },
+  "briefing_compiler": {
+    "name": "UN80 Monthly Briefing Compiler",
+    "description": "Monthly Member State update draft + Notion sync",
+    "workflow": {
+      "authorText": "Compile briefing per automations/briefing-compiler.prompt.md and .cursor/skills/un80-briefing-writer/SKILL.md.\n\nWrite reports/YYYY-MM-member-state-update.md, open PR, create Notion Briefings row (data source 59dc0672-d74e-4e7b-bbfa-9d39ffe402e2, Status=Draft).\n\nWebhook manual_refresh: ad-hoc run with today's date.\n\nDRAFT only. Human review required.",
+      "gitConfig": {
+        "repository": "techpolicycomms/un80-wp15-research",
+        "branch": "main"
+      },
+      "memoryEnabled": true,
+      "triggers": [
+        { "cronTrigger": { "cronExpression": "0 8 1 * *" } },
+        { "webhookTrigger": {} }
+      ]
+    },
+    "tools": ["open_pull_request", "memories", "mcp_notion"],
+    "prefill_url": "https://cursor.com/automations/new?prefill=eyJuYW1lIjoiVU44MCBNb250aGx5IEJyaWVmaW5nIENvbXBpbGVyIiwiZGVzY3JpcHRpb24iOiJNb250aGx5IE1lbWJlciBTdGF0ZSBicmllZmluZyBkcmFmdCArIE5vdGlvbiBzeW5jIiwid29ya2Zsb3ciOnsiYXV0aG9yVGV4dCI6IkNvbXBpbGUgYnJpZWZpbmcgcGVyIGF1dG9tYXRpb25zL2JyaWVmaW5nLWNvbXBpbGVyLnByb21wdC5tZC4gTm90aW9uIEJyaWVmaW5ncyBEQiBkYXRhIHNvdXJjZTogNTlkYzA2NzItZDc0ZS00ZTdiLWJiZmEtOWQzOWZmZTQwMmUyLiBIdWIgcGFnZTogMzY4MDUzODMtNDkxZi04MTNmLWEyMjctZjcwOWMxODc1ODRhLiIsImdpdENvbmZpZyI6eyJicmFuY2giOiJtYWluIiwicmVwb3NpdG9yeSI6InRlY2hwb2xpY3ljb21tcy91bjgwLXdwMTUtcmVzZWFyY2gifSwibWVtb3J5RW5hYmxlZCI6dHJ1ZSwidHJpZ2dlcnMiOlt7ImNyb25UcmlnZ2VyIjp7ImNyb25FeHByZXNzaW9nIjoiMCA4IDEgKiAqIn19LHsid2ViaG9va1RyaWdnZXIiOnt9fV19fQ"
+  },
+  "notion_ids": {
+    "hub_page_id": "36805383-491f-813f-a227-f709c187584a",
+    "hub_url": "https://www.notion.so/36805383491f813fa227f709c187584a",
+    "briefings_database_id": "f7ec4bd5-2e45-42d9-abc8-2d649afbc3a5",
+    "briefings_data_source_id": "59dc0672-d74e-4e7b-bbfa-9d39ffe402e2",
+    "landscape_scans_database_id": "053ca4ba-780c-415c-878b-69610ced5b9d",
+    "landscape_scans_data_source_id": "a3741a6d-60d3-46e3-a8d5-9e0bb80a47df",
+    "sources_inbox_database_id": "2a617795-d629-4c86-a91e-b5d41779b0b1",
+    "sources_inbox_data_source_id": "c3ac8601-780a-4ae4-bc0c-2d1b04f198f5",
+    "automation_log_database_id": "230e22d23f4c-4cd0-bcd2-2d43312fac2f",
+    "automation_log_data_source_id": "cc79cb1c-a897-488b-b913-02ff159f05ef"
+  }
+}
