@@ -1,0 +1,38 @@
+{
+  "$id": "secondary-source.schema.json",
+  "type": "object",
+  "required": ["meta", "findings"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["scan_date", "disclaimer"],
+      "properties": {
+        "scan_date": { "type": "string", "format": "date" },
+        "automation": { "type": "string" },
+        "disclaimer": { "type": "string" }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "relevance", "topic", "summary", "confidence"],
+        "properties": {
+          "source": {
+            "type": "object",
+            "required": ["title", "type"],
+            "properties": {
+              "title": { "type": "string" },
+              "url": { "type": ["string", "null"], "format": "uri" },
+              "type": { "type": "string" }
+            }
+          },
+          "relevance": { "type": "string" },
+          "topic": { "type": "string" },
+          "summary": { "type": "string" },
+          "confidence": { "enum": ["low", "medium", "high"] }
+        }
+      }
+    }
+  }
+}

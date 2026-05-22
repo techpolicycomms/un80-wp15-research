@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "source": "UN80 WP15 pre-briefing (Action 61 baseline assessment)",
+    "as_of": "2026-04-01",
+    "entities_participating": 28,
+    "expenditure_coverage_pct": 97,
+    "disclaimer": "Working document — not agreed UN position"
+  },
+  "totals": {
+    "annual_ict_spend_usd_min": 2000000000,
+    "currency": "USD",
+    "note": "Includes external contracts, licenses, hardware, and in-house functions"
+  },
+  "categories": [
+    {
+      "id": "cloud",
+      "label": "Basic cloud services",
+      "action_61_priority": true
+    },
+    {
+      "id": "network",
+      "label": "Network infrastructure",
+      "action_61_priority": true
+    },
+    {
+      "id": "office_software",
+      "label": "Office software and systems",
+      "action_61_priority": true
+    },
+    {
+      "id": "connectivity",
+      "label": "Connectivity products and support",
+      "action_61_priority": false
+    },
+    {
+      "id": "in_house",
+      "label": "In-house ICT functions",
+      "action_61_priority": false
+    }
+  ],
+  "findings": {
+    "overlap_in_core_services": true,
+    "interoperability_challenges": true,
+    "shared_service_adoption": "Most entities use at least one shared service; openness to expand in selected areas"
+  }
+}

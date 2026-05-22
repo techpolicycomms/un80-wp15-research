@@ -1,0 +1,23 @@
+meta:
+  scan_date: "2026-04-01"
+  automation: manual-seed
+  disclaimer: DRAFT — public secondary sources only
+
+findings:
+  - source:
+      title: UN International Computing Centre
+      url: https://www.unicc.org/
+      type: organization
+    relevance: action_61
+    topic: shared_ict_services
+    summary: ICC provides shared ICT services to UN organizations; consolidation proposal builds on ICC experience.
+    confidence: high
+
+  - source:
+      title: UN80 Initiative — Technology (WP15 update context)
+      url: null
+      type: internal_briefing
+    relevance: action_61_action_62
+    topic: ict_consolidation_tap
+    summary: Baseline confirms >$2B annual ICT spend, overlap in core services, and TAP portfolio of three endorsed use cases.
+    confidence: high

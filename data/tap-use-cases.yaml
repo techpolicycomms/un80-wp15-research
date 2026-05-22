@@ -1,0 +1,43 @@
+# TAP portfolio — Action 62 (Steering Committee endorsed initial set)
+meta:
+  source: UN80 WP15 pre-briefing
+  as_of: "2026-04-01"
+  disclaimer: Working document — not agreed UN position
+
+survey:
+  contributors: 200
+  scope: country-level leaders and functional experts
+  purpose: identify prioritized pipeline of high-impact use cases
+
+portfolio:
+  - id: digital-id
+    name: Digital ID solutions
+    status: endorsed
+    maturity: advanced_concept
+    ownership: clear
+    un80_links: []
+    strategic_support: true
+
+  - id: expertise-on-demand
+    name: Digital platforms for access to expertise on demand
+    status: endorsed
+    maturity: advanced_concept
+    ownership: clear
+    un80_links: []
+    strategic_support: true
+
+  - id: modern-conferencing
+    name: Expanded toolkits for modern conferencing
+    status: endorsed
+    maturity: advanced_concept
+    ownership: clear
+    un80_links: []
+    strategic_support: true
+
+platform_concept:
+  name: Technology Accelerator Platform (TAP)
+  purpose: continuous UN system innovation via demand identification, portfolio shaping, implementation support
+  mechanisms:
+    - pooled_capacity
+    - proposal_cycles
+    - joint_visibility

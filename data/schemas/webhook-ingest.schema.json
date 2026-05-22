@@ -1,0 +1,21 @@
+{
+  "$id": "webhook-ingest.schema.json",
+  "type": "object",
+  "required": ["event", "payload"],
+  "properties": {
+    "event": {
+      "enum": ["source_submission", "survey_wave_complete", "manual_refresh"]
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "topic": { "type": "string" },
+        "relevance": { "type": "string" },
+        "summary": { "type": "string" },
+        "submitted_by": { "type": "string" }
+      }
+    }
+  }
+}

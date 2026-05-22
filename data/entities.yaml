@@ -1,0 +1,23 @@
+# Participating entities — baseline assessment (Action 61)
+meta:
+  count: 28
+  expenditure_coverage_pct: 97
+  note: Entity names are illustrative placeholders; replace with official roster when approved for repo
+
+entities:
+  - id: entity-001
+    shared_services_in_use: 1
+    open_to_expansion: true
+  - id: entity-002
+    shared_services_in_use: 2
+    open_to_expansion: true
+
+consolidation_targets:
+  - cloud
+  - network
+  - office_software
+  - systems
+
+icc:
+  role: inter-organization facility; lessons and engagement for consolidation proposal
+  reference: https://www.unicc.org/

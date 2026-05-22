@@ -1,0 +1,39 @@
+{
+  "$id": "ict-spend-baseline.schema.json",
+  "type": "object",
+  "required": ["meta", "totals", "categories", "findings"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["source", "as_of", "disclaimer"],
+      "properties": {
+        "source": { "type": "string" },
+        "as_of": { "type": "string", "format": "date" },
+        "entities_participating": { "type": "integer" },
+        "expenditure_coverage_pct": { "type": "number" },
+        "disclaimer": { "type": "string" }
+      }
+    },
+    "totals": {
+      "type": "object",
+      "required": ["annual_ict_spend_usd_min", "currency"],
+      "properties": {
+        "annual_ict_spend_usd_min": { "type": "number" },
+        "currency": { "type": "string" }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "action_61_priority": { "type": "boolean" }
+        }
+      }
+    },
+    "findings": { "type": "object" }
+  }
+}

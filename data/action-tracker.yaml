@@ -1,0 +1,47 @@
+# UN80 Actions 61 & 62 phase tracker
+meta:
+  work_package: 15
+  updated: "2026-04-01"
+  disclaimer: Working document — not agreed UN position
+
+actions:
+  - id: action-61
+    title: Consolidate fragmented ICT landscape
+    phases:
+      - id: baseline
+        name: ICT baseline assessment
+        status: complete
+        notes: 28 entities, 97% expenditure coverage, >$2B confirmed
+
+      - id: proposal
+        name: Consolidation proposal
+        status: in_progress
+        notes: Cloud, network, office software, systems; ICC engagement
+
+      - id: implementation
+        name: Implementation plan
+        status: pending
+        gate: CEB and UN80 Steering Committee direction on proposal
+
+  - id: action-62
+    title: TAP baseline and proposal to CEB
+    phases:
+      - id: survey
+        name: Systemwide innovation survey
+        status: complete
+        notes: 200+ contributors; prioritized use case pipeline
+
+      - id: portfolio
+        name: Initial endorsed portfolio
+        status: complete
+        notes: Digital ID, expertise on demand, modern conferencing
+
+      - id: platform-concept
+        name: Long-term TAP concept
+        status: in_progress
+        notes: Sustainable mechanism for continuous innovation
+
+expected_improvements:
+  - Reduced duplication in ICT services
+  - Improved interoperability across the UN system
+  - Accelerated operational modernization via TAP

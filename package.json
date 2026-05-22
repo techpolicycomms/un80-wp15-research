@@ -1,0 +1,16 @@
+{
+  "name": "un80-wp15-research",
+  "version": "0.1.0",
+  "private": true,
+  "description": "UN80 WP15 ICT consolidation and TAP research automation hub",
+  "scripts": {
+    "validate": "node scripts/validate-data.mjs",
+    "build:dashboard": "node scripts/build-dashboard.mjs",
+    "serve:dashboard": "npx --yes serve dashboard/dist -p 3456"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "yaml": "^2.7.0"
+  }
+}
