@@ -52,7 +52,11 @@ async function loadDashboard() {
     },
     {
       value: String(data.social_signal_count ?? 0),
-      label: "Social signals tracked",
+      label: "Social & news signals",
+    },
+    {
+      value: String(data.monitor?.agencies_registered ?? "—"),
+      label: "UN agencies monitored",
     },
   ];
 
@@ -144,6 +148,23 @@ async function loadDashboard() {
   listRoot.replaceChildren(
     ...signals.map((s) => el("li", { text: s.summary ?? s.topic ?? "Signal" }))
   );
+
+  const monitorRoot = document.getElementById("monitor-detail");
+  if (monitorRoot && data.monitor) {
+    const m = data.monitor;
+    monitorRoot.replaceChildren(
+      el("ul", {}, [
+        el("li", { text: `Agencies in registry: ${m.agencies_registered ?? "—"}` }),
+        el("li", { text: `System news feeds: ${m.system_feeds ?? "—"}` }),
+        el("li", {
+          text: `Automated feeds OK: ${m.feeds_ok != null ? `${m.feeds_ok}/${m.feeds_total}` : "run npm run check:monitor"}`,
+        }),
+        el("li", {
+          text: `Agent review (X/FB/LinkedIn): ${m.agent_review_agencies ?? "—"} agencies`,
+        }),
+      ])
+    );
+  }
 }
 
 loadDashboard().catch(console.error);

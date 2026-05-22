@@ -7,6 +7,9 @@
     "validate": "node scripts/validate-data.mjs",
     "build:dashboard": "node scripts/build-dashboard.mjs",
     "fetch:youtube": "node scripts/fetch-youtube-social.mjs",
+    "fetch:feeds": "node scripts/fetch-public-feeds.mjs",
+    "check:monitor": "node scripts/check-monitor-coverage.mjs",
+    "fetch:monitor": "npm run fetch:feeds && npm run check:monitor",
     "serve:dashboard": "npx --yes serve dashboard/dist -p 3456"
   },
   "devDependencies": {

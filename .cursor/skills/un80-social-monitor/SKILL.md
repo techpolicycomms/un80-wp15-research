@@ -1,41 +1,54 @@
 ---
 name: un80-social-monitor
-description: Monitor public X, Facebook, and YouTube posts from official UN agency accounts for WP15 topics (Action 61/62). Use for social monitoring automation runs.
+description: Monitor public news, X, Facebook, YouTube, LinkedIn, and Instagram from official UN agency accounts for WP15 topics (Action 61/62). Use for social monitoring automation runs.
 ---
 
 # UN80 Social Monitor
 
 ## Scope
 
-- **Public posts only** from accounts in `data/un-agencies-social.yaml`
-- Topics: ICT consolidation, shared services, cloud, cybersecurity, digital transformation, innovation, digital ID, AI
+- **Public posts and press releases only** from accounts in `data/un-agencies-social.yaml`
+- **25+ UN agencies** across tiers (ICT backbone, funds/programmes, specialized agencies)
+- Topics: ICT consolidation, shared services, cloud, cybersecurity, digital transformation, innovation, digital ID, AI, TAP
 - **Not** private messages, personal accounts, or leaked content
 
 ## Platforms
 
-### YouTube (automated)
-- Run `npm run fetch:youtube` to pull RSS feeds (no API key)
-- Write/update `data/social-monitor/YYYY-MM-DD-youtube.yaml`
+### News + YouTube (automated)
+- Run `npm run fetch:monitor` (or `fetch:feeds` + `check:monitor`)
+- System feeds: UN News, ReliefWeb UN, UN Global Pulse
+- Agency feeds: UNICC blog, WHO news, agency YouTube RSS where verified
+- Writes `data/social-monitor/YYYY-MM-DD-feeds.yaml` and updates `data/social-signals.yaml`
 
-### X (Twitter)
-- Review **public posts** from official handles listed in registry
-- Search recent posts for `monitoring_keywords`
-- Note: reliable high-volume monitoring may require **X API Basic** (document in PR if unavailable)
+### X, Facebook, LinkedIn, Instagram (agent review)
+- Each Wed run: review agencies in `agent_review_required` from coverage report
+- Search recent public posts for keyword tiers in `scripts/lib/monitor-keywords.mjs`
+- Assign **priority**: high (Action 61/62 specific), medium, low
 
-### Facebook
-- Review **public page posts** from official UN agency pages in registry
-- Meta Graph API optional for production scale (`META_PAGE_ACCESS_TOKEN` in env — not committed)
+### Signal scoring
+- **High**: ICC, shared services, cloud, cybersecurity, TAP, digital ID, DPG
+- **Medium**: digital transformation, AI, innovation
+- **Low**: general technology/digital mentions
 
 ## Output
 
-1. `data/social-monitor/YYYY-MM-DD-social.yaml` combining YouTube + X + Facebook signals
-2. Update `data/social-signals.yaml` rollup for dashboard
-3. Summary in `reports/YYYY-MM-DD-social-scan-summary.md`
-4. Notion **Social signals** row (data source TBD — use Sources inbox with platform tag if no dedicated DB)
-5. Open PR if material WP15 signals found
+1. `data/social-monitor/YYYY-MM-DD-feeds.yaml` — automated RSS scan
+2. `data/social-monitor/YYYY-MM-DD-social.yaml` — combined with agent-reviewed social
+3. `data/social-monitor/YYYY-MM-DD-coverage.yaml` — platform coverage health
+4. Update `data/social-signals.yaml` rollup
+5. `reports/YYYY-MM-DD-social-scan-summary.md`
+6. Notion Sources inbox + Living Analysis + Automation log
+7. Open PR if material WP15 signals found
+
+## Value-add checks each run
+
+- **Watch list**: tier-1 agencies with zero WP15 signals in 14 days
+- **Cross-reference**: dedupe URLs already in `data/secondary-sources/`
+- **Overlap flag**: social signal mentions same topic as `data/overlap-signals.yaml`
+- **Briefing feed**: high-priority signals tagged for monthly compiler
 
 ## Relevance
 
-- `action_61` — ICT, cloud, shared services, ICC
-- `action_62` — innovation, digital ID, AI, TAP
+- `action_61` — ICT, cloud, shared services, ICC, OICT, UNICC
+- `action_62` — innovation, digital ID, AI, TAP, UNDCO, UN Global Pulse
 - `both` — cross-cutting digital transformation
