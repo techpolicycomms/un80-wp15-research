@@ -143,3 +143,5 @@ cp .env.example .env
 - [Operations runbook](./docs/OPERATIONS.md)
 - [Automation setup](./automations/README.md)
 - [Notion hub setup](./docs/notion-setup.md)
+- [Webhook key rotation](./docs/WEBHOOK-KEY-ROTATION.md) (one-time security step)
+- [Email template for Talea & Nestor](./docs/email-talea-nestor.md)

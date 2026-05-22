@@ -1,0 +1,9 @@
+# Default reviewers for UN80 WP15 research hub
+# Replace @REPLACE-WITH-TALEA-GITHUB and @REPLACE-WITH-NESTOR-GITHUB when usernames are known
+
+* @techpolicycomms/rahuljha
+
+data/ @techpolicycomms/rahuljha
+data/secondary-sources/ @techpolicycomms/rahuljha
+reports/ @techpolicycomms/rahuljha
+automations/ @techpolicycomms/rahuljha
