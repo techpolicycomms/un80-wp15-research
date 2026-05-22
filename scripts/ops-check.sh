@@ -39,7 +39,10 @@ else
 fi
 echo ""
 
-echo "→ Live links"
+echo "→ Linear project"
+echo "  Board:    https://linear.app/ituinnovation-hub/project/un80-wp15-research-hub-1b948218cb9e"
+echo "  Guide:    docs/LINEAR.md"
+echo ""
 echo "  Dashboard:  https://techpolicycomms.github.io/un80-wp15-research/"
 echo "  GitHub:     https://github.com/techpolicycomms/un80-wp15-research"
 echo "  Notion hub: https://www.notion.so/36805383491f813fa227f709c187584a"

@@ -11,7 +11,9 @@ Automated research, monitoring, and reporting for **UN80 Work Package 15** — I
 | **Dashboard** | https://techpolicycomms.github.io/un80-wp15-research/ |
 | **GitHub** | https://github.com/techpolicycomms/un80-wp15-research |
 | **Notion hub** | https://www.notion.so/36805383491f813fa227f709c187584a |
+| **Linear project** | https://linear.app/ituinnovation-hub/project/un80-wp15-research-hub-1b948218cb9e |
 | **Operations runbook** | [docs/OPERATIONS.md](./docs/OPERATIONS.md) |
+| **Linear guide** | [docs/LINEAR.md](./docs/LINEAR.md) |
 
 ---
 

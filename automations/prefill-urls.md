@@ -53,6 +53,7 @@ Machine-readable definitions: [workflows.json](./workflows.json)
 ## Checklist
 
 - [ ] All **four** automations saved
+- [ ] **Linear MCP** + **Notion MCP** enabled on each automation
 - [ ] Webhook URL + API key in local `.env`
 - [ ] Notion MCP connected in Cursor
 - [ ] Test: `./scripts/trigger-webhook-example.sh`

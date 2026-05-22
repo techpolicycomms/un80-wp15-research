@@ -19,6 +19,13 @@ Trigger the same data validation and dashboard rebuild without adding a source. 
 
 Do NOT process raw survey responses in this repo. Reply that aggregate cross-reference is not yet enabled; log the event in Memories only.
 
+## Linear (enable Linear MCP)
+
+Follow `.cursor/skills/un80-linear-sync/SKILL.md`:
+
+1. Create or update `[run] Webhook ingest — YYYY-MM-DD` in **UN80 WP15 Research Hub**
+2. Attach PR link; **Done** when ingest PR opened or manual_refresh completes
+
 ## Constraints
 
 - Public secondary data only

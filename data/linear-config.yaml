@@ -1,0 +1,61 @@
+# Linear project management — canonical IDs and conventions
+meta:
+  updated: "2026-05-22"
+  team: ITUInnovation-hub
+  team_key: ITU
+
+project:
+  id: 89189b31-fef8-4aea-9e4f-94980dc33752
+  name: UN80 WP15 Research Hub
+  url: https://linear.app/ituinnovation-hub/project/un80-wp15-research-hub-1b948218cb9e
+
+milestones:
+  m1_foundation: M1 — Foundation
+  m2_automations: M2 — Automations live
+  m3_stakeholders: M3 — Stakeholder rollout
+  m4_ops: M4 — Steady-state ops
+
+tracking_issues:
+  social_monitor_import: ITU-121
+  boss_approval: ITU-122
+  x_api: ITU-123
+  webhook_rotation: ITU-124
+  linear_sync: ITU-125
+
+labels:
+  automation: automation
+  action_61: Action 61
+  action_62: Action 62
+  social: social
+  ops: ops
+
+# Each automation run creates a dated run issue (see .cursor/skills/un80-linear-sync/SKILL.md)
+run_issue_template:
+  title: "[run] {automation_name} — {date}"
+  team: ITUInnovation-hub
+  project: UN80 WP15 Research Hub
+  labels: [automation, ops]
+
+automations:
+  landscape_monitor:
+    name: Landscape scan
+    schedule: Mon 06:00 UTC
+    linear_label: automation
+  webhook_ingest:
+    name: Webhook ingest
+    schedule: on demand
+    linear_label: automation
+  briefing_compiler:
+    name: Briefing compiler
+    schedule: 1st of month 08:00 UTC
+    linear_label: automation
+  social_monitor:
+    name: Social & news monitor
+    schedule: Wed 07:00 UTC
+    linear_label: [automation, social]
+
+# Role split
+roles:
+  linear: Execution tracker — issues, milestones, PR links, blockers
+  notion: Editorial hub — briefings, scans, sources inbox, living analysis
+  github: Source of truth — data, reports, CI, dashboard

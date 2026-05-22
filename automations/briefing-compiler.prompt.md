@@ -20,6 +20,13 @@ Load and follow `.cursor/skills/un80-briefing-writer/SKILL.md`.
 
 Same as above but use today's date in filename and note "ad-hoc refresh" in the report header.
 
+## Linear (enable Linear MCP)
+
+Follow `.cursor/skills/un80-linear-sync/SKILL.md`:
+
+1. Create `[run] Briefing compiler — YYYY-MM` in **UN80 WP15 Research Hub**
+2. Attach GitHub PR + Notion briefing link; **Done** when draft published for review
+
 ## Constraints
 
 - Do not publish externally or mark as final
