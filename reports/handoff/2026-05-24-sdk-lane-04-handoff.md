@@ -1,6 +1,6 @@
 # SDK lane-04 handoff — 2026-05-24
 
-**agent_id:** `sdk-lane-04-2026-05-24-cursor-composer-session4` (resume SDK lane)  
+**agent_id:** `sdk-lane-04-2026-05-24-cursor-composer-session5` (resume SDK lane)  
 **Branch:** `sprint/review-bundle`  
 **Run type:** Full daily digest (SDK parallel lane)
 
@@ -12,10 +12,10 @@
 - [x] Phase 1 — `npm install`, `fetch:monitor`, `fetch:academic`, `validate`
 - [x] Phase 2 — Landscape scan YAML (`data/secondary-sources/2026-05-24-scan.yaml`) — no material delta
 - [x] Phase 3 — Social YAML + summary (`data/social-monitor/2026-05-24-*`, `reports/2026-05-24-social-scan-summary.md`)
-- [x] Phase 4 — Daily digest (`reports/2026-05-24-daily-digest.md`) with Tier A footnotes
+- [x] Phase 4 — Daily digest (`reports/2026-05-24-daily-digest.md`) with 4 Tier A footnotes
 - [x] Phase 4 — Claim verification (`reports/verification/2026-05-24-claims-for-review.md`)
-- [x] Phase 5 — `npm run validate && npm run build:dashboard && npm run verify:claims` — all pass (session4 re-verify)
-- [x] Phase 5 — PR #9 open on `sprint/review-bundle` — https://github.com/techpolicycomms/un80-wp15-research/pull/9
+- [x] Phase 5 — `npm run validate && npm run build:dashboard && npm run verify:claims` — all pass (session5 re-verify)
+- [x] Phase 5 — PR #9 open on `sprint/review-bundle` — https://github.com/techpolicycomms/un80-wp15-research/pull/9 (CI: validate-and-build pass)
 - [x] Phase 6 — Orchestrator handoff updated at `~/Projects/cursor-agent-orchestrator/workspaces/lanes/lane-04/artifacts/handoff/handoff.md`
 
 ## Deploy URL
@@ -33,7 +33,7 @@ https://techpolicycomms.github.io/un80-wp15-research/
 
 ## Next agent task
 
-On next daily run (2026-05-25 or resume with `--resume sdk-lane-04-2026-05-24-cursor-composer-session4`):
+On next daily run (2026-05-25 or resume with `--resume sdk-lane-04-2026-05-24-cursor-composer-session5`):
 
 1. Run `npm run fetch:monitor && npm run fetch:academic`.
 2. Check UNICC/ODET/ITU for new publications since 2026-05-23 — if found, update landscape YAML and overlap signals.
@@ -42,7 +42,7 @@ On next daily run (2026-05-25 or resume with `--resume sdk-lane-04-2026-05-24-cu
 5. Complete GPTZero review on claims checklist before any external distribution.
 6. Open PR with Linear `[run] SDK daily digest — YYYY-MM-DD` issue.
 
-Resume: `--resume sdk-lane-04-2026-05-24-cursor-composer-session4`
+Resume: `--resume sdk-lane-04-2026-05-24-cursor-composer-session5`
 
 ---
 
