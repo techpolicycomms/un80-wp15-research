@@ -1,0 +1,93 @@
+meta:
+  scan_date: "2026-05-23"
+  automation: first-iteration-review
+  disclaimer: DRAFT — public posts and press releases only
+  platforms: [news, youtube]
+  feeds_ok: 12
+  items_scanned: 96
+  wp15_signals: 14
+  high_priority: 8
+  agent_review_note: >-
+    X/Facebook/LinkedIn agent pass deferred to Wed automation; this file consolidates
+    automated RSS pass plus landscape cross-reference for first review bundle.
+
+signals:
+  - platform: news
+    agency: UN International Computing Centre
+    title: UNICC Hosts AI-Driven Crisis Simulation During Geneva Cyber Week
+    url: https://www.unicc.org/news/2026/05/15/unicc-hosts-ai-driven-crisis-simulation-during-geneva-cyber-week/
+    matched_keywords: [unicc, cybersecurity, ai]
+    priority: high
+    relevance: action_61
+    summary: UNICC-led cyber exercise demonstrates shared cybersecurity capacity — consolidation must treat security operations as core shared backbone.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UNICC Biennial Report 2024-2025
+    url: https://www.unicc.org/wp-content/uploads/2026/05/UNICC-2024-2025-Biennial-Report-1.pdf
+    matched_keywords: [unicc, shared services]
+    priority: high
+    relevance: action_61
+    summary: Latest biennial report — primary source for ICC service scale, client base, and strategic direction under Framework 2024–2030.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UN Virtual Worlds Day — AI and emerging tech for cities and communities
+    url: https://www.unicc.org/news/2026/05/13/un-virtual-worlds-day-calls-for-ai-and-emerging-tech-to-support-better-city-and-community-life/
+    matched_keywords: [ai, innovation, digital]
+    priority: high
+    relevance: both
+    summary: Cross-cutting digital innovation event hosted by UNICC — links Action 61 infrastructure provider role with Action 62 emerging tech portfolio.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UN Innovation Update (April 2026)
+    url: https://www.uninnovation.network/innovation-library/un-innovation-update-april-2026
+    matched_keywords: [innovation]
+    priority: high
+    relevance: action_62
+    summary: System innovation library update — relevant to TAP pipeline and demand sensing across entities.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: Enabling Secure and Resilient UN Operations in Bonn
+    url: https://www.unicc.org/news/2026/02/03/enabling-secure-and-resilient-un-operations-in-bonn/
+    matched_keywords: [unicc, cybersecurity]
+    priority: high
+    relevance: action_61
+    summary: Regional secure operations delivery — example of shared infrastructure supporting entity mandates.
+
+  - platform: news
+    agency: UN Global Pulse
+    title: Transforming Development — AI, Innovation & Partnerships for SDGs
+    url: https://www.unglobalpulse.org/transforming-development-ai-innovation-partnerships-for-the-sustainable-development-goals-sdgs/
+    matched_keywords: [ai, innovation]
+    priority: medium
+    relevance: action_62
+    summary: AI/innovation partnership framing aligned with TAP accelerator concept.
+
+  - platform: news
+    agency: UN News
+    title: Building the smart city — promise, pitfalls and people
+    url: https://news.un.org/feed/view/en/story/2026/05/1167564
+    matched_keywords: [digital, technology, innovation]
+    priority: medium
+    relevance: both
+    summary: UN News feature on inclusive digital urban innovation — contextual for digital transformation governance.
+
+  - platform: news
+    agency: World Health Organization
+    title: World Health Assembly — primary health care champions
+    url: https://www.who.int/news/item/20-05-2026-seventy-ninth-world-health-assembly-honours-global-champions-advancing-primary-health-care
+    matched_keywords: [digital, innovation]
+    priority: low
+    relevance: both
+    summary: Marginal WP15 relevance; retained for agency coverage completeness. Review for digital health sub-signals in full text if needed.
+
+watch_list:
+  - agency: UNDCO / ODET
+    note: No RSS hit this pass; monitor @UNDigitalEmerg on Wed run
+  - agency: ITU
+    note: YouTube RSS pending; monitor @ITU for standards/connectivity posts
+  - agency: WFP, UNDP, UNESCO
+    note: Agent review required — registered but no keyword hits in automated pass

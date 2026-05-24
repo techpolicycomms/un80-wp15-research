@@ -1,6 +1,6 @@
 # Signals of duplication and interoperability gaps (populated by automations)
 meta:
-  last_updated: "2026-05-22"
+  last_updated: "2026-05-23"
   disclaimer: Working document — public secondary evidence only
 
 signals:
@@ -13,4 +13,24 @@ signals:
     evidence_sources:
       - data/ict-spend-baseline.json
       - data/secondary-sources/2026-05-22-scan.yaml
+    confidence: medium
+
+  - id: sig-2026-05-23-002
+    topic: uniqcloud_shared_private_cloud_maturity
+    summary: >-
+      UNICC UNIQCloud (2025) provides OpenStack private cloud from UN data centres
+      with Management Committee pricing — demonstrates actionable consolidation path
+      for sensitive workloads alongside public/hybrid cloud strategies (Action 61).
+    evidence_sources:
+      - data/secondary-sources/2026-05-23-first-iteration-scan.yaml
+    confidence: high
+
+  - id: sig-2026-05-23-003
+    topic: odet_system_digital_focal_point
+    summary: >-
+      ODET (Jan 2025) centralizes UN system digital coordination (AI, DPI, open
+      source) — governance layer that consolidation (61) and TAP (62) must align
+      with to avoid parallel digital steering structures.
+    evidence_sources:
+      - data/secondary-sources/2026-05-23-first-iteration-scan.yaml
     confidence: medium
