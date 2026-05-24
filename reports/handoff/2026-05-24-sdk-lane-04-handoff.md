@@ -1,6 +1,6 @@
 # SDK lane-04 handoff — 2026-05-24
 
-**agent_id:** `agent-5989fdfd-591c-4a45-8cdd-d2eea01c9bf8` (orchestrator resume) · `sdk-lane-04-2026-05-24-cursor-composer` (SDK alias)  
+**agent_id:** `sdk-lane-04-2026-05-24-cursor-composer-session3` (resume SDK lane)  
 **Branch:** `sprint/review-bundle`  
 **Run type:** Full daily digest (SDK parallel lane)
 
@@ -16,7 +16,7 @@
 - [x] Phase 4 — Claim verification (`reports/verification/2026-05-24-claims-for-review.md`)
 - [x] Phase 5 — `npm run validate && npm run build:dashboard && npm run verify:claims` — all pass
 - [x] Phase 5 — PR #9 open on `sprint/review-bundle` — https://github.com/techpolicycomms/un80-wp15-research/pull/9
-- [x] Phase 5 — Re-verified `fetch:monitor`, `fetch:academic`, `validate`, `build:dashboard`, `verify:claims` (2026-05-24 SDK session ×2 — no new delta; 11 signals, 12/12 feeds OK)
+- [x] Phase 5 — Re-verified `fetch:monitor`, `fetch:academic`, `validate`, `build:dashboard`, `verify:claims` (2026-05-24 SDK session ×3 — no new delta; 11 signals, 12/12 feeds OK)
 - [x] Phase 6 — Orchestrator handoff updated at `~/Projects/cursor-agent-orchestrator/workspaces/lanes/lane-04/artifacts/handoff/handoff.md`
 - [x] Daily digest email workflow + academic rigour infrastructure included from prior iteration work
 
@@ -44,6 +44,8 @@ On next daily run (2026-05-25 or resume with `--resume sdk-lane-04-2026-05-24-cu
 4. Write `reports/2026-05-25-daily-digest.md`; on 1 June refresh Member State briefing.
 5. Complete GPTZero review on claims checklist before any external distribution.
 6. Open PR with Linear `[run] SDK daily digest — YYYY-MM-DD` issue.
+
+Resume: `--resume sdk-lane-04-2026-05-24-cursor-composer-session3`
 
 ---
 
