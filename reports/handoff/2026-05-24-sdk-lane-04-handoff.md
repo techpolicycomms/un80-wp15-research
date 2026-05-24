@@ -16,7 +16,7 @@
 - [x] Phase 4 — Claim verification (`reports/verification/2026-05-24-claims-for-review.md`)
 - [x] Phase 5 — `npm run validate && npm run build:dashboard && npm run verify:claims` — all pass
 - [x] Phase 5 — PR #9 open on `sprint/review-bundle` — https://github.com/techpolicycomms/un80-wp15-research/pull/9
-- [x] Phase 5 — Re-verified `fetch:monitor`, `fetch:academic`, `validate`, `build:dashboard`, `verify:claims` (2026-05-24 SDK session — no new delta)
+- [x] Phase 5 — Re-verified `fetch:monitor`, `fetch:academic`, `validate`, `build:dashboard`, `verify:claims` (2026-05-24 SDK session ×2 — no new delta; 11 signals, 12/12 feeds OK)
 - [x] Phase 6 — Orchestrator handoff updated at `~/Projects/cursor-agent-orchestrator/workspaces/lanes/lane-04/artifacts/handoff/handoff.md`
 - [x] Daily digest email workflow + academic rigour infrastructure included from prior iteration work
 
