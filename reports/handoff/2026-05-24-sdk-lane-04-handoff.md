@@ -15,7 +15,8 @@
 - [x] Phase 4 — Daily digest (`reports/2026-05-24-daily-digest.md`) with Tier A footnotes
 - [x] Phase 4 — Claim verification (`reports/verification/2026-05-24-claims-for-review.md`)
 - [x] Phase 5 — `npm run validate && npm run build:dashboard && npm run verify:claims` — all pass
-- [x] Phase 5 — PR opened on `sprint/review-bundle`
+- [x] Phase 5 — PR #9 open on `sprint/review-bundle` — https://github.com/techpolicycomms/un80-wp15-research/pull/9
+- [x] Phase 5 — Re-verified `validate`, `build:dashboard`, `verify:claims` (2026-05-24 SDK session)
 - [x] Daily digest email workflow + academic rigour infrastructure included from prior iteration work
 
 ## Deploy URL
@@ -29,7 +30,8 @@ https://techpolicycomms.github.io/un80-wp15-research/
 - **Linear MCP** — not available in this SDK session; Linear sync notes included in PR body for manual issue creation (`[run] SDK daily digest — 2026-05-24`).
 - **GPTZero claim review** — human gate required; checklist prepared, not yet run.
 - **X/FB/LinkedIn agent pass** — 18 agencies deferred; ITU-121 tracks Social Monitor import.
-- **Orchestrator handoff path** — `~/Projects/cursor-agent-orchestrator/workspaces/lanes/lane-04/artifacts/handoff/` not present locally; this file serves as repo-local handoff.
+- **Daily digest email CI** — `send` job failed on PR branch (SMTP secrets likely unset); does not block data PR merge.
+- **Orchestrator handoff** — also at `~/Projects/cursor-agent-orchestrator/workspaces/lanes/lane-04/artifacts/handoff/handoff.md`.
 
 ## Next agent task
 
