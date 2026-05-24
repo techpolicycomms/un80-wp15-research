@@ -1,6 +1,6 @@
 # SDK lane-04 handoff — 2026-05-24
 
-**agent_id:** `sdk-lane-04-2026-05-24-cursor-composer`  
+**agent_id:** `agent-5989fdfd-591c-4a45-8cdd-d2eea01c9bf8` (orchestrator resume) · `sdk-lane-04-2026-05-24-cursor-composer` (SDK alias)  
 **Branch:** `sprint/review-bundle`  
 **Run type:** Full daily digest (SDK parallel lane)
 
@@ -16,7 +16,8 @@
 - [x] Phase 4 — Claim verification (`reports/verification/2026-05-24-claims-for-review.md`)
 - [x] Phase 5 — `npm run validate && npm run build:dashboard && npm run verify:claims` — all pass
 - [x] Phase 5 — PR #9 open on `sprint/review-bundle` — https://github.com/techpolicycomms/un80-wp15-research/pull/9
-- [x] Phase 5 — Re-verified `validate`, `build:dashboard`, `verify:claims` (2026-05-24 SDK session)
+- [x] Phase 5 — Re-verified `fetch:monitor`, `fetch:academic`, `validate`, `build:dashboard`, `verify:claims` (2026-05-24 SDK session — no new delta)
+- [x] Phase 6 — Orchestrator handoff updated at `~/Projects/cursor-agent-orchestrator/workspaces/lanes/lane-04/artifacts/handoff/handoff.md`
 - [x] Daily digest email workflow + academic rigour infrastructure included from prior iteration work
 
 ## Deploy URL
