@@ -1,0 +1,15 @@
+meta:
+  scan_date: "2026-05-22"
+  automation: webhook-source-ingest
+  disclaimer: DRAFT — public secondary sources only
+
+findings:
+  - source:
+      title: Example public source — ICC shared services
+      url: https://www.unicc.org/
+      type: organization
+    relevance: action_61
+    topic: shared_ict_services
+    summary: >-
+      Test ingest from trigger-webhook-example.sh
+    confidence: medium
