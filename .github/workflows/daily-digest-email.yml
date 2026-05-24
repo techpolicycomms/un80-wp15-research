@@ -1,0 +1,44 @@
+name: Daily digest email
+
+on:
+  push:
+    paths:
+      - "reports/**-daily-digest.md"
+  workflow_dispatch:
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build HTML body
+        id: build
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_REF_NAME: ${{ github.ref_name }}
+        run: |
+          PAYLOAD=$(node scripts/build-digest-email.mjs)
+          echo "date=$(echo "$PAYLOAD" | node -e "process.stdout.write(JSON.parse(require('fs').readFileSync(0,'utf8')).date)")" >> "$GITHUB_OUTPUT"
+          {
+            echo 'html<<EOF'
+            echo "$PAYLOAD" | node -e "process.stdout.write(JSON.parse(require('fs').readFileSync(0,'utf8')).html)"
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Send email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: UN80 WP15 Daily Digest (DRAFT) — ${{ steps.build.outputs.date }}
+          to: ${{ secrets.DIGEST_EMAIL_TO }}
+          from: ${{ secrets.DIGEST_EMAIL_FROM }}
+          html_body: ${{ steps.build.outputs.html }}

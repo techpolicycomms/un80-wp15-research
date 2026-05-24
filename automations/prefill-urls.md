@@ -52,8 +52,30 @@ Machine-readable definitions: [workflows.json](./workflows.json)
 
 ## Checklist
 
-- [ ] All **four** automations saved
-- [ ] **Linear MCP** + **Notion MCP** enabled on each automation
+- [ ] **Daily Digest (merged)** saved — [§5 below](#5-un80-daily-digest-merged) — **08:00 CEST**
+- [ ] **Disable cron** on old Landscape (§1), Social (§4), Briefing (§3) automations
+- [ ] GitHub **SMTP secrets** set — [docs/DAILY-DIGEST.md](../docs/DAILY-DIGEST.md)
+- [ ] **Linear MCP** + **Notion MCP** on Daily Digest + Webhook
 - [ ] Webhook URL + API key in local `.env`
-- [ ] Notion MCP connected in Cursor
-- [ ] Test: `./scripts/trigger-webhook-example.sh`
+- [ ] Test email: Actions → **Daily digest email** → Run workflow
+- [ ] Test webhook: `./scripts/trigger-webhook-example.sh`
+
+---
+
+## 5. UN80 Daily Digest (merged) — **primary schedule**
+
+- **Schedule:** `0 6 * * *` (**08:00 CEST** / 06:00 UTC)
+- **Winter (CET):** change to `0 7 * * *` in Cursor UI
+- **Prompt:** [daily-digest.prompt.md](./daily-digest.prompt.md)
+- **Docs:** [DAILY-DIGEST.md](../docs/DAILY-DIGEST.md)
+- **Email:** GitHub Action → `rahul.jha@itu.int`
+
+**Import:** [Open prefill → Daily Digest (merged)](https://cursor.com/automations/new?prefill=eyJuYW1lIjoiVU44MCBEYWlseSBEaWdlc3QgKG1lcmdlZCkiLCJkZXNjcmlwdGlvbiI6IkRhaWx5IDA4OjAwIENFU1Qg4oCUIGxhbmRzY2FwZSArIHNvY2lhbCArIGRpZ2VzdCArIGVtYWlsIHZpYSBHaXRIdWIgQWN0aW9ucyIsIndvcmtmbG93Ijp7ImF1dGhvclRleHQiOiJSdW4gdGhlIGNvbnNvbGlkYXRlZCBkYWlseSBVTjgwIFdQMTUgZGlnZXN0LlxuXG5Mb2FkIGAuY3Vyc29yL3NraWxscy91bjgwLWRhaWx5LWRpZ2VzdC9TS0lMTC5tZGAgYW5kIGZvbGxvdyBgYXV0b21hdGlvbnMvZGFpbHktZGlnZXN0LnByb21wdC5tZGAuXG5cbkFsd2F5cyB3cml0ZSByZXBvcnRzL1lZWVktTU0tREQtZGFpbHktZGlnZXN0Lm1kIGFuZCBvcGVuIFBSIGRpZ2VzdDogZGFpbHkgV1AxNSDigJQgWVlZWS1NTS1ERC5cblxuRFJBRlQgb25seS4gUHVibGljIHNlY29uZGFyeSBkYXRhLiIsImdpdENvbmNpZ2I6eyJyZXBvc2l0b3J5IjoidGVjaHBvbGljeWNvbW1zL3VuODAtd3AxNS1yZXNlYXJjaCIsImJyYW5jaCI6Im1haW4ifSwibWVtb3J5RW5hYmxlZCI6dHJ1ZSwidHJpZ2dlcnMiOlt7ImNyb25UcmlnZ2VyIjp7ImNyb25FeHByZXNzaW9uIjoiMCA2ICogKiAqIn19XX19)
+
+> Supersedes scheduled runs in §1, §3 (cron), and §4. Keep §2 Webhook.
+
+---
+
+## Legacy automations (disable cron after §5 is live)
+
+## 1. UN80 Weekly Landscape Monitor

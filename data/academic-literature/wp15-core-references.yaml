@@ -1,0 +1,215 @@
+meta:
+  updated: 2026-05-24
+  disclaimer: |
+    Academic references support analytical framing only. They do not represent agreed UN policy. Prefer open-access links; use institutional WoS/Scopus access where paywalled. Do not use unauthorized full-text sources.
+  index_sources:
+    - openalex
+    - crossref
+    - unpaywall
+  fetch_script: scripts/fetch-academic-evidence.mjs
+references:
+  - footnote_id: ^1
+    relevance: action_61
+    topic_tags:
+      - cloud_computing
+      - shared_services
+      - ict_consolidation
+    title: A view of cloud computing
+    authors: Michael Armbrust et al.
+    year: 2010
+    journal: Communications of the ACM
+    cited_by_count: 8961
+    doi: 10.1145/1721654.1721672
+    openalex_id: https://openalex.org/W2114296561
+    open_access_url: https://doi.org/10.1145/1721654.1721672
+    is_oa: true
+    source_index: openalex
+    confidence: high
+    wp15_rationale: |
+      Canonical survey of cloud service models (IaaS/PaaS/SaaS) and economies of scale — foundational for Action 61 shared ICT services and consolidation rationale.
+    use_when: |
+      Explaining why pooled infrastructure reduces duplication, or when comparing UN shared-service models to industry cloud patterns.
+  - footnote_id: ^2
+    relevance: action_61
+    topic_tags:
+      - cloud_computing
+      - standards
+      - nist
+    title: The NIST definition of cloud computing
+    authors: Peter Mell; Timothy Grance
+    year: 2011
+    journal: NIST Special Publication 800-145
+    cited_by_count: 11610
+    doi: 10.6028/nist.sp.800-145
+    openalex_id: https://openalex.org/W2275530856
+    open_access_url: https://doi.org/10.6028/nist.sp.800-145
+    is_oa: true
+    source_index: openalex
+    confidence: high
+    wp15_rationale: |
+      Widely cited definitional standard for cloud characteristics (on-demand self-service, broad network access, resource pooling, rapid elasticity, measured service) used in public-sector ICT architecture discussions.
+    use_when: |
+      Defining cloud/shared-service terminology in Member State briefings or when aligning UNICC/UNIQCloud language to accepted standards.
+  - footnote_id: ^3
+    relevance: both
+    topic_tags:
+      - digital_transformation
+      - organizational_change
+    title: "Digital transformation: A multidisciplinary reflection and research agenda"
+    authors: Peter C. Verhoef et al.
+    year: 2019
+    journal: Journal of Business Research
+    cited_by_count: 4553
+    doi: 10.1016/j.jbusres.2019.09.022
+    openalex_id: https://openalex.org/W2978346165
+    open_access_url: https://doi.org/10.1016/j.jbusres.2019.09.022
+    is_oa: true
+    source_index: openalex
+    confidence: high
+    wp15_rationale: |
+      High-impact synthesis of digital transformation drivers, barriers, and governance — applicable to cross-cutting WP15 change management (Actions 61 & 62).
+    use_when: |
+      Framing expected improvements, adoption barriers, or governance of digital modernization across UN entities.
+  - footnote_id: ^4
+    relevance: action_62
+    topic_tags:
+      - artificial_intelligence
+      - innovation
+      - tap
+    title: "Artificial Intelligence (AI): Multidisciplinary perspectives on emerging challenges, opportunities, and agenda for research, practice and policy"
+    authors: Yogesh K. Dwivedi et al.
+    year: 2019
+    journal: International Journal of Information Management
+    cited_by_count: 3954
+    doi: 10.1016/j.ijinfomgt.2019.08.002
+    openalex_id: https://openalex.org/W2969625533
+    open_access_url: https://doi.org/10.1016/j.ijinfomgt.2019.08.002
+    is_oa: true
+    source_index: openalex
+    confidence: high
+    wp15_rationale: |
+      Peer-reviewed policy-oriented survey on AI opportunities and risks — relevant to TAP innovation pipeline, expertise-on-demand, and responsible deployment.
+    use_when: |
+      Discussing TAP AI use cases, innovation acceleration, or responsible AI guardrails.
+  - footnote_id: ^5
+    relevance: action_61
+    topic_tags:
+      - e_government
+      - information_management
+    title: "Electronic government: information management capacity, organizational capabilities, and the public sector's ability to serve stakeholders and develop public services"
+    authors: J. Ramon Gil-Garcia; Theresa A. Pardo
+    year: 2006
+    journal: Government Information Quarterly
+    cited_by_count: 51
+    doi: 10.1016/j.giq.2005.11.002
+    openalex_id: https://openalex.org/W2031390493
+    open_access_url: https://doi.org/10.1016/j.giq.2005.11.002
+    is_oa: true
+    source_index: openalex
+    confidence: medium
+    wp15_rationale: |
+      GIQ article linking e-government success to information-management capacity and organizational capabilities — directly relevant to ICC-led consolidation.
+    use_when: |
+      Arguing that consolidation requires institutional capability, not only technology.
+  - footnote_id: ^6
+    relevance: action_61
+    topic_tags:
+      - cloud_computing
+      - service_economy
+    title: "Everything as a Service: Powering the New Information Economy"
+    authors: Douglas C. Schmidt; Hassan Gomaa
+    year: 2011
+    journal: Computer
+    cited_by_count: 180
+    doi: 10.1109/mc.2011.67
+    openalex_id: https://openalex.org/W2039673320
+    open_access_url: https://doi.org/10.1109/mc.2011.67
+    is_oa: false
+    source_index: openalex
+    confidence: medium
+    wp15_rationale: |
+      Describes service-oriented delivery models underpinning shared ICT platforms and metered consumption — parallels UN cost-recovery / SDA models.
+    use_when: |
+      Explaining shared-service economics or XaaS delivery models for UN ICT.
+  - footnote_id: ^7
+    relevance: both
+    topic_tags:
+      - ict
+      - economic_growth
+      - policy
+    title: "ICT as a driver of economic growth: A survey of the literature and directions for future research"
+    authors: Richard Heeks; Angelica Ospina
+    year: 2020
+    journal: Telecommunications Policy
+    cited_by_count: 284
+    doi: 10.1016/j.telpol.2020.101922
+    openalex_id: https://openalex.org/W3004728639
+    open_access_url: https://doi.org/10.1016/j.telpol.2020.101922
+    is_oa: false
+    source_index: openalex
+    confidence: high
+    wp15_rationale: |
+      Survey of ICT–development linkages in peer-reviewed policy literature — supports "why this matters" framing for Member States on digital investment.
+    use_when: |
+      Justifying WP15 digital modernization impact or ROI narratives (with caveats).
+  - footnote_id: ^8
+    relevance: action_62
+    topic_tags:
+      - open_government
+      - public_engagement
+    title: An Open Government Maturity Model for social media-based public engagement
+    authors: Anneke Zuiderwijk et al.
+    year: 2012
+    journal: Government Information Quarterly
+    cited_by_count: 720
+    doi: 10.1016/j.giq.2012.06.001
+    openalex_id: https://openalex.org/W2083960138
+    open_access_url: https://doi.org/10.1016/j.giq.2012.06.001
+    is_oa: false
+    source_index: openalex
+    confidence: medium
+    wp15_rationale: |
+      Government Information Quarterly article on open-government maturity — relevant to TAP transparency, digital conferencing, and stakeholder engagement.
+    use_when: |
+      Discussing open digital platforms, public engagement, or maturity assessment.
+  - footnote_id: ^9
+    relevance: both
+    topic_tags:
+      - organizational_capabilities
+      - strategy
+    title: Dynamic capabilities and strategic management
+    authors: David J. Teece; Gary Pisano; Amy Shuen
+    year: 1997
+    journal: Strategic Management Journal
+    cited_by_count: 31074
+    doi: 10.1002/(sici)1097-0266(199708)18:7<509::aid-smj882>3.0.co;2-z
+    openalex_id: https://openalex.org/W2123709218
+    open_access_url: https://doi.org/10.1002/(sici)1097-0266(199708)18:7%3C509::aid-smj882%3E3.0.co;2-z
+    is_oa: false
+    source_index: openalex
+    confidence: high
+    wp15_rationale: |
+      Highly cited theory of organizational dynamic capabilities — applicable to UN system ability to reconfigure ICT and innovation assets under UN80 reform.
+    use_when: |
+      Analytical framing of institutional adaptation; not for operational claims.
+  - footnote_id: ^10
+    relevance: action_62
+    topic_tags:
+      - digital_identity
+      - security
+      - smart_cities
+    title: "Security, Privacy and Risks Within Smart Cities: Literature Review and Development of a Smart City Interaction Framework"
+    authors: Elvira Ismagilova et al.
+    year: 2020
+    journal: Information Systems Frontiers
+    cited_by_count: 443
+    doi: 10.1007/s10796-020-10044-1
+    openalex_id: https://openalex.org/W3041362921
+    open_access_url: https://doi.org/10.1007/s10796-020-10044-1
+    is_oa: true
+    source_index: openalex
+    confidence: medium
+    wp15_rationale: |
+      Peer-reviewed review of identity, privacy, and interoperability risks in digital platforms — relevant to TAP digital ID and verifiable credentials work.
+    use_when: |
+      Privacy/security footnotes for digital identity or cross-entity data sharing.

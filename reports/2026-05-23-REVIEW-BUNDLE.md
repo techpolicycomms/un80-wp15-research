@@ -54,6 +54,8 @@
 ### 3. Briefing (Member State / CEB-style draft)
 
 - [ ] Read [2026-05-member-state-update.md](./2026-05-member-state-update.md)
+- [ ] Check **References** footnotes against `data/academic-literature/wp15-core-references.yaml`
+- [ ] Run `npm run verify:claims` and review via [GPTZero](https://gptzero.me/hallucination-detector)
 - [ ] Mark anything too strong for external use
 - [ ] Copy approved sections to Notion Briefings when ready
 

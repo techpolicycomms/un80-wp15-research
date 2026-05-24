@@ -12,12 +12,16 @@ description: Scan public secondary sources for UN ICT consolidation and TAP inno
 - Interoperability standards bodies (W3C, OASIS, ISO public summaries)
 - Cloud provider public architecture / government sector pages (no pricing claims without citation)
 - Academic and think-tank reports on digital public infrastructure
+- Peer-reviewed literature via OpenAlex metadata (`npm run fetch:academic`) — link DOI when citing
 
 ## Do NOT use
 
 - Paywalled content without license
+- Sci-Hub or other unauthorized full-text sources
 - Leaked or unofficial documents
 - Internal UN restricted materials
+
+Load `.cursor/skills/un80-academic-evidence/SKILL.md` when adding scholarly framing to summaries.
 
 ## Output
 

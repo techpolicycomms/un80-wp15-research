@@ -44,6 +44,13 @@
 
 {{NEXT_STEPS}}
 
+## References
+
+<!-- Tier A: peer-reviewed footnotes from data/academic-literature/wp15-core-references.yaml -->
+{{ACADEMIC_FOOTNOTES}}
+
 ---
 
 *Generated from [un80-wp15-research](https://github.com/techpolicycomms/un80-wp15-research) — human review required before distribution.*
+
+*Claim verification: run `npm run verify:claims` and review via [GPTZero Hallucination Detector](https://gptzero.me/hallucination-detector) — see [docs/ACADEMIC-RIGOUR.md](https://github.com/techpolicycomms/un80-wp15-research/blob/main/docs/ACADEMIC-RIGOUR.md).*

@@ -1,6 +1,6 @@
 You maintain the UN80 WP15 research repository (public secondary data only).
 
-Load and follow the skill at `.cursor/skills/un80-landscape-monitor/SKILL.md`.
+Load and follow the skill at `.cursor/skills/un80-landscape-monitor/SKILL.md` and `.cursor/skills/un80-academic-evidence/SKILL.md` when citing scholarly sources.
 
 ## Tasks
 

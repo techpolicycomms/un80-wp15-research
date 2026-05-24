@@ -1,0 +1,55 @@
+# OpenAlex search queries for supplemental literature discovery.
+# Results are filtered by relevance keywords before merge into wp15-core-references.yaml.
+
+queries:
+  - id: cloud_shared_services
+    relevance: action_61
+    search: "cloud computing shared services public sector"
+    min_citations: 100
+    per_page: 8
+    relevance_keywords:
+      - cloud
+      - shared service
+      - public sector
+      - government
+      - consolidation
+      - enterprise architecture
+      - ict
+
+  - id: e_government_interop
+    relevance: both
+    search: "e-government interoperability digital government"
+    min_citations: 80
+    per_page: 8
+    relevance_keywords:
+      - e-government
+      - egovernment
+      - interoperability
+      - digital government
+      - public administration
+      - open data
+
+  - id: digital_public_infrastructure
+    relevance: action_62
+    search: "digital public infrastructure identity"
+    min_citations: 50
+    per_page: 8
+    relevance_keywords:
+      - digital public
+      - digital identity
+      - verifiable
+      - infrastructure
+      - open source
+      - platform
+
+  - id: ai_governance
+    relevance: action_62
+    search: "artificial intelligence governance public sector"
+    min_citations: 150
+    per_page: 6
+    relevance_keywords:
+      - artificial intelligence
+      - governance
+      - public sector
+      - policy
+      - ethics

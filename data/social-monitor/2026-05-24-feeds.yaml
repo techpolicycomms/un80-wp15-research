@@ -1,0 +1,287 @@
+meta:
+  scan_date: 2026-05-24
+  automation: fetch-public-feeds
+  disclaimer: DRAFT — public posts and press releases only
+  feeds_checked: 12
+  feeds_ok: 12
+  items_scanned: 96
+  wp15_signals: 11
+  high_priority: 8
+feed_results:
+  - feed_id: un-news-all
+    feed_name: UN News (all topics)
+    platform: news
+    relevance: both
+    url: https://news.un.org/feed/subscribe/en/news/all/rss.xml
+    status: 200
+    items_scanned: 8
+    signals_found: 1
+  - feed_id: un-global-pulse
+    feed_name: UN Global Pulse
+    platform: news
+    relevance: action_62
+    url: https://www.unglobalpulse.org/feed/
+    status: 200
+    items_scanned: 8
+    signals_found: 1
+  - agency_id: un-secretariat
+    agency_name: United Nations Secretariat
+    platform: youtube
+    relevance: both
+    url: https://www.youtube.com/feeds/videos.xml?user=UnitedNations
+    status: 200
+    items_scanned: 8
+    signals_found: 0
+  - agency_id: unicc
+    agency_name: UN International Computing Centre
+    platform: news
+    relevance: action_61
+    url: https://www.unicc.org/feed/
+    status: 200
+    items_scanned: 8
+    signals_found: 8
+  - agency_id: unicef
+    agency_name: UNICEF
+    platform: youtube
+    relevance: both
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UC-PhoMIVWsstY-VVtUIe-Og
+    status: 200
+    items_scanned: 8
+    signals_found: 0
+  - agency_id: who
+    agency_name: World Health Organization
+    platform: news
+    relevance: both
+    url: https://www.who.int/rss-feeds/news-english.xml
+    status: 200
+    items_scanned: 8
+    signals_found: 1
+  - agency_id: who
+    agency_name: World Health Organization
+    platform: youtube
+    relevance: both
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCT7a_fVlSrjOs9jyvtH-uhA
+    status: 200
+    items_scanned: 8
+    signals_found: 0
+  - agency_id: unhcr
+    agency_name: UNHCR
+    platform: youtube
+    relevance: both
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCEsqtq4czNXTQdtlf5qKlYA
+    status: 200
+    items_scanned: 8
+    signals_found: 0
+  - agency_id: undp
+    agency_name: UNDP
+    platform: youtube
+    relevance: both
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCkt7CZkWK4B2hPDyaKquX2w
+    status: 200
+    items_scanned: 8
+    signals_found: 0
+  - agency_id: un-women
+    agency_name: UN Women
+    platform: youtube
+    relevance: both
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCVuYWigp4VwOsJhrcfYDlXw
+    status: 200
+    items_scanned: 8
+    signals_found: 0
+  - agency_id: unesco
+    agency_name: UNESCO
+    platform: youtube
+    relevance: action_62
+    url: https://www.youtube.com/feeds/videos.xml?user=UNESCO
+    status: 200
+    items_scanned: 8
+    signals_found: 0
+  - agency_id: fao
+    agency_name: FAO
+    platform: youtube
+    relevance: both
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCM93UMoQKlj_8wTACRvl1iQ
+    status: 200
+    items_scanned: 8
+    signals_found: 0
+signals:
+  - agency_id: un-news-all
+    agency_name: UN News (all topics)
+    platform: news
+    title: Ebola risk ‘very high’ in eastern DR Congo as UN intensifies response
+    url: https://news.un.org/feed/view/en/story/2026/05/1167575
+    published: Fri, 22 May 2026 12:00:00 +0000
+    matched_keywords:
+      - ict
+    keyword_tiers:
+      - general_low
+    priority: low
+    relevance: both
+    summary: The UN is rushing emergency personnel, funding and supplies into
+      eastern Democratic Republic of the Congo (DRC) to counter the fast-growing
+      Ebola outbreak spreading through conflict-ravaged provinces.
+    wp15_signal: true
+  - agency_id: un-global-pulse
+    agency_name: UN Global Pulse
+    platform: news
+    title: "Transforming Development: AI, Innovation &#038; Partnerships for the
+      Sustainable Development Goals (SDGs)"
+    url: https://www.unglobalpulse.org/transforming-development-ai-innovation-partnerships-for-the-sustainable-development-goals-sdgs/
+    published: Thu, 11 Sep 2025 13:58:20 +0000
+    matched_keywords:
+      - innovation
+    keyword_tiers:
+      - both_medium
+    priority: medium
+    relevance: both
+    summary: "Transforming Development: AI, Innovation &#038; Partnerships for the
+      Sustainable Development Goals (SDGs)"
+    wp15_signal: true
+  - agency_id: unicc
+    agency_name: UN International Computing Centre
+    platform: news
+    title: UNICC Hosts AI-Driven Crisis Simulation During Geneva Cyber Week
+    url: https://www.unicc.org/news/2026/05/15/unicc-hosts-ai-driven-crisis-simulation-during-geneva-cyber-week/
+    published: Fri, 15 May 2026 11:04:33 +0000
+    matched_keywords:
+      - unicc
+    keyword_tiers:
+      - action_61_high
+    priority: high
+    relevance: action_61
+    summary: The post UNICC Hosts AI-Driven Crisis Simulation During Geneva Cyber
+      Week appeared first on UNICC . ]]>
+    wp15_signal: true
+  - agency_id: unicc
+    agency_name: UN International Computing Centre
+    platform: news
+    title: UNICC Biennial Report 2024-2025
+    url: https://www.unicc.org/wp-content/uploads/2026/05/UNICC-2024-2025-Biennial-Report-1.pdf#new_tab
+    published: Wed, 13 May 2026 19:20:39 +0000
+    matched_keywords:
+      - unicc
+    keyword_tiers:
+      - action_61_high
+    priority: high
+    relevance: action_61
+    summary: The post UNICC Biennial Report 2024-2025 appeared first on UNICC . ]]>
+    wp15_signal: true
+  - agency_id: unicc
+    agency_name: UN International Computing Centre
+    platform: news
+    title: UN Virtual Worlds Day Calls for AI and Emerging Tech to Support Better
+      City and Community Life
+    url: https://www.unicc.org/news/2026/05/13/un-virtual-worlds-day-calls-for-ai-and-emerging-tech-to-support-better-city-and-community-life/
+    published: Wed, 13 May 2026 13:25:13 +0000
+    matched_keywords:
+      - unicc
+      - ai
+    keyword_tiers:
+      - action_61_high
+      - both_medium
+    priority: high
+    relevance: action_61
+    summary: The post UN Virtual Worlds Day Calls for AI and Emerging Tech to
+      Support Better City and Community Life appeared first on UNICC . ]]>
+    wp15_signal: true
+  - agency_id: unicc
+    agency_name: UN International Computing Centre
+    platform: news
+    title: UN Innovation Update (April 2026)
+    url: https://www.uninnovation.network/innovation-library/un-innovation-update-april-2026#new_tab
+    published: Fri, 24 Apr 2026 08:07:32 +0000
+    matched_keywords:
+      - unicc
+      - innovation
+    keyword_tiers:
+      - action_61_high
+      - both_medium
+    priority: high
+    relevance: action_61
+    summary: The post UN Innovation Update (April 2026) appeared first on UNICC . ]]>
+    wp15_signal: true
+  - agency_id: unicc
+    agency_name: UN International Computing Centre
+    platform: news
+    title: "Inspiring the Next Generation of Women in Tech: Girls in ICT Day"
+    url: https://www.unicc.org/news/2026/04/23/gict-day-celebration-2026/
+    published: Thu, 23 Apr 2026 15:21:22 +0000
+    matched_keywords:
+      - unicc
+      - ict
+    keyword_tiers:
+      - action_61_high
+      - general_low
+    priority: high
+    relevance: action_61
+    summary: "The post Inspiring the Next Generation of Women in Tech: Girls in ICT
+      Day appeared first on UNICC . ]]>"
+    wp15_signal: true
+  - agency_id: unicc
+    agency_name: UN International Computing Centre
+    platform: news
+    title: UNICC Recognized with Multiple UN-SWAP Awards for Sustained Performance
+      on Gender Equality
+    url: https://www.unicc.org/news/2026/02/13/unicc-recognized-with-multiple-un-swap-awards-for-sustained-performance-on-gender-equality/
+    published: Fri, 13 Feb 2026 10:50:55 +0000
+    matched_keywords:
+      - unicc
+    keyword_tiers:
+      - action_61_high
+    priority: high
+    relevance: action_61
+    summary: The post UNICC Recognized with Multiple UN-SWAP Awards for Sustained
+      Performance on Gender Equality appeared first on UNICC . ]]>
+    wp15_signal: true
+  - agency_id: unicc
+    agency_name: UN International Computing Centre
+    platform: news
+    title: Enabling Secure and Resilient UN Operations in Bonn
+    url: https://www.unicc.org/news/2026/02/03/enabling-secure-and-resilient-un-operations-in-bonn/
+    published: Tue, 03 Feb 2026 12:09:45 +0000
+    matched_keywords:
+      - unicc
+    keyword_tiers:
+      - action_61_high
+    priority: high
+    relevance: action_61
+    summary: The post Enabling Secure and Resilient UN Operations in Bonn appeared
+      first on UNICC . ]]>
+    wp15_signal: true
+  - agency_id: unicc
+    agency_name: UN International Computing Centre
+    platform: news
+    title: "UN Today: UNICC 55 Years of Shared Innovation"
+    url: https://untoday.org/december-2025-january-2026/#new_tab
+    published: Fri, 23 Jan 2026 21:08:40 +0000
+    matched_keywords:
+      - unicc
+      - innovation
+    keyword_tiers:
+      - action_61_high
+      - both_medium
+    priority: high
+    relevance: action_61
+    summary: "The post UN Today: UNICC 55 Years of Shared Innovation appeared first
+      on UNICC . ]]>"
+    wp15_signal: true
+  - agency_id: who
+    agency_name: World Health Organization
+    platform: news
+    title: Seventy-ninth World Health Assembly honours global champions advancing
+      primary health care
+    url: https://www.who.int/news/item/20-05-2026-seventy-ninth-world-health-assembly-honours-global-champions-advancing-primary-health-care
+    published: Wed, 20 May 2026 10:57:07 Z
+    matched_keywords:
+      - innovation
+      - digital
+    keyword_tiers:
+      - both_medium
+      - general_low
+    priority: medium
+    relevance: both
+    summary: <p>Today, the World Health Assembly recognized individuals and
+      institutions whose contributions to global health have gone far beyond the
+      call of duty. <a
+      href="https://www.who.int/news-room/feature-stories/detail/primary-health-care-champions-celebrated-at-the-seventy-ninth-worl
+    wp15_signal: true

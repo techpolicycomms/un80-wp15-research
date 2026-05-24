@@ -2,11 +2,19 @@
   "status": "operational",
   "operational_since": "2026-05-22",
   "live_automations": {
+    "daily_digest": {
+      "automation_id": null,
+      "url": null,
+      "trigger": "cron: 0 6 * * * (08:00 CEST)",
+      "enabled": false,
+      "note": "Import via prefill-urls.md §5; disable landscape/social/briefing crons after save"
+    },
     "landscape_monitor": {
       "automation_id": "9267c6a1-fd79-4d72-81ca-6415647ab198",
       "url": "https://cursor.com/automations/9267c6a1-fd79-4d72-81ca-6415647ab198",
       "trigger": "cron: 0 6 * * 1",
-      "enabled": true
+      "enabled": true,
+      "superseded_by": "daily_digest"
     },
     "webhook_ingest": {
       "automation_id": "132e3dc9-f9c7-4b80-97e0-8ad28449282a",
@@ -18,13 +26,16 @@
       "automation_id": "50fd2872-5154-49ee-a71f-31c3ffc0a058",
       "url": "https://cursor.com/automations/50fd2872-5154-49ee-a71f-31c3ffc0a058",
       "trigger": "cron: 0 8 1 * *",
-      "enabled": true
+      "enabled": true,
+      "superseded_by": "daily_digest",
+      "note": "Optional: disable cron; daily digest refreshes member-state briefing on 1st"
     },
     "social_monitor": {
       "automation_id": "7b162585-6d97-4e1c-8476-6f2548b9315c",
       "url": "https://cursor.com/automations/7b162585-6d97-4e1c-8476-6f2548b9315c",
       "trigger": "cron: 0 7 * * 3",
-      "enabled": true
+      "enabled": true,
+      "superseded_by": "daily_digest"
     }
   },
   "landscape_monitor": {
@@ -103,6 +114,28 @@
     },
     "tools": ["open_pull_request", "memories", "mcp_notion"],
     "prefill_url": "https://cursor.com/automations/new?prefill=eyJuYW1lIjoiVU44MCBTb2NpYWwgTW9uaXRvciIsImRlc2NyaXB0aW9uIjoiV2VkIHB1YmxpYyBzb2NpYWwgc2NhbiDigJQgWCwgRmFjZWJvb2ssIFlvdVR1YmUgZm9yIFVOIGFnZW5jaWVzIG9uIFdQMTUgdG9waWNzIiwid29ya2Zsb3ciOnsiYXV0aG9yVGV4dCI6IkxvYWQgYC5jdXJzb3Ivc2tpbGxzL3VuODAtc29jaWFsLW1vbml0b3IvU0tJTEwubWRgIGFuZCBgZGF0YS91bi1hZ2VuY2llcy1zb2NpYWwueWFtbGAuIFJ1biBucG0gcnVuIGZldGNoOnlvdXR1YmUuIFJldmlldyBwdWJsaWMgWCBhbmQgRmFjZWJvb2sgZnJvbSByZWdpc3RyeS4gV3JpdGUgZGF0YS9zb2NpYWwtbW9uaXRvci9ZWVlZLU1NLURELXNvY2lhbC55YW1sLCB1cGRhdGUgZGF0YS9zb2NpYWwtc2lnbmFscy55YW1sLCBvcGVuIFBSLCB1cGRhdGUgTm90aW9uIFdQMTUgTGl2aW5nIEFuYWx5c2lzIHBhZ2UuIiwiZ2l0Q29uZmlnIjp7ImJyYW5jaCI6Im1haW4iLCJyZXBvc2l0b3J5IjoidGVjaHBvbGljeWNvbW1zL3VuODAtd3AxNS1yZXNlYXJjaCJ9LCJtZW1vcnlFbmFibGVkIjp0cnVlLCJ0cmlnZ2VycyI6W3siY3JvblRyaWdnZXIiOnsiY3JvbkV4cHJlc3Npb24iOiIwIDcgKiAqIDMifX1dfX0"
+  },
+  "daily_digest": {
+    "name": "UN80 Daily Digest (merged)",
+    "description": "Daily 08:00 CEST — landscape + social + digest; email via GitHub Actions",
+    "schedule": "cron: 0 6 * * *",
+    "schedule_note": "08:00 CEST = 06:00 UTC; use 0 7 * * * for 08:00 CET (winter)",
+    "workflow": {
+      "authorText": "Run consolidated daily digest per automations/daily-digest.prompt.md and .cursor/skills/un80-daily-digest/SKILL.md.\n\nAlways write reports/YYYY-MM-DD-daily-digest.md and open PR.\n\nDRAFT only.",
+      "gitConfig": {
+        "repository": "techpolicycomms/un80-wp15-research",
+        "branch": "main"
+      },
+      "memoryEnabled": true,
+      "triggers": [{ "cronTrigger": { "cronExpression": "0 6 * * *" } }]
+    },
+    "tools": ["open_pull_request", "memories", "mcp_notion"],
+    "email": {
+      "workflow": ".github/workflows/daily-digest-email.yml",
+      "default_recipient": "rahul.jha@itu.int",
+      "secrets": ["DIGEST_EMAIL_TO", "DIGEST_EMAIL_FROM", "SMTP_SERVER", "SMTP_PORT", "SMTP_USERNAME", "SMTP_PASSWORD"]
+    },
+    "prefill_url": "https://cursor.com/automations/new?prefill=eyJuYW1lIjoiVU44MCBEYWlseSBEaWdlc3QgKG1lcmdlZCkiLCJkZXNjcmlwdGlvbiI6IkRhaWx5IDA4OjAwIENFU1Qg4oCUIGxhbmRzY2FwZSArIHNvY2lhbCArIGRpZ2VzdCArIGVtYWlsIHZpYSBHaXRIdWIgQWN0aW9ucyIsIndvcmtmbG93Ijp7ImF1dGhvclRleHQiOiJSdW4gdGhlIGNvbnNvbGlkYXRlZCBkYWlseSBVTjgwIFdQMTUgZGlnZXN0LlxuXG5Mb2FkIGAuY3Vyc29yL3NraWxscy91bjgwLWRhaWx5LWRpZ2VzdC9TS0lMTC5tZGAgYW5kIGZvbGxvdyBgYXV0b21hdGlvbnMvZGFpbHktZGlnZXN0LnByb21wdC5tZGAuXG5cbkFsd2F5cyB3cml0ZSByZXBvcnRzL1lZWVktTU0tREQtZGFpbHktZGlnZXN0Lm1kIGFuZCBvcGVuIFBSIGRpZ2VzdDogZGFpbHkgV1AxNSDigJQgWVlZWS1NTS1ERC5cblxuRFJBRlQgb25seS4gUHVibGljIHNlY29uZGFyeSBkYXRhLiIsImdpdENvbmZpZyI6eyJyZXBvc2l0b3J5IjoidGVjaHBvbGljeWNvbW1zL3VuODAtd3AxNS1yZXNlYXJjaCIsImJyYW5jaCI6Im1haW4ifSwibWVtb3J5RW5hYmxlZCI6dHJ1ZSwidHJpZ2dlcnMiOlt7ImNyb25UcmlnZ2VyIjp7ImNyb25FeHByZXNzaW9nIjoiMCA2ICogKiAqIn19XX19"
   },
   "notion_ids": {
     "hub_page_id": "36805383-491f-813f-a227-f709c187584a",
