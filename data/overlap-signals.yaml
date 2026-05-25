@@ -1,6 +1,6 @@
 # Signals of duplication and interoperability gaps (populated by automations)
 meta:
-  last_updated: "2026-05-23"
+  last_updated: "2026-05-25"
   disclaimer: Working document — public secondary evidence only
 
 signals:
@@ -33,4 +33,28 @@ signals:
       with to avoid parallel digital steering structures.
     evidence_sources:
       - data/secondary-sources/2026-05-23-first-iteration-scan.yaml
+    confidence: medium
+
+  - id: sig-2026-05-25-004
+    topic: un_digital_id_interagency_reuse
+    summary: >-
+      ITU/WSIS public materials describe UNJSPF/UNICC digital identity work and
+      UN Digital ID expansion from pensions to BSAFE mandatory training and
+      inter-agency movements, with multiple UN entities joining. TAP digital ID
+      work should reuse and interoperate with this emerging UN identity rail
+      rather than create a parallel credential system.
+    evidence_sources:
+      - data/secondary-sources/2026-05-25-scan.yaml
+    confidence: high
+
+  - id: sig-2026-05-25-005
+    topic: conferencing_stack_interoperability
+    summary: >-
+      UNICC RSI/event management services, Indico.UN's Zoom and conference-system
+      integrations, and UN Geneva FAST/WIPO AI transcripts show existing
+      interoperable components for modern conferencing. TAP conferencing pilots
+      should connect these assets instead of introducing a stand-alone meeting
+      stack.
+    evidence_sources:
+      - data/secondary-sources/2026-05-25-scan.yaml
     confidence: medium

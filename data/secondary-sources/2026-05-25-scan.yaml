@@ -1,0 +1,176 @@
+meta:
+  scan_date: "2026-05-25"
+  automation: weekly-landscape-monitor
+  disclaimer: DRAFT - public secondary sources only; not agreed UN position
+
+findings:
+  - source:
+      title: "United to Deliver: UN80 Initiative Action Plan"
+      url: "https://www.un.org/un80-initiative/sites/default/files/2025-11/UN80_Initiative_Action_Plan.pdf"
+      type: un_system
+    relevance: action_62
+    topic: tap_system_enabler
+    summary: >-
+      The public UN80 Action Plan places Work Package 15 under Action 62 and
+      describes the Technology Accelerator Platform as a lean, system-wide joint
+      programme intended to scale limited UN digital and AI expertise. It also
+      links TAP to savings from scaled shared ICT services, reinforcing the
+      Action 61/62 dependency.
+    confidence: high
+
+  - source:
+      title: "UN presents UN80 Initiative Action Plan, setting coordinated path for system-wide reforms"
+      url: "https://news.un.org/en/story/2025/11/1166429"
+      type: un_system
+    relevance: both
+    topic: system_operational_enablers
+    summary: >-
+      UN News reports that the UN80 Action Plan gives prominent place to joining
+      up operational enablers including common data, shared technology platforms,
+      unified back-office services, and a simpler approach to training and
+      research. This is public framing for why ICT consolidation and TAP should
+      be coordinated rather than run as isolated tracks.
+    confidence: high
+
+  - source:
+      title: "Services Overview - UNICC"
+      url: "https://www.unicc.org/what-we-do/services-overview/"
+      type: organization
+    relevance: both
+    topic: shared_digital_service_catalog
+    summary: >-
+      UNICC's current services overview states that it maximizes the shared
+      services model for over 90 clients and lists cloud, network, Microsoft 365,
+      digital identity, AI operations, remote simultaneous interpretation, and
+      event management services. The breadth of the catalog is direct evidence
+      for Action 61 service consolidation and provides reusable components for
+      TAP use cases under Action 62.
+    confidence: high
+
+  - source:
+      title: "UNICC Presents New ICT Services and Service Catalogue"
+      url: "https://www.unicc.org/news/2019/11/07/unicc-presents-new-ict-services-and-service-catalogue/"
+      type: press_release
+    relevance: action_61
+    topic: office_cloud_platform_overlap
+    summary: >-
+      UNICC's public service-catalogue announcement identifies Microsoft Office
+      365 Management, Microsoft Azure Management, cloud web hosting, Dynamics
+      365, ServiceNow, and RPA services as shared offerings for UN clients. These
+      categories map directly to the Action 61 overlap areas of cloud, office
+      software, and enterprise platforms.
+    confidence: high
+
+  - source:
+      title: "UNICC Joins UN OICT as a Winner for 2020 Secretary General Awards"
+      url: "https://www.unicc.org/news/2021/03/15/unicc-messaging-team-a-finalist-for-2020-secretary-general-awards/"
+      type: press_release
+    relevance: action_61
+    topic: shared_workplace_collaboration
+    summary: >-
+      UNICC describes dedicated M365 collaboration services for 58,000 UN
+      Secretariat users across headquarters, field missions, offices away from
+      headquarters, and regional commissions, including Teams, OneDrive for
+      Business, and SharePoint Online. The case is concrete evidence of scaled
+      shared workplace infrastructure already operating across a major UN user
+      base.
+    confidence: high
+
+  - source:
+      title: "Session 235 - Digital identity solutions: opportunities and challenges in the pursuit of the SDGs"
+      url: "https://www.itu.int/net4/wsis/forum/2025/en/Agenda/Session/235"
+      type: un_system
+    relevance: action_62
+    topic: digital_id_interoperability
+    summary: >-
+      The WSIS+20 session page describes UNICC leadership of the UN Digital ID
+      initiative and presents the UNJSPF Digital Certificate of Entitlement as a
+      blockchain and biometric identity solution serving pension beneficiaries.
+      It frames UN Digital ID as a unified identity approach to streamline
+      verification and collaboration across the UN workforce.
+    confidence: high
+
+  - source:
+      title: "WSIS+20 Session 235 outcome document - UNJSPF and UNICC"
+      url: "http://www.itu.int/net4/wsis/forum/2025/es/Files/View/DOC/34d8b5011f63f01188b8005056a84dbd/outcomedocument_session_235_unjspf_unicc.pdf"
+      type: un_system
+    relevance: action_62
+    topic: digital_id_reuse
+    summary: >-
+      The public outcome document says the Digital Certificate of Entitlement
+      and UN Digital ID are concrete examples of digitalization, automation, and
+      UN partnerships; it also says UN Digital ID addresses data fragmentation
+      and is expanding from pensions to BSAFE mandatory training and inter-agency
+      movements. This is clear evidence for TAP digital ID reuse and
+      interoperability planning.
+    confidence: high
+
+  - source:
+      title: "UN Innovation Network"
+      url: "https://www.uninnovation.network/"
+      type: un_system
+    relevance: action_62
+    topic: expertise_platform_innovation_pipeline
+    summary: >-
+      UNIN is a collaborative community of UN innovators open to all UN entities
+      and external partners, with topic groups including Digital, Generative AI,
+      Blockchain, and Innovation Scaling. Its public page says colleagues from
+      over 70 entities in over 180 countries have joined, making it relevant
+      infrastructure for TAP expertise discovery and innovation pipeline design.
+    confidence: high
+
+  - source:
+      title: "UN Innovation Network | Innovation Library"
+      url: "https://www.uninnovation.network/innovation-library"
+      type: un_system
+    relevance: action_62
+    topic: innovation_library_reuse
+    summary: >-
+      UNIN's Innovation Library is a living library of UN-led webinars and
+      publications, with 99 listed resources at scan time including UN 2.0
+      Digital and Data Expos, AI resources, digital identity discussions, and
+      scaling guidance. TAP can use this as a public signal of existing
+      innovation-pipeline and knowledge-sharing assets to avoid duplicating
+      discovery work.
+    confidence: medium
+
+  - source:
+      title: "UN: After the Meeting | The United Nations Office at Geneva"
+      url: "https://www.ungeneva.org/en/meetings-events/official-meetings/organizers/un-entities/after-meeting"
+      type: un_system
+    relevance: action_62
+    topic: modern_conferencing_ai
+    summary: >-
+      UN Geneva describes the Fully Automated Speech to Text project, delivered
+      with WIPO AI, which provides automatic transcripts in the six UN official
+      languages alongside public meeting recordings. This is an existing UN
+      conferencing technology component relevant to TAP's modern conferencing
+      use-case space.
+    confidence: medium
+
+  - source:
+      title: "Indico.UN FAQ - The United Nations Office at Geneva"
+      url: "https://www.ungeneva.org/en/faq/705"
+      type: un_system
+    relevance: action_62
+    topic: conference_management_interoperability
+    summary: >-
+      UN Geneva describes Indico.UN as the global standard for UN system event
+      management, a hosted SaaS built on CERN open-source technology and
+      integrated with Zoom plus selected Secretariat conference-management
+      systems. This is a public interoperability signal for any TAP work on
+      modern conferencing.
+    confidence: medium
+
+  - source:
+      title: "Annex I: Global Digital Compact | Pact for the Future"
+      url: "https://www.un.org/pact-for-the-future/en/annex-i-global-digital-compact"
+      type: un_system
+    relevance: action_62
+    topic: digital_public_infrastructure_standards
+    summary: >-
+      The Global Digital Compact commits to resilient, safe, inclusive and
+      interoperable digital public infrastructure, adoption of open standards,
+      and exchange of DPI best practices and use cases. This supplies public
+      standards context for TAP digital ID and reusable digital solution work.
+    confidence: high
