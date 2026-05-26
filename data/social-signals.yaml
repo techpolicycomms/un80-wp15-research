@@ -1,7 +1,7 @@
 meta:
-  last_updated: 2026-05-22
+  last_updated: 2026-05-24
   disclaimer: Public official posts only — DRAFT
-  total_signals: 16
+  total_signals: 17
 signals:
   - id: soc-2026-05-22-001
     date: 2026-05-22
@@ -215,3 +215,16 @@ signals:
       cities are embracing technology at an unprecedented scale. But as
       innovation accelerates, experts warn that inclusion, trust and security
       will determine who truly benefits.
+  - id: soc-2026-05-24-017
+    date: 2026-05-24
+    platform: news
+    agency: UN News (all topics)
+    title: Ebola risk ‘very high’ in eastern DR Congo as UN intensifies response
+    url: https://news.un.org/feed/view/en/story/2026/05/1167575
+    matched_keywords:
+      - ict
+    priority: low
+    relevance: both
+    summary: The UN is rushing emergency personnel, funding and supplies into
+      eastern Democratic Republic of the Congo (DRC) to counter the fast-growing
+      Ebola outbreak spreading through conflict-ravaged provinces.

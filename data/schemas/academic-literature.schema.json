@@ -1,0 +1,68 @@
+{
+  "$id": "academic-literature.schema.json",
+  "type": "object",
+  "required": ["meta", "references"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["updated", "disclaimer", "index_sources"],
+      "properties": {
+        "updated": { "type": "string", "format": "date" },
+        "disclaimer": { "type": "string" },
+        "index_sources": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "fetch_script": { "type": "string" }
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "footnote_id",
+          "relevance",
+          "title",
+          "authors",
+          "year",
+          "cited_by_count",
+          "confidence",
+          "wp15_rationale"
+        ],
+        "properties": {
+          "footnote_id": {
+            "type": "string",
+            "pattern": "^\\^[0-9]+$"
+          },
+          "relevance": {
+            "enum": ["action_61", "action_62", "both"]
+          },
+          "topic_tags": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "title": { "type": "string" },
+          "authors": { "type": "string" },
+          "year": { "type": "integer" },
+          "journal": { "type": ["string", "null"] },
+          "cited_by_count": { "type": "integer", "minimum": 0 },
+          "doi": { "type": ["string", "null"] },
+          "openalex_id": { "type": ["string", "null"], "format": "uri" },
+          "open_access_url": { "type": ["string", "null"], "format": "uri" },
+          "is_oa": { "type": "boolean" },
+          "source_index": {
+            "enum": ["openalex", "crossref", "manual", "institutional_wos", "institutional_scopus"]
+          },
+          "confidence": { "enum": ["low", "medium", "high"] },
+          "wp15_rationale": { "type": "string" },
+          "use_when": { "type": "string" },
+          "verified_in_report": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

@@ -52,4 +52,19 @@ for (const file of readdirSync(secondaryDir).filter((f) => f.endsWith(".yaml")))
   }
 }
 
+const academicPath = join(root, "data/academic-literature/wp15-core-references.yaml");
+if (readFileSync(academicPath, "utf8")) {
+  const academicSchema = JSON.parse(
+    readFileSync(join(root, "data/schemas/academic-literature.schema.json"), "utf8")
+  );
+  const validateAcademic = ajv.compile(academicSchema);
+  const academicContent = yaml.parse(readFileSync(academicPath, "utf8"));
+  if (!validateAcademic(academicContent)) {
+    console.error("FAIL data/academic-literature/wp15-core-references.yaml:", validateAcademic.errors);
+    failed = true;
+  } else {
+    console.log("OK   data/academic-literature/wp15-core-references.yaml");
+  }
+}
+
 process.exit(failed ? 1 : 0);

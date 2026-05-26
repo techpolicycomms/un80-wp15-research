@@ -1,0 +1,107 @@
+meta:
+  scan_date: 2026-05-22
+  disclaimer: Auto-discovered candidates — NOT approved for report footnotes until merged into wp15-core-references.yaml after human review.
+  query_file: data/academic-literature/search-queries.yaml
+candidates:
+  - footnote_id: (pending)
+    relevance: action_62
+    topic_tags:
+      - ai_governance
+    title: "Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI"
+    authors: Alejandro Barredo Arrieta; Natalia Díaz-Rodríguez; Javier Del Ser
+    year: 2019
+    journal: Information Fusion
+    cited_by_count: 8758
+    doi: 10.1016/j.inffus.2019.12.012
+    openalex_id: https://openalex.org/W2981731882
+    open_access_url: http://arxiv.org/abs/1910.10045
+    is_oa: true
+    source_index: openalex
+    confidence: high
+    wp15_rationale: Discovered via query "ai_governance"; requires human curation before footnoting.
+    use_when: Review and assign use_when before citing in a briefing.
+  - footnote_id: (pending)
+    relevance: action_62
+    topic_tags:
+      - digital_public_infrastructure
+    title: Fog computing and its role in the internet of things
+    authors: Flavio Bonomi; Rodolfo Milito; Jiang Zhu
+    year: 2012
+    journal: null
+    cited_by_count: 5948
+    doi: 10.1145/2342509.2342513
+    openalex_id: https://openalex.org/W2114623221
+    open_access_url: https://doi.org/10.1145/2342509.2342513
+    is_oa: true
+    source_index: openalex
+    confidence: high
+    wp15_rationale: Discovered via query "digital_public_infrastructure"; requires human curation before footnoting.
+    use_when: Review and assign use_when before citing in a briefing.
+  - footnote_id: (pending)
+    relevance: action_61
+    topic_tags:
+      - cloud_shared_services
+    title: "The Astropy Project: Sustaining and Growing a Community-oriented Open-source Project and the Latest Major Release (v5.0) of the Core Package"
+    authors: Adrian M. Price-Whelan; LIM, Pey Lian; A. Zonca
+    year: 2022
+    journal: Research Portal (Queen's University Belfast)
+    cited_by_count: 4459
+    doi: 10.3847/1538-4357/ac7c74
+    openalex_id: https://openalex.org/W4293212596
+    open_access_url: https://pure.qub.ac.uk/en/publications/fd0be0d9-bac4-4be0-a926-db4b8f6143e4
+    is_oa: true
+    source_index: openalex
+    confidence: high
+    wp15_rationale: Discovered via query "cloud_shared_services"; requires human curation before footnoting.
+    use_when: Review and assign use_when before citing in a briefing.
+  - footnote_id: (pending)
+    relevance: both
+    topic_tags:
+      - e_government_interop
+    title: "ChEMBL: a large-scale bioactivity database for drug discovery"
+    authors: Anna Gaulton; Louisa J. Bellis; A. Patrícia Bento
+    year: 2011
+    journal: Nucleic Acids Research
+    cited_by_count: 4406
+    doi: 10.1093/nar/gkr777
+    openalex_id: https://openalex.org/W2096541451
+    open_access_url: https://doi.org/10.1093/nar/gkr777
+    is_oa: true
+    source_index: openalex
+    confidence: high
+    wp15_rationale: Discovered via query "e_government_interop"; requires human curation before footnoting.
+    use_when: Review and assign use_when before citing in a briefing.
+  - footnote_id: (pending)
+    relevance: action_61
+    topic_tags:
+      - cloud_shared_services
+    title: "Opinion Paper: “So what if ChatGPT wrote it?” Multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI for research, practice and policy"
+    authors: Yogesh K. Dwivedi; Nir Kshetri; Laurie Hughes
+    year: 2023
+    journal: International Journal of Information Management
+    cited_by_count: 3560
+    doi: 10.1016/j.ijinfomgt.2023.102642
+    openalex_id: https://openalex.org/W4360620450
+    open_access_url: https://doi.org/10.1016/j.ijinfomgt.2023.102642
+    is_oa: true
+    source_index: openalex
+    confidence: high
+    wp15_rationale: Discovered via query "cloud_shared_services"; requires human curation before footnoting.
+    use_when: Review and assign use_when before citing in a briefing.
+  - footnote_id: (pending)
+    relevance: action_62
+    topic_tags:
+      - ai_governance
+    title: "AI4People—An Ethical Framework for a Good AI Society: Opportunities, Risks, Principles, and Recommendations"
+    authors: Luciano Floridi; Josh Cowls; Monica Beltrametti
+    year: 2018
+    journal: Minds and Machines
+    cited_by_count: 3346
+    doi: 10.1007/s11023-018-9482-5
+    openalex_id: https://openalex.org/W2902634493
+    open_access_url: https://doi.org/10.1007/s11023-018-9482-5
+    is_oa: true
+    source_index: openalex
+    confidence: high
+    wp15_rationale: Discovered via query "ai_governance"; requires human curation before footnoting.
+    use_when: Review and assign use_when before citing in a briefing.

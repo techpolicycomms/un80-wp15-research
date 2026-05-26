@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UN80 WP15 — Research Findings &amp; Agent Test Report (2026-05-24)</title>
+  <style>
+    :root { --ink: #1a1a2e; --muted: #4a5568; --accent: #005a8c; --border: #cbd5e0; --warn-bg: #fff8e6; }
+    * { box-sizing: border-box; }
+    body { font-family: "Segoe UI", system-ui, sans-serif; color: var(--ink); max-width: 920px; margin: 0 auto; padding: 2rem 2.5rem; font-size: 11pt; line-height: 1.55; }
+    h1 { font-size: 1.6rem; color: var(--accent); margin: 0 0 0.25rem; }
+    h2 { font-size: 1.12rem; color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 0.2rem; margin-top: 1.75rem; page-break-after: avoid; }
+    h3 { font-size: 1rem; margin-top: 1.1rem; page-break-after: avoid; }
+    h4 { font-size: 0.95rem; margin-top: 0.9rem; color: var(--muted); }
+    .meta { color: var(--muted); font-size: 0.9rem; }
+    .disclaimer { background: var(--warn-bg); border: 1px solid #e2c200; padding: 0.85rem 1rem; border-radius: 4px; font-size: 0.88rem; margin: 1rem 0; }
+    table { width: 100%; border-collapse: collapse; margin: 0.6rem 0 1rem; font-size: 0.86rem; }
+    th, td { border: 1px solid var(--border); padding: 0.4rem 0.55rem; text-align: left; vertical-align: top; }
+    th { background: #edf2f7; }
+    tr:nth-child(even) td { background: #f7fafc; }
+    .pass { color: #276749; font-weight: 600; }
+    .warn { color: #b7791f; font-weight: 600; }
+    ul, ol { margin: 0.35rem 0 0.75rem; padding-left: 1.3rem; }
+    li { margin: 0.2rem 0; }
+    a { color: var(--accent); word-break: break-word; }
+    code { font-family: ui-monospace, Consolas, monospace; font-size: 0.85em; background: #edf2f7; padding: 0.08em 0.3em; border-radius: 3px; }
+    .digest-box, .finding-box { background: #f7fafc; border: 1px solid var(--border); padding: 1rem 1.15rem; border-radius: 4px; margin: 0.75rem 0; }
+    .digest-box p { margin: 0.4rem 0; }
+    .tag { display: inline-block; background: #e2e8f0; padding: 0.1em 0.45em; border-radius: 3px; font-size: 0.78rem; margin-right: 0.25rem; }
+    .tag-high { background: #fed7d7; }
+    .tag-med { background: #feebc8; }
+    .tag-low { background: #e2e8f0; }
+    .page-break { page-break-before: always; }
+    .toc ol { padding-left: 1.2rem; font-size: 0.92rem; }
+    @media print {
+      body { padding: 0.65in; font-size: 9.5pt; }
+      a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.75em; color: var(--muted); }
+      .no-print { display: none; }
+    }
+    .no-print { background: #ebf8ff; border: 1px solid #90cdf4; padding: 0.65rem 1rem; border-radius: 4px; margin-bottom: 1rem; font-size: 0.88rem; }
+  </style>
+</head>
+<body>
+
+<p class="no-print"><strong>Export to PDF:</strong> File → Print → Save as PDF (enable Background graphics).</p>
+
+<h1>UN80 WP15 Research Hub<br/>Findings &amp; Agent Orchestration Test Report</h1>
+<p class="meta">
+  <strong>Report date:</strong> 24 May 2026 &nbsp;|&nbsp; <strong>Scan date:</strong> 2026-05-24 &nbsp;|&nbsp; <strong>Status:</strong> DRAFT — internal pilot<br/>
+  <strong>PR under review:</strong> <a href="https://github.com/techpolicycomms/un80-wp15-research/pull/9">#9 digest: SDK lane-04 WP15 — 2026-05-24</a><br/>
+  <strong>Dashboard:</strong> <a href="https://techpolicycomms.github.io/un80-wp15-research/">techpolicycomms.github.io/un80-wp15-research</a>
+</p>
+
+<div class="disclaimer">
+  <strong>DRAFT — Not an official UN position.</strong> All findings below are working documents from automated and agent-assisted monitoring of <em>public secondary sources</em>. They require human editorial review and GPTZero claim verification before Member State or external distribution.
+</div>
+
+<h2>Contents</h2>
+<ol class="toc">
+  <li>Executive summary</li>
+  <li>Landscape monitoring findings</li>
+  <li>Overlap &amp; consolidation signals</li>
+  <li>Social &amp; news monitoring findings</li>
+  <li>Academic rigour &amp; evidence base</li>
+  <li>Daily digest (authored output)</li>
+  <li>Member State briefing context</li>
+  <li>Validation &amp; claim verification</li>
+  <li>System architecture (orchestration)</li>
+  <li>Test methodology &amp; next steps</li>
+</ol>
+
+<!-- ========== EXECUTIVE SUMMARY ========== -->
+<h2>1. Executive summary</h2>
+<p>
+  On <strong>24 May 2026</strong>, the UN80 WP15 research hub completed an automated daily pass covering
+  <strong>Action 61</strong> (ICT consolidation) and <strong>Action 62</strong> (Technology Accelerator Platform).
+  The pass scanned <strong>96 news/RSS items</strong> across <strong>27 registered agencies</strong>,
+  refreshed the academic citation index via OpenAlex, and produced a structured daily digest with Tier-A footnotes.
+</p>
+<table>
+  <thead><tr><th>Finding area</th><th>Headline result</th></tr></thead>
+  <tbody>
+    <tr><td>Landscape (public secondary sources)</td><td><strong>No material delta</strong> vs 2026-05-23 baseline — prior UNIQCloud, ODET, WIPO audit, and UNICC RFP evidence remains current</td></tr>
+    <tr><td>Social / RSS monitor</td><td><strong>11 WP15 signals</strong> (8 high priority); <strong>12/12 feeds OK</strong>; UNICC dominates Action 61</td></tr>
+    <tr><td>Delta vs prior day</td><td>+1 low-priority UN News false positive (Ebola story — <code>ict</code> substring match); no new high-priority signals</td></tr>
+    <tr><td>Academic literature</td><td><strong>10 core references</strong> enriched in library; <strong>6 OpenAlex discovery candidates</strong> flagged for human curation</td></tr>
+    <tr><td>Validation</td><td><span class="pass">PASS</span> — <code>npm run validate</code>, <code>build:dashboard</code>, <code>verify:claims</code></td></tr>
+    <tr><td>Human gates pending</td><td><span class="warn">18 agencies</span> need X/Facebook/LinkedIn review; GPTZero on 14 extracted claims; PR merge</td></tr>
+  </tbody>
+</table>
+
+<!-- ========== LANDSCAPE ========== -->
+<h2 class="page-break">2. Landscape monitoring findings</h2>
+
+<h3>2.1 Daily pass — 24 May 2026</h3>
+<div class="finding-box">
+  <p><strong>Scan file:</strong> <code>data/secondary-sources/2026-05-24-scan.yaml</code></p>
+  <p><strong>Result:</strong> No new public secondary sources beyond the 2026-05-23 first-iteration scan.</p>
+  <p><strong>Assessment:</strong> UNIQCloud, ODET, Digital Cooperation Portal, WIPO audit, and UNICC RFP evidence remain current. Re-run landscape when UNICC, ODET, or standards bodies publish new material.</p>
+  <p><strong>Confidence:</strong> High</p>
+</div>
+
+<h3>2.2 Baseline landscape evidence (2026-05-23) — still governing today's analysis</h3>
+<p>Because today's pass found no new sources, the following <strong>seven findings</strong> from the first-iteration scan remain the active landscape evidence base:</p>
+
+<table>
+  <thead>
+    <tr><th>Source</th><th>Action</th><th>Topic</th><th>Summary</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://www.unicc.org/what-we-do/uniqcloud/">UNICC UNIQCloud</a></td>
+      <td>61</td>
+      <td>Shared cloud consolidation</td>
+      <td>OpenStack private cloud (launched Jan 2025) operating exclusively from UN data centres with UN-managed cybersecurity. Vendor independence, predictable pricing via Management Committee — direct evidence of mature shared cloud backbone.</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.unicc.org/news/2025/01/30/unicc-introduces-uniqcloud-a-private-cloud-solution-tailored-for-the-un-and-international-organizations/">UNIQCloud launch announcement</a></td>
+      <td>61</td>
+      <td>Cloud strategy</td>
+      <td>UNICC positions UNIQCloud under Strategic Framework 2024–2030 as digital/cybersecurity partner for 100+ organizations — consolidation around shared facilities vs fragmented entity contracts.</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.un.org/odet">UN Office for Digital and Emerging Technologies (ODET)</a></td>
+      <td>Both</td>
+      <td>System digital coordination</td>
+      <td>ODET (est. 1 Jan 2025) — system-wide focal point for AI governance, digital public infrastructure, open source, digital transformation. Governance context for Actions 61 &amp; 62.</td>
+    </tr>
+    <tr>
+      <td><a href="https://unctad.org/news/un-launches-new-portal-digital-cooperation">UN Digital Cooperation Portal</a></td>
+      <td>62</td>
+      <td>Innovation ecosystem</td>
+      <td>ODET-led portal aggregating Global Digital Compact initiatives; AI maps related activities — supports TAP demand sensing and portfolio coordination.</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.ungm.org/Public/Notice/293265">UNICC RFP 2026 — IT consultancy</a></td>
+      <td>61</td>
+      <td>Shared platform services</td>
+      <td>Long-term agreements for ServiceNow, ManageEngine, open-source consultancy — ongoing pooled procurement for common workplace/ITSM platforms.</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.wipo.int/documents/d/about-wipo/docs-en-oversight-iaod-audit-c2-understanding-of-united-nations-international-computing-centre.pdf">WIPO internal oversight — UNICC model</a></td>
+      <td>61</td>
+      <td>Shared services governance</td>
+      <td>Public audit briefing: UNICC inter-org mandate since 1971, 80+ service lines, cost-recovery via MoU/SDA/BCR, client Management Committee governance.</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.unglobalpulse.org/transforming-development-ai-innovation-partnerships-for-the-sustainable-development-goals-sdgs/">UN Global Pulse — AI &amp; innovation</a></td>
+      <td>62</td>
+      <td>AI innovation</td>
+      <td>Public work on AI/innovation partnerships aligns with TAP portfolio themes and modern conferencing / collaboration use cases.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ========== OVERLAP ========== -->
+<h2>3. Overlap &amp; consolidation signals</h2>
+<p>From <code>data/overlap-signals.yaml</code> (last updated 2026-05-23):</p>
+<table>
+  <thead><tr><th>ID</th><th>Topic</th><th>Signal</th><th>Confidence</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>sig-2026-05-22-001</td>
+      <td>Parallel cloud &amp; workplace contracts</td>
+      <td>ICC shared service catalog coexists with entity-level ICT spend &gt;$2B — consolidation opportunity is scaling common cloud/workplace services (Action 61).</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>sig-2026-05-23-002</td>
+      <td>UNIQCloud maturity</td>
+      <td>UNICC UNIQCloud (2025) provides OpenStack private cloud from UN data centres with Management Committee pricing — actionable path for sensitive workloads alongside hybrid strategies.</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>sig-2026-05-23-003</td>
+      <td>ODET digital focal point</td>
+      <td>ODET (Jan 2025) centralizes UN system digital coordination — consolidation (61) and TAP (62) must align to avoid parallel digital steering structures.</td>
+      <td>Medium</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ========== SOCIAL ========== -->
+<h2 class="page-break">4. Social &amp; news monitoring findings</h2>
+
+<h3>4.1 Coverage statistics (24 May 2026)</h3>
+<table>
+  <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+  <tbody>
+    <tr><td>Agencies registered</td><td>27</td></tr>
+    <tr><td>Items scanned (RSS/news)</td><td>96</td></tr>
+    <tr><td>Automated feeds OK</td><td>12 / 12 (100%)</td></tr>
+    <tr><td>WP15-relevant signals</td><td>11</td></tr>
+    <tr><td>High priority</td><td>8</td></tr>
+    <tr><td>Agent review pending (X/FB/LinkedIn)</td><td>18 agencies</td></tr>
+  </tbody>
+</table>
+
+<h3>4.2 Platform registration (27 agencies)</h3>
+<table>
+  <thead><tr><th>Platform</th><th>Agencies with URL registered</th><th>Coverage</th></tr></thead>
+  <tbody>
+    <tr><td>X (Twitter)</td><td>27</td><td>100%</td></tr>
+    <tr><td>LinkedIn</td><td>27</td><td>100%</td></tr>
+    <tr><td>Facebook</td><td>19</td><td>70%</td></tr>
+    <tr><td>YouTube RSS</td><td>8</td><td>30%</td></tr>
+    <tr><td>News RSS (automated)</td><td>2</td><td>7%</td></tr>
+    <tr><td>Instagram</td><td>3</td><td>11%</td></tr>
+  </tbody>
+</table>
+
+<h3>4.3 All WP15 signals detected — 24 May 2026</h3>
+<p>Source: <code>data/social-monitor/2026-05-24-social.yaml</code></p>
+<table>
+  <thead>
+    <tr><th>Priority</th><th>Agency</th><th>Headline</th><th>Action</th><th>Why it matters</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="tag tag-high">High</span></td>
+      <td>UNICC</td>
+      <td><a href="https://www.unicc.org/news/2026/05/15/unicc-hosts-ai-driven-crisis-simulation-during-geneva-cyber-week/">AI-Driven Crisis Simulation — Geneva Cyber Week</a></td>
+      <td>61</td>
+      <td>Shared cybersecurity capacity in action — security ops as core consolidation backbone.</td>
+    </tr>
+    <tr>
+      <td><span class="tag tag-high">High</span></td>
+      <td>UNICC</td>
+      <td><a href="https://www.unicc.org/wp-content/uploads/2026/05/UNICC-2024-2025-Biennial-Report-1.pdf">Biennial Report 2024–2025</a></td>
+      <td>61</td>
+      <td>Primary source for ICC service scale, client base, Strategic Framework 2024–2030 direction.</td>
+    </tr>
+    <tr>
+      <td><span class="tag tag-high">High</span></td>
+      <td>UNICC</td>
+      <td><a href="https://www.unicc.org/news/2026/05/13/un-virtual-worlds-day-calls-for-ai-and-emerging-tech-to-support-better-city-and-community-life/">Virtual Worlds Day — AI &amp; emerging tech</a></td>
+      <td>Both</td>
+      <td>Links Action 61 infrastructure provider role with Action 62 emerging-tech portfolio.</td>
+    </tr>
+    <tr>
+      <td><span class="tag tag-high">High</span></td>
+      <td>UNICC / UN Innovation Network</td>
+      <td><a href="https://www.uninnovation.network/innovation-library/un-innovation-update-april-2026">Innovation Update (April 2026)</a></td>
+      <td>62</td>
+      <td>System innovation library — TAP pipeline and demand sensing.</td>
+    </tr>
+    <tr>
+      <td><span class="tag tag-high">High</span></td>
+      <td>UNICC</td>
+      <td><a href="https://www.unicc.org/news/2026/02/03/enabling-secure-and-resilient-un-operations-in-bonn/">Secure &amp; Resilient UN Operations in Bonn</a></td>
+      <td>61</td>
+      <td>Regional shared infrastructure delivery supporting entity mandates.</td>
+    </tr>
+    <tr>
+      <td><span class="tag tag-med">Medium</span></td>
+      <td>UN Global Pulse</td>
+      <td><a href="https://www.unglobalpulse.org/transforming-development-ai-innovation-partnerships-for-the-sustainable-development-goals-sdgs/">AI, Innovation &amp; Partnerships for SDGs</a></td>
+      <td>62</td>
+      <td>TAP-aligned accelerator themes on AI and innovation partnerships.</td>
+    </tr>
+    <tr>
+      <td><span class="tag tag-med">Medium</span></td>
+      <td>WHO</td>
+      <td><a href="https://www.who.int/news/item/20-05-2026-seventy-ninth-world-health-assembly-honours-global-champions-advancing-primary-health-care">WHA honours primary health care champions</a></td>
+      <td>Both</td>
+      <td>Marginal WP15 relevance — digital/innovation keywords in health context; low briefing priority.</td>
+    </tr>
+    <tr>
+      <td><span class="tag tag-low">Low</span></td>
+      <td>UN News</td>
+      <td><a href="https://news.un.org/feed/view/en/story/2026/05/1167575">Ebola risk in eastern DR Congo</a></td>
+      <td>Both</td>
+      <td><strong>False positive</strong> — keyword <code>ict</code> matched substring in "conflict". Not WP15-relevant; retained for monitor QA.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>4.4 Tier-1 agencies with no automated RSS hit (watch list)</h3>
+<ul>
+  <li><strong>ODET</strong> (@UNDigitalEmerg) — tier 1; needs X/LinkedIn agent review</li>
+  <li><strong>OICT</strong> — registered, no RSS match; manual social pass required</li>
+  <li><strong>ITU, WFP, UNDP, UNESCO</strong> — registered, no keyword match this pass</li>
+</ul>
+<p><strong>Recommended actions:</strong> Schedule X/Facebook/LinkedIn pass on tier-1 agencies (Linear ITU-121); tighten keyword matching to reduce UN News false positives; X API integration tracked as ITU-123.</p>
+
+<!-- ========== ACADEMIC ========== -->
+<h2 class="page-break">5. Academic rigour &amp; evidence base</h2>
+
+<h3>5.1 Core reference library (OpenAlex refresh — 24 May 2026)</h3>
+<p>Source: <code>data/academic-literature/wp15-core-references.yaml</code> — 10 references enriched. Below: references cited in today's digest (Tier A) plus additional core library entries used in Member State framing.</p>
+
+<table>
+  <thead>
+    <tr><th>ID</th><th>Citation</th><th>Action</th><th>Cited by</th><th>WP15 use</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[^1]</td>
+      <td>Armbrust, M. et al. (2010). <em>A view of cloud computing.</em> Communications of the ACM. DOI: 10.1145/1721654.1721672</td>
+      <td>61</td>
+      <td>8,961</td>
+      <td>Foundational survey of IaaS/PaaS/SaaS and economies of scale — shared ICT consolidation rationale.</td>
+    </tr>
+    <tr>
+      <td>[^2]</td>
+      <td>Mell, P. &amp; Grance, T. (2011). <em>The NIST definition of cloud computing.</em> NIST SP 800-145. DOI: 10.6028/nist.sp.800-145</td>
+      <td>61</td>
+      <td>11,610</td>
+      <td>Definitional standard (on-demand, pooling, elasticity) for public-sector ICT architecture and UNIQCloud alignment.</td>
+    </tr>
+    <tr>
+      <td>[^3]</td>
+      <td>Verhoef, P. C. et al. (2019). <em>Digital transformation: A multidisciplinary reflection.</em> J. Business Research. DOI: 10.1016/j.jbusres.2019.09.022</td>
+      <td>Both</td>
+      <td>4,553</td>
+      <td>Digital transformation drivers, barriers, governance — cross-cutting WP15 change management.</td>
+    </tr>
+    <tr>
+      <td>[^4]</td>
+      <td>Dwivedi, Y. K. et al. (2019). <em>Artificial Intelligence (AI): Multidisciplinary perspectives.</em> Int. J. Information Management. DOI: 10.1016/j.ijinfomgt.2019.08.002</td>
+      <td>62</td>
+      <td>3,954</td>
+      <td>AI opportunities/risks — TAP innovation pipeline and responsible deployment guardrails.</td>
+    </tr>
+    <tr>
+      <td>[^5]</td>
+      <td>Gil-Garcia, J. R. &amp; Pardo, T. A. (2006). <em>Electronic government: information management capacity.</em> Government Information Quarterly. DOI: 10.1016/j.giq.2005.11.002</td>
+      <td>61</td>
+      <td>51</td>
+      <td>E-government success linked to organizational capability — consolidation requires institutional capacity, not only technology.</td>
+    </tr>
+    <tr>
+      <td>[^6]</td>
+      <td>Schmidt, D. C. &amp; Gomaa, H. (2011). <em>Everything as a Service.</em> Computer. DOI: 10.1109/mc.2011.67</td>
+      <td>61</td>
+      <td>180</td>
+      <td>Service-oriented delivery parallels UN cost-recovery / SDA shared-service models.</td>
+    </tr>
+    <tr>
+      <td>[^7]</td>
+      <td>Heeks, R. &amp; Ospina, A. (2020). <em>ICT as a driver of economic growth.</em> Telecommunications Policy. DOI: 10.1016/j.telpol.2020.101922</td>
+      <td>Both</td>
+      <td>284</td>
+      <td>ICT–development linkages for Member State "why this matters" framing.</td>
+    </tr>
+    <tr>
+      <td>[^8]</td>
+      <td>Zuiderwijk, A. et al. (2012). <em>Open Government Maturity Model.</em> Government Information Quarterly. DOI: 10.1016/j.giq.2012.06.001</td>
+      <td>62</td>
+      <td>720</td>
+      <td>Open digital platforms, public engagement — TAP transparency and digital conferencing.</td>
+    </tr>
+    <tr>
+      <td>[^9]</td>
+      <td>Teece, D. J. et al. (1997). <em>Dynamic capabilities and strategic management.</em> Strategic Management Journal. DOI: 10.1002/(sici)1097-0266(199708)18:7&lt;509::aid-smj882&gt;3.0.co;2-z</td>
+      <td>Both</td>
+      <td>31,074</td>
+      <td>Organizational dynamic capabilities — analytical framing for UN80 institutional adaptation.</td>
+    </tr>
+    <tr>
+      <td>[^10]</td>
+      <td>Ismagilova, E. et al. (2020). <em>Security, Privacy and Risks Within Smart Cities.</em> Information Systems Frontiers. DOI: 10.1007/s10796-020-10044-1</td>
+      <td>62</td>
+      <td>443</td>
+      <td>Identity, privacy, interoperability risks — TAP digital ID and verifiable credentials work.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>5.2 OpenAlex discovery candidates (pending human curation)</h3>
+<p>Source: <code>data/academic-literature/2026-05-24-discovery.yaml</code> — auto-discovered; <strong>not approved for footnotes</strong> until merged into core library.</p>
+<table>
+  <thead><tr><th>Title (abbrev.)</th><th>Year</th><th>Cited by</th><th>Query theme</th><th>Relevance</th></tr></thead>
+  <tbody>
+    <tr><td>Explainable AI (XAI): Concepts, taxonomies… (Barredo Arrieta et al.)</td><td>2019</td><td>8,773</td><td>ai_governance</td><td>62</td></tr>
+    <tr><td>AI4People — An Ethical Framework for a Good AI Society (Floridi et al.)</td><td>2018</td><td>3,353</td><td>ai_governance</td><td>62</td></tr>
+    <tr><td>ChatGPT multidisciplinary perspectives (Dwivedi et al.)</td><td>2023</td><td>3,567</td><td>cloud_shared_services</td><td>61</td></tr>
+    <tr><td>Fog computing and IoT (Bonomi et al.)</td><td>2012</td><td>5,949</td><td>digital_public_infrastructure</td><td>62</td></tr>
+    <tr><td colspan="5"><em>Note: Some query matches (e.g. Astropy, ChEMBL) are off-topic — human reviewer must reject before merging.</em></td></tr>
+  </tbody>
+</table>
+
+<h3>5.3 Evidence tier policy</h3>
+<table>
+  <thead><tr><th>Tier</th><th>Source type</th><th>Example in this run</th></tr></thead>
+  <tbody>
+    <tr><td>A</td><td>Peer-reviewed journal / standard</td><td>Armbrust 2010 [^1], NIST SP 800-145 [^2]</td></tr>
+    <tr><td>B</td><td>Official UN / agency public page</td><td>UNICC Biennial Report 2024–2025</td></tr>
+    <tr><td>C</td><td>Standards body public spec</td><td>W3C VC (from prior scan)</td></tr>
+    <tr><td>D</td><td>Grey literature / think tank</td><td>OECD digital gov (library)</td></tr>
+    <tr><td>E</td><td>Automated scan — verify before use</td><td>RSS social signals, keyword matches</td></tr>
+  </tbody>
+</table>
+
+<!-- ========== DAILY DIGEST ========== -->
+<h2 class="page-break">6. Daily digest — authored output (24 May 2026)</h2>
+<p>Full text from <code>reports/2026-05-24-daily-digest.md</code> — produced by SDK lane-04 daily pass.</p>
+
+<div class="digest-box">
+  <p><strong>Status:</strong> DRAFT — Working document<br/>
+  <strong>Run:</strong> SDK lane-04 daily digest (landscape + social + briefing)<br/>
+  <strong>Disclaimer:</strong> Does not represent an agreed position, policy or decision of the United Nations.</p>
+
+  <h4>Executive summary</h4>
+  <ul>
+    <li><strong>No material landscape delta</strong> since the 2026-05-23 first-iteration scan — prior UNIQCloud, ODET, and WIPO audit evidence remains current.</li>
+    <li>Automated RSS pass: <strong>11 WP15 signals</strong> (8 high priority), <strong>12/12 feeds OK</strong>; UNICC continues to dominate Action 61 signals.</li>
+    <li><strong>+1 low-priority</strong> UN News hit (keyword false positive) — no new high-priority social signals vs yesterday.</li>
+    <li>Academic literature refreshed via OpenAlex; 10 core references enriched, 6 discovery candidates logged.</li>
+    <li><strong>18 agencies</strong> still require manual X/Facebook/LinkedIn review (ODET, OICT, ITU tier-1 priority).</li>
+    <li>Member State briefing refresh due <strong>1 June</strong>; current draft at <code>reports/2026-05-member-state-update.md</code>.</li>
+    <li>Claim verification checklist at <code>reports/verification/2026-05-24-claims-for-review.md</code> — human GPTZero review pending.</li>
+    <li>Dashboard rebuild pending merge to <code>main</code>; live site reflects last merged data pass.</li>
+  </ul>
+
+  <h4>Action 61 — ICT consolidation</h4>
+  <p><strong>Signals today:</strong> UNICC cyber exercise (Geneva Cyber Week), biennial report 2024–2025, and Bonn secure-operations delivery remain the top RSS signals — shared security and cloud backbone themes [^1][^2]. No new procurement or standards-body publications detected.</p>
+  <p><strong>Landscape evidence:</strong> Prior scan <code>2026-05-23-first-iteration-scan.yaml</code> (UNIQCloud, UNICC RFP, WIPO audit). Today's scan <code>2026-05-24-scan.yaml</code> — no new findings.</p>
+
+  <h4>Action 62 — TAP / innovation</h4>
+  <p><strong>Signals today:</strong> UN Innovation Update (April 2026) and UN Global Pulse AI/innovation partnerships remain relevant TAP alignment points [^3][^4]. UNICC Virtual Worlds Day links infrastructure provider role to emerging-tech portfolio (both actions).</p>
+  <p><strong>Landscape evidence:</strong> ODET and Digital Cooperation Portal references from 2026-05-23 scan still apply. W3C VC and Digital Public Goods Alliance findings unchanged.</p>
+
+  <h4>Social &amp; news highlights</h4>
+  <table>
+    <thead><tr><th>Priority</th><th>Agency</th><th>Headline</th></tr></thead>
+    <tbody>
+      <tr><td>High</td><td>UNICC</td><td>AI-driven crisis simulation (Geneva Cyber Week)</td></tr>
+      <tr><td>High</td><td>UNICC</td><td>Biennial Report 2024–2025</td></tr>
+      <tr><td>High</td><td>UNICC</td><td>Virtual Worlds Day — AI &amp; emerging tech</td></tr>
+      <tr><td>Medium</td><td>UN Global Pulse</td><td>AI, innovation &amp; SDG partnerships</td></tr>
+      <tr><td>Low</td><td>UN News</td><td>Ebola response (keyword noise — not WP15)</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Watch list / gaps</h4>
+  <ul>
+    <li><strong>ODET / OICT / ITU</strong> — tier-1 agencies with no RSS hits; X/LinkedIn agent review needed.</li>
+    <li><strong>Keyword tuning</strong> — UN News false positive on <code>ict</code> substring.</li>
+    <li><strong>X API integration</strong> — Linear ITU-123 backlog.</li>
+  </ul>
+
+  <h4>References (Tier A footnotes in digest)</h4>
+  <ol style="font-size:0.88rem;">
+    <li>Armbrust, M. et al. (2010). <em>A view of cloud computing.</em> CACM. https://doi.org/10.1145/1721654.1721672</li>
+    <li>Mell, P. &amp; Grance, T. (2011). <em>NIST definition of cloud computing.</em> SP 800-145. https://doi.org/10.6028/nist.sp.800-145</li>
+    <li>Verhoef, P. C. et al. (2019). <em>Digital transformation.</em> J. Business Research. https://doi.org/10.1016/j.jbusres.2019.09.022</li>
+    <li>Dwivedi, Y. K. et al. (2019). <em>AI: Multidisciplinary perspectives.</em> Int. J. Information Management. https://doi.org/10.1016/j.ijinfomgt.2019.08.002</li>
+  </ol>
+</div>
+
+<!-- ========== MEMBER STATE ========== -->
+<h2>7. Member State briefing context (current draft)</h2>
+<p>Excerpt from <code>reports/2026-05-member-state-update.md</code> (refresh due 1 June 2026):</p>
+<div class="finding-box">
+  <p><strong>Why this matters:</strong> The UN system spends more than <strong>$2 billion annually</strong> on ICT. A baseline across <strong>28 entities</strong> (covering <strong>97%</strong> of expenditure) confirms significant overlap in core services and interoperability challenges — patterns consistent with literature on cloud economies of scale [^1][^2].</p>
+  <p><strong>Action 61 progress:</strong> Public evidence reinforces UNICC as operational shared backbone: UNIQCloud (2025), cybersecurity exercises, pooled platform procurement. Consolidation opportunity is <em>scaling standardization</em>, not starting from zero.</p>
+  <p><strong>Key public evidence this period:</strong></p>
+  <ul>
+    <li><a href="https://www.unicc.org/what-we-do/uniqcloud/">UNIQCloud</a> — shared private cloud, vendor independence</li>
+    <li><a href="https://www.unicc.org/wp-content/uploads/2026/05/UNICC-2024-2025-Biennial-Report-1.pdf">UNICC Biennial Report 2024–2025</a></li>
+    <li><a href="https://www.unicc.org/news/2026/05/15/unicc-hosts-ai-driven-crisis-simulation-during-geneva-cyber-week/">UNICC cyber simulation (May 2026)</a></li>
+    <li><a href="https://www.wipo.int/documents/d/about-wipo/docs-en-oversight-iaod-audit-c2-understanding-of-united-nations-international-computing-centre.pdf">WIPO/UNICC governance overview</a></li>
+  </ul>
+  <p><strong>Action 62:</strong> ODET (est. Jan 2025) is system-wide digital focal point — TAP should align with AI, DPI, and open-source coordination streams.</p>
+</div>
+
+<!-- ========== VALIDATION ========== -->
+<h2 class="page-break">8. Validation &amp; claim verification</h2>
+
+<h3>8.1 Automated validation results</h3>
+<table>
+  <thead><tr><th>Check</th><th>Command</th><th>Result</th></tr></thead>
+  <tbody>
+    <tr><td>Data schema validation</td><td><code>npm run validate</code></td><td class="pass">PASS</td></tr>
+    <tr><td>Dashboard build</td><td><code>npm run build:dashboard</code></td><td class="pass">PASS</td></tr>
+    <tr><td>Claim extraction</td><td><code>npm run verify:claims</code></td><td class="pass">PASS — checklist generated</td></tr>
+    <tr><td>GitHub CI (PR #9)</td><td>validate-and-build workflow</td><td class="pass">PASS</td></tr>
+    <tr><td>Digest email CI</td><td>daily-digest-email.yml on PR branch</td><td class="warn">May fail — SMTP secrets not set on PR branch</td></tr>
+    <tr><td>Human GPTZero review</td><td>14 claims extracted</td><td class="warn">PENDING</td></tr>
+  </tbody>
+</table>
+
+<h3>8.2 Extracted claims for human review (sample)</h3>
+<p>Source: <code>reports/verification/2026-05-24-claims-for-review.md</code> — paste into <a href="https://gptzero.me/hallucination-detector">GPTZero Hallucination Detector</a>.</p>
+<ol style="font-size:0.88rem;">
+  <li>No material landscape delta since the 2026-05-23 first-iteration scan — prior UNIQCloud, ODET, and WIPO audit evidence remains current.</li>
+  <li>Automated RSS pass: 11 WP15 signals (8 high priority), 12/12 feeds OK; UNICC continues to dominate Action 61 signals.</li>
+  <li>+1 low-priority UN News hit (keyword false positive) — no new high-priority social signals vs yesterday.</li>
+  <li>18 agencies still require manual X/Facebook/LinkedIn review (ODET, OICT, ITU tier-1 priority).</li>
+  <li>UNICC cyber exercise (Geneva Cyber Week), biennial report 2024–2025, and Bonn secure-operations delivery remain the top RSS signals.</li>
+  <li>UN Innovation Update (April 2026) and UN Global Pulse AI/innovation partnerships remain relevant TAP alignment points.</li>
+  <li>UNICC Virtual Worlds Day links infrastructure provider role to emerging-tech portfolio (both actions).</li>
+  <li>Keyword tuning — UN News false positive on <code>ict</code> substring; track for script improvement.</li>
+  <li>Landscape: confirm no missed UNICC/ODET publications since 2026-05-23.</li>
+  <li>UNICC remains the dominant shared ICT signal in the current data pass.</li>
+  <li>UNIQCloud and shared security operations continue as consolidation anchor (see secondary sources).</li>
+</ol>
+<p><em>Full claims block (14 items) in repository verification file.</em></p>
+
+<h3>8.3 Reviewer checklist (from PR #9)</h3>
+<ul>
+  <li>Review daily digest executive summary and Tier-A footnotes</li>
+  <li>Confirm landscape no-op is accurate (no missed UNICC/ODET publications)</li>
+  <li>Spot-check high-priority UNICC signals in social YAML</li>
+  <li>Run GPTZero on claims checklist</li>
+  <li>Merge PR #9 if accurate → confirm dashboard deploy on <code>main</code></li>
+</ul>
+
+<!-- ========== ARCHITECTURE ========== -->
+<h2 class="page-break">9. System architecture &amp; orchestration</h2>
+<p><em>How these findings were produced — for management context on the pilot setup.</em></p>
+
+<h3>9.1 Dual execution paths</h3>
+<table>
+  <thead><tr><th></th><th>Cursor Automations (production)</th><th>SDK Fleet lane-04 (this test)</th></tr></thead>
+  <tbody>
+    <tr><td>Trigger</td><td>Cron / webhook in Cursor UI</td><td><code>orchestrator fleet lane lane-04</code> + 36h daemon</td></tr>
+    <tr><td>Branch</td><td><code>main</code></td><td><code>sprint/review-bundle</code></td></tr>
+    <tr><td>Notion / Linear</td><td>MCP when enabled</td><td>Manual sync notes in PR</td></tr>
+    <tr><td>Output paths</td><td colspan="2">Identical: <code>reports/</code>, <code>data/</code>, validation scripts</td></tr>
+  </tbody>
+</table>
+
+<h3>9.2 Live automations (May 2026)</h3>
+<table>
+  <thead><tr><th>Automation</th><th>Schedule</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr><td>UN80 Daily Digest (merged)</td><td>Daily 06:00 UTC</td><td>Prefill ready</td></tr>
+    <tr><td>Weekly Landscape Monitor</td><td>Mon 06:00 UTC</td><td>Active</td></tr>
+    <tr><td>Webhook Source Ingest</td><td>Event-driven</td><td>Active</td></tr>
+    <tr><td>Monthly Briefing Compiler</td><td>1st of month</td><td>Active</td></tr>
+    <tr><td>Social Monitor</td><td>Wed 07:00 UTC</td><td>Active</td></tr>
+  </tbody>
+</table>
+
+<h3>9.3 Data flow</h3>
+<div style="background:#f7fafc;border:1px solid #cbd5e0;padding:0.85rem;font-family:monospace;font-size:0.78rem;line-height:1.4;">
+Public sources (UNICC, ODET, RSS, OpenAlex)
+    → fetch scripts (monitor, academic)
+    → validated YAML/JSON (data/)
+    → reports/ (digest, verification, handoff)
+    → npm run build:dashboard
+    → GitHub PR → merge to main → GitHub Pages dashboard
+</div>
+
+<h3>9.4 Orchestrator pilot stats (24 May 2026)</h3>
+<ul>
+  <li>36-hour autonomous daemon; 6 parallel agent workers</li>
+  <li>Lane-04: 82+ agent runs in daemon session; substantive output consolidated in PR #9</li>
+  <li>Project: <code>~/Projects/cursor-agent-orchestrator</code></li>
+</ul>
+
+<!-- ========== NEXT STEPS ========== -->
+<h2>10. Conclusion &amp; next steps</h2>
+<p>
+  The 24 May 2026 pass demonstrates a <strong>repeatable, validated research loop</strong> for UN80 WP15:
+  landscape monitoring confirms a stable evidence base centred on UNICC shared services and ODET governance;
+  social monitoring surfaces an UNICC-dominated signal cluster with one monitor QA false positive;
+  academic rigour supplies Tier-A peer-reviewed footnotes; and the daily digest synthesizes these into
+  Action 61/62 narrative suitable for human review.
+</p>
+<p><strong>Recommended management actions:</strong></p>
+<ol>
+  <li>Review and merge <a href="https://github.com/techpolicycomms/un80-wp15-research/pull/9">PR #9</a> if findings are accurate.</li>
+  <li>Complete GPTZero verification on 14 extracted claims before external citation.</li>
+  <li>Schedule tier-1 social review (ODET, OICT, ITU) — ITU-121.</li>
+  <li>Member State briefing refresh — due 1 June 2026.</li>
+  <li>Enable merged Daily Digest automation in Cursor UI per <code>docs/DAILY-DIGEST.md</code>.</li>
+</ol>
+
+<hr style="margin-top:2rem;border:none;border-top:1px solid #cbd5e0;" />
+<p class="meta" style="margin-top:1rem;">
+  Generated 24 May 2026 · Source artifacts: PR #9, daily digest, social/landscape YAML, academic library, verification checklist<br/>
+  Repository: github.com/techpolicycomms/un80-wp15-research · Internal test report — DRAFT
+</p>
+
+</body>
+</html>

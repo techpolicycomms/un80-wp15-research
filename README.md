@@ -12,7 +12,9 @@ Automated research, monitoring, and reporting for **UN80 Work Package 15** — I
 | **GitHub** | https://github.com/techpolicycomms/un80-wp15-research |
 | **Notion hub** | https://www.notion.so/36805383491f813fa227f709c187584a |
 | **Linear project** | https://linear.app/ituinnovation-hub/project/un80-wp15-research-hub-1b948218cb9e |
+| **Daily digest guide** | [docs/DAILY-DIGEST.md](./docs/DAILY-DIGEST.md) |
 | **Operations runbook** | [docs/OPERATIONS.md](./docs/OPERATIONS.md) |
+| **Academic rigour** | [docs/ACADEMIC-RIGOUR.md](./docs/ACADEMIC-RIGOUR.md) |
 | **Linear guide** | [docs/LINEAR.md](./docs/LINEAR.md) |
 
 ---
@@ -21,7 +23,7 @@ Automated research, monitoring, and reporting for **UN80 Work Package 15** — I
 
 This hub supports UN80 WP15 by turning recurring research into a **repeatable pipeline**:
 
-1. **Monitor** — weekly scan of public sources (ICC, UN digital initiatives, interoperability standards) relevant to ICT consolidation and TAP
+1. **Daily digest** — one merged run at **08:00 CEST** (landscape + social + briefing summary → email)
 2. **Ingest** — on-demand submission of curated public links via webhook
 3. **Compile** — monthly draft briefings for Member State / CEB updates, mirrored to Notion
 4. **Monitor social** — weekly X, Facebook, YouTube scan for UN agencies on WP15 topics
@@ -59,7 +61,7 @@ This is a **pilot of Cursor Automations** applied to UN80 research workflow desi
 |-------|------------|------|
 | Data store | GitHub repo (`data/*.yaml`, `data/*.json`) | Single source of truth, versioned |
 | Agents | [Cursor Automations](https://cursor.com/docs/cloud-agent/automations) | Scheduled + webhook-triggered cloud agents |
-| Skills | `.cursor/skills/` | Repeatable instructions (briefing writer, landscape monitor) |
+| Skills | `.cursor/skills/` | Repeatable instructions (briefing writer, landscape monitor, academic evidence) |
 | Validation | JSON Schema + `npm run validate` | Data quality gate |
 | Dashboard | Static HTML/JS + GitHub Pages | Public-facing metrics view |
 | Collaboration | Notion databases | Editorial review queue |
@@ -93,6 +95,8 @@ Prompts and workflow metadata: [`automations/`](./automations/) · Machine-reada
 ### Governance
 
 - Public secondary sources only in this repository
+- Peer-reviewed footnotes via OpenAlex + curated YAML (`npm run fetch:academic`) — see [docs/ACADEMIC-RIGOUR.md](./docs/ACADEMIC-RIGOUR.md)
+- Claim verification via [GPTZero Hallucination Detector](https://gptzero.me/hallucination-detector) before external use (`npm run verify:claims`)
 - Internal surveys (AI Toolkit inventory, org AI policy) are cross-referenced later — raw responses stay out of GitHub
 - Human review required before external distribution
 - All generated text carries DRAFT / working document status

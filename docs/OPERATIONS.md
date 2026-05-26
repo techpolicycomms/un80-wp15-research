@@ -14,17 +14,32 @@ Live automations are **Active** in Cursor. This document is the day-to-day guide
 
 ## Live automations (May 2026)
 
-| # | Name | Schedule / trigger | Cursor link |
-|---|------|-------------------|-------------|
-| 1 | UN80 Weekly Landscape Monitor | Mon 06:00 UTC (cron) | https://cursor.com/automations/9267c6a1-fd79-4d72-81ca-6415647ab198 |
-| 2 | UN80 Webhook Source Ingest | Webhook (on demand) | https://cursor.com/automations/132e3dc9-f9c7-4b80-97e0-8ad28449282a |
-| 3 | UN80 Monthly Briefing Compiler | 1st of month 08:00 UTC (cron) | https://cursor.com/automations/50fd2872-5154-49ee-a71f-31c3ffc0a058 |
-
-All three target repo `techpolicycomms/un80-wp15-research` @ `main`.
+| # | Name | Schedule / trigger | Notes |
+|---|------|-------------------|--------|
+| **0** | **UN80 Daily Digest (merged)** | **Daily 06:00 UTC (08:00 CEST)** | [Setup](./DAILY-DIGEST.md) — import + disable legacy crons |
+| 1 | UN80 Weekly Landscape Monitor | Mon 06:00 UTC | **Disable cron** after Daily Digest live |
+| 2 | UN80 Webhook Source Ingest | Webhook | Keep |
+| 3 | UN80 Monthly Briefing Compiler | 1st 08:00 UTC | **Disable cron** — digest covers 1st-of-month |
+| 4 | UN80 Social Monitor | Wed 07:00 UTC | **Disable cron** after Daily Digest live |
 
 ---
 
-## Weekly rhythm (Action 61 & 62 monitoring)
+## Daily rhythm (recommended)
+
+**Every day ~08:00 CEST (06:00 UTC)** — Daily Digest automation runs.
+
+**Your tasks (~10 min):**
+
+1. Check inbox for **UN80 WP15 Daily Digest (DRAFT)** email
+2. Review PR `digest: daily WP15 — YYYY-MM-DD` on GitHub
+3. Merge if accurate (updates dashboard on `main`)
+4. Check [Notion → Automation log](https://www.notion.so/) for run row
+
+Full setup: [DAILY-DIGEST.md](./DAILY-DIGEST.md)
+
+---
+
+## Weekly rhythm (legacy — if old crons still active)
 
 **Every Monday ~06:00 UTC** — Landscape monitor runs automatically.
 
@@ -93,8 +108,9 @@ curl -X POST "$WEBHOOK_URL" \
 1. Review PR adding `reports/YYYY-MM-member-state-update.md`
 2. Review Notion [Briefings](https://www.notion.so/f7ec4bd52e4542d9abc82d649afbc3a5) row (Status = Draft)
 3. Edit for accuracy and tone — all outputs remain **DRAFT / working document**
-4. Only after human approval: change Notion status to **In review** or **Approved**
-5. Do **not** distribute externally until steering sign-off
+4. Run academic rigour checks: `npm run fetch:academic && npm run verify:claims` — paste claims into [GPTZero Hallucination Detector](https://gptzero.me/hallucination-detector) ([guide](./ACADEMIC-RIGOUR.md))
+5. Only after human approval: change Notion status to **In review** or **Approved**
+6. Do **not** distribute externally until steering sign-off
 
 **Ad-hoc refresh before meetings:** trigger the briefing automation manually from Cursor (**Run now**) or via its webhook with `"event": "manual_refresh"`.
 
@@ -117,6 +133,8 @@ All automation output is **DRAFT**. Nothing represents agreed UN policy.
 
 ```bash
 npm run validate          # schema check on data/
+npm run fetch:academic    # refresh OpenAlex citations + discovery pass
+npm run verify:claims     # GPTZero checklist for report claims
 npm run build:dashboard   # rebuild dashboard locally
 ./scripts/ops-check.sh    # repo + links sanity check
 ```
