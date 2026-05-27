@@ -1,5 +1,5 @@
 meta:
-  updated: 2026-05-24
+  updated: 2026-05-27
   disclaimer: |
     Academic references support analytical framing only. They do not represent agreed UN policy. Prefer open-access links; use institutional WoS/Scopus access where paywalled. Do not use unauthorized full-text sources.
   index_sources:
@@ -18,7 +18,7 @@ references:
     authors: Michael Armbrust et al.
     year: 2010
     journal: Communications of the ACM
-    cited_by_count: 8961
+    cited_by_count: 8962
     doi: 10.1145/1721654.1721672
     openalex_id: https://openalex.org/W2114296561
     open_access_url: https://doi.org/10.1145/1721654.1721672
@@ -39,7 +39,7 @@ references:
     authors: Peter Mell; Timothy Grance
     year: 2011
     journal: NIST Special Publication 800-145
-    cited_by_count: 11610
+    cited_by_count: 11611
     doi: 10.6028/nist.sp.800-145
     openalex_id: https://openalex.org/W2275530856
     open_access_url: https://doi.org/10.6028/nist.sp.800-145
@@ -59,7 +59,7 @@ references:
     authors: Peter C. Verhoef et al.
     year: 2019
     journal: Journal of Business Research
-    cited_by_count: 4553
+    cited_by_count: 4566
     doi: 10.1016/j.jbusres.2019.09.022
     openalex_id: https://openalex.org/W2978346165
     open_access_url: https://doi.org/10.1016/j.jbusres.2019.09.022
@@ -80,7 +80,7 @@ references:
     authors: Yogesh K. Dwivedi et al.
     year: 2019
     journal: International Journal of Information Management
-    cited_by_count: 3954
+    cited_by_count: 3964
     doi: 10.1016/j.ijinfomgt.2019.08.002
     openalex_id: https://openalex.org/W2969625533
     open_access_url: https://doi.org/10.1016/j.ijinfomgt.2019.08.002
@@ -141,7 +141,7 @@ references:
     authors: Richard Heeks; Angelica Ospina
     year: 2020
     journal: Telecommunications Policy
-    cited_by_count: 284
+    cited_by_count: 285
     doi: 10.1016/j.telpol.2020.101922
     openalex_id: https://openalex.org/W3004728639
     open_access_url: https://doi.org/10.1016/j.telpol.2020.101922
@@ -181,7 +181,7 @@ references:
     authors: David J. Teece; Gary Pisano; Amy Shuen
     year: 1997
     journal: Strategic Management Journal
-    cited_by_count: 31074
+    cited_by_count: 31102
     doi: 10.1002/(sici)1097-0266(199708)18:7<509::aid-smj882>3.0.co;2-z
     openalex_id: https://openalex.org/W2123709218
     open_access_url: https://doi.org/10.1002/(sici)1097-0266(199708)18:7%3C509::aid-smj882%3E3.0.co;2-z
