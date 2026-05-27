@@ -1,0 +1,19 @@
+meta:
+  scan_date: "2026-05-27"
+  automation: sdk-lane-04-daily-digest
+  disclaimer: DRAFT — public secondary sources only
+
+findings:
+  - source:
+      title: No material landscape delta — prior scan holds
+      url: null
+      type: note
+    relevance: both
+    topic: scan_status
+    summary: >-
+      SDK lane-04 daily pass (2026-05-27): no new public secondary sources beyond
+      the 2026-05-23 first-iteration scan and 2026-05-24 no-op confirmation.
+      UNIQCloud, ODET, Digital Cooperation Portal, WIPO audit, and UNICC RFP evidence
+      remain current. 2026-05-26 digest run skipped (usage limits); this run catches up.
+      Re-run landscape when UNICC, ODET, or standards bodies publish new material.
+    confidence: high
