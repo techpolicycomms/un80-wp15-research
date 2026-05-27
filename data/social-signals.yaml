@@ -1,7 +1,7 @@
 meta:
-  last_updated: 2026-05-24
+  last_updated: 2026-05-27
   disclaimer: Public official posts only — DRAFT
-  total_signals: 17
+  total_signals: 23
 signals:
   - id: soc-2026-05-22-001
     date: 2026-05-22
@@ -228,3 +228,89 @@ signals:
     summary: The UN is rushing emergency personnel, funding and supplies into
       eastern Democratic Republic of the Congo (DRC) to counter the fast-growing
       Ebola outbreak spreading through conflict-ravaged provinces.
+  - id: soc-2026-05-27-018
+    date: 2026-05-27
+    platform: news
+    agency: UN News (all topics)
+    title: "World News in Brief: Sudan and Haiti updates, Afghan women’s rights"
+    url: https://news.un.org/feed/view/en/story/2026/05/1167591
+    matched_keywords:
+      - ict
+    priority: low
+    relevance: both
+    summary: The United Nations is raising alarm over continued drone attacks in
+      Sudan’s Darfur region after multiple strikes reportedly killed civilians
+      and intensified fears for communities already trapped by the brutal
+      conflict between rival militaries.
+  - id: soc-2026-05-27-019
+    date: 2026-05-27
+    platform: news
+    agency: UN News (all topics)
+    title: "Middle East update: Airstrikes and evacuation orders in Lebanon, aid
+      restrictions in Gaza"
+    url: https://news.un.org/feed/view/en/story/2026/05/1167590
+    matched_keywords:
+      - ict
+    priority: low
+    relevance: both
+    summary: Intensified Israeli airstrikes overnight in Lebanon forced people to
+      again flee their homes, while humanitarians in the Gaza Strip report
+      continued restrictions in bringing aid into the enclave, the United
+      Nations said on Tuesday.
+  - id: soc-2026-05-27-020
+    date: 2026-05-27
+    platform: facebook
+    agency: ITU
+    title: ITU Global Cybersecurity Index and Global CyberDrills post
+    url: https://www.facebook.com/ITU/posts/itus-global-cybersecurity-index-benchmarks-cybersecurity-commitments-across-all-/1364217839072215/
+    matched_keywords:
+      - cybersecurity
+      - ict
+    priority: high
+    relevance: action_61
+    summary: Official ITU Facebook post highlights cybersecurity benchmarking
+      and live cyber-incident simulations, a material Action 61 signal for
+      trusted shared ICT backbone and incident response capacity.
+  - id: soc-2026-05-27-021
+    date: 2026-05-27
+    platform: facebook
+    agency: United Nations
+    title: Digital environment risks and cyberbullying report
+    url: https://www.facebook.com/unitednations/posts/while-the-digital-environment-offers-new-opportunities-for-people-to-learn-and-c/1378446104311411/
+    matched_keywords:
+      - digital
+      - cybersecurity
+    priority: medium
+    relevance: both
+    summary: Official UN Facebook post points to UN reporting on digital
+      environment risks for children and young people; relevant to trusted
+      digital governance and safety-by-design.
+  - id: soc-2026-05-27-022
+    date: 2026-05-27
+    platform: facebook
+    agency: World Health Organization
+    title: Telemedicine, wearables and AI reshaping health
+    url: https://www.facebook.com/WHO/posts/telemedicine-brings-doctors-to-places-they-couldnt-reach-beforewearables-track-w/1414130614079658/
+    matched_keywords:
+      - artificial intelligence
+      - digital
+      - technology
+    priority: medium
+    relevance: both
+    summary: Official WHO Facebook post describes telemedicine, wearables and AI
+      as health-access enablers; relevant to TAP demand sensing for reusable
+      digital health innovation.
+  - id: soc-2026-05-27-023
+    date: 2026-05-27
+    platform: facebook
+    agency: UNDP
+    title: Digital transformation for climate action
+    url: https://www.facebook.com/UNDP/videos/digital-transformation-is-key-to-tackling-climate-changewatch-how-innovative-tec/1101828484968657/
+    matched_keywords:
+      - digital transformation
+      - innovation
+    priority: medium
+    relevance: both
+    summary: Official UNDP Facebook video frames digital transformation and
+      innovative technologies as climate-action enablers; relevant to reusable
+      TAP innovation themes.
