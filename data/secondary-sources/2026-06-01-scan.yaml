@@ -1,0 +1,136 @@
+meta:
+  scan_date: "2026-06-01"
+  automation: weekly-landscape-monitor
+  disclaimer: DRAFT — public secondary sources only; not agreed UN position
+
+findings:
+  - source:
+      title: "Secretary-General's remarks to the General Assembly on the UN80 Initiative"
+      url: https://www.un.org/sg/en/content/sg/statements/2026-05-28/secretary-generals-remarks-the-general-assembly-the-un80-initiative
+      type: un_system
+    relevance: both
+    topic: shared_services_and_technology_governance
+    summary: >-
+      The 28 May 2026 remarks state that a Unified Services Roadmap is moving
+      support services from fragmentation to common arrangements, that the same
+      logic is being applied to technology spending of about US$2.5 billion per
+      year, and that Member States can support common solutions, interoperability,
+      data and technology governance, and justification of continued duplication.
+      The remarks also note a Digital Hub in Valencia and a UN data commons with
+      26 entities agreeing to bring together data and statistics on one platform.
+    confidence: high
+
+  - source:
+      title: "UN80 Initiative: Progress Report (May 2026)"
+      url: https://www.un.org/un80-initiative/sites/default/files/2026-05/UN80-PR2_260526_0833_WEB.pdf
+      type: un_system
+    relevance: both
+    topic: expertise_on_demand_and_interoperability
+    summary: >-
+      The May 2026 progress report records an expertise-on-demand mechanism under
+      development with a common catalogue of available expertise, access protocols
+      and standardized administrative arrangements, with selected country teams
+      expected to test the mechanism from June 2026. It also frames data and
+      digital systems, shared beneficiary interoperability, cybersecurity, data
+      protection and business continuity as implementation considerations.
+    confidence: high
+
+  - source:
+      title: "UNICC Biennial Report 2024-2025"
+      url: https://www.unicc.org/our-impact/resources/biennial-report-2024-2025/
+      type: organization
+    relevance: both
+    topic: digital_foundations_portfolio
+    summary: >-
+      UNICC presents its 2024-2025 biennial report around "Digital Foundations"
+      spanning infrastructure, private cloud and specialized computing; digital
+      tools and platforms; cybersecurity; data and AI services; and insights,
+      expertise and training. The report positions UNICC as scaling shared
+      solutions and collaboration for a more agile, efficient UN system.
+    confidence: high
+
+  - source:
+      title: "Services Overview - UNICC"
+      url: https://www.unicc.org/what-we-do/services-overview/
+      type: organization
+    relevance: both
+    topic: shared_service_catalog_expansion
+    summary: >-
+      UNICC's current services overview describes a broad shared service catalog:
+      cloud broker and cloud management services, UNIQCloud, M365 and Azure Entra
+      management, network and data-centre consolidation, common cybersecurity,
+      AI operations, secure authentication, digital identity and verification, and
+      remote simultaneous interpretation and event management. This is practical
+      evidence for Action 61 consolidation domains and Action 62 use cases such as
+      digital ID, expertise platforms and modern conferencing.
+    confidence: high
+
+  - source:
+      title: "UN 2.0 - UNICC"
+      url: https://www.unicc.org/our-impact/un-two-zero/
+      type: organization
+    relevance: both
+    topic: reusable_digital_foundations
+    summary: >-
+      UNICC links its role to UN 2.0 by describing common, trusted and cybersecure
+      digital foundations, reusable digital components, a secure digital workshop
+      for the UN family, and support for digital public infrastructure. The page
+      explicitly connects UNICC to inter-agency scaling opportunities on technology
+      infrastructure, systems, capabilities and pooled funding.
+    confidence: high
+
+  - source:
+      title: "Partners and Collaboration | UN 2.0 | United Nations"
+      url: https://un-two-zero.network/partners-and-collaboration/
+      type: un_system
+    relevance: both
+    topic: interagency_technology_review
+    summary: >-
+      The UN 2.0 partners and collaboration page identifies Action 14 as a joint
+      technology review to find inter-agency scaling opportunities in technology
+      infrastructure, systems, capabilities and pooled funding, including through
+      UNICC. It also calls for interoperable tech stacks that improve collaboration,
+      cost savings and joint technology support teams.
+    confidence: high
+
+  - source:
+      title: "UNIN | Innovation Library | UN Innovation Update (April 2026)"
+      url: https://www.uninnovation.network/innovation-library/un-innovation-update-april-2026
+      type: un_system
+    relevance: action_62
+    topic: innovation_pipeline_baseline
+    summary: >-
+      The UN Innovation Network update brings together innovation highlights from
+      45 UN entities and identifies three system-wide trends: wider AI use, a
+      stronger focus on moving innovations from pilot to scale, and increased
+      investment in capacities, systems and partnerships. This is relevant baseline
+      evidence for TAP portfolio design and demand sensing.
+    confidence: medium
+
+  - source:
+      title: "UNIN | Innovation Library | Readiness Assessment Methodology (RAM)"
+      url: https://www.uninnovation.network/innovation-library/readiness-assessment-methodology-ram
+      type: un_system
+    relevance: action_62
+    topic: ai_readiness_methods
+    summary: >-
+      The UN Innovation Network records UNESCO's Readiness Assessment Methodology
+      for AI ecosystems, covering legal and regulatory, social and cultural,
+      economic, scientific and educational, and technological and infrastructural
+      dimensions. The methodology is a public example of structured readiness
+      assessment that TAP could reuse or align with for innovation pipeline triage.
+    confidence: medium
+
+  - source:
+      title: "W3C publishes Verifiable Credentials 2.0 as a W3C Standard"
+      url: https://www.w3.org/press-releases/2025/verifiable-credentials-2-0/
+      type: standards_body
+    relevance: action_62
+    topic: digital_id_interoperability
+    summary: >-
+      W3C states that Verifiable Credentials 2.0 provides cryptographically secure,
+      privacy-respecting and machine-verifiable digital credentials, with extension
+      mechanisms for identity, education, government and other credentials. This is
+      relevant standards evidence for TAP digital ID pilots and interoperability
+      requirements across issuers, holders and verifiers.
+    confidence: high

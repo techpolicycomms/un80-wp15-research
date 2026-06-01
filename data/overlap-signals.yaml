@@ -1,6 +1,6 @@
 # Signals of duplication and interoperability gaps (populated by automations)
 meta:
-  last_updated: "2026-05-23"
+  last_updated: "2026-06-01"
   disclaimer: Working document — public secondary evidence only
 
 signals:
@@ -34,3 +34,16 @@ signals:
     evidence_sources:
       - data/secondary-sources/2026-05-23-first-iteration-scan.yaml
     confidence: medium
+
+  - id: sig-2026-06-01-004
+    topic: shared_services_technology_governance_interoperability
+    summary: >-
+      The Secretary-General's 28 May 2026 UN80 remarks state that the Unified
+      Services Roadmap is moving support services from fragmentation to common
+      arrangements; apply the same logic to technology spending of about US$2.5B
+      per year; and ask governing bodies to support interoperability, data and
+      technology governance, and justification of continued duplication where
+      shared approaches would deliver stronger value.
+    evidence_sources:
+      - data/secondary-sources/2026-06-01-scan.yaml
+    confidence: high
