@@ -1,6 +1,6 @@
 # Signals of duplication and interoperability gaps (populated by automations)
 meta:
-  last_updated: "2026-05-23"
+  last_updated: "2026-06-08"
   disclaimer: Working document — public secondary evidence only
 
 signals:
@@ -34,3 +34,27 @@ signals:
     evidence_sources:
       - data/secondary-sources/2026-05-23-first-iteration-scan.yaml
     confidence: medium
+
+  - id: sig-2026-06-08-006
+    topic: integrated_ict_procurement_shared_software
+    summary: >-
+      CEB/HLCM public evidence identifies integrated ICT procurement and shared
+      software services, including collective cloud/enterprise licensing,
+      One UN IT data centre consolidation, Digital Service Hubs and shared
+      software catalogues, as a concrete route to reduce duplicated ICT stacks
+      and improve interoperability under Action 61.
+    evidence_sources:
+      - data/secondary-sources/2026-06-08-scan.yaml
+    confidence: high
+
+  - id: sig-2026-06-08-007
+    topic: ai_language_services_common_mechanism
+    summary: >-
+      HLCM describes a common policy and technical mechanism for AI-powered
+      language services that inventories tools, develops shared guidance and
+      pilots use cases across participating entities, providing clear evidence
+      of TAP-relevant coordination to avoid duplicated translation and
+      conferencing capabilities.
+    evidence_sources:
+      - data/secondary-sources/2026-06-08-scan.yaml
+    confidence: high
