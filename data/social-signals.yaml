@@ -1,7 +1,7 @@
 meta:
-  last_updated: 2026-05-24
+  last_updated: 2026-06-10
   disclaimer: Public official posts only — DRAFT
-  total_signals: 17
+  total_signals: 22
 signals:
   - id: soc-2026-05-22-001
     date: 2026-05-22
@@ -228,3 +228,80 @@ signals:
     summary: The UN is rushing emergency personnel, funding and supplies into
       eastern Democratic Republic of the Congo (DRC) to counter the fast-growing
       Ebola outbreak spreading through conflict-ravaged provinces.
+  - id: soc-2026-06-10-018
+    date: 2026-06-10
+    platform: news
+    agency: World Health Organization
+    title: WHO urges governments to protect young people from addiction to tobacco
+      and nicotine products
+    url: https://www.who.int/news/item/29-05-2026-who-urges-governments-to-protect-young-people-from-addiction-to-tobacco-and-nicotine-products
+    matched_keywords:
+      - ict
+    priority: low
+    relevance: both
+    summary: "Worldwide, at least 40 million children aged 13–15 use tobacco
+      products, and young people’s use of e-cigarettes and nicotine pouches
+      continues to rise. In advance of World No Tobacco Day – 31 May – the World
+      Health Organization (WHO) urges governments around the world to protect "
+  - id: soc-2026-06-10-019
+    date: 2026-06-10
+    platform: news
+    agency: World Health Organization
+    title: Message by the WHO Director-General to the people of the Democratic
+      Republic of the Congo
+    url: https://www.who.int/news/item/28-05-2026-message-by-the-who-director-general-to-the-people-of-the-democratic-republic-of-the-congo
+    matched_keywords:
+      - ict
+    priority: low
+    relevance: both
+    summary: <p>To the people of DRC, especially to the people of
+      Ituri&nbsp;</p><p>Jambo kwenu wakahaji wa Ituri&nbsp;</p><p>Mbote na bino,
+      bato ya Ituri&nbsp;</p><p>My name is Tedros, and I am the Director-General
+      of the World Health Organization (WHO). But today, I am not writing to you
+      as
+  - id: soc-2026-06-10-020
+    date: 2026-06-10
+    platform: facebook
+    agency: International Telecommunication Union
+    title: Artificial intelligence is advancing faster than governance frameworks
+    url: https://www.facebook.com/ITU/videos/artificial-intelligence-is-advancing-faster-than-governance-frameworksthe-global/1511582170329665/
+    matched_keywords:
+      - artificial intelligence
+      - Global Digital Compact
+      - AI governance
+    priority: medium
+    relevance: action_62
+    summary: Official ITU Facebook video promotes the July 2026 Global Dialogue
+      on AI Governance and links it to the Global Digital Compact; material for
+      Action 62 governance and TAP context.
+  - id: soc-2026-06-10-021
+    date: 2026-06-10
+    platform: facebook
+    agency: UNESCO
+    title: United Nations Global Dialogue on AI Governance
+    url: https://www.facebook.com/unesco/videos/united-nations-global-dialogue-on-ai-governance/2008673236353162/
+    matched_keywords:
+      - artificial intelligence
+      - AI governance
+      - Global Digital Compact
+    priority: medium
+    relevance: action_62
+    summary: Official UNESCO Facebook post notes UNESCO/ITU coordination of the
+      Global Dialogue joint secretariat with ODET and EOSG; material for Action
+      62 AI governance landscape monitoring.
+  - id: soc-2026-06-10-022
+    date: 2026-06-10
+    platform: official_web
+    agency: UN Office for Digital and Emerging Technologies / UN OICT
+    title: UN Open Source Week 2026
+    url: https://www.unopensource.org/
+    matched_keywords:
+      - artificial intelligence
+      - digital public infrastructure
+      - digital transformation
+      - innovation
+    priority: medium
+    relevance: both
+    summary: Official event page co-organized by ODET and OICT highlights AI,
+      DPI, OSPOs, digital cooperation, and practical reusable tools; relevant to
+      Action 61 infrastructure and Action 62 innovation/TAP monitoring.
