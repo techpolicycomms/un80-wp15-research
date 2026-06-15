@@ -64,7 +64,7 @@ findings:
     confidence: high
 
   - source:
-      title: UN80 Initiative: Progress Report (May 2026)
+      title: "UN80 Initiative: Progress Report (May 2026)"
       url: https://www.un.org/un80-initiative/sites/default/files/2026-05/UN80-PR2_260526_0833_WEB.pdf
       type: un_system
     relevance: both
