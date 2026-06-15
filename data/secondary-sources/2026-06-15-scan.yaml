@@ -1,0 +1,138 @@
+meta:
+  scan_date: "2026-06-15"
+  automation: un80-landscape-monitor
+  disclaimer: DRAFT — public secondary sources only
+
+findings:
+  - source:
+      title: UNICC Biennial Report 2024-2025
+      url: https://www.unicc.org/our-impact/resources/biennial-report-2024-2025/
+      type: un_system
+    relevance: action_61
+    topic: shared_digital_foundations
+    summary: >-
+      UNICC frames its 2024-2025 work around "Digital Foundations" across
+      infrastructure, private cloud, specialized computing, digital tools and
+      platforms, cybersecurity, data and AI services, and expertise/training.
+      The report explicitly positions UNICC as scaling shared solutions for a
+      more agile and efficient UN system, reinforcing Action 61 consolidation
+      options around common ICT providers and platforms.
+    confidence: high
+
+  - source:
+      title: HLCM Far-Reaching Efficiency Initiatives
+      url: https://unsceb.org/topics/hlcm-far-reaching-efficiency-initiatives
+      type: un_system
+    relevance: action_61
+    topic: integrated_ict_procurement_and_one_un_it
+    summary: >-
+      The public CEB/HLCM efficiency page identifies "Integrated ICT procurement
+      and Shared Software Services" and "One UN IT" as priority initiatives,
+      including data-centre consolidation, regional Digital Service Hubs, a UN
+      private cloud/hybrid-cloud model, and system-wide shared software
+      catalogues to reduce duplication and improve operational efficiency.
+    confidence: high
+
+  - source:
+      title: Session Report
+      url: https://unsceb.org/session-report-431
+      type: un_system
+    relevance: both
+    topic: dtn_fragmentation_and_unified_identity
+    summary: >-
+      The CEB Digital and Technology Network session report names fragmentation
+      of technology services, the need for unified digital identity, and deeper
+      collaboration on AI as pressing system-wide digital challenges under the
+      UN80 modernization and UN 2.0 agendas. This provides cross-cutting
+      evidence for Action 61 consolidation and Action 62 TAP use cases.
+    confidence: high
+
+  - source:
+      title: Progress and Next Steps
+      url: https://www.un.org/un80-initiative/sites/default/files/2026-05/UN80_Progress-Next-Steps_260522_1415%201.pdf
+      type: un_system
+    relevance: both
+    topic: action_61_62_public_milestones
+    summary: >-
+      The public UN80 progress deck states that Action 61 is intended to expand
+      shared ICT services for cloud, network and basic enterprise systems while
+      improving interoperability, and that Action 62 will establish TAP to
+      identify common demands, develop solution portfolios and mobilize pooled
+      capacity. It also names TAP priority use cases: AI translation and
+      conferencing toolboxes, expertise-on-demand support, and shared digital ID
+      solutions.
+    confidence: high
+
+  - source:
+      title: UN80 Initiative: Progress Report (May 2026)
+      url: https://www.un.org/un80-initiative/sites/default/files/2026-05/UN80-PR2_260526_0833_WEB.pdf
+      type: un_system
+    relevance: both
+    topic: shared_core_services_and_tap_phase_1
+    summary: >-
+      The May 2026 UN80 progress report describes technology and data as
+      fragmented across entities and platforms, notes work on shared core
+      services and system-wide software contracts, and lists TAP phase-one
+      solution areas including AI-assisted conferencing and translation,
+      expertise-on-demand, and common digital identity. The finding is based
+      only on the published report and does not reproduce internal survey data.
+    confidence: high
+
+  - source:
+      title: UN Innovation Network | Digital Group
+      url: https://www.uninnovation.network/un-group-pages/digital
+      type: un_system
+    relevance: action_62
+    topic: digital_expertise_community_and_solution_showcases
+    summary: >-
+      The UN Digital Community is presented as a UN-family community for
+      exploring digital programming, connecting digital practitioners, sharing
+      expertise and good practices, and running UN 2.0 Digital and Data Solution
+      Expo showcases. This is a public operational analogue for TAP's expertise
+      discovery and innovation pipeline functions.
+    confidence: medium
+
+  - source:
+      title: UN Innovation Network | Projects | UN Digital ID
+      url: https://www.uninnovation.network/projects/un-digital-id
+      type: un_system
+    relevance: action_62
+    topic: shared_digital_id
+    summary: >-
+      The UN Digital ID project page describes a universal system-wide identity
+      for UN staff, designed to reduce data fragmentation and duplication and
+      enable secure, consent-based data exchange between staff, organizations
+      and UN organizations. It identifies participating UN entities including
+      CEB, UNJSPF, WFP and UNICC, and states that the MVP launched with WFP and
+      UNJSPF.
+    confidence: high
+
+  - source:
+      title: Identity & the Web
+      url: https://www.w3.org/reports/identity-web-impact/
+      type: standards_body
+    relevance: action_62
+    topic: digital_credentials_interoperability
+    summary: >-
+      W3C's identity impact report links Verifiable Credentials, Digital
+      Credentials API work and federated identity discussions to privacy,
+      rights and interoperability concerns. It is relevant standards context for
+      any TAP or UN Digital ID design that must bridge centralized, federated
+      and decentralized identity models without locking into a single
+      implementation approach.
+    confidence: medium
+
+  - source:
+      title: ISO/IEC 24760-2:2025 - Information security, cybersecurity and privacy protection - A framework for identity management - Part 2
+      url: https://www.iso.org/standard/24760-2
+      type: standards_body
+    relevance: action_62
+    topic: identity_management_reference_architecture
+    summary: >-
+      ISO's public summary for ISO/IEC 24760-2:2025 describes a reference
+      architecture and requirements for identity management systems, including
+      integration across diverse identity models, risk-based access control,
+      privacy considerations and interoperability with related identity and
+      privacy standards. This supports TAP follow-up on digital ID architecture
+      and governance.
+    confidence: medium

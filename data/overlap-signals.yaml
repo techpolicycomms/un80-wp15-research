@@ -1,6 +1,6 @@
 # Signals of duplication and interoperability gaps (populated by automations)
 meta:
-  last_updated: "2026-05-23"
+  last_updated: "2026-06-15"
   disclaimer: Working document — public secondary evidence only
 
 signals:
@@ -34,3 +34,16 @@ signals:
     evidence_sources:
       - data/secondary-sources/2026-05-23-first-iteration-scan.yaml
     confidence: medium
+
+  - id: sig-2026-06-15-008
+    topic: ceb_shared_technology_services_interoperability
+    summary: >-
+      Public CEB/HLCM materials explicitly identify technology-service
+      fragmentation and propose integrated ICT procurement, shared software
+      services, One UN IT/data-centre consolidation, unified digital identity and
+      ERP-as-a-Service as common-service responses. This is clear duplication and
+      interoperability evidence for aligning Action 61 provider consolidation
+      with Action 62 TAP solution portfolios.
+    evidence_sources:
+      - data/secondary-sources/2026-06-15-scan.yaml
+    confidence: high
