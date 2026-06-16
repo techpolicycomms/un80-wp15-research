@@ -1,0 +1,151 @@
+meta:
+  scan_date: "2026-06-10"
+  automation: cursor-weekly-social-monitor
+  disclaimer: DRAFT - public official posts and pages only; not agreed UN position
+  platforms: [news, youtube, x, facebook, official_web]
+  signal_counts:
+    total_reviewed_signals: 14
+    rss_feed_signals: 11
+    facebook_signals: 2
+    x_signals: 0
+    official_web_cross_checks: 1
+    high_priority: 8
+    material_new_signals: 3
+    likely_false_positive: 2
+  source_files:
+    feeds: data/social-monitor/2026-06-10-feeds.yaml
+    registry: data/un-agencies-social.yaml
+  agent_review_note: >-
+    YouTube/news RSS was pulled with npm run fetch:youtube. Direct public fetch
+    of X returned HTTP 403 and targeted public web search did not surface recent
+    indexable X status URLs for registered official handles, so no X signals are
+    counted. Facebook review used public indexed pages only and found two
+    official posts from registry accounts. No private data or authenticated
+    platform access was used.
+
+signals:
+  - platform: news
+    agency: UN Global Pulse
+    title: "Transforming Development: AI, Innovation & Partnerships for the Sustainable Development Goals (SDGs)"
+    url: https://www.unglobalpulse.org/transforming-development-ai-innovation-partnerships-for-the-sustainable-development-goals-sdgs/
+    matched_keywords: [innovation]
+    priority: medium
+    relevance: action_62
+    summary: RSS carry-forward signal on AI and innovation partnerships for SDG delivery; relevant to Action 62 demand sensing and accelerator framing.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UNICC Hosts AI-Driven Crisis Simulation During Geneva Cyber Week
+    url: https://www.unicc.org/news/2026/05/15/unicc-hosts-ai-driven-crisis-simulation-during-geneva-cyber-week/
+    matched_keywords: [unicc, cybersecurity, ai]
+    priority: high
+    relevance: action_61
+    summary: Shared cybersecurity capacity signal from UNICC; supports Action 61 analysis of security operations as a common ICT backbone capability.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UNICC Biennial Report 2024-2025
+    url: https://www.unicc.org/wp-content/uploads/2026/05/UNICC-2024-2025-Biennial-Report-1.pdf#new_tab
+    matched_keywords: [unicc, shared services]
+    priority: high
+    relevance: action_61
+    summary: Primary UNICC strategy and service-scale source for Action 61 shared ICT services monitoring.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UN Virtual Worlds Day Calls for AI and Emerging Tech to Support Better City and Community Life
+    url: https://www.unicc.org/news/2026/05/13/un-virtual-worlds-day-calls-for-ai-and-emerging-tech-to-support-better-city-and-community-life/
+    matched_keywords: [unicc, ai, emerging technology]
+    priority: high
+    relevance: both
+    summary: Cross-cutting emerging technology item linking UNICC infrastructure role with Action 62 innovation themes.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UN Innovation Update (April 2026)
+    url: https://www.uninnovation.network/innovation-library/un-innovation-update-april-2026#new_tab
+    matched_keywords: [unicc, innovation]
+    priority: high
+    relevance: action_62
+    summary: System innovation library update relevant to TAP pipeline tracking and system-wide innovation demand signals.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: "Inspiring the Next Generation of Women in Tech: Girls in ICT Day"
+    url: https://www.unicc.org/news/2026/04/23/gict-day-celebration-2026/
+    matched_keywords: [unicc, ict]
+    priority: high
+    relevance: action_61
+    summary: Workforce and ICT-capability signal from UNICC; relevant as background to common ICT capacity and skills.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UNICC Recognized with Multiple UN-SWAP Awards for Sustained Performance on Gender Equality
+    url: https://www.unicc.org/news/2026/02/13/unicc-recognized-with-multiple-un-swap-awards-for-sustained-performance-on-gender-equality/
+    matched_keywords: [unicc]
+    priority: high
+    relevance: action_61
+    summary: Low substantive WP15 content beyond UNICC institutional monitoring; retained as RSS keyword hit.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: Enabling Secure and Resilient UN Operations in Bonn
+    url: https://www.unicc.org/news/2026/02/03/enabling-secure-and-resilient-un-operations-in-bonn/
+    matched_keywords: [unicc, cybersecurity]
+    priority: high
+    relevance: action_61
+    summary: Shared secure operations delivery example for Action 61 common ICT infrastructure analysis.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: "UN Today: UNICC 55 Years of Shared Innovation"
+    url: https://untoday.org/december-2025-january-2026/#new_tab
+    matched_keywords: [unicc, innovation]
+    priority: high
+    relevance: both
+    summary: UNICC institutional history and shared innovation item; useful context for shared-services narrative.
+
+  - platform: news
+    agency: World Health Organization
+    title: WHO urges governments to protect young people from addiction to tobacco and nicotine products
+    url: https://www.who.int/news/item/29-05-2026-who-urges-governments-to-protect-young-people-from-addiction-to-tobacco-and-nicotine-products
+    matched_keywords: [ict]
+    priority: low
+    relevance: false_positive
+    summary: RSS keyword false positive caused by substring match inside "addiction"; not treated as material WP15 evidence.
+
+  - platform: news
+    agency: World Health Organization
+    title: Message by the WHO Director-General to the people of the Democratic Republic of the Congo
+    url: https://www.who.int/news/item/28-05-2026-message-by-the-who-director-general-to-the-people-of-the-democratic-republic-of-the-congo
+    matched_keywords: [ict]
+    priority: low
+    relevance: false_positive
+    summary: RSS keyword false positive caused by substring match inside "Ituri"; not treated as material WP15 evidence.
+
+  - platform: facebook
+    agency: International Telecommunication Union
+    title: "Artificial intelligence is advancing faster than governance frameworks"
+    url: https://www.facebook.com/ITU/videos/artificial-intelligence-is-advancing-faster-than-governance-frameworksthe-global/1511582170329665/
+    matched_keywords: [artificial intelligence, Global Digital Compact, AI governance]
+    priority: medium
+    relevance: action_62
+    summary: Official ITU Facebook video promotes the July 2026 Global Dialogue on AI Governance and links it to the Global Digital Compact; material for Action 62 governance and TAP context.
+
+  - platform: facebook
+    agency: UNESCO
+    title: United Nations Global Dialogue on AI Governance
+    url: https://www.facebook.com/unesco/videos/united-nations-global-dialogue-on-ai-governance/2008673236353162/
+    matched_keywords: [artificial intelligence, AI governance, Global Digital Compact]
+    priority: medium
+    relevance: action_62
+    summary: Official UNESCO Facebook post notes UNESCO/ITU coordination of the Global Dialogue joint secretariat with ODET and EOSG; material for Action 62 AI governance landscape.
+
+  - platform: official_web
+    agency: UN Office for Digital and Emerging Technologies / UN OICT
+    title: UN Open Source Week 2026
+    url: https://www.unopensource.org/
+    matched_keywords: [artificial intelligence, digital public infrastructure, digital transformation, innovation]
+    priority: medium
+    relevance: both
+    summary: Official event page co-organized by ODET and OICT highlights AI, DPI, OSPOs, digital cooperation, and practical reusable tools; relevant to Action 61 infrastructure and Action 62 innovation/TAP monitoring.
