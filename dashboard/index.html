@@ -7,40 +7,88 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <p class="badge">DRAFT — Working document</p>
-      <h1>UN80 WP15 Research Dashboard</h1>
-      <p class="subtitle">ICT consolidation (Action 61) &amp; Technology Accelerator Platform (Action 62)</p>
-      <p id="generated-at" class="meta"></p>
+    <header class="app-header">
+      <div>
+        <p class="badge">DRAFT - Working document</p>
+        <h1>UN80 WP15 Research Dashboard</h1>
+        <p class="subtitle">Action 61 ICT consolidation + Action 62 Technology Accelerator Platform</p>
+        <p id="generated-at" class="meta"></p>
+      </div>
+      <nav aria-label="Dashboard sections">
+        <a href="#reports">Reports</a>
+        <a href="#pushes">Pushes</a>
+        <a href="#data">Data</a>
+      </nav>
     </header>
 
     <main>
-      <section class="cards" id="metric-cards"></section>
+      <p id="app-error" class="error"></p>
+
+      <section class="cards" id="metric-cards" aria-label="Dashboard metrics"></section>
+
+      <div class="split" id="headline-findings"></div>
 
       <section class="panel">
-        <h2>Action 61 — ICT baseline</h2>
-        <div id="baseline-detail"></div>
+        <h2>Baseline And Portfolio</h2>
+        <div class="split">
+          <div id="baseline-detail"></div>
+          <div>
+            <h3>Action 62 TAP Portfolio</h3>
+            <div id="tap-portfolio"></div>
+          </div>
+        </div>
       </section>
 
       <section class="panel">
-        <h2>Action 62 — TAP portfolio</h2>
-        <div id="tap-portfolio"></div>
+        <h2>Phase Tracker</h2>
+        <div id="phase-tracker" class="stack"></div>
+      </section>
+
+      <section class="panel" id="reports">
+        <div class="section-header">
+          <div>
+            <h2>Report Library</h2>
+            <p id="report-count" class="meta"></p>
+          </div>
+          <div class="controls">
+            <label>
+              <span>Search</span>
+              <input id="report-search" name="report-search" type="search" autocomplete="off" aria-label="Search" />
+            </label>
+            <label>
+              <span>Type</span>
+              <select id="report-category" name="report-category" aria-label="Type"></select>
+            </label>
+          </div>
+        </div>
+        <div class="report-grid">
+          <div id="report-list" class="report-list" aria-label="Generated reports"></div>
+          <article id="report-viewer" class="report-viewer" aria-label="Selected report"></article>
+        </div>
+      </section>
+
+      <section class="panel" id="pushes">
+        <div class="section-header">
+          <div>
+            <h2>Push Timeline</h2>
+            <p id="history-note" class="meta"></p>
+          </div>
+        </div>
+        <div id="push-timeline" class="timeline"></div>
+      </section>
+
+      <div id="data">
+        <div id="data-inventory" class="split"></div>
+      </div>
+
+      <section class="panel">
+        <h2>Overlap Signals</h2>
+        <div id="overlap-list" class="signal-grid"></div>
       </section>
 
       <section class="panel">
-        <h2>Phase tracker</h2>
-        <div id="phase-tracker"></div>
-      </section>
-
-      <section class="panel">
-        <h2>Overlap signals</h2>
-        <p id="overlap-count" class="meta"></p>
-        <ul id="overlap-list"></ul>
-      </section>
-
-      <section class="panel">
-        <h2>Media &amp; news monitoring</h2>
-        <div id="monitor-detail"></div>
+        <h2>Social And News Signals</h2>
+        <div id="social-signal-list" class="signal-grid"></div>
       </section>
     </main>
 
