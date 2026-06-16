@@ -63,6 +63,267 @@ function statusBadge(status) {
   });
 }
 
+function pct(value, total) {
+  if (!total) return 0;
+  return Math.max(0, Math.min(100, (value / total) * 100));
+}
+
+function renderHorizontalBars(rootId, items, options = {}) {
+  const root = document.getElementById(rootId);
+  const data = items.slice(0, options.limit ?? 10);
+  const max = Math.max(...data.map((item) => item.count), 1);
+  root.replaceChildren(
+    el(
+      "div",
+      { className: "bar-list" },
+      data.map((item, index) =>
+        el("div", { className: "bar-row" }, [
+          el("div", { className: "bar-label", text: item.label }),
+          el("div", { className: "bar-track" }, [
+            el("div", {
+              className: `bar-fill tone-${(index % 6) + 1}`,
+              style: `width:${Math.max(4, pct(item.count, max))}%`,
+            }),
+          ]),
+          el("div", { className: "bar-value", text: String(item.count) }),
+        ])
+      )
+    )
+  );
+}
+
+function renderActionBalance() {
+  const root = document.getElementById("action-balance-chart");
+  const analysis = state.data.text_analysis;
+  const action61 = analysis.action61_score;
+  const action62 = analysis.action62_score;
+  const total = action61 + action62;
+  const action61Pct = pct(action61, total);
+  const action62Pct = pct(action62, total);
+  root.replaceChildren(
+    el("div", { className: "balance-meter" }, [
+      el("div", {
+        className: "balance-segment action-61",
+        style: `width:${action61Pct}%`,
+        title: `Action 61: ${action61}`,
+      }),
+      el("div", {
+        className: "balance-segment action-62",
+        style: `width:${action62Pct}%`,
+        title: `Action 62: ${action62}`,
+      }),
+    ]),
+    el("div", { className: "balance-legend" }, [
+      el("span", {}, [
+        el("b", { text: `${Math.round(action61Pct)}%` }),
+        " Action 61",
+      ]),
+      el("span", {}, [
+        el("b", { text: `${Math.round(action62Pct)}%` }),
+        " Action 62",
+      ]),
+    ]),
+    el("p", {
+      className: "chart-note",
+      text: `${action61.toLocaleString()} Action 61 evidence-weight points vs ${action62.toLocaleString()} Action 62 points.`,
+    })
+  );
+}
+
+function renderTimelineChart() {
+  const root = document.getElementById("timeline-chart");
+  const data = state.data.text_analysis.timeline ?? [];
+  const maxReports = Math.max(...data.map((item) => item.reports), 1);
+  const maxEvidence = Math.max(...data.map((item) => item.evidence_score), 1);
+  root.replaceChildren(
+    el(
+      "div",
+      { className: "timeline-chart" },
+      data.map((item) =>
+        el("div", { className: "timeline-column" }, [
+          el("div", { className: "timeline-bars" }, [
+            el("div", {
+              className: "timeline-evidence",
+              style: `height:${Math.max(6, pct(item.evidence_score, maxEvidence))}%`,
+              title: `Evidence score: ${item.evidence_score}`,
+            }),
+            el("div", {
+              className: "timeline-reports",
+              style: `height:${Math.max(6, pct(item.reports, maxReports))}%`,
+              title: `Reports: ${item.reports}`,
+            }),
+          ]),
+          el("div", { className: "timeline-label", text: item.date }),
+        ])
+      )
+    ),
+    el("p", { className: "chart-note", text: "Blue bars show report volume; purple bars show evidence weight." })
+  );
+}
+
+function renderReviewRiskChart() {
+  const root = document.getElementById("review-risk-chart");
+  const counts = state.data.text_analysis.review_risk_counts ?? {};
+  const items = ["high", "medium", "low"].map((level) => ({
+    label: level,
+    count: counts[level] ?? 0,
+  }));
+  const total = items.reduce((sum, item) => sum + item.count, 0);
+  root.replaceChildren(
+    el(
+      "div",
+      { className: "risk-rings" },
+      items.map((item) =>
+        el("div", { className: `risk-tile ${item.label}` }, [
+          el("div", { className: "risk-number", text: String(item.count) }),
+          el("div", { className: "risk-label", text: item.label }),
+          el("div", { className: "risk-share", text: `${Math.round(pct(item.count, total))}%` }),
+        ])
+      )
+    )
+  );
+}
+
+function renderTermCloud() {
+  const root = document.getElementById("term-cloud");
+  const terms = state.data.text_analysis.top_terms ?? [];
+  const max = Math.max(...terms.map((term) => term.count), 1);
+  root.replaceChildren(
+    el(
+      "div",
+      { className: "term-cloud" },
+      terms.map((term, index) =>
+        el("span", {
+          className: `term-chip tone-${(index % 6) + 1}`,
+          style: `font-size:${0.8 + pct(term.count, max) / 80}rem`,
+          text: `${term.label} ${term.count}`,
+        })
+      )
+    )
+  );
+}
+
+function reportById(id) {
+  return (state.data.reports ?? []).find((report) => report.id === id);
+}
+
+function selectReport(id) {
+  if (!reportById(id)) return;
+  state.selectedReportId = id;
+  state.query = "";
+  state.category = "all";
+  document.getElementById("report-search").value = "";
+  document.getElementById("report-category").value = "all";
+  renderReportLibrary();
+  document.getElementById("reports").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function renderAnalysisReportCard(item, mode) {
+  return el("article", { className: "analysis-report-card" }, [
+    el("div", {}, [
+      el("p", { className: "eyebrow", text: `${formatDate(item.date)} · ${item.category}` }),
+      el("h4", { text: item.title }),
+      el("p", {
+        className: "meta",
+        text:
+          mode === "risk"
+            ? `${item.review_risk} risk · ${item.review_signal_count} review signal(s)`
+            : `Evidence ${item.evidence_score} · ${item.url_count} URL(s) · ${item.footnote_count} footnote(s)`,
+      }),
+      ...(item.key_sentences?.length
+        ? [el("p", { className: "mini-extract", text: item.key_sentences[0] })]
+        : []),
+    ]),
+    el("button", { type: "button", className: "mini-button", "data-report-id": item.id, text: "Read" }),
+  ]);
+}
+
+function bindReportCardButtons(root) {
+  for (const button of root.querySelectorAll("button[data-report-id]")) {
+    button.addEventListener("click", () => selectReport(button.dataset.reportId));
+  }
+}
+
+function renderCategoryMatrix() {
+  const root = document.getElementById("category-matrix");
+  const rows = state.data.text_analysis.category_matrix ?? [];
+  const max = Math.max(
+    ...rows.map((row) => Math.max(row.action61_score, row.action62_score, row.evidence_score)),
+    1
+  );
+  root.replaceChildren(
+    el("table", { className: "matrix-table" }, [
+      el("thead", {}, [
+        el("tr", {}, [
+          el("th", { text: "Report type" }),
+          el("th", { text: "Reports" }),
+          el("th", { text: "Action 61" }),
+          el("th", { text: "Action 62" }),
+          el("th", { text: "Evidence" }),
+          el("th", { text: "Review" }),
+        ]),
+      ]),
+      el(
+        "tbody",
+        {},
+        rows.map((row) =>
+          el("tr", {}, [
+            el("td", { text: row.category }),
+            el("td", { text: String(row.reports) }),
+            matrixBar(row.action61_score, max, "action-61"),
+            matrixBar(row.action62_score, max, "action-62"),
+            matrixBar(row.evidence_score, max, "evidence"),
+            el("td", { text: String(row.review_signals) }),
+          ])
+        )
+      ),
+    ])
+  );
+}
+
+function matrixBar(value, max, tone) {
+  return el("td", {}, [
+    el("div", { className: "matrix-cell" }, [
+      el("span", { text: String(value) }),
+      el("div", { className: "matrix-track" }, [
+        el("div", { className: `matrix-fill ${tone}`, style: `width:${Math.max(3, pct(value, max))}%` }),
+      ]),
+    ]),
+  ]);
+}
+
+function renderTextAnalysis() {
+  const analysis = state.data.text_analysis;
+  document.getElementById("insight-cards").replaceChildren(
+    ...(analysis.insights ?? []).map((insight) =>
+      el("article", { className: "insight-card" }, [
+        el("h3", { text: insight.title }),
+        el("p", { text: insight.body }),
+      ])
+    )
+  );
+  renderActionBalance();
+  renderHorizontalBars("theme-bar-chart", analysis.theme_totals ?? [], { limit: 10 });
+  renderTimelineChart();
+  renderReviewRiskChart();
+  renderHorizontalBars("entity-chart", analysis.entity_totals ?? [], { limit: 10 });
+  renderHorizontalBars("source-domain-chart", analysis.domain_totals ?? [], { limit: 10 });
+  renderCategoryMatrix();
+  renderTermCloud();
+
+  const evidenceRoot = document.getElementById("evidence-report-cards");
+  evidenceRoot.replaceChildren(
+    ...(analysis.top_evidence_reports ?? []).slice(0, 5).map((report) => renderAnalysisReportCard(report, "evidence"))
+  );
+  bindReportCardButtons(evidenceRoot);
+
+  const riskRoot = document.getElementById("risk-report-cards");
+  riskRoot.replaceChildren(
+    ...(analysis.top_risk_reports ?? []).slice(0, 5).map((report) => renderAnalysisReportCard(report, "risk"))
+  );
+  bindReportCardButtons(riskRoot);
+}
+
 function renderMetricCards() {
   const data = state.data;
   const baseline = data.baseline;
@@ -258,7 +519,17 @@ function filteredReports() {
   return (state.data.reports ?? []).filter((report) => {
     if (state.category !== "all" && report.category !== state.category) return false;
     if (!query) return true;
-    return [report.title, report.path, report.summary, report.content, report.category]
+    return [
+      report.title,
+      report.path,
+      report.summary,
+      report.content,
+      report.category,
+      report.analysis?.action_focus,
+      ...(report.analysis?.themes ?? []).map((theme) => theme.label),
+      ...(report.analysis?.entities ?? []).map((entity) => entity.label),
+      ...(report.analysis?.key_sentences ?? []),
+    ]
       .map(normalize)
       .some((value) => value.includes(query));
   });
@@ -485,6 +756,7 @@ async function loadDashboard() {
 
   bindControls();
   renderMetricCards();
+  renderTextAnalysis();
   renderHeadlineFindings();
   renderBaseline();
   renderTapAndPhases();

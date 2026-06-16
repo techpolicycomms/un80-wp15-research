@@ -106,6 +106,11 @@ h3 {
   font-size: 0.96rem;
 }
 
+h4 {
+  margin: 0 0 6px;
+  font-size: 0.92rem;
+}
+
 .subtitle,
 .meta,
 .eyebrow,
@@ -148,7 +153,10 @@ footer {
 .signal-item,
 .timeline-body,
 .report-row,
-.report-viewer {
+.report-viewer,
+.chart-card,
+.insight-card,
+.analysis-list-panel {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -179,8 +187,339 @@ footer {
   box-shadow: var(--shadow);
 }
 
+.analysis-panel {
+  border-color: #c7d5de;
+}
+
 .compact-panel {
   margin-bottom: 0;
+}
+
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.insight-card {
+  padding: 12px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fafc 100%);
+  border-top: 4px solid #c86b4a;
+}
+
+.insight-card:nth-child(2n) {
+  border-top-color: #5b5f97;
+}
+
+.insight-card:nth-child(3n) {
+  border-top-color: #147d52;
+}
+
+.insight-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.chart-card {
+  min-height: 240px;
+  min-width: 0;
+  overflow: hidden;
+  padding: 13px;
+  background: #fbfcfd;
+}
+
+.chart-card > div {
+  min-width: 0;
+}
+
+.wide-chart {
+  grid-column: span 2;
+}
+
+.chart-note {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.bar-list {
+  display: grid;
+  gap: 9px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: minmax(92px, 1.1fr) minmax(90px, 2fr) 42px;
+  gap: 8px;
+  align-items: center;
+  min-width: 0;
+}
+
+.bar-label,
+.bar-value {
+  color: var(--muted);
+  font-size: 0.8rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.bar-value {
+  text-align: right;
+  font-weight: 800;
+}
+
+.bar-track,
+.matrix-track {
+  min-height: 10px;
+  border-radius: 999px;
+  background: #e4e9ee;
+  overflow: hidden;
+}
+
+.bar-fill,
+.matrix-fill {
+  height: 100%;
+  border-radius: inherit;
+}
+
+.tone-1 {
+  background: #146c94;
+}
+
+.tone-2 {
+  background: #c86b4a;
+}
+
+.tone-3 {
+  background: #147d52;
+}
+
+.tone-4 {
+  background: #5b5f97;
+}
+
+.tone-5 {
+  background: #9b5f00;
+}
+
+.tone-6 {
+  background: #6d5d4c;
+}
+
+.balance-meter {
+  display: flex;
+  height: 42px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #e4e9ee;
+  border: 1px solid var(--border);
+}
+
+.balance-segment.action-61 {
+  background: #146c94;
+}
+
+.balance-segment.action-62 {
+  background: #c86b4a;
+}
+
+.balance-legend {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.timeline-chart {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(42px, 1fr);
+  gap: 9px;
+  min-height: 190px;
+  align-items: end;
+  overflow-x: auto;
+  padding: 4px 2px 0;
+}
+
+.timeline-column {
+  display: grid;
+  grid-template-rows: 150px auto;
+  gap: 7px;
+  min-width: 44px;
+}
+
+.timeline-bars {
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 5px;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline-reports,
+.timeline-evidence {
+  width: 12px;
+  border-radius: 999px 999px 0 0;
+}
+
+.timeline-reports {
+  background: #146c94;
+}
+
+.timeline-evidence {
+  background: #5b5f97;
+}
+
+.timeline-label {
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.15;
+  text-align: center;
+  overflow-wrap: normal;
+}
+
+.risk-rings {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.risk-tile {
+  min-height: 120px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.risk-tile.high {
+  background: #fbe4e4;
+  color: var(--danger);
+}
+
+.risk-tile.medium {
+  background: #fff0d6;
+  color: var(--warning);
+}
+
+.risk-tile.low {
+  background: #e4f4ec;
+  color: var(--success);
+}
+
+.risk-number {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.risk-label,
+.risk-share {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.matrix-table {
+  font-size: 0.82rem;
+}
+
+#category-matrix {
+  overflow-x: auto;
+}
+
+.matrix-cell {
+  display: grid;
+  grid-template-columns: 44px minmax(70px, 1fr);
+  gap: 8px;
+  align-items: center;
+}
+
+.matrix-cell span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.matrix-fill.action-61 {
+  background: #146c94;
+}
+
+.matrix-fill.action-62 {
+  background: #c86b4a;
+}
+
+.matrix-fill.evidence {
+  background: #5b5f97;
+}
+
+.term-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-content: start;
+  min-width: 0;
+}
+
+.term-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 800;
+  padding: 5px 10px;
+}
+
+.analysis-list-panel {
+  padding: 13px;
+  background: #fbfcfd;
+}
+
+.analysis-report-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: start;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  padding: 11px;
+}
+
+.analysis-report-card p {
+  margin: 0 0 6px;
+}
+
+.mini-extract {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.mini-button {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface-muted);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 800;
+  padding: 7px 10px;
+}
+
+.mini-button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .split {
@@ -471,8 +810,13 @@ footer {
 
   .split,
   .two-column,
-  .report-grid {
+  .report-grid,
+  .chart-grid {
     grid-template-columns: 1fr;
+  }
+
+  .wide-chart {
+    grid-column: auto;
   }
 
   .report-list,
@@ -510,6 +854,27 @@ footer {
   input,
   select {
     width: 100%;
+  }
+
+  .bar-row {
+    grid-template-columns: 1fr 56px;
+  }
+
+  .bar-track {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .risk-rings {
+    grid-template-columns: 1fr;
+  }
+
+  .analysis-report-card {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-chart {
+    grid-auto-columns: minmax(38px, 1fr);
   }
 
   .file-list {

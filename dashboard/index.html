@@ -15,6 +15,7 @@
         <p id="generated-at" class="meta"></p>
       </div>
       <nav aria-label="Dashboard sections">
+        <a href="#analysis">Analysis</a>
         <a href="#reports">Reports</a>
         <a href="#pushes">Pushes</a>
         <a href="#data">Data</a>
@@ -25,6 +26,60 @@
       <p id="app-error" class="error"></p>
 
       <section class="cards" id="metric-cards" aria-label="Dashboard metrics"></section>
+
+      <section class="panel analysis-panel" id="analysis">
+        <div class="section-header">
+          <div>
+            <h2>Inferred Text Intelligence</h2>
+            <p class="meta">Automated reading of every generated report artifact, including branch-only reports.</p>
+          </div>
+        </div>
+        <div id="insight-cards" class="insight-grid"></div>
+        <div class="chart-grid">
+          <article class="chart-card">
+            <h3>Action Evidence Balance</h3>
+            <div id="action-balance-chart"></div>
+          </article>
+          <article class="chart-card">
+            <h3>Dominant Themes</h3>
+            <div id="theme-bar-chart"></div>
+          </article>
+          <article class="chart-card wide-chart">
+            <h3>Report Timeline</h3>
+            <div id="timeline-chart"></div>
+          </article>
+          <article class="chart-card">
+            <h3>Review Risk</h3>
+            <div id="review-risk-chart"></div>
+          </article>
+          <article class="chart-card">
+            <h3>Institutional Attention</h3>
+            <div id="entity-chart"></div>
+          </article>
+          <article class="chart-card">
+            <h3>Source Domains</h3>
+            <div id="source-domain-chart"></div>
+          </article>
+          <article class="chart-card wide-chart">
+            <h3>Category Matrix</h3>
+            <div id="category-matrix"></div>
+          </article>
+          <article class="chart-card wide-chart">
+            <h3>Corpus Term Cloud</h3>
+            <div id="term-cloud"></div>
+          </article>
+        </div>
+        <div class="split">
+          <section class="analysis-list-panel">
+            <h3>Evidence-Rich Reports</h3>
+            <div id="evidence-report-cards" class="stack"></div>
+          </section>
+          <section class="analysis-list-panel">
+            <h3>Review-Gated Reports</h3>
+            <div id="risk-report-cards" class="stack"></div>
+          </section>
+        </div>
+      </section>
 
       <div class="split" id="headline-findings"></div>
 
