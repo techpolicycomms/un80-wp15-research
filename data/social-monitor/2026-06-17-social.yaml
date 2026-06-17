@@ -1,0 +1,165 @@
+meta:
+  scan_date: "2026-06-17"
+  automation: cursor-weekly-social-monitor
+  disclaimer: DRAFT - public official posts and pages only; not agreed UN position
+  platforms: [news, youtube, x, facebook, official_web]
+  signal_counts:
+    total_reviewed_signals: 15
+    rss_feed_signals: 14
+    youtube_signals: 0
+    x_signals: 0
+    facebook_signals: 0
+    official_web_cross_checks: 1
+    high_priority_raw_hits: 9
+    material_new_signals: 0
+    material_existing_signals_cross_checked: 1
+    likely_false_positive_or_non_material: 5
+  source_files:
+    feeds: data/social-monitor/2026-06-17-feeds.yaml
+    registry: data/un-agencies-social.yaml
+    rollup: data/social-signals.yaml
+  agent_review_note: >-
+    Ran npm run fetch:youtube, which delegates to the public RSS monitor and
+    wrote data/social-monitor/2026-06-17-feeds.yaml. Direct unauthenticated
+    public fetches of X official handles returned HTTP 403; targeted public web
+    searches for registered X handles and monitoring keywords did not surface
+    recent indexable status URLs. Facebook public page fetches exposed sparse
+    page metadata only, and targeted public web searches did not surface new
+    official Facebook post URLs for this pass. No private data, authenticated
+    sessions, APIs, or high-volume scraping were used.
+
+signals:
+  - platform: news
+    agency: UN News (all topics)
+    title: A turning point for Haiti? New security force takes fight to powerful gangs
+    url: https://news.un.org/feed/view/en/story/2026/06/1167732
+    matched_keywords: [tap]
+    priority: high
+    relevance: false_positive
+    summary: RSS keyword hit is not a WP15 TAP signal; "tap" appears in the phrase "tap tap" for a shared pick-up taxi in Haiti.
+
+  - platform: news
+    agency: UN News (all topics)
+    title: UN urges adherence to mine ban treaty
+    url: https://news.un.org/feed/view/en/story/2026/06/1167730
+    matched_keywords: [ict]
+    priority: low
+    relevance: false_positive
+    summary: RSS keyword hit is not a WP15 ICT signal; the match appears as a substring inside unrelated text such as "conflict".
+
+  - platform: news
+    agency: UN Global Pulse
+    title: "Transforming Development: AI, Innovation & Partnerships for the Sustainable Development Goals (SDGs)"
+    url: https://www.unglobalpulse.org/transforming-development-ai-innovation-partnerships-for-the-sustainable-development-goals-sdgs/
+    matched_keywords: [innovation]
+    priority: medium
+    relevance: action_62
+    summary: Carry-forward RSS signal on AI, innovation, and partnerships for SDG delivery; relevant background for Action 62 demand sensing and accelerator framing.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UNICC Hosts AI-Driven Crisis Simulation During Geneva Cyber Week
+    url: https://www.unicc.org/news/2026/05/15/unicc-hosts-ai-driven-crisis-simulation-during-geneva-cyber-week/
+    matched_keywords: [unicc, cybersecurity, ai]
+    priority: high
+    relevance: action_61
+    summary: Carry-forward shared cybersecurity capacity signal from UNICC; supports Action 61 analysis of security operations as a common ICT backbone capability.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UNICC Biennial Report 2024-2025
+    url: https://www.unicc.org/wp-content/uploads/2026/05/UNICC-2024-2025-Biennial-Report-1.pdf#new_tab
+    matched_keywords: [unicc, shared services]
+    priority: high
+    relevance: action_61
+    summary: Carry-forward primary UNICC source for shared ICT service scale, institutional role, and Action 61 baseline context.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UN Virtual Worlds Day Calls for AI and Emerging Tech to Support Better City and Community Life
+    url: https://www.unicc.org/news/2026/05/13/un-virtual-worlds-day-calls-for-ai-and-emerging-tech-to-support-better-city-and-community-life/
+    matched_keywords: [unicc, ai, emerging technology]
+    priority: high
+    relevance: both
+    summary: Carry-forward cross-cutting emerging-technology item linking UNICC infrastructure capacity with Action 62 innovation themes.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UN Innovation Update (April 2026)
+    url: https://www.uninnovation.network/innovation-library/un-innovation-update-april-2026#new_tab
+    matched_keywords: [unicc, innovation]
+    priority: high
+    relevance: action_62
+    summary: Carry-forward system innovation update relevant to TAP pipeline tracking and system-wide innovation demand signals.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: "Inspiring the Next Generation of Women in Tech: Girls in ICT Day"
+    url: https://www.unicc.org/news/2026/04/23/gict-day-celebration-2026/
+    matched_keywords: [unicc, ict]
+    priority: high
+    relevance: action_61
+    summary: Carry-forward workforce and ICT-capability signal from UNICC; relevant as background to common ICT capacity and skills.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UNICC Recognized with Multiple UN-SWAP Awards for Sustained Performance on Gender Equality
+    url: https://www.unicc.org/news/2026/02/13/unicc-recognized-with-multiple-un-swap-awards-for-sustained-performance-on-gender-equality/
+    matched_keywords: [unicc]
+    priority: high
+    relevance: background_low
+    summary: Institutional UNICC RSS hit with limited substantive WP15 content beyond maintaining visibility of the shared-services provider.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: Enabling Secure and Resilient UN Operations in Bonn
+    url: https://www.unicc.org/news/2026/02/03/enabling-secure-and-resilient-un-operations-in-bonn/
+    matched_keywords: [unicc, cybersecurity]
+    priority: high
+    relevance: action_61
+    summary: Carry-forward secure operations delivery example for Action 61 common ICT infrastructure and resilience analysis.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: "UN Today: UNICC 55 Years of Shared Innovation"
+    url: https://untoday.org/december-2025-january-2026/#new_tab
+    matched_keywords: [unicc, innovation]
+    priority: high
+    relevance: both
+    summary: Carry-forward UNICC institutional history and shared innovation item; useful context for the shared-services narrative.
+
+  - platform: news
+    agency: World Health Organization
+    title: Open letter to leaders of G7, G20, BRICS and all nations on finalizing the WHO Pandemic Agreement's Pathogen Access and Benefit Sharing annex
+    url: https://www.who.int/news/item/15-06-2026-open-letter-to-leaders-of-g7-g20-brics-and-all-nations-on-finalizing-the-who-pandemic-agreement-s-pathogen-access-and-benefit-sharing-annex
+    matched_keywords: [technology, ict]
+    priority: low
+    relevance: background_low
+    summary: Official WHO item on PABS and pandemic governance; low-confidence WP15 relevance because technology references relate to health countermeasures rather than ICT consolidation or TAP.
+
+  - platform: news
+    agency: World Health Organization
+    title: WHO urges governments to protect young people from addiction to tobacco and nicotine products
+    url: https://www.who.int/news/item/29-05-2026-who-urges-governments-to-protect-young-people-from-addiction-to-tobacco-and-nicotine-products
+    matched_keywords: [ict]
+    priority: low
+    relevance: false_positive
+    summary: RSS keyword false positive caused by substring matching inside "addiction"; not treated as material WP15 evidence.
+
+  - platform: news
+    agency: World Health Organization
+    title: Message by the WHO Director-General to the people of the Democratic Republic of the Congo
+    url: https://www.who.int/news/item/28-05-2026-message-by-the-who-director-general-to-the-people-of-the-democratic-republic-of-the-congo
+    matched_keywords: [ict]
+    priority: low
+    relevance: false_positive
+    summary: RSS keyword false positive caused by substring matching inside "Ituri"; not treated as material WP15 evidence.
+
+  - platform: official_web
+    agency: UN Office for Digital and Emerging Technologies / UN OICT
+    title: UN Open Source Week 2026
+    url: https://www.unopensource.org/
+    matched_keywords: [artificial intelligence, digital public infrastructure, digital transformation, innovation, ict]
+    priority: medium
+    relevance: both
+    summary: Material existing rollup signal cross-checked this run. The official page says ODET and OICT co-organize the June 22-26 event, with sessions on open source, AI, DPI, OSPOs, digital cooperation, and reusable tools.

@@ -1,7 +1,7 @@
 meta:
-  last_updated: 2026-06-10
+  last_updated: 2026-06-17
   disclaimer: Public official posts only — DRAFT
-  total_signals: 22
+  total_signals: 25
 signals:
   - id: soc-2026-05-22-001
     date: 2026-05-22
@@ -271,8 +271,8 @@ signals:
       - AI governance
     priority: medium
     relevance: action_62
-    summary: Official ITU Facebook video promotes the July 2026 Global Dialogue
-      on AI Governance and links it to the Global Digital Compact; material for
+    summary: Official ITU Facebook video promotes the July 2026 Global Dialogue on
+      AI Governance and links it to the Global Digital Compact; material for
       Action 62 governance and TAP context.
   - id: soc-2026-06-10-021
     date: 2026-06-10
@@ -302,6 +302,45 @@ signals:
       - innovation
     priority: medium
     relevance: both
-    summary: Official event page co-organized by ODET and OICT highlights AI,
-      DPI, OSPOs, digital cooperation, and practical reusable tools; relevant to
+    summary: Official event page co-organized by ODET and OICT highlights AI, DPI,
+      OSPOs, digital cooperation, and practical reusable tools; relevant to
       Action 61 infrastructure and Action 62 innovation/TAP monitoring.
+  - id: soc-2026-06-17-023
+    date: 2026-06-17
+    platform: news
+    agency: UN News (all topics)
+    title: A turning point for Haiti? New security force takes fight to powerful gangs
+    url: https://news.un.org/feed/view/en/story/2026/06/1167732
+    matched_keywords:
+      - tap
+    priority: high
+    relevance: false_positive
+    summary: RSS keyword hit is not a WP15 TAP signal; "tap" appears in the phrase
+      "tap tap" for a shared pick-up taxi in Haiti.
+  - id: soc-2026-06-17-024
+    date: 2026-06-17
+    platform: news
+    agency: UN News (all topics)
+    title: UN urges adherence to mine ban treaty
+    url: https://news.un.org/feed/view/en/story/2026/06/1167730
+    matched_keywords:
+      - ict
+    priority: low
+    relevance: false_positive
+    summary: RSS keyword hit is not a WP15 ICT signal; the match appears as a
+      substring inside unrelated text such as "conflict".
+  - id: soc-2026-06-17-025
+    date: 2026-06-17
+    platform: news
+    agency: World Health Organization
+    title: Open letter to leaders of G7, G20, BRICS and all nations on finalizing
+      the WHO Pandemic Agreement’s Pathogen Access and Benefit Sharing annex
+    url: https://www.who.int/news/item/15-06-2026-open-letter-to-leaders-of-g7-g20-brics-and-all-nations-on-finalizing-the-who-pandemic-agreement-s-pathogen-access-and-benefit-sharing-annex
+    matched_keywords:
+      - technology
+      - ict
+    priority: low
+    relevance: background_low
+    summary: Official WHO item on PABS and pandemic governance; low-confidence
+      WP15 relevance because technology references relate to health countermeasures
+      rather than ICT consolidation or TAP.
