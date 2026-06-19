@@ -2,7 +2,9 @@
 
 **Status: Operational** (since 22 May 2026) — see [docs/OPERATIONS.md](../docs/OPERATIONS.md) for the team runbook.
 
-Three automations cover the research loop: **monitor** (cron), **ingest** (webhook), and **compile** (cron).
+**Improvements (May 2026):** [docs/CLOUD-AGENT-IMPROVEMENTS.md](../docs/CLOUD-AGENT-IMPROVEMENTS.md) — approved feeds, living analysis, pre-fetch, PR no-op policy, claim verification on all reports.
+
+Four automations cover the research loop: **landscape** (Mon), **social** (Wed), **briefing** (1st), **webhook** (on demand). Optional **daily digest** (thin synthesis).
 
 ## Prerequisites
 

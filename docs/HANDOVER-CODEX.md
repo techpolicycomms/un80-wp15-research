@@ -1,9 +1,11 @@
-# Project handover — UN80 WP15 Research Hub → Codex
+# Project handover — UN80 WP15 Research Hub
 
 **From:** Rahul Jha (ITU)  
-**To:** Codex (successor agent / operator)  
+**Audience:** Successor operators (Codex, local SDK, or human maintainers)  
 **Repo:** https://github.com/techpolicycomms/un80-wp15-research  
 **Handover date:** 2026-06-15 (update as needed)
+
+> **Operational model:** **Cursor cloud agents remain the production pipeline.** Codex and SDK lane-04 may propose repo/skill changes via PR; they do not replace scheduled automations unless explicitly migrated. See [CLOUD-AGENT-IMPROVEMENTS.md](./CLOUD-AGENT-IMPROVEMENTS.md).
 
 ---
 

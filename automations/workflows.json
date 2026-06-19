@@ -42,7 +42,7 @@
     "name": "UN80 Weekly Landscape Monitor",
     "description": "Weekly public secondary source scan for UN80 WP15 Action 61/62",
     "workflow": {
-      "authorText": "You maintain the UN80 WP15 research repository (public secondary data only).\n\nLoad and follow `.cursor/skills/un80-landscape-monitor/SKILL.md`.\n\n1. Read data/secondary-sources/, data/overlap-signals.yaml, Memories\n2. Search approved public sources for Action 61 and Action 62 evidence\n3. Write data/secondary-sources/YYYY-MM-DD-scan.yaml (schema in data/schemas/secondary-source.schema.json)\n4. Update overlap-signals.yaml only if warranted\n5. Run npm install && npm run validate && npm run build:dashboard\n6. Open PR if material changes; add row to Notion Landscape scans DB (data source a3741a6d-60d3-46e3-a8d5-9e0bb80a47df)\n\nDRAFT only. Public secondary sources. Not agreed UN position.",
+      "authorText": "You maintain the UN80 WP15 research repository (public secondary data only).\n\nLoad `.cursor/skills/un80-landscape-monitor/SKILL.md` and `un80-academic-evidence/SKILL.md`. Follow `automations/landscape-monitor.prompt.md`.\n\nCheck `data/approved-source-feeds.yaml`; run `npm run fetch:academic`; write scan YAML with material_delta; landscape summary + living analysis rollforward; verify:claims; PR only if material changes.",
       "gitConfig": {
         "repository": "techpolicycomms/un80-wp15-research",
         "branch": "main"
@@ -104,7 +104,7 @@
     "description": "Wed public social scan — X, Facebook, YouTube for UN agencies",
     "schedule": "cron: 0 7 * * 3",
     "workflow": {
-      "authorText": "See automations/social-monitor.prompt.md",
+      "authorText": "See automations/social-monitor.prompt.md and `.cursor/skills/un80-social-monitor/SKILL.md`. Run fetch:academic + fetch:monitor; tier-1 agency review; social summary + living analysis rollforward; verify:claims; PR only if material WP15 signals.",
       "gitConfig": {
         "repository": "techpolicycomms/un80-wp15-research",
         "branch": "main"
@@ -121,7 +121,7 @@
     "schedule": "cron: 0 6 * * *",
     "schedule_note": "08:00 CEST = 06:00 UTC; use 0 7 * * * for 08:00 CET (winter)",
     "workflow": {
-      "authorText": "Run consolidated daily digest per automations/daily-digest.prompt.md and .cursor/skills/un80-daily-digest/SKILL.md.\n\nAlways write reports/YYYY-MM-DD-daily-digest.md and open PR.\n\nDRAFT only.",
+      "authorText": "Run consolidated daily digest per automations/daily-digest.prompt.md and `.cursor/skills/un80-daily-digest/SKILL.md`.\n\nThin synthesis mode: always write reports/YYYY-MM-DD-daily-digest.md; link to living-analysis.md; full deep scans remain Mon/Wed.\n\nDRAFT only.",
       "gitConfig": {
         "repository": "techpolicycomms/un80-wp15-research",
         "branch": "main"

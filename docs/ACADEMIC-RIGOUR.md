@@ -11,7 +11,7 @@ This hub produces **DRAFT** policy research from public secondary data. Academic
 | Curated peer-reviewed footnote library | **Maintained** in `data/academic-literature/wp15-core-references.yaml` |
 | Institutional Web of Science / Scopus | **Manual** — use ITU/library credentials where available |
 | Sci-Hub or other paywall circumvention | **Not used** — violates copyright and project policy |
-| GPTZero hallucination check | **Human step** — see [Claim verification](#claim-verification) |
+| Claim verification | **Human step** — `npm run verify:claims` on briefings, landscape summaries, social summaries, daily digest, living analysis; see [Claim verification](#claim-verification) |
 
 ## Evidence tiers
 

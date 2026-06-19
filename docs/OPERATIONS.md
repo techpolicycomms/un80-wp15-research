@@ -132,12 +132,31 @@ All automation output is **DRAFT**. Nothing represents agreed UN policy.
 ## Health check
 
 ```bash
-npm run validate          # schema check on data/
-npm run fetch:academic    # refresh OpenAlex citations + discovery pass
-npm run verify:claims     # GPTZero checklist for report claims
-npm run build:dashboard   # rebuild dashboard locally
-./scripts/ops-check.sh    # repo + links sanity check
+npm run validate              # schema check on data/
+npm run fetch:academic        # refresh OpenAlex citations + discovery pass
+npm run prefetch:monitor      # pre-agent fetch (also runs via GitHub Action Mon/Wed)
+npm run verify:claims         # GPTZero checklist for latest narrative reports
+npm run verify:claims:all     # all report markdown files
+npm run build:dashboard       # rebuild dashboard locally
+./scripts/ops-check.sh        # repo + links sanity check
 ```
+
+---
+
+## Cloud agent improvements (May 2026)
+
+Full guide: [CLOUD-AGENT-IMPROVEMENTS.md](./CLOUD-AGENT-IMPROVEMENTS.md)
+
+| Improvement | Location |
+|-------------|----------|
+| Approved source watchlist | `data/approved-source-feeds.yaml` |
+| Living synthesis doc | `reports/living-analysis.md` |
+| Pre-fetch before Mon/Wed | `.github/workflows/prefetch-monitor.yml` |
+| Memory discipline | [MEMORY-DISCIPLINE.md](./MEMORY-DISCIPLINE.md) |
+| Webhook intake | [WEBHOOK-RESEARCH-INTAKE.md](./WEBHOOK-RESEARCH-INTAKE.md) |
+| PR no-op policy | Landscape/social skip PR when no material delta |
+
+**Merge backlog:** Open cloud-agent PRs (#10–#18) should be reviewed and merged so `main` and the dashboard reflect June TAP/HLCM work.
 
 ---
 

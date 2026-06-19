@@ -1,0 +1,38 @@
+name: Pre-fetch monitor data
+
+on:
+  schedule:
+    # 30 min before landscape (Mon 06:00 UTC)
+    - cron: "30 5 * * 1"
+    # 30 min before social monitor (Wed 07:00 UTC)
+    - cron: "30 6 * * 3"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  prefetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci
+      - run: npm run prefetch:monitor
+
+      - name: Commit refreshed monitor data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/social-monitor/ data/social-signals.yaml data/academic-literature/
+          if git diff --staged --quiet; then
+            echo "No monitor data changes to commit."
+          else
+            git commit -m "chore(prefetch): refresh monitor and academic data [skip ci]"
+            git push
+          fi

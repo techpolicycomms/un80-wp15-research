@@ -22,6 +22,17 @@ const jsonValidations = [
   },
 ];
 
+const yamlValidations = [
+  {
+    data: "data/approved-source-feeds.yaml",
+    schema: "data/schemas/approved-source-feeds.schema.json",
+  },
+  {
+    data: "data/academic-literature/wp15-core-references.yaml",
+    schema: "data/schemas/academic-literature.schema.json",
+  },
+];
+
 let failed = false;
 
 for (const { data, schema } of jsonValidations) {
@@ -29,6 +40,18 @@ for (const { data, schema } of jsonValidations) {
   const validate = ajv.compile(schemaObj);
   const dataObj = JSON.parse(readFileSync(join(root, data), "utf8"));
   if (!validate(dataObj)) {
+    console.error(`FAIL ${data}:`, validate.errors);
+    failed = true;
+  } else {
+    console.log(`OK   ${data}`);
+  }
+}
+
+for (const { data, schema } of yamlValidations) {
+  const schemaObj = JSON.parse(readFileSync(join(root, schema), "utf8"));
+  const validate = ajv.compile(schemaObj);
+  const content = yaml.parse(readFileSync(join(root, data), "utf8"));
+  if (!validate(content)) {
     console.error(`FAIL ${data}:`, validate.errors);
     failed = true;
   } else {
@@ -52,18 +75,19 @@ for (const file of readdirSync(secondaryDir).filter((f) => f.endsWith(".yaml")))
   }
 }
 
-const academicPath = join(root, "data/academic-literature/wp15-core-references.yaml");
-if (readFileSync(academicPath, "utf8")) {
-  const academicSchema = JSON.parse(
-    readFileSync(join(root, "data/schemas/academic-literature.schema.json"), "utf8")
-  );
-  const validateAcademic = ajv.compile(academicSchema);
-  const academicContent = yaml.parse(readFileSync(academicPath, "utf8"));
-  if (!validateAcademic(academicContent)) {
-    console.error("FAIL data/academic-literature/wp15-core-references.yaml:", validateAcademic.errors);
+const socialDir = join(root, "data/social-monitor");
+const socialSchema = JSON.parse(
+  readFileSync(join(root, "data/schemas/social-monitor.schema.json"), "utf8")
+);
+const validateSocial = ajv.compile(socialSchema);
+
+for (const file of readdirSync(socialDir).filter((f) => f.endsWith("-social.yaml"))) {
+  const content = yaml.parse(readFileSync(join(socialDir, file), "utf8"));
+  if (!validateSocial(content)) {
+    console.error(`FAIL data/social-monitor/${file}:`, validateSocial.errors);
     failed = true;
   } else {
-    console.log("OK   data/academic-literature/wp15-core-references.yaml");
+    console.log(`OK   data/social-monitor/${file}`);
   }
 }
 

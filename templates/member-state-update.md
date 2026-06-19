@@ -5,7 +5,13 @@
 **Work Package:** 15 | Actions 61 & 62  
 **Disclaimer:** This document might be updated as implementation progresses. It does not represent an agreed position, policy or decision of the United Nations.
 
+**Synthesis order:** Read `reports/living-analysis.md` first, then period YAML in `data/secondary-sources/` and `data/social-monitor/`.
+
 ---
+
+## Executive summary (max 10 bullets)
+
+{{EXECUTIVE_SUMMARY}}
 
 ## Why this matters
 
@@ -20,8 +26,11 @@
 ### Current phase
 {{ACTION_61_PHASE}}
 
-### Progress since last update
-{{ACTION_61_PROGRESS}}
+### New this period
+{{ACTION_61_NEW}}
+
+### Carried forward
+{{ACTION_61_CARRIED_FORWARD}}
 
 ### Public secondary evidence (this period)
 {{ACTION_61_EVIDENCE}}
@@ -31,6 +40,12 @@
 ### Portfolio status
 {{ACTION_62_PORTFOLIO}}
 
+### New this period
+{{ACTION_62_NEW}}
+
+### Carried forward
+{{ACTION_62_CARRIED_FORWARD}}
+
 ### Innovation pipeline highlights
 {{ACTION_62_PIPELINE}}
 
@@ -39,6 +54,14 @@
 - Reduced duplication in ICT services
 - Improved interoperability across the UN system
 - Accelerated operational modernization via TAP
+
+## Gaps & thin evidence
+
+{{GAPS}}
+
+## Human review flags
+
+{{REVIEW_FLAGS}}
 
 ## Next steps
 

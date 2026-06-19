@@ -43,10 +43,11 @@ export const KEYWORD_TIERS = {
     "technology",
     "digital",
     "information and communications",
-    "ict",
     "software",
     "platform",
   ],
+  // Short tokens — matched with word boundaries only (avoids "ict" in unrelated words)
+  general_low_boundary: ["ict", "tap", "dpg", " ai "],
 };
 
 export function allKeywords() {
@@ -55,7 +56,17 @@ export function allKeywords() {
     ...KEYWORD_TIERS.action_62_high,
     ...KEYWORD_TIERS.both_medium,
     ...KEYWORD_TIERS.general_low,
+    ...KEYWORD_TIERS.general_low_boundary.map((w) => w.trim()),
   ];
+}
+
+function matchesKeyword(lower, word, tier) {
+  const w = word.toLowerCase().trim();
+  if (tier === "general_low_boundary") {
+    const pattern = new RegExp(`\\b${w.replace(/\s+/g, "")}\\b`, "i");
+    return pattern.test(lower);
+  }
+  return lower.includes(w);
 }
 
 export function matchKeywords(text) {
@@ -63,7 +74,7 @@ export function matchKeywords(text) {
   const matched = [];
   for (const [tier, words] of Object.entries(KEYWORD_TIERS)) {
     for (const word of words) {
-      if (lower.includes(word.toLowerCase())) {
+      if (matchesKeyword(lower, word, tier)) {
         matched.push({ keyword: word.trim(), tier });
       }
     }
@@ -75,6 +86,7 @@ export function scoreSignal(matched) {
   if (matched.some((m) => m.tier === "action_61_high")) return { priority: "high", relevance: "action_61" };
   if (matched.some((m) => m.tier === "action_62_high")) return { priority: "high", relevance: "action_62" };
   if (matched.some((m) => m.tier === "both_medium")) return { priority: "medium", relevance: "both" };
-  if (matched.some((m) => m.tier === "general_low")) return { priority: "low", relevance: "both" };
+  if (matched.some((m) => m.tier === "general_low" || m.tier === "general_low_boundary"))
+    return { priority: "low", relevance: "both" };
   return { priority: null, relevance: null };
 }

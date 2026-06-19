@@ -1,0 +1,105 @@
+# Approved public source watchlist — checked each landscape / daily digest run
+meta:
+  updated: "2026-05-26"
+  disclaimer: Public secondary sources only — DRAFT working list
+  usage: |
+    Cloud agents iterate this list before open web search.
+    Mark last_checked in Memories or scan YAML meta when a feed has no delta.
+
+feeds:
+  - id: un80-progress
+    title: UN80 Progress Report
+    url: https://www.un.org/un80/
+    check_frequency: weekly
+    relevance: both
+    evidence_tier: B
+    topics: [un80, implementation, governance]
+
+  - id: ceb-hlcm
+    title: CEB / HLCM public materials
+    url: https://www.unsystem.org/
+    check_frequency: weekly
+    relevance: both
+    evidence_tier: B
+    topics: [hlcm, ceb, ict_governance, shared_services]
+
+  - id: hlcm-ai-services
+    title: HLCM AI services (shared AI tooling)
+    url: https://www.unsystem.org/
+    check_frequency: weekly
+    relevance: action_61
+    evidence_tier: B
+    topics: [ai_services, shared_ict, consolidation]
+
+  - id: unicc-news
+    title: UNICC news and publications
+    url: https://www.unicc.org/news/
+    check_frequency: weekly
+    relevance: action_61
+    evidence_tier: B
+    topics: [shared_services, cloud, cybersecurity, uniqcloud]
+
+  - id: odet-portal
+    title: ODET / system digital coordination
+    url: https://www.un.org/digital-emerging-technologies/
+    check_frequency: weekly
+    relevance: action_62
+    evidence_tier: B
+    topics: [odet, digital_cooperation, system_focal_point]
+
+  - id: digital-cooperation-portal
+    title: Digital Cooperation Portal
+    url: https://digitalcooperationportal.org/
+    check_frequency: weekly
+    relevance: action_62
+    evidence_tier: B
+    topics: [innovation, dpg, tap_alignment]
+
+  - id: un-innovation-network
+    title: UN Innovation Network library
+    url: https://www.uninnovation.network/innovation-library
+    check_frequency: weekly
+    relevance: action_62
+    evidence_tier: B
+    topics: [innovation, tap, pilots]
+
+  - id: w3c-vc-did
+    title: W3C Verifiable Credentials / DIDs
+    url: https://www.w3.org/TR/vc-data-model-2.0/
+    check_frequency: monthly
+    relevance: action_62
+    evidence_tier: C
+    topics: [digital_identity, standards, vc_2_0]
+
+  - id: iso-24760
+    title: ISO/IEC 24760 identity management
+    url: https://www.iso.org/standard/45138.html
+    check_frequency: monthly
+    relevance: action_62
+    evidence_tier: C
+    topics: [digital_identity, standards]
+
+  - id: itu-t-public
+    title: ITU-T public recommendations
+    url: https://www.itu.int/ITU-T/recommendations/
+    check_frequency: monthly
+    relevance: both
+    evidence_tier: C
+    topics: [standards, telecommunications, ict]
+
+  - id: un-digital-id
+    title: UN Digital ID initiative (public pages)
+    url: https://www.un.org/digital-emerging-technologies/
+    check_frequency: weekly
+    relevance: action_62
+    evidence_tier: B
+    topics: [digital_identity, tap_portfolio]
+
+  - id: reliefweb-un
+    title: ReliefWeb UN system (if accessible)
+    url: https://reliefweb.int/updates?advanced-search=%28S150%29
+    check_frequency: weekly
+    relevance: both
+    evidence_tier: B
+    topics: [humanitarian_ict, operations]
+    notes: Bot access may fail — note limitation in scan meta if unreachable

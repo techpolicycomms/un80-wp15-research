@@ -1,0 +1,68 @@
+{
+  "$id": "social-monitor.schema.json",
+  "type": "object",
+  "required": ["meta", "signals"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["scan_date", "disclaimer"],
+      "properties": {
+        "scan_date": { "type": "string", "format": "date" },
+        "automation": { "type": "string" },
+        "disclaimer": { "type": "string" },
+        "platforms": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "feeds_ok": { "type": "integer" },
+        "items_scanned": { "type": "integer" },
+        "wp15_signals": { "type": "integer" },
+        "high_priority": { "type": "integer" },
+        "agent_review_note": { "type": "string" }
+      }
+    },
+    "signals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["platform", "agency", "title", "url", "priority", "relevance", "summary"],
+        "properties": {
+          "platform": { "type": "string" },
+          "agency": { "type": "string" },
+          "title": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "matched_keywords": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "priority": { "enum": ["high", "medium", "low"] },
+          "relevance": { "enum": ["action_61", "action_62", "both"] },
+          "summary": { "type": "string" },
+          "evidence_tier": { "enum": ["A", "B", "C", "D", "E"] },
+          "claim_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "cross_ref_scan": { "type": "string" },
+          "links_to": {
+            "type": "object",
+            "properties": {
+              "overlap_signals": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "tap_use_cases": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "secondary_sources": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

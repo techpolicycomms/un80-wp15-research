@@ -11,6 +11,7 @@ survey:
 
 portfolio:
   - id: digital-id
+    claim_id: tap-digital-identity
     name: Digital ID solutions
     status: endorsed
     maturity: advanced_concept
@@ -19,6 +20,7 @@ portfolio:
     strategic_support: true
 
   - id: expertise-on-demand
+    claim_id: tap-expertise-on-demand
     name: Digital platforms for access to expertise on demand
     status: endorsed
     maturity: advanced_concept
@@ -27,6 +29,7 @@ portfolio:
     strategic_support: true
 
   - id: modern-conferencing
+    claim_id: tap-ai-conferencing
     name: Expanded toolkits for modern conferencing
     status: endorsed
     maturity: advanced_concept

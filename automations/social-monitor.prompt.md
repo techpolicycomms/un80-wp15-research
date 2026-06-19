@@ -1,25 +1,20 @@
 You monitor **public social media and news** for UN agencies on WP15 topics (Action 61 ICT consolidation, Action 62 TAP).
 
-Load and follow `.cursor/skills/un80-social-monitor/SKILL.md` and `data/un-agencies-social.yaml`.
+Load and follow `.cursor/skills/un80-social-monitor/SKILL.md`, `.cursor/skills/un80-academic-evidence/SKILL.md`, and `data/un-agencies-social.yaml`.
 
 ## Tasks
 
-1. Run `npm run fetch:monitor` — pulls news + YouTube RSS, updates rollup, writes coverage report
-2. Review **public** recent posts on **X**, **Facebook**, **LinkedIn**, and **Instagram** from official handles in the registry (agencies listed in today's `*-coverage.yaml` under `agent_review_required`)
-3. Search for WP15 keywords; prioritize Action 61 (ICC, cloud, shared services) and Action 62 (TAP, digital ID, innovation)
-4. Write `data/social-monitor/YYYY-MM-DD-social.yaml`:
-   - meta (scan_date, platforms, signal counts, high_priority count)
-   - signals[] (platform, agency, title, url, matched_keywords, priority, relevance, summary)
-5. Merge new signals into `data/social-signals.yaml` (dedupe by URL)
-6. Write `reports/YYYY-MM-DD-social-scan-summary.md` including:
-   - Coverage stats from coverage report
-   - Top high-priority signals
-   - Agencies with no recent WP15 signals (watch list)
-   - Cross-links to related entries in `data/secondary-sources/` if URLs overlap
-7. Run `npm run validate && npm run build:dashboard`
-8. Open PR if material WP15 signals; add Notion rows to **Sources inbox** (data source `c3ac8601-780a-4ae4-bc0c-2d1b04f198f5`) with platform in Topic field
-9. Update Notion **WP15 Living Analysis** page with social + news signals section
-10. Log run in Notion **Automation log** (data source `cc79cb1c-a897-488b-b913-02ff159f05ef`)
+1. Read Memories; note tier-1 agency checklist (OICT, ODET, ITU, UNESCO).
+2. Run `npm install && npm run fetch:academic && npm run fetch:monitor`.
+3. Review **public** recent posts on **X**, **Facebook**, **LinkedIn**, and **Instagram** from official handles in the registry (agencies in `agent_review_required` from coverage report).
+4. Search for WP15 keywords; prioritize Action 61 (ICC, cloud, shared services) and Action 62 (TAP, digital ID, innovation).
+5. Write `data/social-monitor/YYYY-MM-DD-social.yaml` with optional `evidence_tier`, `claim_ids`, `cross_ref_scan`, `links_to`.
+6. Merge new signals into `data/social-signals.yaml` (dedupe by URL).
+7. Write `reports/YYYY-MM-DD-social-scan-summary.md` using **`templates/social-scan-summary.md`** (New vs Carried forward sections).
+8. Append rollforward to `reports/living-analysis.md`.
+9. Run `npm run validate && npm run build:dashboard && npm run verify:claims reports/YYYY-MM-DD-social-scan-summary.md`.
+10. **PR policy:** Open PR only if material new high/medium WP15 signals. No-op → Notion Automation log only.
+11. Notion Sources inbox for high-priority URLs (data source `c3ac8601-780a-4ae4-bc0c-2d1b04f198f5`).
 
 ## Linear (enable Linear MCP)
 
@@ -27,15 +22,20 @@ Follow `.cursor/skills/un80-linear-sync/SKILL.md`:
 
 1. Create `[run] Social & news monitor — YYYY-MM-DD` with labels `automation`, `social`
 2. Attach PR, coverage report path, signal counts; **Done** when run complete
-3. If ITU-121 acceptance criteria met (4th automation saved), close **ITU-121**
+
+## Narrative quality
+
+- Map Action 62 signals to TAP `claim_ids` in `data/tap-use-cases.yaml`
+- Flag X/API limitations and keyword false positives
+- Executive summary ≤ 10 bullets
 
 ## Constraints
 
 - Public official accounts and press releases only — no private data
 - DRAFT — not agreed UN position
-- If X/Meta API unavailable, use public web review and note limitations
-- Do not scrape at scale in violation of platform ToS; prefer RSS (news/YouTube) and agent review for X/Facebook/LinkedIn/Instagram
+- If X/Meta API unavailable, use public web review and note limitations (see ITU-123 for X API)
+- Do not scrape at scale in violation of platform ToS
 
 ## Schedule context
 
-Runs **Wednesdays 07:00 UTC** — between weekly landscape (Mon) and monthly briefing (1st).
+Runs **Wednesdays 07:00 UTC** — pre-fetch Action runs 06:30 UTC same day.

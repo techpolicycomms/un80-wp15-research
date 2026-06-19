@@ -58,13 +58,27 @@ function pickClaims(sentences, limit = 25) {
 }
 
 function resolveInputFiles(argv) {
-  if (argv.length) return argv.map((p) => join(root, p));
+  const allReports = argv.includes("--all-reports");
+  const paths = argv.filter((a) => !a.startsWith("--"));
+
+  if (paths.length) return paths.map((p) => join(root, p));
+
+  const reportTypes = [
+    /-member-state-update\.md$/,
+    /-daily-digest\.md$/,
+    /-social-scan-summary\.md$/,
+    /-landscape-scan-summary\.md$/,
+    /^living-analysis\.md$/,
+  ];
+
   const files = readdirSync(reportsDir)
     .filter((f) => f.endsWith(".md") && !f.startsWith("."))
+    .filter((f) => allReports || reportTypes.some((re) => re.test(f)))
     .map((f) => join(reportsDir, f))
     .filter((p) => statSync(p).isFile())
     .sort((a, b) => statSync(b).mtimeMs - statSync(a).mtimeMs);
-  return files.slice(0, 3);
+
+  return allReports ? files : files.slice(0, 5);
 }
 
 function buildReviewDoc(sources) {

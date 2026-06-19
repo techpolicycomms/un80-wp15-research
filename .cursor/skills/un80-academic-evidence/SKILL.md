@@ -32,7 +32,9 @@ description: Add peer-reviewed footnotes and verify factual claims for UN80 WP15
 | Member State briefing — Why this matters | 1–2 Tier A |
 | Action 61 — shared services / cloud | 1 Tier A (cloud/consolidation) |
 | Action 62 — TAP / innovation | 1 Tier A (AI, identity, or open gov) |
-| Landscape scan summary | Tier B–E for sources; Tier A optional for framing |
+| Landscape scan summary | Tier B–E for sources; 1 Tier A optional for framing; run `verify:claims` |
+| Social scan summary | Tier B–E; run `verify:claims` |
+| Living analysis rollforward | Tier B–E URLs; flag gaps explicitly |
 
 ## Refresh literature
 
@@ -51,12 +53,14 @@ If user has institutional access:
 2. Add entry to `wp15-core-references.yaml` with `source_index: institutional_wos` or `institutional_scopus`.
 3. Include DOI; run fetch script to sync OpenAlex metadata.
 
-## Claim verification (required for briefings)
+## Claim verification (required for all narrative reports)
 
-After drafting:
+After drafting any of: member-state update, daily digest, landscape summary, social summary, living analysis rollforward:
 
 ```bash
-npm run verify:claims reports/YYYY-MM-member-state-update.md
+npm run verify:claims reports/YYYY-MM-DD-<type>.md
+# or all recent reports:
+npm run verify:claims:all
 ```
 
 1. Open output in `reports/verification/`.

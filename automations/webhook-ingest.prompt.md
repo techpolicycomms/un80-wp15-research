@@ -6,10 +6,16 @@ The webhook body is JSON. Validate against `data/schemas/webhook-ingest.schema.j
 
 1. Parse `payload`: title, url, topic, relevance, summary, submitted_by
 2. Verify URL is reachable and appears to be a **public** source
-3. Append to `data/secondary-sources/YYYY-MM-DD-ingest.yaml` (create if needed) as a new finding with confidence `medium` unless you can verify higher
+3. Append to `data/secondary-sources/YYYY-MM-DD-ingest.yaml` (create if needed) as a new finding with:
+   - `confidence` medium or higher if verifiable
+   - `evidence_tier` B–D as appropriate (see `docs/ACADEMIC-RIGOUR.md`)
+   - optional `claim_ids` and `links_to` when relevance to TAP/overlap is clear
 4. Run `npm install && npm run validate && npm run build:dashboard`
 5. Open PR: `data: ingest source — <title>`
-6. Record source URL in Memories to prevent duplicate ingest
+6. Add Notion Sources inbox row; append brief note to `reports/living-analysis.md` rollforward if material
+7. Record source URL in Memories to prevent duplicate ingest
+
+Team intake guide: `docs/WEBHOOK-RESEARCH-INTAKE.md`
 
 ## On event `manual_refresh`
 

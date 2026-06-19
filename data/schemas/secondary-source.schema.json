@@ -9,7 +9,16 @@
       "properties": {
         "scan_date": { "type": "string", "format": "date" },
         "automation": { "type": "string" },
-        "disclaimer": { "type": "string" }
+        "disclaimer": { "type": "string" },
+        "feeds_checked": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "IDs from data/approved-source-feeds.yaml checked this run"
+        },
+        "material_delta": {
+          "type": "boolean",
+          "description": "false when no new findings beyond prior scan"
+        }
       }
     },
     "findings": {
@@ -30,7 +39,29 @@
           "relevance": { "type": "string" },
           "topic": { "type": "string" },
           "summary": { "type": "string" },
-          "confidence": { "enum": ["low", "medium", "high"] }
+          "confidence": { "enum": ["low", "medium", "high"] },
+          "evidence_tier": { "enum": ["A", "B", "C", "D", "E"] },
+          "claim_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "suggested_footnote": {
+            "type": "string",
+            "description": "footnote_id from wp15-core-references.yaml e.g. ^1"
+          },
+          "links_to": {
+            "type": "object",
+            "properties": {
+              "overlap_signals": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "tap_use_cases": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
         }
       }
     }

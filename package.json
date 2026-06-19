@@ -11,7 +11,9 @@
     "check:monitor": "node scripts/check-monitor-coverage.mjs",
     "fetch:monitor": "npm run fetch:feeds && npm run check:monitor",
     "fetch:academic": "node scripts/fetch-academic-evidence.mjs",
+    "prefetch:monitor": "node scripts/prefetch-monitor.mjs",
     "verify:claims": "node scripts/prepare-claim-verification.mjs",
+    "verify:claims:all": "node scripts/prepare-claim-verification.mjs --all-reports",
     "serve:dashboard": "npx --yes serve dashboard/dist -p 3456"
   },
   "devDependencies": {

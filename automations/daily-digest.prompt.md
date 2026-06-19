@@ -1,4 +1,4 @@
-You run the **consolidated daily UN80 WP15 digest** (landscape + social/news + briefing summary in one pass).
+You run the **consolidated daily UN80 WP15 digest** (thin synthesis mode).
 
 Load and follow `.cursor/skills/un80-daily-digest/SKILL.md`.
 
@@ -11,14 +11,19 @@ Full instructions also in:
 ## Tasks (in order)
 
 1. `npm install && npm run fetch:monitor && npm run fetch:academic`
-2. **Landscape** — scan public sources; write `data/secondary-sources/YYYY-MM-DD-scan.yaml` if new evidence; update overlap signals only if clear
-3. **Social/news** — review registry in `data/un-agencies-social.yaml`; write `data/social-monitor/YYYY-MM-DD-social.yaml`; dedupe into `data/social-signals.yaml`
-4. **Daily digest** — write `reports/YYYY-MM-DD-daily-digest.md` using `templates/daily-digest.md` (required every run)
-5. **If today is the 1st of the month** — also refresh `reports/YYYY-MM-member-state-update.md` per briefing-compiler prompt
-6. `npm run validate && npm run build:dashboard && npm run verify:claims`
-7. **Open PR** `digest: daily WP15 — YYYY-MM-DD` (include digest even when no material delta)
-8. Notion: Automation log row; Living Analysis if material; Sources inbox for high-priority social URLs
-9. Linear MCP: `[run] Daily digest — YYYY-MM-DD` in **UN80 WP15 Research Hub**
+2. Read `reports/living-analysis.md` and `data/approved-source-feeds.yaml`
+3. **Landscape** — update scan YAML only if new evidence since last merged PR
+4. **Social/news** — refresh social YAML if RSS shows new high-priority signals
+5. **Daily digest** — write `reports/YYYY-MM-DD-daily-digest.md` using `templates/daily-digest.md` (required every run)
+6. **If today is the 1st of the month** — full member-state update per briefing-compiler prompt
+7. `npm run validate && npm run build:dashboard && npm run verify:claims reports/YYYY-MM-DD-daily-digest.md`
+8. Open PR `digest: daily WP15 — YYYY-MM-DD` when material delta; no-op may skip PR (log Notion)
+9. Notion Automation log; living analysis rollforward if material
+10. Linear MCP: `[run] Daily digest — YYYY-MM-DD`
+
+## Thin mode
+
+Do not duplicate full Mon/Wed deep scans. Link to latest scan YAML and living analysis rollforward. Spot-check tier-1 approved feeds only.
 
 ## Constraints
 
@@ -26,6 +31,6 @@ Full instructions also in:
 - No Sci-Hub; academic footnotes from `data/academic-literature/wp15-core-references.yaml`
 - Cite title + URL for operational claims
 
-## Deprecated automations
+## Enabling daily digest
 
-This run **replaces** separate Mon landscape, Wed social, and daily-only briefing crons. Disable those in Cursor if still active to avoid duplicate runs and billing.
+Import via `automations/prefill-urls.md` §5. Optionally disable Mon/Wed/monthly crons to avoid duplicate runs — or keep weekly for depth + daily for synthesis (document choice in Notion).
