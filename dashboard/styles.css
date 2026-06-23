@@ -276,6 +276,7 @@ a { color: var(--slate-deep); }
 .prov-pill { font-family: var(--mono); font-size: 12px; border: 1px solid var(--line-strong); border-radius: 6px; padding: 7px 11px; background: var(--panel); display: inline-flex; gap: 8px; align-items: center; }
 .prov-pill .st { font-weight: 600; }
 .st-live { color: var(--safe); }
+.st-cli { color: var(--slate-deep); }
 .st-fallback { color: var(--caveat); }
 .st-skipped { color: var(--ink-soft); }
 .prov-foot { font-size: 12.5px; color: var(--ink-soft); border-top: 1px solid var(--line); padding-top: 16px; margin: 0; }

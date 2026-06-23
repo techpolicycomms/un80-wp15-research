@@ -16,7 +16,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { loadEnv, providerStatus, MODELS } from "./lib/orchestration/config.mjs";
-import { callClaude, callDeepSeek, callGemini } from "./lib/orchestration/providers.mjs";
+import { callClaude, callClaudeCLI, callDeepSeek, callGemini } from "./lib/orchestration/providers.mjs";
 import { reconcile } from "./lib/orchestration/reconcile.mjs";
 import { fallbackSynthesis } from "./lib/orchestration/fallback-synthesis.mjs";
 
@@ -61,33 +61,38 @@ async function main() {
   );
   const stages = { claude: "skipped", deepseek: "skipped", gemini: "skipped" };
   let synthesis = fallbackSynthesis;
-  if (status.anthropic) {
-    log("Stage 1: Claude synthesizing…");
-    const claudeOut = await callClaude({
-      env,
-      model: models.anthropic,
-      system:
-        "You are a UN policy research synthesizer. Return ONLY a JSON object matching the provided schema. " +
-        "Preserve all 15 RQ items (RQ-001..RQ-015), each with id, question, answer, evidence[], and claims:[<its id>]. " +
-        "Keep claims arrays as [the RQ's own id]. Improve clarity and accuracy from the source; do not invent facts or sources.",
-      user:
-        `SOURCE SYNTHESIS (markdown):\n${md}\n\nADDITIONAL REPO CONTEXT:\n${extra}\n\n` +
-        `BASELINE STRUCTURE to refine (already schema-valid):\n${JSON.stringify(fallbackSynthesis)}`,
-      schema: synthSchema,
-    });
-    saveRaw("claude", claudeOut);
-    const parsed = tryParse(claudeOut);
-    if (parsed && Array.isArray(parsed.rq) && parsed.rq.length >= 10) {
-      synthesis = parsed;
-      stages.claude = "live";
-      log(`  Claude OK — ${parsed.rq.length} RQ items`);
-    } else {
-      stages.claude = "fallback";
-      log("  Claude output unusable — using curated fallback");
-    }
+
+  const claudeSystem =
+    "You are a UN policy research synthesizer. Return ONLY a JSON object matching the provided schema. " +
+    "Preserve all 15 RQ items (RQ-001..RQ-015), each with id, question, answer, evidence[], and claims:[<its id>]. " +
+    "Keep claims arrays as [the RQ's own id]. Improve clarity and accuracy from the source; do not invent facts or sources.";
+  const claudeUser =
+    `SOURCE SYNTHESIS (markdown):\n${md}\n\nADDITIONAL REPO CONTEXT:\n${extra}\n\n` +
+    `BASELINE STRUCTURE to refine (already schema-valid):\n${JSON.stringify(fallbackSynthesis)}`;
+  const usable = (o) => o && Array.isArray(o.rq) && o.rq.length >= 10;
+  const preferCli = (env.CLAUDE_PROVIDER || "").toLowerCase() === "cli";
+
+  // Chain: Claude API → local Claude Code CLI (subscription auth) → curated fallback.
+  let claudeOut = null;
+  if (status.anthropic && !preferCli) {
+    log("Stage 1: Claude synthesizing (API)…");
+    claudeOut = await callClaude({ env, model: models.anthropic, system: claudeSystem, user: claudeUser, schema: synthSchema });
+    saveRaw("claude-api", claudeOut);
+    if (usable(tryParse(claudeOut))) stages.claude = "live";
+  }
+  if (!usable(tryParse(claudeOut))) {
+    log(preferCli ? "Stage 1: Claude synthesizing (CLI, forced)…" : "  Claude API unavailable — trying local Claude Code CLI…");
+    const cliOut = await callClaudeCLI({ system: claudeSystem, user: claudeUser });
+    saveRaw("claude-cli", cliOut);
+    if (usable(cliOut)) { claudeOut = cliOut; stages.claude = "cli"; }
+  }
+  const parsedClaude = tryParse(claudeOut);
+  if (usable(parsedClaude)) {
+    synthesis = parsedClaude;
+    log(`  Claude OK (${stages.claude}) — ${parsedClaude.rq.length} RQ items`);
   } else {
     stages.claude = "fallback";
-    log("Stage 1: Claude skipped — using curated fallback");
+    log("  Claude unavailable — using curated fallback");
   }
 
   // --- Build one atomic claim per RQ (deterministic linkage) ---

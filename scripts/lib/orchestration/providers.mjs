@@ -1,6 +1,47 @@
 import Anthropic from "@anthropic-ai/sdk";
+import { spawn } from "node:child_process";
 
 const log = (m) => process.stderr.write(`[providers] ${m}\n`);
+
+// Extract a JSON object from free-form model text (strips code fences / preamble).
+function extractJson(text) {
+  if (!text) return null;
+  let t = text;
+  const fence = t.match(/```(?:json)?\s*([\s\S]*?)```/);
+  if (fence) t = fence[1];
+  const s = t.indexOf("{");
+  const e = t.lastIndexOf("}");
+  if (s >= 0 && e > s) t = t.slice(s, e + 1);
+  try { return JSON.parse(t); } catch { return null; }
+}
+
+// Run Claude via the local Claude Code CLI (headless). Uses the logged-in
+// session's auth (e.g. a Claude subscription) — no Anthropic API credits needed.
+// Returns the parsed JSON object, or null on any failure.
+export async function callClaudeCLI({ system, user, bin = "claude" }) {
+  return new Promise((resolve) => {
+    let out = "";
+    let err = "";
+    let proc;
+    try {
+      proc = spawn(bin, ["-p", "--output-format", "json"], { stdio: ["pipe", "pipe", "pipe"] });
+    } catch (e) {
+      log(`Claude CLI spawn failed: ${e.message}`);
+      return resolve(null);
+    }
+    proc.on("error", (e) => { log(`Claude CLI unavailable: ${e.message}`); resolve(null); });
+    proc.stdout.on("data", (d) => { out += d; });
+    proc.stderr.on("data", (d) => { err += d; });
+    proc.on("close", (code) => {
+      if (code !== 0) { log(`Claude CLI exit ${code}: ${err.slice(0, 200)}`); return resolve(null); }
+      let result;
+      try { result = JSON.parse(out).result; } catch { result = out; }
+      resolve(extractJson(result));
+    });
+    proc.stdin.write(`${system}\n\n${user}`);
+    proc.stdin.end();
+  });
+}
 
 export async function callClaude({ env, model, system, user, schema }) {
   const key = env.ANTHROPIC_API_KEY || env.CLAUDE_API_KEY;
