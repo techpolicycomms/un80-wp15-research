@@ -1,6 +1,6 @@
 # Signals of duplication and interoperability gaps (populated by automations)
 meta:
-  last_updated: "2026-06-15"
+  last_updated: "2026-06-22"
   disclaimer: Working document — public secondary evidence only
 
 signals:
@@ -46,4 +46,42 @@ signals:
       with Action 62 TAP solution portfolios.
     evidence_sources:
       - data/secondary-sources/2026-06-15-scan.yaml
+    confidence: high
+
+  - id: sig-2026-06-22-009
+    topic: shared_services_default_duplication_test
+    summary: >-
+      The public Secretary-General UN80 progress report calls for system-wide
+      shared services and critical common enablers, notably technology and data,
+      to become the default where they improve quality, efficiency, transparency
+      and delivery. It explicitly asks entities to support interoperability and
+      data governance and to justify duplication where shared approaches would
+      appear better placed to deliver value.
+    evidence_sources:
+      - data/secondary-sources/2026-06-22-scan.yaml
+    confidence: high
+
+  - id: sig-2026-06-22-010
+    topic: p3_icc_software_procurement_coherence
+    summary: >-
+      Public HLCM Procurement Network material links P3 joint software licensing
+      with ICC shared-service activity, noting potential synergies between P3
+      aggregated-demand negotiations and ICC software-license resale/digital
+      services. This is clear consolidation evidence for avoiding parallel
+      software-procurement channels and preserving coherence between Action 61
+      provider consolidation and ICC delivery.
+    evidence_sources:
+      - data/secondary-sources/2026-06-22-scan.yaml
+    confidence: high
+
+  - id: sig-2026-06-22-011
+    topic: secretariat_digital_reuse_interoperability_gap
+    summary: >-
+      The public OIOS evaluation reports that many Secretariat digital tools were
+      highly customized, lacked interoperability, and could not be scaled or
+      reused across the Secretariat. This creates direct design evidence for
+      Action 61 shared-platform consolidation and Action 62 TAP portfolio
+      governance to prioritize reusable components over entity-specific builds.
+    evidence_sources:
+      - data/secondary-sources/2026-06-22-scan.yaml
     confidence: high

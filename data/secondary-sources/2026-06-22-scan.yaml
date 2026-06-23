@@ -1,0 +1,165 @@
+meta:
+  scan_date: "2026-06-22"
+  automation: un80-landscape-monitor
+  disclaimer: DRAFT — public secondary sources only
+
+findings:
+  - source:
+      title: "UN80 Initiative Progress Report: Report of the Secretary-General"
+      url: https://www.un.org/un80-initiative/sites/default/files/2026-05/UN80-PR2_260528_1209_WEB.pdf
+      type: un_system
+    relevance: both
+    topic: sg_progress_report_shared_services_tap_scale
+    summary: >-
+      The public UN80 progress report frames technology and data as fragmented
+      across entities and platforms, cites phased shared core ICT services and
+      system-wide software contracts, and describes TAP phase-one scale for
+      AI-assisted conferencing and translation, expertise-on-demand and digital
+      IDs for more than 120,000 staff and 80 million beneficiaries. It also
+      asks Member States to support interoperability, data governance and
+      justification of duplication where shared approaches would deliver better
+      value.
+    confidence: high
+
+  - source:
+      title: UN Digital ID
+      url: https://unsceb.org/topics/un-digital-id
+      type: un_system
+    relevance: action_62
+    topic: system_wide_workforce_identity
+    summary: >-
+      The public CEB page describes UN Digital ID as an HLCM-sponsored,
+      system-wide workforce identity intended to expand across the UN system.
+      It explicitly states that a unified digital ID reduces data duplication
+      and fragmentation, enables secure sharing of personal and professional
+      data, and supports use cases including UNJSPF pension processing, BSAFE
+      security training and inter-agency staff movements.
+    confidence: high
+
+  - source:
+      title: "38th HLCM Procurement Network Meeting 7 October 2025 Summary of Decisions and Outcomes"
+      url: https://unsceb.org/sites/default/files/2025-12/38th%20HLCM%20PN%20Meeting%207%20October%202025%20Summary%20of%20Decisions%20and%20Outcomes.pdf
+      type: un_system
+    relevance: action_61
+    topic: p3_icc_joint_software_procurement
+    summary: >-
+      The public HLCM Procurement Network summary describes P3 integrated ICT
+      procurement and shared software services as identifying high-value
+      software contracts for aggregated demand and improved licensing terms.
+      It also records that ICC's shared-services role was reaffirmed and that
+      potential synergies between P3 and ICC software-license resale and
+      digital services may warrant consideration to ensure coherence and
+      complementarity.
+    confidence: high
+
+  - source:
+      title: UNICC AI Hub
+      url: https://www.unicc.org/artificial-intelligence/
+      type: un_system
+    relevance: action_62
+    topic: shared_ai_expertise_and_reusable_playbooks
+    summary: >-
+      UNICC's public AI Hub page describes expertise, resources and a
+      collaborative environment for AI initiatives across the UN family and
+      other international organizations. It highlights secure environments and
+      private AI, foundational components that can be shared or replicated
+      across UN organizations, an AI Hub Community Platform, shared
+      infrastructure, reusable playbooks and testing environments.
+    confidence: medium
+
+  - source:
+      title: "UN 2.0 Digital and Data Expo #4 | One Hour. 8 UN Showcases"
+      url: https://www.uninnovation.network/innovation-library/un-2-0-digital-and-data-expo-4-one-hour-8-un-showcases
+      type: un_system
+    relevance: action_62
+    topic: digital_solution_showcase_pipeline
+    summary: >-
+      The UN Innovation Network page for the May 2026 UN 2.0 Digital and Data
+      Solutions Expo presents eight UN showcases across UNEP, OCHA, UNDP,
+      UNFPA, UNAIDS, WFP, UNICEF and UNCTAD, plus an external spotlight. The
+      event is framed as a way to see practical digital and data solutions,
+      hear from implementation teams and connect colleagues working on similar
+      challenges across the UN system, making it a public analogue for TAP
+      pipeline discovery and practitioner matching.
+    confidence: medium
+
+  - source:
+      title: Digital Credentials
+      url: https://www.w3.org/TR/digital-credentials/
+      type: standards_body
+    relevance: action_62
+    topic: browser_mediated_digital_credentials
+    summary: >-
+      The W3C Digital Credentials draft specifies an API for user agents to
+      mediate presentation and issuance of digital credentials. It builds on
+      Credential Management Level 1, is agnostic to credential formats, is
+      extensible to multiple presentation and issuance protocols, and requires
+      user-mediated consent. This is relevant standards evidence for TAP and UN
+      Digital ID work that must avoid locking identity exchange to a single
+      wallet, browser or protocol.
+    confidence: medium
+
+  - source:
+      title: Lightweight Verifiable Credential Schema Version 1.0
+      url: https://docs.oasis-open.org/lvcsp/lvcs/v1.0/lvcs-v1.0.html
+      type: standards_body
+    relevance: action_62
+    topic: verifiable_credential_schema_interoperability
+    summary: >-
+      The OASIS Lightweight Verifiable Credential Schema defines schemas for
+      eKYC verifiable credentials based on W3C and related standards. Its
+      public specification states that interoperability is critical in
+      multi-vendor, multi-user and multi-purpose digital identity ecosystems
+      and that schemas facilitate interoperability by defining credential
+      structure. This provides standards context for reusable UN Digital ID
+      credential designs.
+    confidence: medium
+
+  - source:
+      title: "Strengthening digital public infrastructure and data governance: Digital Government Outlook 2026"
+      url: https://www.oecd.org/en/publications/digital-government-outlook_0496b2bc-en/full-report/strengthening-digital-public-infrastructure-and-data-governance_2c7323c7.html
+      type: think_tank
+    relevance: both
+    topic: shared_dpi_adoption_and_interoperability
+    summary: >-
+      The OECD Digital Government Outlook 2026 chapter states that shared DPI,
+      well-governed data and connected systems enable service reliability and
+      reduce duplication, but that impact depends on consistent use across
+      organizations and government levels. It reports that only 63 percent of
+      public institutions are connected to national data interoperability
+      systems on average, reinforcing that shared infrastructure needs adoption
+      mechanisms and governance, not only technical availability.
+    confidence: medium
+
+  - source:
+      title: "Global Digital Public Infrastructure Program: From Foundations to Scale"
+      url: https://www.worldbank.org/en/results/2026/05/06/global-digital-public-infrastructure-program
+      type: international_org
+    relevance: action_62
+    topic: reusable_dpi_building_blocks
+    summary: >-
+      The World Bank Global DPI Program page describes digital ID, payments and
+      secure data sharing as shared digital foundations and states that
+      fragmented strategies, institutional capacity gaps, outdated laws and
+      lack of secure interoperable systems limit progress. Its approach
+      promotes interoperable digital ID, payments and data-sharing platforms,
+      open standards, toolkits and knowledge products to reduce duplication and
+      unlock innovation across sectors.
+    confidence: medium
+
+  - source:
+      title: Evaluation of Digital Transformation in the United Nations Secretariat
+      url: https://oios.un.org/system/files/reports/2026_IED_25_016.pdf
+      type: un_system
+    relevance: both
+    topic: secretariat_digital_scale_reuse_gaps
+    summary: >-
+      The public OIOS evaluation of digital transformation across 41 UN
+      Secretariat entities reports that many tools were highly customized,
+      lacked interoperability, and could not be scaled or reused across the
+      Secretariat. It also notes that OICT provides core ICT infrastructure,
+      shared enterprise platforms and governance frameworks for system-wide
+      interoperability, while ODET contributes system-wide coordination on
+      emerging technologies. This is Secretariat-scope evidence for Action 61
+      and Action 62 design risks around reuse and scale.
+    confidence: high
