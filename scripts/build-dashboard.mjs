@@ -1015,4 +1015,10 @@ copyFileSync(join(root, "dashboard/index.html"), join(out, "index.html"));
 copyFileSync(join(root, "dashboard/styles.css"), join(out, "styles.css"));
 copyFileSync(join(root, "dashboard/app.js"), join(out, "app.js"));
 
+// TAP synthesis artifacts (from orchestrate-synthesis.mjs) — guard if not yet generated.
+for (const artifact of ["data/tap-synthesis.json", "data/claim-ledger.jsonl"]) {
+  const src = join(root, artifact);
+  if (existsSync(src)) copyFileSync(src, join(out, artifact.split("/").pop()));
+}
+
 console.log("Dashboard built → dashboard/dist/");
