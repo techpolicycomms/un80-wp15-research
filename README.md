@@ -27,8 +27,9 @@ This hub supports UN80 WP15 by turning recurring research into a **repeatable pi
 2. **Ingest** — on-demand submission of curated public links via webhook
 3. **Compile** — monthly draft briefings for Member State / CEB updates, mirrored to Notion
 4. **Monitor social** — weekly X, Facebook, YouTube scan for UN agencies on WP15 topics
-5. **Visualize** — dashboard fed from structured data in `data/`
-6. **Review** — every automation opens a GitHub PR; humans merge and approve before anything is treated as final
+5. **Synthesize** — a build-time multi-model engine (`npm run orchestrate`) fans the TAP working synthesis out to Claude (synthesize), DeepSeek (extract atomic claims) and Gemini (score evidence), then a deterministic reconciler merges them into `data/tap-synthesis.json` + `data/claim-ledger.jsonl` with a `safe` / `caveat` / `do-not-cite` verdict per claim. Keys live in `.env`; the deployed site stays static and key-free, and each stage degrades to a curated fallback so a missing key or provider outage never breaks the build.
+6. **Visualize** — the dashboard rebuilds around the 8-section TAP synthesis (Lead Answer → RQ-001…015 → Evidence Quality → Agent Loop → Sources → Next Actions), with a cite-status chip on every research answer and an honest engine-provenance footer.
+7. **Review** — every automation opens a GitHub PR; humans merge and approve before anything is treated as final. No model alone promotes a claim to "final".
 
 Aligned to the WP15 pre-briefing: >$2B annual UN system ICT spend, baseline across 28 entities, TAP portfolio (digital ID, expertise on demand, modern conferencing).
 
