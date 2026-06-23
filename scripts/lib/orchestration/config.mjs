@@ -26,6 +26,6 @@ export function MODELS(env) {
   return {
     anthropic: env.ANTHROPIC_MODEL || "claude-opus-4-8",
     deepseek: env.DEEPSEEK_MODEL || "deepseek-chat",
-    gemini: env.GEMINI_MODEL || "gemini-2.5-pro",
+    gemini: env.GEMINI_MODEL || "gemini-2.5-flash",
   };
 }

@@ -5,6 +5,7 @@
   "description": "UN80 WP15 ICT consolidation and TAP research automation hub",
   "scripts": {
     "validate": "node scripts/validate-data.mjs",
+    "orchestrate": "node scripts/orchestrate-synthesis.mjs",
     "build:dashboard": "node scripts/build-dashboard.mjs",
     "fetch:youtube": "node scripts/fetch-youtube-social.mjs",
     "fetch:feeds": "node scripts/fetch-public-feeds.mjs",

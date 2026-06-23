@@ -7,7 +7,9 @@ export async function callClaude({ env, model, system, user, schema }) {
   if (!key || key.length < 8) { log("Claude skipped (no key)"); return null; }
   try {
     const client = new Anthropic({ apiKey: key });
-    const res = await client.messages.create({
+    // Stream: large max_tokens + adaptive thinking can exceed the non-streaming
+    // request timeout, so use .stream().finalMessage() per the SDK guidance.
+    const stream = client.messages.stream({
       model,
       max_tokens: 32000,
       thinking: { type: "adaptive" },
@@ -15,9 +17,21 @@ export async function callClaude({ env, model, system, user, schema }) {
       system,
       messages: [{ role: "user", content: user }],
     });
+    const res = await stream.finalMessage();
     const text = res.content.filter((b) => b.type === "text").map((b) => b.text).join("");
     return JSON.parse(text);
   } catch (e) { log(`Claude failed: ${e.message}`); return null; }
+}
+
+async function fetchWithRetry(url, init, { attempts = 4, base = 1500 } = {}) {
+  for (let i = 0; i < attempts; i += 1) {
+    const r = await fetch(url, init);
+    if (r.status !== 429 && r.status !== 503) return r;
+    if (i === attempts - 1) return r;
+    const wait = base * 2 ** i;
+    log(`HTTP ${r.status} — retrying in ${wait}ms (${i + 1}/${attempts - 1})`);
+    await new Promise((res) => setTimeout(res, wait));
+  }
 }
 
 export async function callDeepSeek({ env, model, system, user }) {
@@ -44,7 +58,7 @@ export async function callGemini({ env, model, system, user }) {
   if (!key || key.length < 8) { log("Gemini skipped (no key)"); return null; }
   try {
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`;
-    const r = await fetch(url, {
+    const r = await fetchWithRetry(url, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
