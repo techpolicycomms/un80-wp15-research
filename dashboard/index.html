@@ -3,153 +3,132 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UN80 WP15 Research Dashboard</title>
+    <title>UN80 / TAP — Research & Secondary Data Synthesis</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="app-header">
-      <div>
-        <p class="badge">DRAFT - Working document</p>
-        <h1>UN80 WP15 Research Dashboard</h1>
-        <p class="subtitle">Action 61 ICT consolidation + Action 62 Technology Accelerator Platform</p>
-        <p id="generated-at" class="meta"></p>
-      </div>
-      <nav aria-label="Dashboard sections">
-        <a href="#analysis">Analysis</a>
-        <a href="#reports">Reports</a>
-        <a href="#pushes">Pushes</a>
-        <a href="#data">Data</a>
-      </nav>
-    </header>
+    <a class="skip-link" href="#lead-answer">Skip to content</a>
 
-    <main>
-      <p id="app-error" class="error"></p>
+    <div class="layout">
+      <aside class="rail" aria-label="Section navigation">
+        <div class="rail-mark">
+          <span class="rail-ws">UN80 · WP15</span>
+          <strong>TAP</strong>
+          <span class="rail-sub">Research &amp; Secondary Data Agent Loop</span>
+        </div>
+        <nav class="rail-nav">
+          <a href="#lead-answer"><span class="idx">01</span> Lead Answer</a>
+          <a href="#status"><span class="idx">02</span> Status &amp; Prior Work</a>
+          <a href="#new-files"><span class="idx">03</span> New Files</a>
+          <a href="#research-answers"><span class="idx">04</span> Research Answers</a>
+          <a href="#evidence-quality"><span class="idx">05</span> Evidence Quality</a>
+          <a href="#agent-loop"><span class="idx">06</span> Agent Loop</a>
+          <a href="#sources"><span class="idx">07</span> Sources</a>
+          <a href="#next-actions"><span class="idx">08</span> Next Actions</a>
+        </nav>
+        <p class="rail-note" id="rail-status">Loading…</p>
+      </aside>
 
-      <section class="cards" id="metric-cards" aria-label="Dashboard metrics"></section>
+      <main class="main">
+        <p id="app-error" class="error" role="alert" hidden></p>
 
-      <section class="panel analysis-panel" id="analysis">
-        <div class="section-header">
-          <div>
-            <h2>Inferred Text Intelligence</h2>
-            <p class="meta">Automated reading of every generated report artifact, including branch-only reports.</p>
+        <!-- 01 — Lead Answer -->
+        <section id="lead-answer" class="section section-lead">
+          <div class="banner" role="note">
+            <span class="banner-tag">DRAFT</span>
+            <span id="status-line">Evidence-backed working synthesis — not yet leadership-validated.</span>
           </div>
-        </div>
-        <div id="insight-cards" class="insight-grid"></div>
-        <div class="chart-grid">
-          <article class="chart-card">
-            <h3>Action Evidence Balance</h3>
-            <div id="action-balance-chart"></div>
-          </article>
-          <article class="chart-card">
-            <h3>Dominant Themes</h3>
-            <div id="theme-bar-chart"></div>
-          </article>
-          <article class="chart-card wide-chart">
-            <h3>Report Timeline</h3>
-            <div id="timeline-chart"></div>
-          </article>
-          <article class="chart-card">
-            <h3>Review Risk</h3>
-            <div id="review-risk-chart"></div>
-          </article>
-          <article class="chart-card">
-            <h3>Institutional Attention</h3>
-            <div id="entity-chart"></div>
-          </article>
-          <article class="chart-card">
-            <h3>Source Domains</h3>
-            <div id="source-domain-chart"></div>
-          </article>
-          <article class="chart-card wide-chart">
-            <h3>Category Matrix</h3>
-            <div id="category-matrix"></div>
-          </article>
-          <article class="chart-card wide-chart">
-            <h3>Corpus Term Cloud</h3>
-            <div id="term-cloud"></div>
-          </article>
-        </div>
-        <div class="split">
-          <section class="analysis-list-panel">
-            <h3>Evidence-Rich Reports</h3>
-            <div id="evidence-report-cards" class="stack"></div>
-          </section>
-          <section class="analysis-list-panel">
-            <h3>Review-Gated Reports</h3>
-            <div id="risk-report-cards" class="stack"></div>
-          </section>
-        </div>
-      </section>
+          <p class="eyebrow">The lead answer</p>
+          <h1 class="thesis" id="lead-statement"></h1>
+          <ul class="lead-points" id="lead-points"></ul>
+        </section>
 
-      <div class="split" id="headline-findings"></div>
-
-      <section class="panel">
-        <h2>Baseline And Portfolio</h2>
-        <div class="split">
-          <div id="baseline-detail"></div>
-          <div>
-            <h3>Action 62 TAP Portfolio</h3>
-            <div id="tap-portfolio"></div>
+        <!-- 02 — Status & Previous Work -->
+        <section id="status" class="section">
+          <h2 class="section-h"><span class="section-idx">02</span> Status &amp; previous work</h2>
+          <p class="section-lede">The earlier innovation-jobs scan that grounds the distributed-capacity argument.</p>
+          <div class="stat-row" id="prev-stats"></div>
+          <div class="chips-block">
+            <p class="micro-label">Job-family tags — capacity is embedded, not centralized</p>
+            <div class="tag-wrap" id="job-families"></div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="panel">
-        <h2>Phase Tracker</h2>
-        <div id="phase-tracker" class="stack"></div>
-      </section>
+        <!-- 03 — New Files -->
+        <section id="new-files" class="section">
+          <h2 class="section-h"><span class="section-idx">03</span> New files incorporated</h2>
+          <p class="section-lede">Source provenance for the 23 June refresh.</p>
+          <ul class="file-list" id="file-list"></ul>
+        </section>
 
-      <section class="panel" id="reports">
-        <div class="section-header">
-          <div>
-            <h2>Report Library</h2>
-            <p id="report-count" class="meta"></p>
+        <!-- 04 — Research Answers -->
+        <section id="research-answers" class="section">
+          <h2 class="section-h"><span class="section-idx">04</span> Research answers</h2>
+          <p class="section-lede">
+            Fifteen research questions. Each answer wears the evidence verdict the engine assigned to its
+            underlying claim.
+          </p>
+
+          <div class="ledger-bar" aria-hidden="true">
+            <div class="ledger-seg seg-safe" id="seg-safe"></div>
+            <div class="ledger-seg seg-caveat" id="seg-caveat"></div>
+            <div class="ledger-seg seg-dnc" id="seg-dnc"></div>
           </div>
-          <div class="controls">
-            <label>
-              <span>Search</span>
-              <input id="report-search" name="report-search" type="search" autocomplete="off" aria-label="Search" />
-            </label>
-            <label>
-              <span>Type</span>
-              <select id="report-category" name="report-category" aria-label="Type"></select>
-            </label>
+          <div class="ledger-key">
+            <button class="filter is-on" data-filter="all">All <span id="ct-all">0</span></button>
+            <button class="filter" data-filter="safe"><i class="dot dot-safe"></i> Safe to cite <span id="ct-safe">0</span></button>
+            <button class="filter" data-filter="caveat"><i class="dot dot-caveat"></i> Cite with caveat <span id="ct-caveat">0</span></button>
+            <button class="filter" data-filter="do-not-cite"><i class="dot dot-dnc"></i> Do not cite yet <span id="ct-dnc">0</span></button>
           </div>
-        </div>
-        <div class="report-grid">
-          <div id="report-list" class="report-list" aria-label="Generated reports"></div>
-          <article id="report-viewer" class="report-viewer" aria-label="Selected report"></article>
-        </div>
-      </section>
 
-      <section class="panel" id="pushes">
-        <div class="section-header">
-          <div>
-            <h2>Push Timeline</h2>
-            <p id="history-note" class="meta"></p>
+          <ol class="rq-list" id="rq-list"></ol>
+        </section>
+
+        <!-- 05 — Evidence Quality -->
+        <section id="evidence-quality" class="section">
+          <h2 class="section-h"><span class="section-idx">05</span> Evidence quality</h2>
+          <p class="section-lede">What the working group can lean on now, and what still needs validation.</p>
+          <div class="eq-grid">
+            <div class="eq-col eq-strong">
+              <h3>Strong enough to use now</h3>
+              <ul id="eq-strong"></ul>
+            </div>
+            <div class="eq-col eq-caveat">
+              <h3>Use with caveats</h3>
+              <ul id="eq-caveat"></ul>
+            </div>
           </div>
-        </div>
-        <div id="push-timeline" class="timeline"></div>
-      </section>
+        </section>
 
-      <div id="data">
-        <div id="data-inventory" class="split"></div>
-      </div>
+        <!-- 06 — Agent Loop -->
+        <section id="agent-loop" class="section">
+          <h2 class="section-h"><span class="section-idx">06</span> The secondary-data agent loop</h2>
+          <p class="section-lede">Eight agents keep the synthesis substantiated; promotion to "confident" is gated by human review on Friday.</p>
+          <ol class="agent-flow" id="agent-flow"></ol>
+          <div class="cadence" id="cadence"></div>
+        </section>
 
-      <section class="panel">
-        <h2>Overlap Signals</h2>
-        <div id="overlap-list" class="signal-grid"></div>
-      </section>
+        <!-- 07 — Sources -->
+        <section id="sources" class="section">
+          <h2 class="section-h"><span class="section-idx">07</span> Real-world secondary sources</h2>
+          <p class="section-lede">Public datasets and benchmarks the loop draws on. No private or pre-decisional data.</p>
+          <div class="source-grid" id="source-grid"></div>
+        </section>
 
-      <section class="panel">
-        <h2>Social And News Signals</h2>
-        <div id="social-signal-list" class="signal-grid"></div>
-      </section>
-    </main>
+        <!-- 08 — Next Actions -->
+        <section id="next-actions" class="section">
+          <h2 class="section-h"><span class="section-idx">08</span> Immediate next actions</h2>
+          <ul class="action-list" id="action-list"></ul>
+        </section>
 
-    <footer>
-      <p>Public secondary data only. Human review required before external distribution.</p>
-    </footer>
+        <footer class="prov" id="provenance">
+          <p class="prov-title">Engine provenance</p>
+          <div class="prov-body" id="prov-body"></div>
+          <p class="prov-foot">Public secondary data only. Human review required before external distribution. Not an agreed UN position.</p>
+        </footer>
+      </main>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
