@@ -1,0 +1,106 @@
+meta:
+  scan_date: "2026-06-08"
+  automation: weekly-landscape-monitor
+  disclaimer: DRAFT - public secondary sources only; not an agreed UN position
+
+findings:
+  - source:
+      title: HLCM Far-Reaching Efficiency Initiatives
+      url: https://unsceb.org/topics/hlcm-far-reaching-efficiency-initiatives
+      type: un_system
+    relevance: action_61
+    topic: integrated_ict_procurement_shared_services
+    summary: >-
+      CEB/HLCM public material identifies P3 "Integrated ICT Procurement and
+      Shared Software Services" and describes a One UN IT path involving data
+      centre consolidation, Digital Service Hubs, a UN private cloud and hybrid
+      cloud model. This is direct public evidence that Action 61 implementation
+      is being framed around shared procurement, shared software and consolidated
+      infrastructure rather than entity-by-entity ICT stacks.
+    confidence: high
+
+  - source:
+      title: Digital and Technology Network
+      url: https://unsceb.org/dtn
+      type: un_system
+    relevance: both
+    topic: system_digital_technology_coordination
+    summary: >-
+      The Digital and Technology Network is the HLCM-linked inter-agency
+      mechanism for cooperation on digital and technology matters, bringing CIOs
+      together to advise on system-wide approaches and coordinate ICT policy and
+      practices. It is a public governance anchor for both Action 61 shared ICT
+      services and Action 62 TAP demand/portfolio coordination.
+    confidence: high
+
+  - source:
+      title: DTN Session Report
+      url: https://unsceb.org/session-report-422
+      type: un_system
+    relevance: action_61
+    topic: cloud_and_enterprise_software_overlap
+    summary: >-
+      The DTN session covered renegotiation of cloud and enterprise software
+      licensing contracts, vendor-exit strategies, IT budget benchmarking, data
+      centre resilience, ERP streamlining and shared services. The public report
+      emphasizes common services and collective vendor negotiations as tools to
+      harmonize technology and improve UN operations.
+    confidence: high
+
+  - source:
+      title: UN Digital ID
+      url: https://unsceb.org/topics/un-digital-id
+      type: un_system
+    relevance: action_62
+    topic: digital_id_interoperability
+    summary: >-
+      CEB describes UN Digital ID as an HLCM-sponsored universal workforce
+      identity that reduces data duplication and fragmentation. Public milestones
+      include the UNJSPF pension use case, BSAFE/security-clearance use and
+      inter-agency staff movements, making this a concrete shared digital ID
+      foundation for the TAP portfolio.
+    confidence: high
+
+  - source:
+      title: HLCM Far-Reaching Efficiency Initiatives
+      url: https://unsceb.org/topics/hlcm-far-reaching-efficiency-initiatives
+      type: un_system
+    relevance: action_62
+    topic: ai_language_services_common_mechanism
+    summary: >-
+      The HLCM efficiency page identifies O2 as a common policy and technical
+      mechanism for AI-powered language services, with participating entities
+      coordinating use-case assessment, shared policies, guidance and pilots.
+      This is TAP-relevant evidence for modern conferencing/translation toolkits
+      because it explicitly aims to avoid duplication across entities while
+      building on existing UN tools and expertise.
+    confidence: high
+
+  - source:
+      title: Verifiable Credentials Working Group Charter
+      url: https://www.w3.org/2026/03/vc-wg-charter.html
+      type: standards_body
+    relevance: action_62
+    topic: digital_id_standards_interoperability
+    summary: >-
+      W3C's 2026 Verifiable Credentials Working Group charter maintains the VC
+      specification family and adds deliverables such as credential APIs,
+      confidence methods and verifiable issuers/verifiers. Its success criteria
+      require open test suites and at least two independent interoperable
+      implementations per feature, giving TAP digital ID work a standards-based
+      interoperability reference.
+    confidence: medium
+
+  - source:
+      title: Decentralized Identifiers (DIDs) v1.1
+      url: https://www.w3.org/TR/did-1.1/
+      type: standards_body
+    relevance: action_62
+    topic: digital_id_identifier_portability
+    summary: >-
+      The W3C DID v1.1 Candidate Recommendation defines identifiers that can
+      bridge centralized, federated and decentralized identity systems. Its
+      design goals include interoperability and portability, and its conformance
+      model defines how DID documents and methods are tested for interoperable
+      implementation, which is relevant to cross-entity UN Digital ID design.
+    confidence: medium

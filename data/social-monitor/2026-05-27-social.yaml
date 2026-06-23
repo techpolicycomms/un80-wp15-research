@@ -1,0 +1,88 @@
+meta:
+  scan_date: "2026-05-27"
+  automation: sdk-lane-04-daily-digest
+  disclaimer: DRAFT — public posts and press releases only
+  platforms: [news, youtube]
+  feeds_ok: 9
+  feeds_total: 12
+  feeds_failed: 3
+  items_scanned: 72
+  wp15_signals: 1
+  high_priority: 0
+  agent_review_note: >-
+    Automated RSS pass degraded: 9/12 feeds OK (UN News timeout, UN Global Pulse 403,
+    UNICC 504). Only 1 new RSS signal (WHO medium). Prior high-priority UNICC cluster
+    from 2026-05-24 fetch remains valid — carried forward below. X/Facebook/LinkedIn
+    agent review deferred for 18 tier-1 agencies. 2026-05-26 run skipped; catch-up in
+    this pass.
+
+signals:
+  - platform: news
+    agency: World Health Organization
+    title: Seventy-ninth World Health Assembly honours global champions advancing primary health care
+    url: https://www.who.int/news/item/20-05-2026-seventy-ninth-world-health-assembly-honours-global-champions-advancing-primary-health-care
+    matched_keywords: [innovation, digital]
+    priority: medium
+    relevance: both
+    summary: Marginal WP15 relevance — digital/innovation keywords in health assembly context; same signal as 2026-05-24 pass.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UNICC Hosts AI-Driven Crisis Simulation During Geneva Cyber Week
+    url: https://www.unicc.org/news/2026/05/15/unicc-hosts-ai-driven-crisis-simulation-during-geneva-cyber-week/
+    matched_keywords: [unicc, cybersecurity, ai]
+    priority: high
+    relevance: action_61
+    summary: Carried forward from 2026-05-24 pass — UNICC feed unreachable today (504). Shared cyber capacity in action.
+    carry_forward_from: "2026-05-24"
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UNICC Biennial Report 2024-2025
+    url: https://www.unicc.org/wp-content/uploads/2026/05/UNICC-2024-2025-Biennial-Report-1.pdf
+    matched_keywords: [unicc, shared services]
+    priority: high
+    relevance: action_61
+    summary: Carried forward — primary ICC performance source; UNICC feed unreachable today.
+    carry_forward_from: "2026-05-24"
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UN Virtual Worlds Day — AI and emerging tech for cities and communities
+    url: https://www.unicc.org/news/2026/05/13/un-virtual-worlds-day-calls-for-ai-and-emerging-tech-to-support-better-city-and-community-life/
+    matched_keywords: [ai, innovation, digital]
+    priority: high
+    relevance: both
+    summary: Carried forward — links Action 61 infrastructure provider role with Action 62 emerging tech portfolio.
+    carry_forward_from: "2026-05-24"
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UN Innovation Update (April 2026)
+    url: https://www.uninnovation.network/innovation-library/un-innovation-update-april-2026
+    matched_keywords: [innovation]
+    priority: high
+    relevance: action_62
+    summary: Carried forward — system innovation library update relevant to TAP pipeline.
+    carry_forward_from: "2026-05-24"
+
+  - platform: news
+    agency: UN Global Pulse
+    title: Transforming Development — AI, Innovation & Partnerships for SDGs
+    url: https://www.unglobalpulse.org/transforming-development-ai-innovation-partnerships-for-the-sustainable-development-goals-sdgs/
+    matched_keywords: [innovation, ai]
+    priority: medium
+    relevance: action_62
+    summary: Carried forward — UN Global Pulse feed returned 403 today; TAP-aligned accelerator themes.
+    carry_forward_from: "2026-05-24"
+
+feed_failures:
+  - feed: UN News (all topics)
+    status: 0
+    error: Request aborted (timeout)
+  - feed: UN Global Pulse
+    status: 403
+    error: HTTP 403
+  - feed: UN International Computing Centre
+    status: 504
+    error: HTTP 504
