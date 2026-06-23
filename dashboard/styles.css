@@ -182,6 +182,34 @@ a { color: var(--slate-deep); }
 
 .jobs-pending { font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); border-left: 2px solid var(--line-strong); padding-left: 12px; margin: 22px 0 0; line-height: 1.5; }
 
+/* Collected dataset layer */
+#jobs-collected { margin-top: 30px; padding-top: 26px; border-top: 1px dashed var(--line-strong); }
+.collected-head { margin-bottom: 16px; }
+.collected-count { font-family: var(--sans); font-size: 12px; color: #fff; background: var(--slate); border-radius: 999px; padding: 2px 9px; margin-left: 6px; }
+.collected-method { font-size: 12.5px; color: var(--ink-soft); margin: 6px 0 0; max-width: 64ch; line-height: 1.5; }
+.collected-dists { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 18px; }
+.dist-card { margin: 0; border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; background: var(--panel); }
+.dist-card figcaption { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate); margin-bottom: 12px; }
+.dist-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+.dist-list li { display: grid; grid-template-columns: 92px 1fr auto; gap: 10px; align-items: center; font-size: 13px; }
+.dist-list .dl-label { color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dist-list .dl-track { height: 8px; background: #eef3f6; border-radius: 999px; overflow: hidden; }
+.dist-list .dl-fill { height: 100%; background: var(--slate); border-radius: 999px; }
+.dist-list .dl-val { font-family: var(--mono); font-size: 12px; color: var(--slate-deep); font-weight: 600; }
+
+.records { margin-bottom: 4px; }
+.records summary { cursor: pointer; font-size: 13.5px; color: var(--slate-deep); font-weight: 600; padding: 8px 0; }
+.records summary:hover { color: var(--slate); }
+.record-list { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 0; }
+.record-list li { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: baseline; padding: 11px 0; border-top: 1px solid var(--line); font-size: 13px; }
+.record-list .rl-main { color: var(--ink); }
+.record-list .rl-main a { color: var(--ink); text-decoration: none; }
+.record-list .rl-main a:hover { color: var(--slate); text-decoration: underline; }
+.record-list .rl-meta { font-size: 12px; color: var(--ink-soft); }
+.record-list .rl-agency { font-family: var(--mono); font-size: 11px; color: var(--slate); font-weight: 600; }
+
+@media (max-width: 880px) { .collected-dists { grid-template-columns: 1fr; } }
+
 /* ---- 03 New Files ---- */
 .file-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
 .file-list li { font-family: var(--mono); font-size: 13px; color: var(--ink); padding: 12px 0 12px 26px; border-top: 1px solid var(--line); position: relative; word-break: break-word; }

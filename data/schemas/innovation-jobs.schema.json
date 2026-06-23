@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Innovation Jobs Dataset",
+  "type": "object",
+  "required": ["meta", "records"],
+  "properties": {
+    "meta": { "type": "object" },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "agency", "source"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "agency": { "type": "string" },
+          "grade": { "type": ["string", "null"] },
+          "location": { "type": ["string", "null"] },
+          "family": { "type": "string" },
+          "source": { "enum": ["official", "aggregator", "web-research"] },
+          "sourceUrl": { "type": ["string", "null"] },
+          "date": { "type": ["string", "null"] },
+          "note": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -83,6 +83,22 @@ if (existsSync(tapSynthPath)) {
   }
 }
 
+// Innovation-jobs dataset (object) — present once collected/seeded.
+const jobsPath = join(root, "data/innovation-jobs.json");
+if (existsSync(jobsPath)) {
+  const jobsSchema = JSON.parse(
+    readFileSync(join(root, "data/schemas/innovation-jobs.schema.json"), "utf8")
+  );
+  const validateJobs = ajv.compile(jobsSchema);
+  const jobsObj = JSON.parse(readFileSync(jobsPath, "utf8"));
+  if (!validateJobs(jobsObj)) {
+    console.error("FAIL data/innovation-jobs.json:", validateJobs.errors);
+    failed = true;
+  } else {
+    console.log(`OK   data/innovation-jobs.json (${jobsObj.records.length} records)`);
+  }
+}
+
 // Claim ledger (JSONL) — validate one object per non-empty line.
 const ledgerPath = join(root, "data/claim-ledger.jsonl");
 if (existsSync(ledgerPath)) {

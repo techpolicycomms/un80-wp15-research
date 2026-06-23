@@ -19,6 +19,7 @@ import { loadEnv, providerStatus, MODELS } from "./lib/orchestration/config.mjs"
 import { callClaude, callClaudeCLI, callDeepSeek, callGemini } from "./lib/orchestration/providers.mjs";
 import { reconcile } from "./lib/orchestration/reconcile.mjs";
 import { fallbackSynthesis } from "./lib/orchestration/fallback-synthesis.mjs";
+import { loadJobsDataset, computeJobsIntelligence } from "./lib/orchestration/jobs.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
@@ -156,6 +157,20 @@ async function main() {
     }
   } else {
     log("Stage 3: Gemini skipped — no scores (all claims => caveat)");
+  }
+
+  // --- Innovation-jobs dataset: compute distributions when present ---
+  const jobsDs = loadJobsDataset(join(root, "data/innovation-jobs.json"));
+  if (jobsDs) {
+    const intel = computeJobsIntelligence(jobsDs.records);
+    synthesis = {
+      ...synthesis,
+      innovationJobs: {
+        ...(synthesis.innovationJobs || {}),
+        collected: { meta: jobsDs.meta, ...intel, records: jobsDs.records },
+      },
+    };
+    log(`Innovation-jobs dataset: ${intel.total} records across ${intel.byAgency.length} agencies`);
   }
 
   // --- Reconcile + stamp ---

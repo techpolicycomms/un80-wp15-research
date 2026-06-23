@@ -71,6 +71,29 @@
             <div class="tag-wrap" id="job-families"></div>
           </div>
 
+          <!-- Collected dataset layer (populated when data/innovation-jobs.json is present) -->
+          <div id="jobs-collected" hidden>
+            <div class="collected-head">
+              <p class="micro-label">Newly collected · sourced postings <span id="collected-count" class="collected-count"></span></p>
+              <p class="collected-method" id="collected-method"></p>
+            </div>
+            <div class="collected-dists">
+              <figure class="dist-card">
+                <figcaption>By agency</figcaption>
+                <ul class="dist-list" id="dist-agency"></ul>
+              </figure>
+              <figure class="dist-card">
+                <figcaption>By job family</figcaption>
+                <ul class="dist-list" id="dist-family"></ul>
+              </figure>
+            </div>
+            <details class="records">
+              <summary>Browse the <span id="records-n"></span> sourced postings</summary>
+              <ul class="record-list" id="record-list"></ul>
+            </details>
+            <p class="jobs-pending" id="collected-caveat"></p>
+          </div>
+
           <p class="jobs-pending" id="jobs-pending"></p>
         </section>
 

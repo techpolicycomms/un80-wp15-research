@@ -79,6 +79,58 @@ function renderStatus(d) {
   const pending = $("#jobs-pending");
   if (j.pending) pending.textContent = j.pending;
   else pending.hidden = true;
+
+  if (j.collected) renderCollectedJobs(j.collected);
+}
+
+function renderDist(listEl, items, max) {
+  items.forEach((x) => {
+    const li = el("li");
+    li.append(el("span", "dl-label", x.label));
+    const track = el("span", "dl-track");
+    const fill = el("span", "dl-fill");
+    fill.style.width = `${Math.round((100 * x.value) / (max || 1))}%`;
+    track.append(fill);
+    li.append(track, el("span", "dl-val", String(x.value)));
+    listEl.append(li);
+  });
+}
+
+function renderCollectedJobs(c) {
+  const box = $("#jobs-collected");
+  box.hidden = false;
+  $("#jobs-pending").hidden = true; // collected layer supersedes the placeholder
+
+  $("#collected-count").textContent = c.total;
+  $("#collected-method").textContent = c.meta?.methodology || "";
+
+  const agency = (c.byAgency || []).slice(0, 8);
+  const family = (c.byFamily || []).slice(0, 8);
+  renderDist($("#dist-agency"), agency, Math.max(...agency.map((x) => x.value), 1));
+  renderDist($("#dist-family"), family, Math.max(...family.map((x) => x.value), 1));
+
+  $("#records-n").textContent = (c.records || []).length;
+  const rl = $("#record-list");
+  (c.records || []).forEach((r) => {
+    const li = el("li");
+    const main = el("div", "rl-main");
+    main.append(el("span", "rl-agency", `${r.agency} · `));
+    if (r.sourceUrl) {
+      const a = el("a", null, r.title);
+      a.href = r.sourceUrl;
+      a.target = "_blank";
+      a.rel = "noopener";
+      main.append(a);
+    } else {
+      main.append(document.createTextNode(r.title));
+    }
+    const meta = [r.grade, r.location, r.family].filter(Boolean).join(" · ");
+    li.append(main, el("div", "rl-meta", meta));
+    rl.append(li);
+  });
+
+  const caveat = $("#collected-caveat");
+  caveat.textContent = (c.meta?.caveats || []).join("  ·  ") + (c.meta?.fullPull ? `  ·  ${c.meta.fullPull}` : "");
 }
 
 function renderNewFiles(d) {
