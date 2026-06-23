@@ -22,6 +22,17 @@
       }
     },
     "newFiles": { "type": "array", "items": { "type": "string" } },
+    "innovationJobs": {
+      "type": "object",
+      "properties": {
+        "total": { "type": "number" },
+        "bySource": { "type": "array", "items": { "type": "object" } },
+        "byRole": { "type": "array", "items": { "type": "object" } },
+        "jobFamilies": { "type": "array", "items": { "type": "string" } },
+        "takeaway": { "type": "string" },
+        "pending": { "type": "string" }
+      }
+    },
     "rq": {
       "type": "array",
       "items": {

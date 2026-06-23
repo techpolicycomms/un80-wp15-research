@@ -157,6 +157,31 @@ a { color: var(--slate-deep); }
 .tag-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
 .tag { font-size: 13px; padding: 5px 12px; background: #eaf1f5; color: var(--slate-deep); border-radius: 999px; border: 1px solid var(--line-strong); }
 
+/* Innovation-jobs intelligence */
+.jobs-head { display: grid; grid-template-columns: auto 1fr; gap: 26px; align-items: center; margin-bottom: 28px; }
+.jobs-total { text-align: center; padding-right: 26px; border-right: 1px solid var(--line); }
+.jobs-total span { display: block; font-size: 52px; font-weight: 700; letter-spacing: -0.03em; color: var(--slate-deep); line-height: 1; }
+.jobs-total small { display: block; font-size: 12px; color: var(--ink-soft); margin-top: 6px; max-width: 130px; }
+.jobs-take { margin: 0; font-size: 14.5px; color: var(--ink); line-height: 1.55; }
+
+.split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+.split-card { margin: 0; border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; background: var(--panel); }
+.split-card figcaption { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate); margin-bottom: 12px; }
+.split-bar { display: flex; height: 14px; border-radius: 999px; overflow: hidden; border: 1px solid var(--line-strong); margin-bottom: 14px; }
+.split-seg { height: 100%; }
+.split-seg.s0 { background: var(--slate-deep); }
+.split-seg.s1 { background: #9cb4c4; }
+.split-legend { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.split-legend li { display: grid; grid-template-columns: auto 1fr auto; gap: 9px; align-items: baseline; font-size: 13px; }
+.split-legend .sw { width: 10px; height: 10px; border-radius: 3px; align-self: center; }
+.split-legend .sw.s0 { background: var(--slate-deep); }
+.split-legend .sw.s1 { background: #9cb4c4; }
+.split-legend .lg-label { color: var(--ink); }
+.split-legend .lg-note { grid-column: 2 / 3; font-size: 11.5px; color: var(--ink-soft); }
+.split-legend .lg-val { font-family: var(--mono); font-weight: 600; color: var(--slate-deep); }
+
+.jobs-pending { font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); border-left: 2px solid var(--line-strong); padding-left: 12px; margin: 22px 0 0; line-height: 1.5; }
+
 /* ---- 03 New Files ---- */
 .file-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
 .file-list li { font-family: var(--mono); font-size: 13px; color: var(--ink); padding: 12px 0 12px 26px; border-top: 1px solid var(--line); position: relative; word-break: break-word; }

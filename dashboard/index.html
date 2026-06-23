@@ -43,15 +43,35 @@
           <ul class="lead-points" id="lead-points"></ul>
         </section>
 
-        <!-- 02 — Status & Previous Work -->
+        <!-- 02 — Status & Innovation-jobs intelligence -->
         <section id="status" class="section">
-          <h2 class="section-h"><span class="section-idx">02</span> Status &amp; previous work</h2>
+          <h2 class="section-h"><span class="section-idx">02</span> Innovation-jobs intelligence</h2>
           <p class="section-lede">The earlier innovation-jobs scan that grounds the distributed-capacity argument.</p>
-          <div class="stat-row" id="prev-stats"></div>
+
+          <div class="jobs-head">
+            <div class="jobs-total"><span id="jobs-total">114</span><small>innovation-related records mapped</small></div>
+            <p class="jobs-take" id="jobs-takeaway"></p>
+          </div>
+
+          <div class="split-grid">
+            <figure class="split-card">
+              <figcaption>By source</figcaption>
+              <div class="split-bar" id="bar-source"></div>
+              <ul class="split-legend" id="legend-source"></ul>
+            </figure>
+            <figure class="split-card">
+              <figcaption>By role type</figcaption>
+              <div class="split-bar" id="bar-role"></div>
+              <ul class="split-legend" id="legend-role"></ul>
+            </figure>
+          </div>
+
           <div class="chips-block">
-            <p class="micro-label">Job-family tags — capacity is embedded, not centralized</p>
+            <p class="micro-label">Job-family tags — the functions where innovation work actually lives</p>
             <div class="tag-wrap" id="job-families"></div>
           </div>
+
+          <p class="jobs-pending" id="jobs-pending"></p>
         </section>
 
         <!-- 03 — New Files -->

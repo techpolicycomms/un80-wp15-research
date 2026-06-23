@@ -32,6 +32,31 @@ export const fallbackSynthesis = {
       "Innovation strategy",
     ],
   },
+  // Innovation-jobs scan intelligence. Only figures documented in the source are
+  // used; per-agency and geography breakdowns await the raw dataset and are NOT invented.
+  innovationJobs: {
+    total: 114,
+    bySource: [
+      { label: "Official recruitment sources", value: 85, note: "Authoritative capability signal" },
+      { label: "UN Talent aggregator / manual discovery", value: 29, note: "Discovery only — not authoritative evidence" },
+    ],
+    byRole: [
+      { label: "Explicit core innovation roles", value: 32, note: "Labelled 'innovation'" },
+      { label: "Embedded in other functions", value: 82, note: "Programme, digital, data, policy, partnership, operations" },
+    ],
+    jobFamilies: [
+      "Programme delivery",
+      "Digital transformation",
+      "AI / data",
+      "Partnerships / ecosystem",
+      "Research / policy",
+      "Operations",
+      "Innovation strategy",
+    ],
+    takeaway:
+      "Only 28% of innovation-related roles are explicitly labelled 'innovation' — the other 72% are embedded across programme, digital, data, policy, partnership and operations functions. Capacity is real but distributed, which is the core evidence for TAP orchestrating existing entity capacity rather than building a new central hub.",
+    pending: "Per-agency, role-family and geography distributions await re-running the innovation-jobs collector on the raw dataset (not yet in this repo).",
+  },
   newFiles: [
     "260217 - UNIN - Johanna Jochim.docx",
     "interview-transcripts/[UN80 WP15] Talea x TAP Proposal Interview.docx",

@@ -48,15 +48,37 @@ function renderLead(d) {
   (d.leadAnswer?.points || []).forEach((p) => ul.append(el("li", null, p)));
 }
 
-function renderStatus(d) {
-  const row = $("#prev-stats");
-  (d.previousWork?.stats || []).forEach((s) => {
-    const card = el("div", "stat");
-    card.append(el("div", "stat-num", String(s.value)), el("div", "stat-label", s.label));
-    row.append(card);
+function renderSplit(barEl, legendEl, items) {
+  const total = items.reduce((a, x) => a + (x.value || 0), 0) || 1;
+  items.forEach((x, i) => {
+    const seg = el("div", `split-seg s${i}`);
+    seg.style.flexGrow = x.value || 0.001;
+    seg.title = `${x.label}: ${x.value}`;
+    barEl.append(seg);
+
+    const li = el("li");
+    const pct = Math.round((100 * (x.value || 0)) / total);
+    li.append(el("span", `sw s${i}`));
+    li.append(el("span", "lg-label", x.label));
+    li.append(el("span", "lg-val", `${x.value} · ${pct}%`));
+    if (x.note) li.append(el("span", "lg-note", x.note));
+    legendEl.append(li);
   });
+}
+
+function renderStatus(d) {
+  const j = d.innovationJobs || {};
+  $("#jobs-total").textContent = j.total ?? "114";
+  $("#jobs-takeaway").textContent = j.takeaway || "";
+  if (j.bySource) renderSplit($("#bar-source"), $("#legend-source"), j.bySource);
+  if (j.byRole) renderSplit($("#bar-role"), $("#legend-role"), j.byRole);
+
   const tags = $("#job-families");
-  (d.previousWork?.jobFamilies || []).forEach((f) => tags.append(el("span", "tag", f)));
+  (j.jobFamilies || d.previousWork?.jobFamilies || []).forEach((f) => tags.append(el("span", "tag", f)));
+
+  const pending = $("#jobs-pending");
+  if (j.pending) pending.textContent = j.pending;
+  else pending.hidden = true;
 }
 
 function renderNewFiles(d) {

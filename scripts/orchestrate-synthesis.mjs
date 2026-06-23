@@ -65,7 +65,9 @@ async function main() {
   const claudeSystem =
     "You are a UN policy research synthesizer. Return ONLY a JSON object matching the provided schema. " +
     "Preserve all 15 RQ items (RQ-001..RQ-015), each with id, question, answer, evidence[], and claims:[<its id>]. " +
-    "Keep claims arrays as [the RQ's own id]. Improve clarity and accuracy from the source; do not invent facts or sources.";
+    "Keep claims arrays as [the RQ's own id]. Preserve the innovationJobs object and its numeric figures EXACTLY " +
+    "(total, bySource, byRole counts) — you may refine wording but never change a number or invent agency/geography counts. " +
+    "Improve clarity and accuracy from the source; do not invent facts or sources.";
   const claudeUser =
     `SOURCE SYNTHESIS (markdown):\n${md}\n\nADDITIONAL REPO CONTEXT:\n${extra}\n\n` +
     `BASELINE STRUCTURE to refine (already schema-valid):\n${JSON.stringify(fallbackSynthesis)}`;
