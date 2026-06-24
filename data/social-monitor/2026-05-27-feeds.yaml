@@ -1,0 +1,127 @@
+meta:
+  scan_date: 2026-05-27
+  automation: fetch-public-feeds
+  disclaimer: DRAFT — public posts and press releases only
+  feeds_checked: 12
+  feeds_ok: 9
+  items_scanned: 72
+  wp15_signals: 1
+  high_priority: 0
+feed_results:
+  - feed_id: un-news-all
+    feed_name: UN News (all topics)
+    platform: news
+    relevance: both
+    url: https://news.un.org/feed/subscribe/en/news/all/rss.xml
+    status: 0
+    error: This operation was aborted
+    signals_found: 0
+  - feed_id: un-global-pulse
+    feed_name: UN Global Pulse
+    platform: news
+    relevance: action_62
+    url: https://www.unglobalpulse.org/feed/
+    status: 403
+    error: HTTP 403
+    signals_found: 0
+  - agency_id: un-secretariat
+    agency_name: United Nations Secretariat
+    platform: youtube
+    relevance: both
+    url: https://www.youtube.com/feeds/videos.xml?user=UnitedNations
+    status: 200
+    items_scanned: 8
+    signals_found: 0
+  - agency_id: unicc
+    agency_name: UN International Computing Centre
+    platform: news
+    relevance: action_61
+    url: https://www.unicc.org/feed/
+    status: 504
+    error: HTTP 504
+    signals_found: 0
+  - agency_id: unicef
+    agency_name: UNICEF
+    platform: youtube
+    relevance: both
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UC-PhoMIVWsstY-VVtUIe-Og
+    status: 200
+    items_scanned: 8
+    signals_found: 0
+  - agency_id: who
+    agency_name: World Health Organization
+    platform: news
+    relevance: both
+    url: https://www.who.int/rss-feeds/news-english.xml
+    status: 200
+    items_scanned: 8
+    signals_found: 1
+  - agency_id: who
+    agency_name: World Health Organization
+    platform: youtube
+    relevance: both
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCT7a_fVlSrjOs9jyvtH-uhA
+    status: 200
+    items_scanned: 8
+    signals_found: 0
+  - agency_id: unhcr
+    agency_name: UNHCR
+    platform: youtube
+    relevance: both
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCEsqtq4czNXTQdtlf5qKlYA
+    status: 200
+    items_scanned: 8
+    signals_found: 0
+  - agency_id: undp
+    agency_name: UNDP
+    platform: youtube
+    relevance: both
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCkt7CZkWK4B2hPDyaKquX2w
+    status: 200
+    items_scanned: 8
+    signals_found: 0
+  - agency_id: un-women
+    agency_name: UN Women
+    platform: youtube
+    relevance: both
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCVuYWigp4VwOsJhrcfYDlXw
+    status: 200
+    items_scanned: 8
+    signals_found: 0
+  - agency_id: unesco
+    agency_name: UNESCO
+    platform: youtube
+    relevance: action_62
+    url: https://www.youtube.com/feeds/videos.xml?user=UNESCO
+    status: 200
+    items_scanned: 8
+    signals_found: 0
+  - agency_id: fao
+    agency_name: FAO
+    platform: youtube
+    relevance: both
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCM93UMoQKlj_8wTACRvl1iQ
+    status: 200
+    items_scanned: 8
+    signals_found: 0
+signals:
+  - agency_id: who
+    agency_name: World Health Organization
+    platform: news
+    title: Seventy-ninth World Health Assembly honours global champions advancing
+      primary health care
+    url: https://www.who.int/news/item/20-05-2026-seventy-ninth-world-health-assembly-honours-global-champions-advancing-primary-health-care
+    published: Wed, 20 May 2026 10:57:07 Z
+    matched_keywords:
+      - innovation
+      - digital
+    keyword_tiers:
+      - both_medium
+      - general_low
+    priority: medium
+    relevance: both
+    summary: <p>Today, the World Health Assembly recognized individuals and
+      institutions whose contributions to global health have gone far beyond the
+      call of duty. <a
+      href="https://www.who.int/news-room/feature-stories/detail/primary-health-care-champions-celebrated-at-the-seventy-ninth-worl
+    wp15_signal: true

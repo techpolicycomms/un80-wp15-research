@@ -1,0 +1,550 @@
+meta:
+  scan_date: 2026-05-27
+  agency_count: 27
+  system_feeds: 2
+  feeds_ok: 9
+  feeds_total: 12
+  feeds_failed: 3
+  agent_review_agencies: 18
+platform_coverage:
+  news_rss:
+    registered: 2
+    pct: 7
+  youtube_rss:
+    registered: 8
+    pct: 30
+  x_url:
+    registered: 27
+    pct: 100
+  facebook_url:
+    registered: 19
+    pct: 70
+  linkedin_url:
+    registered: 27
+    pct: 100
+  instagram_url:
+    registered: 3
+    pct: 11
+agencies:
+  - id: un-secretariat
+    name: United Nations Secretariat
+    tier: 1
+    relevance: both
+    platforms:
+      news_rss: false
+      youtube_rss: true
+      x_url: true
+      facebook_url: true
+      linkedin_url: true
+      instagram_url: true
+    automated_feed: true
+    agent_review: true
+  - id: unicc
+    name: UN International Computing Centre
+    tier: 1
+    relevance: action_61
+    platforms:
+      news_rss: true
+      youtube_rss: false
+      x_url: true
+      facebook_url: true
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: true
+    agent_review: true
+  - id: un-dco
+    name: UN Office for Digital and Emerging Technology
+    tier: 1
+    relevance: action_62
+    platforms:
+      news_rss: false
+      youtube_rss: false
+      x_url: true
+      facebook_url: false
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: false
+    agent_review: true
+  - id: un-oict
+    name: UN Office of Information and Communications Technology
+    tier: 1
+    relevance: action_61
+    platforms:
+      news_rss: false
+      youtube_rss: false
+      x_url: true
+      facebook_url: false
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: false
+    agent_review: true
+  - id: itu
+    name: International Telecommunication Union
+    tier: 1
+    relevance: both
+    platforms:
+      news_rss: false
+      youtube_rss: false
+      x_url: true
+      facebook_url: true
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: false
+    agent_review: true
+  - id: unicef
+    name: UNICEF
+    tier: 2
+    relevance: both
+    platforms:
+      news_rss: false
+      youtube_rss: true
+      x_url: true
+      facebook_url: true
+      linkedin_url: true
+      instagram_url: true
+    automated_feed: true
+    agent_review: true
+  - id: who
+    name: World Health Organization
+    tier: 2
+    relevance: both
+    platforms:
+      news_rss: true
+      youtube_rss: true
+      x_url: true
+      facebook_url: true
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: true
+    agent_review: true
+  - id: wfp
+    name: World Food Programme
+    tier: 2
+    relevance: both
+    platforms:
+      news_rss: false
+      youtube_rss: false
+      x_url: true
+      facebook_url: true
+      linkedin_url: true
+      instagram_url: true
+    automated_feed: false
+    agent_review: true
+  - id: unhcr
+    name: UNHCR
+    tier: 2
+    relevance: both
+    platforms:
+      news_rss: false
+      youtube_rss: true
+      x_url: true
+      facebook_url: true
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: true
+    agent_review: true
+  - id: undp
+    name: UNDP
+    tier: 2
+    relevance: both
+    platforms:
+      news_rss: false
+      youtube_rss: true
+      x_url: true
+      facebook_url: true
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: true
+    agent_review: true
+  - id: unops
+    name: UNOPS
+    tier: 2
+    relevance: action_61
+    platforms:
+      news_rss: false
+      youtube_rss: false
+      x_url: true
+      facebook_url: true
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: false
+    agent_review: true
+  - id: un-women
+    name: UN Women
+    tier: 2
+    relevance: both
+    platforms:
+      news_rss: false
+      youtube_rss: true
+      x_url: true
+      facebook_url: true
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: true
+    agent_review: true
+  - id: unfpa
+    name: UNFPA
+    tier: 2
+    relevance: both
+    platforms:
+      news_rss: false
+      youtube_rss: false
+      x_url: true
+      facebook_url: true
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: false
+    agent_review: true
+  - id: unocha
+    name: UN OCHA
+    tier: 2
+    relevance: both
+    platforms:
+      news_rss: false
+      youtube_rss: false
+      x_url: true
+      facebook_url: true
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: false
+    agent_review: true
+  - id: unesco
+    name: UNESCO
+    tier: 3
+    relevance: action_62
+    platforms:
+      news_rss: false
+      youtube_rss: true
+      x_url: true
+      facebook_url: true
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: true
+    agent_review: true
+  - id: fao
+    name: FAO
+    tier: 3
+    relevance: both
+    platforms:
+      news_rss: false
+      youtube_rss: true
+      x_url: true
+      facebook_url: true
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: true
+    agent_review: true
+  - id: ilo
+    name: ILO
+    tier: 3
+    relevance: both
+    platforms:
+      news_rss: false
+      youtube_rss: false
+      x_url: true
+      facebook_url: true
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: false
+    agent_review: true
+  - id: unep
+    name: UNEP
+    tier: 3
+    relevance: both
+    platforms:
+      news_rss: false
+      youtube_rss: false
+      x_url: true
+      facebook_url: true
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: false
+    agent_review: true
+  - id: unctad
+    name: UNCTAD
+    tier: 3
+    relevance: action_62
+    platforms:
+      news_rss: false
+      youtube_rss: false
+      x_url: true
+      facebook_url: true
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: false
+    agent_review: true
+  - id: wipo
+    name: WIPO
+    tier: 3
+    relevance: action_62
+    platforms:
+      news_rss: false
+      youtube_rss: false
+      x_url: true
+      facebook_url: true
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: false
+    agent_review: true
+  - id: iaea
+    name: IAEA
+    tier: 3
+    relevance: action_61
+    platforms:
+      news_rss: false
+      youtube_rss: false
+      x_url: true
+      facebook_url: true
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: false
+    agent_review: true
+  - id: ifad
+    name: IFAD
+    tier: 3
+    relevance: both
+    platforms:
+      news_rss: false
+      youtube_rss: false
+      x_url: true
+      facebook_url: false
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: false
+    agent_review: true
+  - id: wmo
+    name: WMO
+    tier: 3
+    relevance: both
+    platforms:
+      news_rss: false
+      youtube_rss: false
+      x_url: true
+      facebook_url: false
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: false
+    agent_review: true
+  - id: icao
+    name: ICAO
+    tier: 3
+    relevance: action_61
+    platforms:
+      news_rss: false
+      youtube_rss: false
+      x_url: true
+      facebook_url: false
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: false
+    agent_review: true
+  - id: imo
+    name: IMO
+    tier: 3
+    relevance: action_61
+    platforms:
+      news_rss: false
+      youtube_rss: false
+      x_url: true
+      facebook_url: false
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: false
+    agent_review: true
+  - id: un-global-pulse
+    name: UN Global Pulse
+    tier: 3
+    relevance: action_62
+    platforms:
+      news_rss: false
+      youtube_rss: false
+      x_url: true
+      facebook_url: false
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: false
+    agent_review: true
+  - id: ungp
+    name: UN Global Compact
+    tier: 3
+    relevance: both
+    platforms:
+      news_rss: false
+      youtube_rss: false
+      x_url: true
+      facebook_url: false
+      linkedin_url: true
+      instagram_url: false
+    automated_feed: false
+    agent_review: true
+feed_health:
+  - label: UN News (all topics)
+    url: https://news.un.org/feed/subscribe/en/news/all/rss.xml
+    ok: false
+    status: 0
+    error: This operation was aborted
+  - label: UN Global Pulse
+    url: https://www.unglobalpulse.org/feed/
+    ok: false
+    status: 403
+    error: null
+  - label: United Nations Secretariat YouTube
+    url: https://www.youtube.com/feeds/videos.xml?user=UnitedNations
+    ok: true
+    status: 200
+    error: null
+  - label: UN International Computing Centre news
+    url: https://www.unicc.org/feed/
+    ok: false
+    status: 504
+    error: null
+  - label: UNICEF YouTube
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UC-PhoMIVWsstY-VVtUIe-Og
+    ok: true
+    status: 200
+    error: null
+  - label: World Health Organization news
+    url: https://www.who.int/rss-feeds/news-english.xml
+    ok: true
+    status: 200
+    error: null
+  - label: World Health Organization YouTube
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCT7a_fVlSrjOs9jyvtH-uhA
+    ok: true
+    status: 200
+    error: null
+  - label: UNHCR YouTube
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCEsqtq4czNXTQdtlf5qKlYA
+    ok: true
+    status: 200
+    error: null
+  - label: UNDP YouTube
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCkt7CZkWK4B2hPDyaKquX2w
+    ok: true
+    status: 200
+    error: null
+  - label: UN Women YouTube
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCVuYWigp4VwOsJhrcfYDlXw
+    ok: true
+    status: 200
+    error: null
+  - label: UNESCO YouTube
+    url: https://www.youtube.com/feeds/videos.xml?user=UNESCO
+    ok: true
+    status: 200
+    error: null
+  - label: FAO YouTube
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCM93UMoQKlj_8wTACRvl1iQ
+    ok: true
+    status: 200
+    error: null
+gaps: []
+agent_review_required:
+  - id: un-dco
+    name: UN Office for Digital and Emerging Technology
+    x: https://x.com/UNDigitalEmerg
+    facebook: null
+    linkedin: https://www.linkedin.com/company/united-nations-office-for-digital-and-emerging-technology
+    instagram: null
+  - id: un-oict
+    name: UN Office of Information and Communications Technology
+    x: https://x.com/UN_OICT
+    facebook: null
+    linkedin: https://www.linkedin.com/company/united-nations-oict
+    instagram: null
+  - id: itu
+    name: International Telecommunication Union
+    x: https://x.com/ITU
+    facebook: https://www.facebook.com/ITU
+    linkedin: https://www.linkedin.com/company/itu
+    instagram: null
+  - id: wfp
+    name: World Food Programme
+    x: https://x.com/WFP
+    facebook: https://www.facebook.com/WorldFoodProgramme
+    linkedin: https://www.linkedin.com/company/wfp
+    instagram: https://www.instagram.com/wfp
+  - id: unops
+    name: UNOPS
+    x: https://x.com/UNOPS
+    facebook: https://www.facebook.com/UNOPS
+    linkedin: https://www.linkedin.com/company/unops
+    instagram: null
+  - id: unfpa
+    name: UNFPA
+    x: https://x.com/UNFPA
+    facebook: https://www.facebook.com/UNFPA
+    linkedin: https://www.linkedin.com/company/unfpa
+    instagram: null
+  - id: unocha
+    name: UN OCHA
+    x: https://x.com/UNOCHA
+    facebook: https://www.facebook.com/UNOCHA
+    linkedin: https://www.linkedin.com/company/unocha
+    instagram: null
+  - id: ilo
+    name: ILO
+    x: https://x.com/ILO
+    facebook: https://www.facebook.com/ILO
+    linkedin: https://www.linkedin.com/company/ilo
+    instagram: null
+  - id: unep
+    name: UNEP
+    x: https://x.com/UNEP
+    facebook: https://www.facebook.com/unep
+    linkedin: https://www.linkedin.com/company/unep
+    instagram: null
+  - id: unctad
+    name: UNCTAD
+    x: https://x.com/UNCTAD
+    facebook: https://www.facebook.com/UNCTAD
+    linkedin: https://www.linkedin.com/company/unctad
+    instagram: null
+  - id: wipo
+    name: WIPO
+    x: https://x.com/WIPO
+    facebook: https://www.facebook.com/WIPO
+    linkedin: https://www.linkedin.com/company/wipo
+    instagram: null
+  - id: iaea
+    name: IAEA
+    x: https://x.com/iaeaorg
+    facebook: https://www.facebook.com/iaeaorg
+    linkedin: https://www.linkedin.com/company/iaea
+    instagram: null
+  - id: ifad
+    name: IFAD
+    x: https://x.com/IFAD
+    facebook: null
+    linkedin: https://www.linkedin.com/company/ifad
+    instagram: null
+  - id: wmo
+    name: WMO
+    x: https://x.com/WMO
+    facebook: null
+    linkedin: https://www.linkedin.com/company/wmo
+    instagram: null
+  - id: icao
+    name: ICAO
+    x: https://x.com/ICAO
+    facebook: null
+    linkedin: https://www.linkedin.com/company/icao
+    instagram: null
+  - id: imo
+    name: IMO
+    x: https://x.com/IMOHQ
+    facebook: null
+    linkedin: https://www.linkedin.com/company/imo
+    instagram: null
+  - id: un-global-pulse
+    name: UN Global Pulse
+    x: https://x.com/UNGlobalPulse
+    facebook: null
+    linkedin: https://www.linkedin.com/company/un-global-pulse
+    instagram: null
+  - id: ungp
+    name: UN Global Compact
+    x: https://x.com/globalcompact
+    facebook: null
+    linkedin: https://www.linkedin.com/company/united-nations-global-compact
+    instagram: null

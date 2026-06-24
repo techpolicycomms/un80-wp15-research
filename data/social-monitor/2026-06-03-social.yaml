@@ -1,0 +1,173 @@
+meta:
+  scan_date: "2026-06-03"
+  automation: social-monitor
+  disclaimer: DRAFT — public official posts and feeds only; not agreed UN position
+  platforms: [news, youtube, x, facebook]
+  feeds_checked: 12
+  feeds_ok: 5
+  items_scanned: 40
+  x_facebook_review:
+    method: >-
+      Public logged-out web search and spot fetches of official registry handles;
+      no X API or Meta API was available in this run.
+    x_status: Direct X profile fetches returned HTTP 403; search indexing was sparse.
+    facebook_status: Logged-out Facebook pages exposed limited public fragments only.
+    official_accounts_reviewed:
+      - United Nations Secretariat
+      - UN International Computing Centre
+      - UN Office for Digital and Emerging Technology
+      - UN Office of Information and Communications Technology
+      - International Telecommunication Union
+      - UNICEF
+      - World Health Organization
+      - World Food Programme
+      - UNDP
+      - UNOPS
+      - UNFPA
+      - UN OCHA
+      - UNESCO
+      - FAO
+      - UNEP
+      - UN Global Pulse
+  signal_counts:
+    total: 14
+    high_priority: 8
+    medium_priority: 3
+    low_priority: 3
+    by_platform:
+      news: 14
+      youtube: 0
+      x: 0
+      facebook: 0
+  limitations: >-
+    YouTube RSS was preferred for automated collection, but seven registered
+    YouTube feeds returned 404 and one returned 500 during the run. X and
+    Facebook were reviewed only through public logged-out web visibility; no
+    private data, non-official accounts, or at-scale scraping were used.
+
+signals:
+  - platform: news
+    agency: UN International Computing Centre
+    title: UNICC Hosts AI-Driven Crisis Simulation During Geneva Cyber Week
+    url: https://www.unicc.org/news/2026/05/15/unicc-hosts-ai-driven-crisis-simulation-during-geneva-cyber-week/
+    matched_keywords: [unicc, cybersecurity, artificial intelligence]
+    priority: high
+    relevance: action_61
+    summary: UNICC-led crisis simulation remains the strongest Action 61 signal for shared cyber capacity and operational resilience.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UNICC Biennial Report 2024-2025
+    url: https://www.unicc.org/wp-content/uploads/2026/05/UNICC-2024-2025-Biennial-Report-1.pdf#new_tab
+    matched_keywords: [unicc, shared services, ict]
+    priority: high
+    relevance: action_61
+    summary: Primary source for ICC service scale and strategy under the 2024-2030 framework; useful for ICT consolidation evidence.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UN Virtual Worlds Day Calls for AI and Emerging Tech to Support Better City and Community Life
+    url: https://www.unicc.org/news/2026/05/13/un-virtual-worlds-day-calls-for-ai-and-emerging-tech-to-support-better-city-and-community-life/
+    matched_keywords: [unicc, artificial intelligence, innovation]
+    priority: high
+    relevance: both
+    summary: Cross-cutting signal linking the shared ICT provider role with emerging-technology and innovation use cases.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UN Innovation Update (April 2026)
+    url: https://www.uninnovation.network/innovation-library/un-innovation-update-april-2026#new_tab
+    matched_keywords: [unicc, innovation]
+    priority: high
+    relevance: action_62
+    summary: System innovation-library update relevant to TAP pipeline sensing and cross-agency innovation visibility.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: "Inspiring the Next Generation of Women in Tech: Girls in ICT Day"
+    url: https://www.unicc.org/news/2026/04/23/gict-day-celebration-2026/
+    matched_keywords: [unicc, ict]
+    priority: high
+    relevance: action_61
+    summary: ICT workforce and inclusion signal from UNICC; useful background for capability-building but not a consolidation decision point.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: UNICC Recognized with Multiple UN-SWAP Awards for Sustained Performance on Gender Equality
+    url: https://www.unicc.org/news/2026/02/13/unicc-recognized-with-multiple-un-swap-awards-for-sustained-performance-on-gender-equality/
+    matched_keywords: [unicc]
+    priority: high
+    relevance: action_61
+    summary: Retained because UNICC is an Action 61 backbone provider; substantive WP15 value is indirect.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: Enabling Secure and Resilient UN Operations in Bonn
+    url: https://www.unicc.org/news/2026/02/03/enabling-secure-and-resilient-un-operations-in-bonn/
+    matched_keywords: [unicc, cybersecurity]
+    priority: high
+    relevance: action_61
+    summary: Example of shared secure operations delivery and regional ICT resilience.
+
+  - platform: news
+    agency: UN International Computing Centre
+    title: "UN Today: UNICC 55 Years of Shared Innovation"
+    url: https://untoday.org/december-2025-january-2026/#new_tab
+    matched_keywords: [unicc, innovation, shared services]
+    priority: high
+    relevance: action_61
+    summary: Background narrative on UNICC as a long-running shared-services and innovation platform.
+
+  - platform: news
+    agency: UN Global Pulse
+    title: "Transforming Development: AI, Innovation & Partnerships for the Sustainable Development Goals (SDGs)"
+    url: https://www.unglobalpulse.org/transforming-development-ai-innovation-partnerships-for-the-sustainable-development-goals-sdgs/
+    matched_keywords: [artificial intelligence, innovation]
+    priority: medium
+    relevance: action_62
+    summary: TAP-aligned accelerator themes on AI and innovation partnerships; still relevant but not new this week.
+
+  - platform: news
+    agency: World Health Organization
+    title: New WHO discussion paper sets out opportunities and risks of AI in evidence-informed health policy
+    url: https://www.who.int/news/item/02-06-2026-new-who-discussion-paper-sets-out-opportunities-and-risks-of-ai-in-evidence-informed-health-policy
+    matched_keywords: [artificial intelligence, digital, cybersecurity]
+    priority: medium
+    relevance: action_62
+    summary: New June 2 WHO paper frames AI governance, data bias, cybersecurity, and human oversight for policy cycles; material for TAP governance watch.
+
+  - platform: news
+    agency: International Telecommunication Union
+    title: AI for Good Global Summit 2026
+    url: https://aiforgood.itu.int/summit26/
+    matched_keywords: [artificial intelligence, innovation, digital transformation]
+    priority: medium
+    relevance: action_62
+    summary: ITU-led UN AI convening remains a major Action 62/TAP signal, with programme updates visible in public web results during the X/Facebook review.
+
+  - platform: news
+    agency: UN News (all topics)
+    title: "From Libyan deserts to 3D-printed guns: The weapons that never go away"
+    url: https://news.un.org/feed/view/en/story/2026/06/1167616
+    matched_keywords: [ict]
+    priority: low
+    relevance: both
+    summary: Low-confidence keyword hit caused by the broad `ict` matcher; retained for QA but not treated as material WP15 evidence.
+
+  - platform: news
+    agency: World Health Organization
+    title: WHO urges governments to protect young people from addiction to tobacco and nicotine products
+    url: https://www.who.int/news/item/29-05-2026-who-urges-governments-to-protect-young-people-from-addiction-to-tobacco-and-nicotine-products
+    matched_keywords: [ict]
+    priority: low
+    relevance: both
+    summary: False-positive-style `ict` substring hit in a health item; retained for monitor QA and excluded from briefing candidates.
+
+  - platform: news
+    agency: World Health Organization
+    title: Message by the WHO Director-General to the people of the Democratic Republic of the Congo
+    url: https://www.who.int/news/item/28-05-2026-message-by-the-who-director-general-to-the-people-of-the-democratic-republic-of-the-congo
+    matched_keywords: [ict]
+    priority: low
+    relevance: both
+    summary: Low-confidence `ict` substring hit; not a substantive WP15 Action 61/62 signal.
