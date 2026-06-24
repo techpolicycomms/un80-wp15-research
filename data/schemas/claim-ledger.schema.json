@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Claim Ledger Line",
+  "type": "object",
+  "required": ["claimId", "text", "citeStatus"],
+  "additionalProperties": true,
+  "properties": {
+    "claimId": { "type": "string" },
+    "text": { "type": "string" },
+    "sourceIds": { "type": "array", "items": { "type": "string" } },
+    "claudeAsserted": { "type": "boolean" },
+    "geminiBucket": { "type": ["string", "null"] },
+    "geminiConfidence": { "type": ["number", "null"] },
+    "citeStatus": { "enum": ["safe", "caveat", "do-not-cite"] },
+    "staleDate": { "type": ["string", "null"] },
+    "nextCheck": { "type": ["string", "null"] }
+  }
+}

@@ -1,0 +1,809 @@
+{
+  "status": "Evidence-backed working synthesis. Suitable for working-group review; not yet leadership-validated.",
+  "leadAnswer": {
+    "statement": "TAP should be framed as a lean, system-level portfolio and execution mechanism that attaches senior UN leadership decisions to distributed entity-level delivery capacity. It should not duplicate existing innovation hubs — its distinctive value is execution, not exchange.",
+    "points": [
+      "UN innovation capacity is real but distributed — WFP, UNICEF, UNDP, UNHCR, ITU, Global Pulse, DPO and others each hold pieces of implementation capacity, but no single actor holds the whole.",
+      "System-level exchange exists, but system-level execution is weak. UNIN connects and curates; DTN coordinates technology actors; UN 2.0/Global Pulse provide capability and accelerator functions — none alone provides a durable, funded, senior-leadership-to-delivery mechanism.",
+      "The design gap is not another hub. It is a repeatable way to identify system-level priorities, attach funding and governance, assemble surge teams from existing entity capacity, and transition solutions to long-term owners.",
+      "The funding model is the \"teeth\". Without flexible pooled funding or committed entity contributions, TAP risks becoming just another coordination layer."
+    ]
+  },
+  "previousWork": {
+    "stats": [
+      {
+        "label": "Innovation-related records collected",
+        "value": 114
+      },
+      {
+        "label": "From official recruitment sources",
+        "value": 85
+      },
+      {
+        "label": "From UN Talent aggregator / manual discovery",
+        "value": 29
+      },
+      {
+        "label": "Explicit core innovation roles",
+        "value": 32
+      }
+    ],
+    "jobFamilies": [
+      "Programme delivery",
+      "Digital transformation",
+      "AI / data",
+      "Partnerships / ecosystem",
+      "Research / policy",
+      "Operations",
+      "Innovation strategy"
+    ]
+  },
+  "innovationJobs": {
+    "total": 114,
+    "bySource": [
+      {
+        "label": "Official recruitment sources",
+        "value": 85,
+        "note": "Authoritative capability signal"
+      },
+      {
+        "label": "UN Talent aggregator / manual discovery",
+        "value": 29,
+        "note": "Discovery only — not authoritative evidence"
+      }
+    ],
+    "byRole": [
+      {
+        "label": "Explicit core innovation roles",
+        "value": 32,
+        "note": "Labelled 'innovation'"
+      },
+      {
+        "label": "Embedded in other functions",
+        "value": 82,
+        "note": "Programme, digital, data, policy, partnership, operations"
+      }
+    ],
+    "jobFamilies": [
+      "Programme delivery",
+      "Digital transformation",
+      "AI / data",
+      "Partnerships / ecosystem",
+      "Research / policy",
+      "Operations",
+      "Innovation strategy"
+    ],
+    "takeaway": "Only 28% of innovation-related roles are explicitly labelled 'innovation' — the other 72% are embedded across programme, digital, data, policy, partnership and operations functions. Capacity is real but distributed, which is the core evidence for TAP orchestrating existing entity capacity rather than building a new central hub.",
+    "pending": "Per-agency, role-family and geography distributions await re-running the innovation-jobs collector on the raw dataset (not yet in this repo).",
+    "collected": {
+      "meta": {
+        "generated": "2026-06-24",
+        "title": "Innovation-jobs collection (augmenting the original 114-record scan)",
+        "methodology": "Real UN-system postings mentioning innovation, located via web research (June 2026) across Impactpool, ITU, UNDP and UNICEF careers listings. Every record carries a real source URL. Nothing is fabricated.",
+        "caveats": [
+          "Discovery-grade evidence — verify each posting before citing as authoritative, consistent with the 'public secondary data / human review required' framing.",
+          "Post dates are left null where the source does not expose a reliable date; they populate automatically via the ReliefWeb collector.",
+          "This is NOT a complete 2020+ census. UN career portals expose only current openings, and the ReliefWeb / UN Talent bulk endpoints are gated; coverage skews to recent/current roles."
+        ],
+        "fullPull": "For the complete 2020-onwards UN innovation-jobs pull, register a free ReliefWeb appname at https://apidoc.reliefweb.int/parameters#appname, set RELIEFWEB_APPNAME in .env, and run `npm run collect:jobs` — it adds dated, archived postings (closed roles included) to this file automatically."
+      },
+      "total": 23,
+      "byRole": [
+        {
+          "label": "Explicit core innovation roles",
+          "value": 14,
+          "note": "“innovation” in the title"
+        },
+        {
+          "label": "Embedded in other functions",
+          "value": 9,
+          "note": "innovation in scope, not title"
+        }
+      ],
+      "bySource": [
+        {
+          "key": "official",
+          "label": "Official recruitment sources",
+          "value": 8
+        },
+        {
+          "key": "web-research",
+          "label": "Web research (this session, sourced)",
+          "value": 15
+        }
+      ],
+      "byAgency": [
+        {
+          "label": "WFP",
+          "value": 10
+        },
+        {
+          "label": "UNDP",
+          "value": 6
+        },
+        {
+          "label": "ITU",
+          "value": 4
+        },
+        {
+          "label": "UNICEF",
+          "value": 3
+        }
+      ],
+      "byFamily": [
+        {
+          "label": "Innovation strategy",
+          "value": 8
+        },
+        {
+          "label": "Digital transformation",
+          "value": 4
+        },
+        {
+          "label": "Operations",
+          "value": 3
+        },
+        {
+          "label": "Partnerships / ecosystem",
+          "value": 3
+        },
+        {
+          "label": "Research / policy",
+          "value": 3
+        },
+        {
+          "label": "Programme delivery",
+          "value": 2
+        }
+      ],
+      "byYear": [],
+      "records": [
+        {
+          "id": "wr-001",
+          "title": "Head of Global Innovation Accelerator Operations and Partnerships",
+          "agency": "WFP",
+          "grade": "P4",
+          "location": "Munich, Germany",
+          "family": "Innovation strategy",
+          "source": "web-research",
+          "sourceUrl": "https://www.impactpool.org/jobs/1130779",
+          "date": null,
+          "note": "WFP Innovation Accelerator (via Impactpool)."
+        },
+        {
+          "id": "wr-002",
+          "title": "Innovation Ventures Consultant",
+          "agency": "WFP",
+          "grade": null,
+          "location": "Munich, Germany",
+          "family": "Innovation strategy",
+          "source": "web-research",
+          "sourceUrl": "https://www.impactpool.org/jobs/1116741",
+          "date": null,
+          "note": "WFP Innovation Accelerator (via Impactpool)."
+        },
+        {
+          "id": "wr-003",
+          "title": "Innovation Lead Consultant",
+          "agency": "WFP",
+          "grade": null,
+          "location": "Munich, Germany",
+          "family": "Innovation strategy",
+          "source": "web-research",
+          "sourceUrl": "https://www.impactpool.org/jobs/1127336",
+          "date": null,
+          "note": "WFP Innovation Accelerator (via Impactpool)."
+        },
+        {
+          "id": "wr-004",
+          "title": "Innovation Accelerator - New Ventures Consultant",
+          "agency": "WFP",
+          "grade": null,
+          "location": "Munich, Germany",
+          "family": "Innovation strategy",
+          "source": "web-research",
+          "sourceUrl": "https://www.impactpool.org/jobs/464028",
+          "date": null,
+          "note": "WFP Innovation Accelerator (via Impactpool)."
+        },
+        {
+          "id": "wr-005",
+          "title": "Innovation Consultant - Field Innovation Project Manager",
+          "agency": "WFP",
+          "grade": null,
+          "location": "Munich, Germany",
+          "family": "Programme delivery",
+          "source": "web-research",
+          "sourceUrl": "https://www.impactpool.org/jobs/1083367",
+          "date": null,
+          "note": "WFP Innovation Accelerator (via Impactpool)."
+        },
+        {
+          "id": "wr-006",
+          "title": "Innovation Accelerator Consultant - Project Manager",
+          "agency": "WFP",
+          "grade": null,
+          "location": "Munich, Germany",
+          "family": "Programme delivery",
+          "source": "web-research",
+          "sourceUrl": "https://www.impactpool.org/jobs/173610",
+          "date": null,
+          "note": "WFP Innovation Accelerator (via Impactpool)."
+        },
+        {
+          "id": "wr-007",
+          "title": "Consultant - Innovation Accelerator Communications",
+          "agency": "WFP",
+          "grade": null,
+          "location": "Munich, Germany",
+          "family": "Partnerships / ecosystem",
+          "source": "web-research",
+          "sourceUrl": "https://www.impactpool.org/jobs/438373",
+          "date": null,
+          "note": "WFP Innovation Accelerator (via Impactpool)."
+        },
+        {
+          "id": "wr-008",
+          "title": "Innovation Accelerator Events Delivery Consultant",
+          "agency": "WFP",
+          "grade": null,
+          "location": "Munich, Germany",
+          "family": "Operations",
+          "source": "web-research",
+          "sourceUrl": "https://www.impactpool.org/jobs/717912",
+          "date": null,
+          "note": "WFP Innovation Accelerator (via Impactpool)."
+        },
+        {
+          "id": "wr-009",
+          "title": "Business Support Assistant G4 - Innovation Accelerator",
+          "agency": "WFP",
+          "grade": "G4",
+          "location": "Munich, Germany",
+          "family": "Operations",
+          "source": "web-research",
+          "sourceUrl": "https://www.impactpool.org/jobs/978509",
+          "date": null,
+          "note": "WFP Innovation Accelerator (via Impactpool)."
+        },
+        {
+          "id": "wr-010",
+          "title": "Business Support Assistant G4 - Innovation Accelerator",
+          "agency": "WFP",
+          "grade": "G4",
+          "location": "Munich, Germany",
+          "family": "Operations",
+          "source": "web-research",
+          "sourceUrl": "https://www.impactpool.org/jobs/455629",
+          "date": null,
+          "note": "Earlier WFP Innovation Accelerator posting (via Impactpool)."
+        },
+        {
+          "id": "wr-011",
+          "title": "Innovation Specialist (Portfolio, Insight and Alumni Engagement)",
+          "agency": "UNICEF",
+          "grade": "P-3",
+          "location": "Stockholm, Sweden",
+          "family": "Innovation strategy",
+          "source": "official",
+          "sourceUrl": "https://jobs.unicef.org/en-us/filter/?category=innovation",
+          "date": null,
+          "note": "UNICEF Office of Innovation; TA 364 days."
+        },
+        {
+          "id": "wr-012",
+          "title": "Innovation Specialist (Integration and Nodes Implementation)",
+          "agency": "UNICEF",
+          "grade": null,
+          "location": "New York, USA",
+          "family": "Innovation strategy",
+          "source": "official",
+          "sourceUrl": "https://jobs.unicef.org/en-us/filter/?category=innovation",
+          "date": null,
+          "note": "UNICEF Office of Innovation; consultancy 200 days."
+        },
+        {
+          "id": "wr-013",
+          "title": "Partnerships Specialist, Office of Innovation",
+          "agency": "UNICEF",
+          "grade": null,
+          "location": "Stockholm, Sweden",
+          "family": "Partnerships / ecosystem",
+          "source": "official",
+          "sourceUrl": "https://www.unicef.org/innovation/jobs",
+          "date": null,
+          "note": "UNICEF Office of Innovation; partnership unit."
+        },
+        {
+          "id": "wr-014",
+          "title": "Innovation Specialist",
+          "agency": "UNDP",
+          "grade": null,
+          "location": "Global / Accelerator Lab Network",
+          "family": "Innovation strategy",
+          "source": "web-research",
+          "sourceUrl": "https://untalent.org/jobs/innovation-specialist",
+          "date": null,
+          "note": "UNDP Accelerator Labs; horizon scanning & market intelligence."
+        },
+        {
+          "id": "wr-015",
+          "title": "Head of Exploration, Accelerator Lab",
+          "agency": "UNDP",
+          "grade": null,
+          "location": "Country office",
+          "family": "Innovation strategy",
+          "source": "web-research",
+          "sourceUrl": "https://www.impactpool.org/jobs/602721",
+          "date": null,
+          "note": "UNDP Accelerator Lab (via Impactpool)."
+        },
+        {
+          "id": "wr-016",
+          "title": "Monitoring Support, Accelerator Labs Network",
+          "agency": "UNDP",
+          "grade": null,
+          "location": "Global",
+          "family": "Research / policy",
+          "source": "official",
+          "sourceUrl": "https://jobs.undp.org/cj_view_job.cfm?cur_job_id=90175",
+          "date": null,
+          "note": "UNDP Accelerator Labs Network (job id 90175)."
+        },
+        {
+          "id": "wr-017",
+          "title": "Internship - Horizon Scanning (Accelerator Lab)",
+          "agency": "UNDP",
+          "grade": null,
+          "location": "UNDP",
+          "family": "Research / policy",
+          "source": "official",
+          "sourceUrl": "https://jobs.undp.org/cj_view_job.cfm?cur_job_id=115586",
+          "date": null,
+          "note": "UNDP Accelerator Lab (job id 115586)."
+        },
+        {
+          "id": "wr-018",
+          "title": "Internship with Accelerator Lab (Solutions Mapping)",
+          "agency": "UNDP",
+          "grade": null,
+          "location": "UNDP",
+          "family": "Research / policy",
+          "source": "official",
+          "sourceUrl": "https://jobs.undp.org/cj_view_job.cfm?cur_job_id=89634",
+          "date": null,
+          "note": "UNDP Accelerator Lab (job id 89634)."
+        },
+        {
+          "id": "wr-019",
+          "title": "Digital Horizon Lead",
+          "agency": "UNDP",
+          "grade": null,
+          "location": "UNDP",
+          "family": "Digital transformation",
+          "source": "web-research",
+          "sourceUrl": "https://www.unjobnet.org/jobs/detail/84122879",
+          "date": null,
+          "note": "UNDP (via UNjobnet)."
+        },
+        {
+          "id": "wr-020",
+          "title": "Project Officer - Digital Public Infrastructure, Digital Credentials and Wallets",
+          "agency": "ITU",
+          "grade": null,
+          "location": "Geneva, Switzerland",
+          "family": "Digital transformation",
+          "source": "web-research",
+          "sourceUrl": "https://unjobs.org/vacancies/1765639437330",
+          "date": null,
+          "note": "ITU; DPI / digital credentials / AI implementation (archived listing)."
+        },
+        {
+          "id": "wr-021",
+          "title": "Chief Projects, Partnerships & Digital Skills (PPS)",
+          "agency": "ITU",
+          "grade": null,
+          "location": "Geneva, Switzerland",
+          "family": "Partnerships / ecosystem",
+          "source": "web-research",
+          "sourceUrl": "https://unjobs.org/vacancies/1744305640463",
+          "date": null,
+          "note": "ITU BDT; resource mobilization & project design."
+        },
+        {
+          "id": "wr-022",
+          "title": "Digital Services Project Officer",
+          "agency": "ITU",
+          "grade": null,
+          "location": "Geneva, Switzerland",
+          "family": "Digital transformation",
+          "source": "official",
+          "sourceUrl": "https://jobs.itu.int/job/Geneva-Digital-Services-Project-Officer/1169300055/",
+          "date": null,
+          "note": "ITU-D; digital health & public services."
+        },
+        {
+          "id": "wr-023",
+          "title": "Digital & Web Solutions Developer",
+          "agency": "ITU",
+          "grade": null,
+          "location": "Geneva, Switzerland",
+          "family": "Digital transformation",
+          "source": "official",
+          "sourceUrl": "https://jobs.itu.int/job/Geneva-Digital-&-Web-Solutions-Developer/981931155/",
+          "date": null,
+          "note": "ITU."
+        }
+      ]
+    }
+  },
+  "newFiles": [
+    "260217 - UNIN - Johanna Jochim.docx",
+    "interview-transcripts/[UN80 WP15] Talea x TAP Proposal Interview.docx",
+    "260611 - Long-term TAP proposal working draft - v1.pptx",
+    "260622_UN80 WP15 - TAP proposal weekly update - v2.pptx",
+    "TAP Research Answers - Executive Deck.pptx",
+    "un80 inititave workstream 3 changing structures and realigning programmes.pdf",
+    "ungp-innovation-scaling-report.pdf"
+  ],
+  "rq": [
+    {
+      "id": "RQ-001",
+      "question": "Who are the key actors and stakeholders in the UN innovation ecosystem?",
+      "answer": "Map the ecosystem by function, not by logo: entity-level implementation capacity (WFP, UNICEF, UNDP, UNHCR, ITU, DPO and other entity innovation/digital/data teams); system-level exchange and knowledge (UNIN, UN 2.0 communities of practice, capacity-building actors); coordination and decision channels (DTN, HLCM/CEB mechanisms, the UN80 Steering Committee while active); flexible delivery enablers (Global Pulse, UNICC, Digital ID/Data Commons coalitions, pooled funds); and adoption owners — programme, country, or shared-service owners who can commit to transition and reuse.",
+      "evidence": [
+        "Johanna interview",
+        "Talea interview",
+        "innovation-jobs dataset",
+        "260611 working draft"
+      ],
+      "claims": [
+        "RQ-001"
+      ],
+      "citeStatus": "safe"
+    },
+    {
+      "id": "RQ-002",
+      "question": "How is innovation currently delivered across entity and cross-entity levels?",
+      "answer": "Innovation is delivered through a mixed architecture — entity accelerators and labs, digital/data teams, programme-led pilots, funds, communities of practice, and ad hoc inter-agency coalitions. No single UN model dominates, which supports TAP as an orchestrator and execution-enabler rather than a centralized replacement.",
+      "evidence": [
+        "WFP/UNICEF patterns in jobs dataset",
+        "Johanna interview (models similar but not codified)",
+        "UNGP Scaling the Summit",
+        "Global Pulse interview"
+      ],
+      "claims": [
+        "RQ-002"
+      ],
+      "citeStatus": "safe"
+    },
+    {
+      "id": "RQ-003",
+      "question": "What processes, roles, and barriers characterize the ecosystem?",
+      "answer": "The process moves idea/demand signal → pilot/prototype → internal validation → attempted scale. Support breaks at ownership, technical delivery, flexible funding, procurement/legal, cross-entity resource sharing, and adoption/transition. Funding is the named problem but is often a proxy for missing execution resources.",
+      "evidence": [
+        "Johanna interview",
+        "UNGP scaling report",
+        "TAP Business Needs Survey slide",
+        "Talea interview"
+      ],
+      "claims": [
+        "RQ-003"
+      ],
+      "citeStatus": "safe"
+    },
+    {
+      "id": "RQ-004",
+      "question": "Where is the ecosystem strongest, and where are the gaps?",
+      "answer": "The ecosystem is strongest at entity-level innovation and distributed technical/programmatic expertise. The critical gap is system-level implementation capacity: a mechanism that lets senior leadership decide priorities and then mobilize entity-level capacity for system-level use cases.",
+      "evidence": [
+        "Talea interview (Data Commons, entity teams)",
+        "Johanna interview (UNIN not an implementer)",
+        "2024 UN 2.0 Assessment slide"
+      ],
+      "claims": [
+        "RQ-004"
+      ],
+      "citeStatus": "safe"
+    },
+    {
+      "id": "RQ-005",
+      "question": "How do innovations travel through hubs, and where does support break?",
+      "answer": "Grassroots ideas and entity innovations move through WFP, Global Pulse, UNICEF, UNIN and other channels, but they often fail to cross the chasm into multi-entity adoption. Support breaks when there is no mandate, no common owner, no pooled funding, no technical \"doing\" team, or no sustainable service-provider/cost-recovery route.",
+      "evidence": [
+        "Talea interview (Global Pulse cohorts, Data Commons)",
+        "Johanna interview (Digital ID, technical execution)",
+        "UNGP scaling journey"
+      ],
+      "claims": [
+        "RQ-005"
+      ],
+      "citeStatus": "safe"
+    },
+    {
+      "id": "RQ-006",
+      "question": "What operating models exist, and what do they teach TAP?",
+      "answer": "Learn from at least five models: WFP Innovation Accelerator (structured path to scale with funding, mentorship, hands-on support and operational access); UNICEF Venture Fund (staged non-dilutive funding, open-source requirement, real-time data, growth-stage funding); Global Pulse accelerator (system-wide cohort/support and flexible innovation capacity); Digital ID/Data Commons (small technical ownership plus a cross-entity leadership mandate); and CRAF'd/MPTF (pooled financing, steering committee, secretariat, administrative agent, results reporting).",
+      "evidence": [
+        "Local interviews + working draft",
+        "WFP Innovation page",
+        "UNICEF Venture Fund page",
+        "CRAF'd MPTF page"
+      ],
+      "claims": [
+        "RQ-006"
+      ],
+      "citeStatus": "safe"
+    },
+    {
+      "id": "RQ-007",
+      "question": "What external accelerator best practices should be adapted?",
+      "answer": "Adapt the substantive practices, not cosmetic accelerator rituals: stage gates and stop/go decisions; fast sprints for uncertainty reduction; adoption-owner checks before scale funding; structured technical support and a partner bench; portfolio-level measurement rather than idea-count; and a clear transition route into operations, cost recovery, or service-provider ownership.",
+      "evidence": [
+        "Executive deck",
+        "Working draft external-benchmark slide",
+        "OECD/OPSI and NHS adoption logic",
+        "WFP/UNICEF examples"
+      ],
+      "claims": [
+        "RQ-007"
+      ],
+      "citeStatus": "safe"
+    },
+    {
+      "id": "RQ-008",
+      "question": "What criteria define TAP-worthy digital/technology innovation?",
+      "answer": "A TAP-worthy use case clears four filters: new or newly adapted to context (not routine ICT maintenance); technology-enabled (digital, data, AI, platform, emerging technology, or shared technology component); system-wide potential (value crosses entities, countries, or shared functions); and a real adoption pathway (named problem/adoption owner, transition route, and measurable benefit). Explicit exclusions: generic helpdesk work, routine data entry, ordinary communications, and one-entity IT maintenance.",
+      "evidence": [
+        "Executive deck RQ-004",
+        "Working draft definition slide",
+        "UN80 report paragraphs 76-79"
+      ],
+      "claims": [
+        "RQ-008"
+      ],
+      "citeStatus": "safe"
+    },
+    {
+      "id": "RQ-009",
+      "question": "What pain points block delivery and scale?",
+      "answer": "The main blockers are fragmentation, funding constraints, policy/legal/governance constraints, limited technical capacity, weak adoption ownership, earmarked funding, time scarcity, and culture/leadership gaps. The TAP Business Needs Survey supports these categories, but the raw survey still needs validation before its figures are treated as final.",
+      "evidence": [
+        "TAP survey slide in working draft",
+        "Johanna interview",
+        "UNGP scaling report"
+      ],
+      "claims": [
+        "RQ-009"
+      ],
+      "citeStatus": "safe"
+    },
+    {
+      "id": "RQ-010",
+      "question": "What support is needed at different maturity levels?",
+      "answer": "Support changes by maturity — Discovery/demand: surveys, communities, accelerator pipelines, country/team pain points, and horizon scanning. Seed/pilot: sprint funding, technical assessment, project management, and data/security/legal checks. Implementation: assemble a surge task force, secure owner commitments, and de-block procurement/legal/governance. Scale: fund adoption and interoperability work and connect service providers and country/entity adopters. Transition: hand over to a shared service provider, implementing entity, cost-recovery mechanism, or pooled-fund window.",
+      "evidence": [
+        "Working draft portfolio cycle",
+        "Talea interview",
+        "UNICEF Venture Fund stage logic",
+        "WFP path-to-scale logic"
+      ],
+      "claims": [
+        "RQ-010"
+      ],
+      "citeStatus": "safe"
+    },
+    {
+      "id": "RQ-011",
+      "question": "What should inform demand signals, prioritization, and metrics?",
+      "answer": "Demand should not rely only on a Microsoft Forms-style survey. Triangulate: business-needs survey results, existing accelerator/case pipelines, official innovation/digital job postings and capability signals, pooled-funding and donor-priority signals, CIO/DTN/UNIN/UN 2.0 community inputs, and use-case progress data from Data Commons, Beneficiary ID, Translation, and Expertise-on-Demand. Prioritize by system value, urgency, adoption readiness, reuse potential, technical feasibility, risk, and availability of owners.",
+      "evidence": [
+        "Talea interview (WFP demand signal structurally smarter)",
+        "jobs dataset",
+        "TAP survey",
+        "working draft"
+      ],
+      "claims": [
+        "RQ-011"
+      ],
+      "citeStatus": "safe"
+    },
+    {
+      "id": "RQ-012",
+      "question": "Who is TAP's client?",
+      "answer": "TAP's client is the accountable problem/adoption owner, not simply the innovator. Innovators are partners. The client must be able to commit to adoption, funding or cost recovery, a legal/policy path, and transition. For system-level assets, this may be a coalition or shared-service owner.",
+      "evidence": [
+        "Executive deck RQ-011",
+        "Johanna interview (business ownership)",
+        "Talea interview (leadership-to-ground link)"
+      ],
+      "claims": [
+        "RQ-012"
+      ],
+      "citeStatus": "safe"
+    },
+    {
+      "id": "RQ-013",
+      "question": "What operating, governance, and funding model should TAP use?",
+      "answer": "Use a hybrid model: a lean, execution-focused TAP Coordination Unit (prepares the portfolio, tracks delivery, supports fundraising, maintains evidence); time-bound Surge Task Forces built around use cases from entity experts, technical capacity, project management and vendors/partners; the UN Innovation Ecosystem as the source of knowledge, demand, solutions, owners and experts; a Steering Committee for quarterly approval of portfolio, funding envelope, stage decisions and escalation; and pooled funding (a flexible fund or joint programme with clear safeguards) rather than slow, donor-driven case-by-case fundraising as the default. Governance must separate problem selection, technical validation, funding allocation, delivery oversight, and adoption commitment.",
+      "evidence": [
+        "260611 working draft slides 22-28",
+        "Talea interview (pooled funding, senior leadership)",
+        "CRAF'd governance model"
+      ],
+      "claims": [
+        "RQ-013"
+      ],
+      "citeStatus": "safe"
+    },
+    {
+      "id": "RQ-014",
+      "question": "What investment posture and KPIs should TAP use?",
+      "answer": "Adopt a catalytic, stage-based public-value venture posture: small, fast, flexible seed/sprint tickets for learning and feasibility; larger targeted scale-up funding after evidence and owner commitment; and a sustainable transition route through a service provider, cost recovery, pooled fund, or entity handover. KPIs should track portfolio flow and adoption rather than idea volume — seed and scale-up counts, time from demand signal to funded setup, number of entities contributing to surge task forces, named adoption owners and completed transitions, reuse across entities/country teams, value delivered vs. business case, and integrity/risk indicators (cybersecurity, data protection, ethics, procurement/legal readiness).",
+      "evidence": [
+        "Executive deck RQ-013/RQ-014",
+        "Working draft KPI slide",
+        "UNICEF/WFP examples"
+      ],
+      "claims": [
+        "RQ-014"
+      ],
+      "citeStatus": "safe"
+    },
+    {
+      "id": "RQ-015",
+      "question": "What pathway and risks should guide TAP setup?",
+      "answer": "Move from UN80 temporary governance into a standing joint programme or MPTF-style mechanism: mandate and sponsor route → demand and portfolio thesis → first proposals and owner commitments → delivery through surge teams and pooled capacity → transition to sustainable owners → institutionalize as a standing UN 2.0 acceleration capability. Key risks: coordination-only failure (no technical team, authority, or money); duplication with WFP, UNICEF, Global Pulse, UNIN, DTN or UNICC; funding capture by donor preferences; ownership failure (no adoption owner or transition route); evidence weakness (WIP survey/deck figures cited as final without raw validation); unclear post-UN80 governance; and security/legal risk on AI/data/shared-platform use cases that need early risk gating.",
+      "evidence": [
+        "UN80 report paragraphs 76-79",
+        "Talea interview",
+        "Johanna interview",
+        "working draft",
+        "UNGP scaling report"
+      ],
+      "claims": [
+        "RQ-015"
+      ],
+      "citeStatus": "safe"
+    }
+  ],
+  "evidenceQuality": {
+    "strongNow": [
+      "Direction of travel: TAP as a lean system-level accelerator/joint programme — anchored in the UN80 report and working draft.",
+      "Distributed capacity — supported by the innovation-jobs dataset, interviews, and the UNGP report.",
+      "System-level execution gap — strongly supported by the Johanna and Talea interviews.",
+      "Need for pooled funding and governance — supported by Talea, CRAF'd/MPTF, and the working-draft funding slides."
+    ],
+    "useWithCaveats": [
+      "TAP Business Needs Survey percentages — cite as internal WIP until the raw survey and methodology are checked.",
+      "Gartner benchmark — cite only if the underlying source/table can be shown.",
+      "UN Talent aggregator roles — use for discovery, not authoritative evidence.",
+      "UN 2.0 Assessment data — useful, but confirm the raw assessment and sharing status."
+    ]
+  },
+  "agentLoop": {
+    "agents": [
+      {
+        "name": "Source Watcher",
+        "does": "Watches the TAP folder, UN80 docs, MPTF Gateway, IATI, WFP, UNICEF, Global Pulse, OECD OPSI, and CEB/HLCM/DTN pages. Emits a changed-source registry with URL/path, date, owner, access status, and evidence type."
+      },
+      {
+        "name": "Document Extractor",
+        "does": "Converts PPTX/PDF/DOCX/XLSX/HTML to text; emits extracts, metadata, keyword snippets, and duplicate detection."
+      },
+      {
+        "name": "Innovation Jobs",
+        "does": "Re-runs and extends the innovation-jobs collector across WHO/FAO/Taleo, Inspira, UNFPA, UNOPS, and UNICC; emits role distributions by agency, source type, role family, and geography."
+      },
+      {
+        "name": "Funding & Governance",
+        "does": "Pulls MPTF Gateway fund/project/contribution data and IATI activities; tags pooled funds by governance model, contributors, administrative agent, participating organizations, and disbursement pattern."
+      },
+      {
+        "name": "Case Study",
+        "does": "Tracks WFP, UNICEF, Global Pulse, CRAF'd, Digital ID/Data Commons, NHS, and OECD OPSI cases; extracts stage gates, support package, funding ticket size, adoption owner, scale metrics, and transition model."
+      },
+      {
+        "name": "Demand Signal",
+        "does": "Compares the TAP survey, accelerator pipelines, UNIN/UN 2.0 community signals, jobs data, and funding flows; emits recurring demand themes and survey-only vs. externally-validated."
+      },
+      {
+        "name": "Claim Auditor",
+        "does": "Maintains the claim ledger: claim text, source IDs, evidence type, confidence, validation status, stale date, deck slide, and next check; emits safe-to-cite / cite-with-caveat / do-not-cite-yet."
+      },
+      {
+        "name": "Synthesis / Deck",
+        "does": "Produces slide-ready bullets and a weekly research delta; never invents final claims — only promotes from needs_review to working_confident when the Claim Auditor has enough evidence."
+      }
+    ],
+    "cadence": [
+      {
+        "day": "Monday AM (Geneva)",
+        "task": "Run watchers and extraction."
+      },
+      {
+        "day": "Monday midday",
+        "task": "Refresh jobs / funding / case data."
+      },
+      {
+        "day": "Tuesday",
+        "task": "Claim auditor updates evidence statuses."
+      },
+      {
+        "day": "Wednesday",
+        "task": "Synthesis agent prepares deck deltas and interview-question updates."
+      },
+      {
+        "day": "Friday",
+        "task": "Human review with Rahul / working team; promote only reviewed claims."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "MPTF Gateway",
+      "useFor": "Pooled fund structures, contributors, participating organizations, project financials, payment vouchers, and CRAF'd governance.",
+      "url": "https://mptf.undp.org/"
+    },
+    {
+      "name": "Complex Risk Analytics Fund (CRAF'd)",
+      "useFor": "Concrete pooled-fund benchmark for data/digital public goods: steering committee, secretariat, administrative agent, and funding windows.",
+      "url": "https://mptf.undp.org/fund/cra00"
+    },
+    {
+      "name": "IATI API Gateway",
+      "useFor": "Development/humanitarian activity data, donor-recipient flows, sectors, locations, implementing orgs, and duplication/coordination evidence.",
+      "url": "https://developer.iatistandard.org/"
+    },
+    {
+      "name": "WFP Innovation Accelerator",
+      "useFor": "Path-to-scale model, funding/mentorship/hands-on support, and operational access.",
+      "url": "https://innovation.wfp.org/"
+    },
+    {
+      "name": "UNICEF Venture Fund",
+      "useFor": "Staged non-dilutive funding, open-source requirements, real-time data requirement, and growth funding model.",
+      "url": "https://www.unicefventurefund.org/"
+    },
+    {
+      "name": "UN Global Pulse",
+      "useFor": "SG innovation-lab positioning, Global Pulse accelerator/hubs, and flexible innovation capacity.",
+      "url": "https://www.unglobalpulse.org/"
+    },
+    {
+      "name": "OECD OPSI",
+      "useFor": "Public-sector innovation benchmark cases and external case-study coding.",
+      "url": "https://oecd-opsi.org/case_type/opsi/"
+    }
+  ],
+  "nextActions": [
+    "Validate the raw TAP Business Needs Survey before using percentages as final evidence.",
+    "Turn the ecosystem map into a database with actor type, level, decision rights, implementation capacity, funding model, and evidence source.",
+    "Update the interview guide for WFP around demand-signal design, private-sector partnership, and path-to-scale governance.",
+    "Interview Max / Digital ID as a system-level delivery case with a technical owner plus institutional mandate.",
+    "Interview DPO / a smaller entity to avoid over-designing for mature agencies only.",
+    "Run the secondary-data agent loop weekly and maintain a claim ledger before every deck update."
+  ],
+  "provenance": {
+    "ranModels": [
+      "anthropic",
+      "gemini",
+      "deepseek"
+    ],
+    "skippedModels": [
+      "openai"
+    ],
+    "staleDays": 30,
+    "generatedAt": "2026-06-23T23:24:20.491Z",
+    "models": {
+      "anthropic": "claude-opus-4-8",
+      "deepseek": "deepseek-chat",
+      "gemini": "gemini-2.5-flash"
+    },
+    "stages": {
+      "claude": "cli",
+      "deepseek": "live",
+      "gemini": "live"
+    }
+  }
+}

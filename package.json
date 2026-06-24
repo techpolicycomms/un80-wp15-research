@@ -5,6 +5,8 @@
   "description": "UN80 WP15 ICT consolidation and TAP research automation hub",
   "scripts": {
     "validate": "node scripts/validate-data.mjs",
+    "orchestrate": "node scripts/orchestrate-synthesis.mjs",
+    "collect:jobs": "node scripts/collect-innovation-jobs.mjs",
     "build:dashboard": "node scripts/build-dashboard.mjs",
     "fetch:youtube": "node scripts/fetch-youtube-social.mjs",
     "fetch:feeds": "node scripts/fetch-public-feeds.mjs",
@@ -18,5 +20,8 @@
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "yaml": "^2.7.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.105.0"
   }
 }

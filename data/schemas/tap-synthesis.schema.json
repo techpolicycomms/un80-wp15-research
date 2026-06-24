@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TAP Synthesis",
+  "type": "object",
+  "required": ["leadAnswer", "rq", "evidenceQuality", "sources", "nextActions"],
+  "additionalProperties": true,
+  "properties": {
+    "leadAnswer": {
+      "type": "object",
+      "required": ["statement", "points"],
+      "properties": {
+        "statement": { "type": "string" },
+        "points": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "status": { "type": "string" },
+    "previousWork": {
+      "type": "object",
+      "properties": {
+        "stats": { "type": "array", "items": { "type": "object" } },
+        "jobFamilies": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "newFiles": { "type": "array", "items": { "type": "string" } },
+    "innovationJobs": {
+      "type": "object",
+      "properties": {
+        "total": { "type": "number" },
+        "bySource": { "type": "array", "items": { "type": "object" } },
+        "byRole": { "type": "array", "items": { "type": "object" } },
+        "jobFamilies": { "type": "array", "items": { "type": "string" } },
+        "takeaway": { "type": "string" },
+        "pending": { "type": "string" }
+      }
+    },
+    "rq": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "question", "answer", "citeStatus"],
+        "additionalProperties": true,
+        "properties": {
+          "id": { "type": "string" },
+          "question": { "type": "string" },
+          "answer": { "type": "string" },
+          "evidence": { "type": "array", "items": { "type": "string" } },
+          "claims": { "type": "array", "items": { "type": "string" } },
+          "citeStatus": { "enum": ["safe", "caveat", "do-not-cite"] }
+        }
+      }
+    },
+    "evidenceQuality": {
+      "type": "object",
+      "properties": {
+        "strongNow": { "type": "array", "items": { "type": "string" } },
+        "useWithCaveats": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "agentLoop": {
+      "type": "object",
+      "properties": {
+        "agents": { "type": "array" },
+        "cadence": { "type": "array" }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string" },
+          "useFor": { "type": "string" },
+          "url": { "type": "string" }
+        }
+      }
+    },
+    "nextActions": { "type": "array", "items": { "type": "string" } },
+    "provenance": { "type": "object" }
+  }
+}
