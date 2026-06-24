@@ -83,7 +83,7 @@ reports/2026-05-wp15-living-analysis.md                        (UPDATED)
 
 1. **Merge PR?** — Publishes data + dashboard refresh
 2. **External use?** — All content remains DRAFT until you approve
-3. **Boss / Talea / Nestor** — ITU-122 still open; use briefing only after green light
+3. **Boss / the Global Pulse/OSG interviewee / [internal contact]** — ITU-122 still open; use briefing only after green light
 4. **Notion** — Paste living analysis + briefing row if satisfied
 
 ---

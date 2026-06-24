@@ -58,11 +58,11 @@ export const fallbackSynthesis = {
     pending: "Per-agency, role-family and geography distributions await re-running the innovation-jobs collector on the raw dataset (not yet in this repo).",
   },
   newFiles: [
-    "260217 - UNIN - Johanna Jochim.docx",
-    "interview-transcripts/[UN80 WP15] Talea x TAP Proposal Interview.docx",
-    "260611 - Long-term TAP proposal working draft - v1.pptx",
-    "260622_UN80 WP15 - TAP proposal weekly update - v2.pptx",
-    "TAP Research Answers - Executive Deck.pptx",
+    "UNIN interview (internal, not published)",
+    "WP15 interview (internal) (internal, not published)",
+    "TAP working draft (internal)",
+    "TAP weekly update (internal)",
+    "TAP executive deck (internal)",
     "un80 inititave workstream 3 changing structures and realigning programmes.pdf",
     "ungp-innovation-scaling-report.pdf",
   ],
@@ -72,7 +72,7 @@ export const fallbackSynthesis = {
       question: "Who are the key actors and stakeholders in the UN innovation ecosystem?",
       answer:
         "Map the ecosystem by function, not by logo: entity-level implementation capacity (WFP, UNICEF, UNDP, UNHCR, ITU, DPO); system-level exchange and knowledge (UNIN, UN 2.0, capacity-building); coordination/decision channels (DTN, HLCM/CEB, UN80 Steering Committee); flexible delivery enablers (Global Pulse, UNICC, Digital ID/Data Commons, pooled funds); and adoption owners who can commit to transition and reuse.",
-      evidence: ["Johanna interview", "Talea interview", "innovation-jobs dataset", "260611 working draft"],
+      evidence: ["WP15 interview (internal)", "WP15 interview (internal)", "innovation-jobs dataset", "TAP working draft (internal)"],
       claims: ["RQ-001"],
     },
     {
@@ -80,7 +80,7 @@ export const fallbackSynthesis = {
       question: "How is innovation currently delivered across entity and cross-entity levels?",
       answer:
         "Innovation is delivered through a mixed architecture — entity accelerators and labs, digital/data teams, programme-led pilots, funds, communities of practice, and ad hoc inter-agency coalitions. No single UN model dominates, which supports TAP as an orchestrator and execution-enabler rather than a centralized replacement.",
-      evidence: ["WFP/UNICEF patterns in jobs dataset", "Johanna interview", "UNGP Scaling the Summit", "Global Pulse interview"],
+      evidence: ["WFP/UNICEF patterns in jobs dataset", "WP15 interview (internal)", "UNGP Scaling the Summit", "WP15 interview (internal)"],
       claims: ["RQ-002"],
     },
     {
@@ -88,7 +88,7 @@ export const fallbackSynthesis = {
       question: "What processes, roles, and barriers characterize the ecosystem?",
       answer:
         "The process moves idea/demand signal → pilot/prototype → internal validation → attempted scale. Support breaks at ownership, technical delivery, flexible funding, procurement/legal, cross-entity resource sharing, and adoption/transition. Funding is the named problem but is often a proxy for missing execution resources.",
-      evidence: ["Johanna interview", "UNGP scaling report", "TAP Business Needs Survey slide", "Talea interview"],
+      evidence: ["WP15 interview (internal)", "UNGP scaling report", "TAP Business Needs Survey slide", "WP15 interview (internal)"],
       claims: ["RQ-003"],
     },
     {
@@ -96,7 +96,7 @@ export const fallbackSynthesis = {
       question: "Where is the ecosystem strongest, and where are the gaps?",
       answer:
         "Strongest at entity-level innovation and distributed technical/programmatic expertise. The critical gap is system-level implementation capacity: a mechanism that lets senior leadership decide priorities and then mobilize entity-level capacity for system-level use cases.",
-      evidence: ["Talea interview (Data Commons, entity teams)", "Johanna interview (UNIN not an implementer)", "2024 UN 2.0 Assessment slide"],
+      evidence: ["WP15 interview (internal) (Data Commons, entity teams)", "WP15 interview (internal) (UNIN not an implementer)", "2024 UN 2.0 Assessment slide"],
       claims: ["RQ-004"],
     },
     {
@@ -104,7 +104,7 @@ export const fallbackSynthesis = {
       question: "How do innovations travel through hubs, and where does support break?",
       answer:
         "Grassroots ideas and entity innovations move through WFP, Global Pulse, UNICEF, UNIN and others, but often fail to cross into multi-entity adoption. Support breaks when there is no mandate, no common owner, no pooled funding, no technical \"doing\" team, or no sustainable service-provider/cost-recovery route.",
-      evidence: ["Talea interview (Global Pulse cohorts, Data Commons)", "Johanna interview (Digital ID)", "UNGP scaling journey"],
+      evidence: ["WP15 interview (internal) (Global Pulse cohorts, Data Commons)", "WP15 interview (internal) (Digital ID)", "UNGP scaling journey"],
       claims: ["RQ-005"],
     },
     {
@@ -136,7 +136,7 @@ export const fallbackSynthesis = {
       question: "What pain points block delivery and scale?",
       answer:
         "Fragmentation, funding constraints, policy/legal/governance constraints, limited technical capacity, weak adoption ownership, earmarked funding, time scarcity, and culture/leadership gaps. The TAP Business Needs Survey supports these categories, but the raw survey still needs validation.",
-      evidence: ["TAP survey slide in working draft", "Johanna interview", "UNGP scaling report"],
+      evidence: ["TAP survey slide in working draft", "WP15 interview (internal)", "UNGP scaling report"],
       claims: ["RQ-009"],
     },
     {
@@ -144,7 +144,7 @@ export const fallbackSynthesis = {
       question: "What support is needed at different maturity levels?",
       answer:
         "Support changes by maturity — Discovery/demand: surveys, communities, accelerator pipelines, horizon scanning. Seed/pilot: sprint funding, technical assessment, project management, data/security/legal checks. Implementation: surge task force, owner commitments, de-block procurement/legal. Scale: fund adoption and interoperability, connect adopters. Transition: hand over to a shared service provider, implementing entity, cost-recovery mechanism, or pooled-fund window.",
-      evidence: ["Working draft portfolio cycle", "Talea interview", "UNICEF Venture Fund stage logic", "WFP path-to-scale logic"],
+      evidence: ["Working draft portfolio cycle", "WP15 interview (internal)", "UNICEF Venture Fund stage logic", "WFP path-to-scale logic"],
       claims: ["RQ-010"],
     },
     {
@@ -152,7 +152,7 @@ export const fallbackSynthesis = {
       question: "What should inform demand signals, prioritization, and metrics?",
       answer:
         "Don't rely only on a Microsoft Forms-style survey. Triangulate: business-needs survey, existing accelerator/case pipelines, official innovation/digital job postings, pooled-funding and donor-priority signals, CIO/DTN/UNIN/UN 2.0 community inputs, and use-case progress data (Data Commons, Beneficiary ID, Translation, Expertise-on-Demand). Prioritize by system value, urgency, adoption readiness, reuse potential, technical feasibility, risk, and owner availability.",
-      evidence: ["Talea interview (WFP demand signal)", "jobs dataset", "TAP survey", "working draft"],
+      evidence: ["WP15 interview (internal) (WFP demand signal)", "jobs dataset", "TAP survey", "working draft"],
       claims: ["RQ-011"],
     },
     {
@@ -160,7 +160,7 @@ export const fallbackSynthesis = {
       question: "Who is TAP's client?",
       answer:
         "TAP's client is the accountable problem/adoption owner, not simply the innovator. Innovators are partners. The client must be able to commit to adoption, funding or cost recovery, a legal/policy path, and transition. For system-level assets this may be a coalition or shared-service owner.",
-      evidence: ["Executive deck RQ-011", "Johanna interview (business ownership)", "Talea interview (leadership-to-ground link)"],
+      evidence: ["Executive deck RQ-011", "WP15 interview (internal) (business ownership)", "WP15 interview (internal) (leadership-to-ground link)"],
       claims: ["RQ-012"],
     },
     {
@@ -168,7 +168,7 @@ export const fallbackSynthesis = {
       question: "What operating, governance, and funding model should TAP use?",
       answer:
         "A hybrid model: a lean TAP Coordination Unit (portfolio, delivery tracking, fundraising, evidence); time-bound Surge Task Forces drawn from entity experts; the UN Innovation Ecosystem as the source of knowledge, demand, solutions, owners; a Steering Committee for quarterly portfolio/funding/stage decisions; and pooled funding rather than slow case-by-case fundraising. Governance must separate problem selection, technical validation, funding allocation, delivery oversight, and adoption commitment.",
-      evidence: ["260611 working draft slides 22-28", "Talea interview (pooled funding)", "CRAF'd governance model"],
+      evidence: ["TAP working draft (internal) slides 22-28", "WP15 interview (internal) (pooled funding)", "CRAF'd governance model"],
       claims: ["RQ-013"],
     },
     {
@@ -184,7 +184,7 @@ export const fallbackSynthesis = {
       question: "What pathway and risks should guide TAP setup?",
       answer:
         "Move from UN80 temporary governance into a standing joint programme or MPTF-style mechanism: mandate/sponsor route → demand and portfolio thesis → first proposals and owner commitments → delivery via surge teams and pooled capacity → transition to owners → institutionalize as a standing UN 2.0 acceleration capability. Key risks: coordination-only failure, duplication, funding capture, ownership failure, evidence weakness, unclear post-UN80 governance, and security/legal risk on AI/data use cases.",
-      evidence: ["UN80 report paragraphs 76-79", "Talea interview", "Johanna interview", "working draft", "UNGP scaling report"],
+      evidence: ["UN80 report paragraphs 76-79", "WP15 interview (internal)", "WP15 interview (internal)", "working draft", "UNGP scaling report"],
       claims: ["RQ-015"],
     },
   ],
@@ -192,8 +192,8 @@ export const fallbackSynthesis = {
     strongNow: [
       "Direction of travel: TAP as a lean system-level accelerator/joint programme — anchored in the UN80 report and working draft.",
       "Distributed capacity — supported by the innovation-jobs dataset, interviews, and the UNGP report.",
-      "System-level execution gap — strongly supported by the Johanna and Talea interviews.",
-      "Need for pooled funding and governance — supported by Talea, CRAF'd/MPTF, and the working-draft funding slides.",
+      "System-level execution gap — strongly supported by the the UNIN interviewee and WP15 interview (internal)s.",
+      "Need for pooled funding and governance — supported by the Global Pulse/OSG interviewee, CRAF'd/MPTF, and the working-draft funding slides.",
     ],
     useWithCaveats: [
       "TAP Business Needs Survey percentages — cite as internal WIP until the raw survey and methodology are checked.",

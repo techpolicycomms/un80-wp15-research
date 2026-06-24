@@ -8,7 +8,7 @@
 
 TAP should be framed as a lean, system-level portfolio and execution mechanism that attaches senior UN leadership decisions to distributed entity-level delivery capacity.
 
-TAP should not duplicate existing innovation hubs. The 23 June Johanna and Talea interview materials sharpen that answer:
+TAP should not duplicate existing innovation hubs. The 23 June the UNIN interviewee and WP15 interview (internal) materials sharpen that answer:
 
 - UN innovation capacity is real but distributed. WFP, UNICEF, UNDP, UNHCR, ITU, Global Pulse, DPO and others hold pieces of implementation capacity.
 - System-level exchange exists, but system-level execution is weak. UNIN connects and curates; DTN coordinates technology actors; UN 2.0/Global Pulse provide capability and accelerator functions. None alone provides a durable, funded, senior-leadership-to-delivery mechanism.
@@ -32,11 +32,11 @@ I extracted searchable text from the new 23 June files into:
 
 Files extracted:
 
-- 260217 - UNIN - Johanna Jochim.docx
-- interview-transcripts/[UN80 WP15] Talea x TAP Proposal Interview.docx
-- 260611 - Long-term TAP proposal working draft - v1.pptx
-- 260622_UN80 WP15 - TAP proposal weekly update - v2.pptx
-- TAP Research Answers - Executive Deck.pptx
+- UNIN interview (internal, not published)
+- WP15 interview (internal) (internal, not published)
+- TAP working draft (internal)
+- TAP weekly update (internal)
+- TAP executive deck (internal)
 - un80 inititave workstream 3 changing structures and realigning programmes.pdf
 - ungp-innovation-scaling-report.pdf
 
@@ -52,31 +52,31 @@ Answer: The ecosystem should be mapped by function, not by logo. The useful cate
 - Flexible system-level delivery enablers: Global Pulse, UNICC, Digital ID/Data Commons coalitions, pooled funds.
 - Adoption owners: programme, country, shared-service, or business owners who can commit to transition and reuse.
 
-Evidence: Johanna interview; Talea interview; innovation-jobs dataset; 260611 working draft.
+Evidence: WP15 interview (internal); WP15 interview (internal); innovation-jobs dataset; TAP working draft (internal).
 
 ### RQ-002: How is innovation currently delivered across entity and cross-entity levels?
 
 Answer: Innovation is delivered through a mixed architecture: entity accelerators and labs, digital/data teams, programme-led pilots, funds, communities of practice, and ad hoc inter-agency coalitions. No single UN innovation model dominates. This supports TAP as an orchestrator and execution-enabler, not a centralized replacement.
 
-Evidence: WFP and UNICEF patterns in the jobs dataset; Johanna's comment that models are similar but not codified; UNGP Scaling the Summit; Global Pulse interview.
+Evidence: WFP and UNICEF patterns in the jobs dataset; the UNIN interviewee's comment that models are similar but not codified; UNGP Scaling the Summit; WP15 interview (internal).
 
 ### RQ-003: What processes, roles, and barriers characterize the ecosystem?
 
 Answer: The process usually moves from idea/demand signal -> pilot/prototype -> internal validation -> attempted scale. Support breaks at ownership, technical delivery, flexible funding, procurement/legal, cross-entity resource sharing, and adoption/transition. Funding often appears as the named problem but is frequently a proxy for missing execution resources.
 
-Evidence: Johanna interview; UNGP scaling report; TAP Business Needs Survey slide; Talea interview.
+Evidence: WP15 interview (internal); UNGP scaling report; TAP Business Needs Survey slide; WP15 interview (internal).
 
 ### RQ-004: Where is the ecosystem strongest, and where are the gaps?
 
 Answer: The ecosystem is strongest at entity-level innovation and distributed technical/programmatic expertise. The critical gap is system-level implementation capacity: a mechanism that lets senior leadership decide priorities and then mobilize entity-level capacity for system-level use cases.
 
-Evidence: Talea interview on Data Commons and entity-level teams; Johanna interview on UNIN not being an implementer; 2024 UN 2.0 Assessment slide in working draft.
+Evidence: WP15 interview (internal) on Data Commons and entity-level teams; WP15 interview (internal) on UNIN not being an implementer; 2024 UN 2.0 Assessment slide in working draft.
 
 ### RQ-005: How do innovations travel through hubs, and where does support break?
 
 Answer: Grassroots ideas and entity innovations can move through WFP, Global Pulse, UNICEF, UNIN and other channels, but they often do not cross the chasm into multi-entity adoption. Support breaks when there is no mandate, no common owner, no pooled funding, no technical "doing" team, or no sustainable service-provider/cost-recovery route.
 
-Evidence: Talea interview on Global Pulse cohorts and Data Commons; Johanna interview on Digital ID and technical execution; UNGP scaling journey.
+Evidence: WP15 interview (internal) on Global Pulse cohorts and Data Commons; WP15 interview (internal) on Digital ID and technical execution; UNGP scaling journey.
 
 ### RQ-006: What operating models exist, and what do they teach TAP?
 
@@ -120,7 +120,7 @@ Evidence: Executive deck RQ-004; working draft slide on definition; UN80 report 
 
 Answer: The main blockers are fragmentation, funding constraints, policy/legal/governance constraints, limited technical capacity, weak adoption ownership, earmarked funding, time scarcity, and culture/leadership gaps. The TAP Business Needs Survey already supports these categories, but the raw survey still needs validation.
 
-Evidence: TAP survey slide in working draft; Johanna interview; UNGP scaling report.
+Evidence: TAP survey slide in working draft; WP15 interview (internal); UNGP scaling report.
 
 ### RQ-010: What support is needed at different maturity levels?
 
@@ -132,7 +132,7 @@ Answer: Support should change by maturity:
 - Scale: fund adoption and interoperability work; connect service providers and country/entity adopters.
 - Transition: hand over to shared service provider, implementing entity, cost-recovery mechanism, or pooled fund window.
 
-Evidence: Working draft portfolio cycle; Talea interview; UNICEF Venture Fund stage logic; WFP path-to-scale logic.
+Evidence: Working draft portfolio cycle; WP15 interview (internal); UNICEF Venture Fund stage logic; WFP path-to-scale logic.
 
 ### RQ-011: What should inform demand signals, prioritization, and metrics?
 
@@ -147,13 +147,13 @@ Answer: Demand should not rely only on a Microsoft Forms-style survey. TAP shoul
 
 Prioritization should score system value, urgency, adoption readiness, reuse potential, technical feasibility, risk, and availability of owners.
 
-Evidence: Talea interview on WFP demand signal being structurally smarter; jobs dataset; TAP survey; working draft.
+Evidence: WP15 interview (internal) on WFP demand signal being structurally smarter; jobs dataset; TAP survey; working draft.
 
 ### RQ-012: Who is TAP's client?
 
 Answer: TAP's client is the accountable problem/adoption owner, not simply the innovator. Innovators are partners. The client must be able to commit to adoption, funding or cost recovery, legal/policy path, and transition. For system-level assets, this may be a coalition or shared-service owner.
 
-Evidence: Executive deck RQ-011; Johanna interview on business ownership; Talea interview on leadership-to-ground link.
+Evidence: Executive deck RQ-011; WP15 interview (internal) on business ownership; WP15 interview (internal) on leadership-to-ground link.
 
 ### RQ-013: What operating, governance, and funding model should TAP use?
 
@@ -167,7 +167,7 @@ Answer: Use a hybrid model:
 
 Governance must separate problem selection, technical validation, funding allocation, delivery oversight, and adoption commitment.
 
-Evidence: 260611 working draft slides 22-28; Talea interview on pooled funding and senior leadership; CRAF'd governance model.
+Evidence: TAP working draft (internal) slides 22-28; WP15 interview (internal) on pooled funding and senior leadership; CRAF'd governance model.
 
 ### RQ-014: What investment posture and KPIs should TAP use?
 
@@ -210,7 +210,7 @@ Key risks:
 - Political/institutional risk: post-UN80 governance route unclear.
 - Security/legal risk: AI/data/shared platform use cases need early risk gating.
 
-Evidence: UN80 report paragraphs 76-79; Talea interview; Johanna interview; working draft; UNGP scaling report.
+Evidence: UN80 report paragraphs 76-79; WP15 interview (internal); WP15 interview (internal); working draft; UNGP scaling report.
 
 ## 5. Evidence Quality
 
@@ -218,8 +218,8 @@ Evidence: UN80 report paragraphs 76-79; Talea interview; Johanna interview; work
 
 - Direction of travel: TAP as lean system-level accelerator/joint programme is anchored in the UN80 report and working draft.
 - Distributed capacity: supported by innovation-jobs dataset, interviews, and UNGP report.
-- System-level execution gap: strongly supported by Johanna and Talea interviews.
-- Need for pooled funding and governance: supported by Talea, CRAF'd/MPTF, and working draft funding slides.
+- System-level execution gap: strongly supported by the UNIN interviewee and WP15 interview (internal)s.
+- Need for pooled funding and governance: supported by the Global Pulse/OSG interviewee, CRAF'd/MPTF, and working draft funding slides.
 
 ### Use With Caveats
 

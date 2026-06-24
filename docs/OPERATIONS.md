@@ -141,7 +141,7 @@ npm run build:dashboard   # rebuild dashboard locally
 
 ---
 
-## Adding GitHub reviewers (Talea, Nestor, others)
+## Adding GitHub reviewers (the Global Pulse/OSG interviewee, [internal contact], others)
 
 1. Repo → **Settings** → **Collaborators** (or **Manage access**)
 2. **Add people** → enter GitHub username or UN email linked to GitHub
@@ -151,9 +151,9 @@ npm run build:dashboard   # rebuild dashboard locally
 Example `CODEOWNERS` (create when usernames are known):
 
 ```
-* @techpolicycomms/talea-username @techpolicycomms/nestor-username
-data/ @techpolicycomms/talea-username
-reports/ @techpolicycomms/nestor-username
+* @techpolicycomms/owner1-username @techpolicycomms/owner2-username
+data/ @techpolicycomms/owner1-username
+reports/ @techpolicycomms/owner2-username
 ```
 
 ---
