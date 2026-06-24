@@ -38,7 +38,7 @@
 
 **Headline finding:** UNICC dominates this pass — cyber exercise, biennial report, innovation events.
 
-2. **Boss / Talea / Nestor** — ITU-122 still open; use briefing only after green light
+2. **Boss / the Global Pulse/OSG interviewee / [internal contact]** — ITU-122 still open; use briefing only after green light
 4.
 
 
@@ -97,7 +97,7 @@ The UN system spends more than **$2 billion annually** on ICT.
 
 **Headline finding:** UNICC dominates this pass — cyber exercise, biennial report, innovation events.
 
-2. **Boss / Talea / Nestor** — ITU-122 still open; use briefing only after green light
+2. **Boss / the Global Pulse/OSG interviewee / [internal contact]** — ITU-122 still open; use briefing only after green light
 4.
 
 3. ---

@@ -25,4 +25,4 @@ If you see a **nested** child page also titled "UN80 WP15 Research Hub" under th
 
 ## 4. Share hub
 
-Invite Talea and Nestor to the Notion page (Share → invite by email).
+Invite the Global Pulse/OSG interviewee and [internal contact] to the Notion page (Share → invite by email).

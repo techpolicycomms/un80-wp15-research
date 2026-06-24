@@ -19,7 +19,7 @@ Machine-readable config: [`data/linear-config.yaml`](../data/linear-config.yaml)
 |-----------|--------|--------|
 | **M1 — Foundation** | Repo, dashboard, Notion hub | May 2026 |
 | **M2 — Automations live** | All 4 Cursor automations + integrations | Jun 2026 |
-| **M3 — Stakeholder rollout** | Boss approval, Talea/Nestor | Jul 2026 |
+| **M3 — Stakeholder rollout** | Boss approval, the Global Pulse/OSG interviewee/[internal contact] | Jul 2026 |
 | **M4 — Steady-state ops** | Recurring Mon/Wed/monthly rhythm | Aug 2026 |
 
 ## Three-system model
