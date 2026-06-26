@@ -44,6 +44,12 @@ jobs:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     needs: validate-and-build
     runs-on: ubuntu-latest
+    # Serialize Pages deployments: GitHub Pages allows only one in-flight
+    # deployment, so back-to-back merges to main otherwise race and the later
+    # one 400s ("due to in progress deployment"). Queue them instead.
+    concurrency:
+      group: pages-deploy
+      cancel-in-progress: false
     permissions:
       contents: read
       pages: write
