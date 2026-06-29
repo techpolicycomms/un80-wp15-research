@@ -1,0 +1,47 @@
+{
+  "$id": "research-plan.schema.json",
+  "type": "object",
+  "required": ["meta", "pillars"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["research_plan_date", "disclaimer"],
+      "properties": {
+        "research_plan_date": { "type": "string", "format": "date" },
+        "sts_advisory_group": { "type": "string" },
+        "disclaimer": { "type": "string" },
+        "wave_status": { "type": "object" }
+      }
+    },
+    "pillars": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "color", "research_questions", "deliverables"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "color": { "type": "string" },
+          "research_questions": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "deliverables": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "label"],
+              "properties": {
+                "id": { "type": "string" },
+                "label": { "type": "string" },
+                "status": { "enum": ["complete", "in_progress", "planned", "pending"] }
+              }
+            }
+          }
+        }
+      }
+    },
+    "survey_methodology": { "type": "object" }
+  }
+}

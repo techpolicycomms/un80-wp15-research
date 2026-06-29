@@ -19,6 +19,8 @@ const baseline = JSON.parse(
 const tap = yaml.parse(readFileSync(join(root, "data/tap-use-cases.yaml"), "utf8"));
 const tracker = yaml.parse(readFileSync(join(root, "data/action-tracker.yaml"), "utf8"));
 const overlap = yaml.parse(readFileSync(join(root, "data/overlap-signals.yaml"), "utf8"));
+const researchPlan = yaml.parse(readFileSync(join(root, "data/research-plan.yaml"), "utf8"));
+
 let socialSignalCount = 0;
 let monitorMeta = {};
 try {
@@ -29,7 +31,7 @@ try {
 }
 try {
   const registry = yaml.parse(readFileSync(join(root, "data/un-agencies-social.yaml"), "utf8"));
-    monitorMeta = {
+  monitorMeta = {
     agencies_registered: registry.agencies?.length ?? 0,
     system_feeds: (registry.system_feeds ?? registry.meta?.system_feeds ?? []).length,
   };
@@ -50,6 +52,10 @@ try {
 const dashboardData = {
   generated_at: new Date().toISOString(),
   disclaimer: "DRAFT — public secondary data only; not agreed UN position",
+  research_plan: researchPlan,
+  research_pillar_count: researchPlan.pillars?.length ?? 0,
+  survey_respondents: researchPlan.survey_methodology?.respondents_completed,
+  interviews: researchPlan.survey_methodology?.interviews,
   baseline,
   tap,
   tracker,

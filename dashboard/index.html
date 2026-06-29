@@ -3,49 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UN80 WP15 Research Dashboard</title>
+    <title>UN80 WP15 / TAP Research Dashboard</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <p class="badge">DRAFT — Working document</p>
-      <h1>UN80 WP15 Research Dashboard</h1>
-      <p class="subtitle">ICT consolidation (Action 61) &amp; Technology Accelerator Platform (Action 62)</p>
+      <h1>TAP Research Dashboard</h1>
+      <p class="subtitle">
+        Scaling the Summit 2.0 research plan · UN80 WP15 Action 62 (TAP) &amp; Action 61 (ICT)
+      </p>
       <p id="generated-at" class="meta"></p>
+      <p id="research-meta" class="meta"></p>
     </header>
+
+    <nav class="pillar-nav" id="pillar-nav" aria-label="Research pillars"></nav>
 
     <main>
       <section class="cards" id="metric-cards"></section>
 
-      <section class="panel">
-        <h2>Action 61 — ICT baseline</h2>
-        <div id="baseline-detail"></div>
-      </section>
+      <div id="pillar-panels"></div>
 
-      <section class="panel">
-        <h2>Action 62 — TAP portfolio</h2>
-        <div id="tap-portfolio"></div>
-      </section>
-
-      <section class="panel">
-        <h2>Phase tracker</h2>
-        <div id="phase-tracker"></div>
-      </section>
-
-      <section class="panel">
-        <h2>Overlap signals</h2>
-        <p id="overlap-count" class="meta"></p>
-        <ul id="overlap-list"></ul>
-      </section>
-
-      <section class="panel">
-        <h2>Media &amp; news monitoring</h2>
-        <div id="monitor-detail"></div>
+      <section class="panel panel-secondary">
+        <h2>WP15 operational data</h2>
+        <p class="meta">Supporting evidence from public secondary monitoring (Actions 61 &amp; 62)</p>
+        <div class="ops-grid">
+          <div>
+            <h3>Action 61 — ICT baseline</h3>
+            <div id="baseline-detail"></div>
+          </div>
+          <div>
+            <h3>Action 62 — TAP portfolio</h3>
+            <div id="tap-portfolio"></div>
+          </div>
+          <div>
+            <h3>Phase tracker</h3>
+            <div id="phase-tracker"></div>
+          </div>
+          <div>
+            <h3>Overlap signals</h3>
+            <p id="overlap-count" class="meta"></p>
+            <ul id="overlap-list"></ul>
+          </div>
+          <div>
+            <h3>Media &amp; news monitoring</h3>
+            <div id="monitor-detail"></div>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>Public secondary data only. Human review required before external distribution.</p>
+      <p>
+        Based on Scaling the Summit 2.0 Advisory Group 2 (18 Jun 2026) and public WP15 secondary data.
+        Human review required before external distribution.
+      </p>
     </footer>
     <script src="app.js"></script>
   </body>

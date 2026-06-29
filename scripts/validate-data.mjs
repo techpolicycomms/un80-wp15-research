@@ -31,6 +31,10 @@ const yamlValidations = [
     data: "data/academic-literature/wp15-core-references.yaml",
     schema: "data/schemas/academic-literature.schema.json",
   },
+  {
+    data: "data/research-plan.yaml",
+    schema: "data/schemas/research-plan.schema.json",
+  },
 ];
 
 let failed = false;

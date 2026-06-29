@@ -1,0 +1,264 @@
+# TAP / WP15 research plan — aligned to Scaling the Summit 2.0 (Advisory Group 2, 18 Jun 2026)
+meta:
+  research_plan_date: "2026-06-12"
+  sts_advisory_group: "Scaling the Summit 2.0 — Advisory Group 2"
+  sts_meeting_date: "2026-06-18"
+  lead: "UN Global Pulse — Innovation Scaling Team"
+  partner: Hellon
+  disclaimer: |
+    DRAFT working research framework. Combines the 12 Jun 2026 research plan,
+    StS 2.0 Wave 1 emergent findings, and public WP15 secondary data. Not agreed UN policy.
+  wave_status:
+    wave_1: complete
+    wave_2: planned
+    validation_workshop: "2026-07-16 (suggested)"
+
+pillars:
+  - id: innovation_landscape
+    title: Innovation landscape
+    color: "#3ecf8e"
+    research_questions:
+      - What entity-level innovation mechanisms exist?
+      - What system-wide innovation systems exist?
+      - What external accelerator best practices exist, and what can the UN learn from them?
+    deliverables:
+      - id: actors_map
+        label: Map of actors & centres
+        status: in_progress
+      - id: process_map
+        label: Process map including roles and barriers
+        status: in_progress
+      - id: scaling_counts
+        label: Number of centres, priorities, and innovations scaled
+        status: pending
+    sts_wave1_findings:
+      - theme: Effective scaling practices and evidence of impact
+        summary: >-
+          Innovations scale when embedded in core work with mandates, KPIs and senior
+          leadership backing, and grounded locally with an actor to deliver and sustain.
+        since_2022: >-
+          Progress from pilot "islands" toward structures, guidelines and policies
+          (UNHCR, WHO, UNFPA, WFP). ODA cuts have again hit innovation work first.
+        evidence_quotes:
+          - >-
+            If they were not strong in the local ecosystem… they didn't really scale.
+            — Senior Accelerator Lead
+    wp15_links:
+      actors:
+        - UN Innovation Network
+        - Digital Cooperation Portal
+        - UN Global Pulse
+        - ODET
+        - UNICC AI Hub / AI Sandbox
+      data_refs:
+        - data/approved-source-feeds.yaml
+        - data/social-monitor/
+        - data/secondary-sources/
+
+  - id: needs_barriers_risks
+    title: Needs, barriers & risks
+    color: "#f5a623"
+    research_questions:
+      - What criteria define digital/technology innovation with potential for system-wide change?
+      - What are the key pain points in delivering and scaling innovation across the UN system?
+      - What are the pros and cons of operating models, governance structures, and funding models?
+      - What needs and gaps remain?
+    deliverables:
+      - id: innovation_definition
+        label: Digital tech innovation definition for hub (by maturity)
+        status: in_progress
+    sts_wave1_findings:
+      - theme: Persistence and evolution of barriers to scale
+        summary: >-
+          Structural barriers largely unchanged — bureaucracy, legacy rules, scaling
+          depends on individual champions. AI is the one new prominent factor.
+        since_2022: >-
+          Valley of death and safe-delivery vs scaling-speed mismatch still centre stage.
+          AI absent in 2022; now most prominent new factor.
+      - theme: Operating environment and external factors
+        summary: >-
+          Less about funding amount, more about what gets funded. Emphasis shifting
+          from pilots to scaling; collaboration growing but shared infrastructure gap persists.
+    survey_factors:
+      - id: scale_readiness
+        label: Scale readiness
+        role: checkpoint
+        correlation: 0.33
+        met_pct: 60
+        note: Hygiene checkpoint — stops wrong things scaling
+      - id: scaling_capability
+        label: Scaling capability
+        role: engine
+        correlation: 0.42
+        met_pct: 38
+        note: Systems thinking, change management, evidence, internal navigation
+      - id: ecosystem_engagement
+        label: Ecosystem engagement
+        role: key_lever
+        correlation: 0.60
+        met_pct: 36
+        note: Strongest predictor; least-demanded support (36% requested partners)
+      - id: organisational_support
+        label: Organisational support
+        role: precondition
+        correlation: 0.30
+        met_pct: 49
+        note: Most-requested support (67%); gate not driver
+      - id: scaling_pathways
+        label: Scaling pathways
+        role: requirement
+        correlation: 0.28
+        met_pct: 52
+        note: Connective scaffolding for other factors
+      - id: funding_resourcing
+        label: Funding & resourcing
+        role: bottleneck
+        correlation: 0.21
+        met_pct: 23
+        note: Most-cited hindrance; more funding alone rarely converts teams
+    innovation_journey_gates:
+      - gate: Admin and procurement
+        support_need_pct: 56
+        note: Friction gate — low-progress teams stall here
+      - gate: Adoption and localisation
+        support_need_pct: 31
+        note: Moving to impact
+    wp15_links:
+      data_refs:
+        - data/overlap-signals.yaml
+        - data/ict-spend-baseline.json
+
+  - id: signature_innovations
+    title: Signature innovation cases
+    color: "#e879a9"
+    research_questions:
+      - How did successful innovations work?
+    deliverables:
+      - id: case_studies
+        label: Case studies — innovation journeys & breaking points
+        status: planned
+    sts_wave1_findings:
+      - theme: Dual ownership model
+        summary: >-
+          Scale when owned on two fronts — embedded in organisation core work with
+          mandates and leadership, and grounded locally with delivery actor.
+      - theme: Pilot-to-scale handover gap
+        summary: >-
+          Few organisations set up for the different work of taking proven ideas to scale.
+    candidate_cases:
+      - name: UNify HR
+        agency: Inter-agency (13 orgs)
+        topic: GenAI shared policy repository
+        relevance: action_62
+        source: UN Innovation Network
+      - name: UN AI Resource Hub
+        agency: ITU / UN system
+        topic: Centralised inventory of 750+ AI initiatives
+        relevance: action_62
+      - name: UNICC AI Sandbox
+        agency: UNICC
+        topic: Dataset/model reuse, interoperability
+        relevance: both
+      - name: UN Digital ID
+        agency: HLCM / CEB
+        topic: System-wide workforce identity
+        relevance: action_62
+        claim_id: tap-digital-identity
+    wp15_links:
+      data_refs:
+        - data/tap-use-cases.yaml
+        - data/secondary-sources/
+
+  - id: hub_design
+    title: Hub design (TAP)
+    color: "#f5d623"
+    research_questions:
+      - What is the overall ambition and goal of TAP as of UN80 direction?
+      - Who owns the problems and potential solutions — clients and partners of TAP?
+      - Which innovation cycle and design principles should TAP follow?
+      - What criteria should inform demand signals and prioritization?
+      - What are key KPIs and how should we measure success?
+      - What would be the right investment posture to scale innovation?
+      - What is the pathway to develop and scale TAP (timeline and go-to-market)?
+    deliverables:
+      - id: problem_statement
+        label: Refined problem statement & value proposition
+        status: in_progress
+      - id: tap_client
+        label: Profile — TAP client
+        status: in_progress
+      - id: innovation_cycle
+        label: Refined innovation cycle
+        status: in_progress
+      - id: design_principles
+        label: Design principles (operating model, funding, governance)
+        status: in_progress
+      - id: journey_map
+        label: Innovation journey map / decision tree
+        status: planned
+      - id: kpi_framework
+        label: KPI framework
+        status: planned
+      - id: roadmap
+        label: Validated roadmap
+        status: planned
+    sts_wave1_findings:
+      - theme: System-wide capabilities for strengthening scaling
+        summary: >-
+          Capabilities are relational (grit, network-navigation, systems thinking) not
+          purely technical. Magic-wand fixes cluster on silo-breaking, financing logic,
+          incentives, and formal innovation-to-scale architecture.
+        quote: >-
+          Create a formal innovation-to-scale architecture across the UN… I think that
+          is really key. — Innovation Service Lead
+    tap_alignment:
+      ambition: >-
+        Continuous UN system innovation via demand identification, portfolio shaping,
+        and implementation support — aligned with UN80 Action 62 and ODET coordination.
+      endorsed_portfolio:
+        - Digital ID solutions
+        - Expertise on demand
+        - Modern conferencing / AI-assisted translation
+      clients:
+        - Entity programme teams with scaling-ready innovations
+        - HLCM / CEB policy owners seeking system-wide coherence
+        - Country offices needing local delivery partners
+      partners:
+        - ODET and Digital Cooperation Portal
+        - UN Innovation Network
+        - UNICC shared ICT / AI infrastructure
+    project_timeline:
+      - milestone: Data and case studies collected
+        target: End June 2026
+        status: in_progress
+      - milestone: Analysis complete, preliminary findings
+        target: End July 2026
+        status: pending
+      - milestone: Validation workshop
+        target: Mid August 2026
+        status: pending
+      - milestone: Final report & executive summary
+        target: Mid September 2026
+        status: pending
+    wp15_links:
+      data_refs:
+        - data/tap-use-cases.yaml
+        - data/action-tracker.yaml
+        - reports/living-analysis.md
+
+survey_methodology:
+  respondents_completed: 58
+  interviews: 9
+  agencies_interviewed:
+    - UNICEF
+    - WFP
+    - IOM
+    - UNHCR
+    - UNDP
+    - OHCHR
+  kpi_question: >-
+    Across the UN innovation scaling efforts you have been involved in, how much
+    progress have they generally made towards scale?
+  analysis_note: >-
+    Conversion analysis (F1 0.85) — intermediary results; Wave 2 interviews and
+    validation workshop (16 Jul 2026) to substantiate.
