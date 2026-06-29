@@ -1,6 +1,6 @@
 # Signals of duplication and interoperability gaps (populated by automations)
 meta:
-  last_updated: "2026-06-22"
+  last_updated: "2026-06-29"
   disclaimer: Working document — public secondary evidence only
 
 signals:
@@ -84,4 +84,31 @@ signals:
       governance to prioritize reusable components over entity-specific builds.
     evidence_sources:
       - data/secondary-sources/2026-06-22-scan.yaml
+    confidence: high
+
+  - id: sig-2026-06-29-012
+    topic: dtn_shared_services_duplication_controls
+    summary: >-
+      The public CEB Digital and Technology Network session report says shared
+      ICT and digital transformation discussions were guided by preventing
+      monopolies, promoting healthy competition and eliminating duplication.
+      This is direct governance evidence that Action 61 consolidation should
+      balance common-provider expansion with competition safeguards and explicit
+      duplication tests.
+    evidence_sources:
+      - data/secondary-sources/2026-06-29-scan.yaml
+    confidence: high
+
+  - id: sig-2026-06-29-013
+    topic: shared_ai_portfolio_reuse_interoperability
+    summary: >-
+      Public ITU, UN Innovation Network and UNICC pages describe UN-wide AI
+      resource and sandbox mechanisms that centralize discoverability, align
+      activities, reuse datasets and pre-trained models, foster
+      interoperability and reduce duplication of effort. This provides clear
+      Action 62 evidence for TAP portfolio governance to prefer shared AI
+      infrastructure, repositories and model/data reuse over isolated entity
+      pilots.
+    evidence_sources:
+      - data/secondary-sources/2026-06-29-scan.yaml
     confidence: high
