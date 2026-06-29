@@ -1,0 +1,229 @@
+# Maps every scheduled automation to research pillars and questions
+meta:
+  updated: "2026-06-29"
+  source: automations/workflows.json + .github/workflows/
+  disclaimer: DRAFT — schedules in UTC unless noted
+
+jobs:
+  - id: landscape_monitor
+    name: UN80 Weekly Landscape Monitor
+    platform: cursor
+    type: cron
+    schedule_cron: "0 6 * * 1"
+    schedule_human: "Monday 06:00 UTC"
+    enabled: true
+    automation_id: "9267c6a1-fd79-4d72-81ca-6415647ab198"
+    url: https://cursor.com/automations/9267c6a1-fd79-4d72-81ca-6415647ab198
+    outputs:
+      - data/secondary-sources/YYYY-MM-DD-scan.yaml
+      - reports/YYYY-MM-DD-landscape-scan-summary.md
+      - data/overlap-signals.yaml
+      - reports/living-analysis.md
+    mappings:
+      - pillar_id: innovation_landscape
+        research_question_refs: [0, 1, 2]
+        deliverable_ids: [actors_map, process_map, scaling_counts]
+        rationale: Scans approved public sources for entity and system-wide innovation mechanisms and external practices.
+      - pillar_id: needs_barriers_risks
+        research_question_refs: [1, 2, 3]
+        deliverable_ids: [innovation_definition]
+        rationale: Overlap signals and governance sources surface pain points and operating-model trade-offs.
+      - pillar_id: signature_innovations
+        research_question_refs: [0]
+        deliverable_ids: [case_studies]
+        rationale: Identifies candidate innovations from public agency and standards sources for case follow-up.
+      - pillar_id: hub_design
+        research_question_refs: [0, 6]
+        deliverable_ids: [problem_statement, roadmap]
+        rationale: UN80/TAP public materials inform ambition and scaling pathway evidence.
+
+  - id: social_monitor
+    name: UN80 Social Monitor
+    platform: cursor
+    type: cron
+    schedule_cron: "0 7 * * 3"
+    schedule_human: "Wednesday 07:00 UTC"
+    enabled: true
+    automation_id: "7b162585-6d97-4e1c-8476-6f2548b9315c"
+    url: https://cursor.com/automations/7b162585-6d97-4e1c-8476-6f2548b9315c
+    outputs:
+      - data/social-monitor/YYYY-MM-DD-social.yaml
+      - data/social-signals.yaml
+      - reports/YYYY-MM-DD-social-scan-summary.md
+      - reports/living-analysis.md
+    mappings:
+      - pillar_id: innovation_landscape
+        research_question_refs: [0, 1]
+        deliverable_ids: [actors_map, scaling_counts]
+        rationale: Agency posts reveal entity-level mechanisms and system-wide innovation activity in real time.
+      - pillar_id: needs_barriers_risks
+        research_question_refs: [1]
+        deliverable_ids: [innovation_definition]
+        rationale: High-priority signals flag delivery pain points and scaling friction themes.
+      - pillar_id: signature_innovations
+        research_question_refs: [0]
+        deliverable_ids: [case_studies]
+        rationale: Surfaces how innovations are communicated and adopted via official channels.
+      - pillar_id: hub_design
+        research_question_refs: [1, 3, 4]
+        deliverable_ids: [tap_client, kpi_framework]
+        rationale: Demand signals from tier-1 agencies; client/partner activity; monitor metrics as KPI inputs.
+
+  - id: briefing_compiler
+    name: UN80 Monthly Briefing Compiler
+    platform: cursor
+    type: cron
+    schedule_cron: "0 8 1 * *"
+    schedule_human: "1st of month 08:00 UTC"
+    enabled: true
+    automation_id: "50fd2872-5154-49ee-a71f-31c3ffc0a058"
+    url: https://cursor.com/automations/50fd2872-5154-49ee-a71f-31c3ffc0a058
+    outputs:
+      - reports/YYYY-MM-member-state-update.md
+      - reports/living-analysis.md
+    mappings:
+      - pillar_id: hub_design
+        research_question_refs: [0, 1, 2, 3, 4, 5, 6]
+        deliverable_ids:
+          - problem_statement
+          - tap_client
+          - innovation_cycle
+          - design_principles
+          - journey_map
+          - kpi_framework
+          - roadmap
+        rationale: Monthly synthesis draft for TAP ambition, clients, cycle, prioritization, KPIs, investment posture, and pathway.
+      - pillar_id: needs_barriers_risks
+        research_question_refs: [2, 3]
+        deliverable_ids: [innovation_definition]
+        rationale: Briefing sections on governance, funding models, and evidence gaps.
+      - pillar_id: innovation_landscape
+        research_question_refs: [1]
+        deliverable_ids: [process_map]
+        rationale: Carries forward system-wide landscape narrative for Member States.
+
+  - id: webhook_ingest
+    name: UN80 Webhook Source Ingest
+    platform: cursor
+    type: webhook
+    schedule_cron: null
+    schedule_human: On demand (team submission)
+    enabled: true
+    automation_id: "132e3dc9-f9c7-4b80-97e0-8ad28449282a"
+    url: https://cursor.com/automations/132e3dc9-f9c7-4b80-97e0-8ad28449282a
+    outputs:
+      - data/secondary-sources/YYYY-MM-DD-ingest.yaml
+    mappings:
+      - pillar_id: innovation_landscape
+        research_question_refs: [0, 1, 2]
+        deliverable_ids: [actors_map]
+        rationale: Curated HLCM, standards, and agency sources from research team.
+      - pillar_id: signature_innovations
+        research_question_refs: [0]
+        deliverable_ids: [case_studies]
+        rationale: Team can submit case-study source URLs for agent ingest.
+      - pillar_id: needs_barriers_risks
+        research_question_refs: [0, 1]
+        deliverable_ids: [innovation_definition]
+        rationale: Grey literature and policy decks inform maturity definitions and pain points.
+      - pillar_id: hub_design
+        research_question_refs: [3, 6]
+        deliverable_ids: [roadmap]
+        rationale: Steering and CEB materials inform prioritization and pathway.
+
+  - id: daily_digest
+    name: UN80 Daily Digest (merged)
+    platform: cursor
+    type: cron
+    schedule_cron: "0 6 * * *"
+    schedule_human: "Daily 06:00 UTC (08:00 CEST)"
+    enabled: false
+    automation_id: null
+    url: null
+    note: Import via automations/prefill-urls.md §5; disable legacy crons after enable
+    outputs:
+      - reports/YYYY-MM-DD-daily-digest.md
+    mappings:
+      - pillar_id: innovation_landscape
+        research_question_refs: [0, 1]
+        deliverable_ids: [actors_map]
+        rationale: Thin daily synthesis linking to latest scan YAML.
+      - pillar_id: hub_design
+        research_question_refs: [0, 3, 4]
+        deliverable_ids: [kpi_framework]
+        rationale: Executive bullets and watch-list as daily demand/KPI pulse.
+      - pillar_id: needs_barriers_risks
+        research_question_refs: [1]
+        deliverable_ids: [innovation_definition]
+        rationale: Daily gap and thin-evidence flags.
+
+  - id: prefetch_monitor
+    name: Pre-fetch monitor data
+    platform: github_actions
+    type: cron
+    schedule_cron: "30 5 * * 1; 30 6 * * 3"
+    schedule_human: "Mon 05:30 UTC · Wed 06:30 UTC (30 min before agents)"
+    enabled: true
+    workflow_file: .github/workflows/prefetch-monitor.yml
+    url: https://github.com/techpolicycomms/un80-wp15-research/actions/workflows/prefetch-monitor.yml
+    outputs:
+      - data/social-monitor/
+      - data/social-signals.yaml
+      - data/academic-literature/
+    mappings:
+      - pillar_id: innovation_landscape
+        research_question_refs: [0, 1, 2]
+        deliverable_ids: [actors_map, scaling_counts]
+        rationale: Refreshes RSS/YouTube feeds and citation data before landscape and social agent runs.
+      - pillar_id: signature_innovations
+        research_question_refs: [0]
+        deliverable_ids: [case_studies]
+        rationale: Ensures agents start with current public signal data for case identification.
+
+  - id: validate_dashboard
+    name: Validate data and build dashboard
+    platform: github_actions
+    type: event
+    schedule_cron: null
+    schedule_human: "On push/PR to data/, scripts/, dashboard/"
+    enabled: true
+    workflow_file: .github/workflows/dashboard.yml
+    url: https://github.com/techpolicycomms/un80-wp15-research/actions/workflows/dashboard.yml
+    outputs:
+      - dashboard/dist/
+      - GitHub Pages deploy
+    mappings:
+      - pillar_id: innovation_landscape
+        research_question_refs: [0, 1, 2]
+        deliverable_ids: [actors_map, process_map, scaling_counts]
+        rationale: Publishes research-plan dashboard with landscape evidence counts.
+      - pillar_id: needs_barriers_risks
+        research_question_refs: [0, 1, 2, 3]
+        deliverable_ids: [innovation_definition]
+        rationale: Validates overlap and barrier data schemas on merge.
+      - pillar_id: signature_innovations
+        research_question_refs: [0]
+        deliverable_ids: [case_studies]
+        rationale: Publishes candidate case cards from research-plan.yaml.
+      - pillar_id: hub_design
+        research_question_refs: [0, 4, 6]
+        deliverable_ids: [kpi_framework, roadmap]
+        rationale: Deploys TAP timeline and metric cards to GitHub Pages.
+
+  - id: daily_digest_email
+    name: Daily digest email
+    platform: github_actions
+    type: event
+    schedule_cron: null
+    schedule_human: "On push of reports/*-daily-digest.md"
+    enabled: true
+    workflow_file: .github/workflows/daily-digest-email.yml
+    url: https://github.com/techpolicycomms/un80-wp15-research/actions/workflows/daily-digest-email.yml
+    note: Requires SMTP secrets; currently failing on HTML heredoc — fix pending
+    outputs:
+      - Email to DIGEST_EMAIL_TO
+    mappings:
+      - pillar_id: hub_design
+        research_question_refs: [0, 4]
+        deliverable_ids: [kpi_framework]
+        rationale: Distributes daily TAP/WP15 synthesis to research leads.

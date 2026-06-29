@@ -1,0 +1,60 @@
+{
+  "$id": "cron-research-map.schema.json",
+  "type": "object",
+  "required": ["meta", "jobs"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["updated", "disclaimer"],
+      "properties": {
+        "updated": { "type": "string", "format": "date" },
+        "source": { "type": "string" },
+        "disclaimer": { "type": "string" }
+      }
+    },
+    "jobs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "platform", "type", "enabled", "mappings"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "platform": { "enum": ["cursor", "github_actions"] },
+          "type": { "enum": ["cron", "webhook", "event"] },
+          "schedule_cron": { "type": ["string", "null"] },
+          "schedule_human": { "type": "string" },
+          "enabled": { "type": "boolean" },
+          "automation_id": { "type": ["string", "null"] },
+          "workflow_file": { "type": "string" },
+          "url": { "type": ["string", "null"], "format": "uri" },
+          "note": { "type": "string" },
+          "outputs": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "mappings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["pillar_id", "research_question_refs", "rationale"],
+              "properties": {
+                "pillar_id": { "type": "string" },
+                "research_question_refs": {
+                  "type": "array",
+                  "items": { "type": "integer", "minimum": 0 }
+                },
+                "deliverable_ids": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "rationale": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

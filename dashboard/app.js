@@ -56,8 +56,132 @@ function renderPillarNav(pillars, onSelect, activeId) {
   }
 }
 
-function renderResearchQuestions(questions) {
-  return el("ul", { className: "rq-list" }, questions.map((q) => el("li", { text: q })));
+function renderResearchQuestions(questionAutomations) {
+  if (!questionAutomations?.length) return el("p", { className: "meta", text: "No research questions defined." });
+  return el(
+    "ul",
+    { className: "rq-list" },
+    questionAutomations.map((qa) => {
+      const li = el("li", {});
+      li.appendChild(document.createTextNode(`Q${qa.index + 1}. ${qa.question} `));
+      const seen = new Set();
+      for (const job of qa.jobs ?? []) {
+        if (seen.has(job.id)) continue;
+        seen.add(job.id);
+        li.appendChild(
+          el("span", {
+            className: `job-chip${job.enabled ? "" : " disabled"}`,
+            text: job.name,
+            title: `${job.platform} · ${job.id}`,
+          })
+        );
+      }
+      return li;
+    })
+  );
+}
+
+function pillarTitle(pillars, pillarId) {
+  return pillars.find((p) => p.id === pillarId)?.title ?? pillarId;
+}
+
+function pillarColor(pillars, pillarId) {
+  return pillars.find((p) => p.id === pillarId)?.color ?? "#4da3ff";
+}
+
+function renderCronSchedule(jobs, pillars) {
+  const root = document.getElementById("cron-schedule-table");
+  if (!jobs?.length) {
+    root.replaceChildren(el("p", { className: "meta", text: "No cron jobs mapped." }));
+    return;
+  }
+
+  const rows = jobs.map((job) => {
+    const pillarTags = [];
+    const seenPillars = new Set();
+    for (const m of job.mappings ?? []) {
+      if (seenPillars.has(m.pillar_id)) continue;
+      seenPillars.add(m.pillar_id);
+      const color = pillarColor(pillars, m.pillar_id);
+      pillarTags.push(
+        el("span", {
+          className: "cron-pillar-tag",
+          text: pillarTitle(pillars, m.pillar_id),
+          style: `border-color: ${color}; color: ${color}`,
+        })
+      );
+    }
+
+    const rqSummary = (job.mappings ?? [])
+      .map((m) => {
+        const refs = (m.research_question_refs ?? []).map((r) => `Q${r + 1}`).join(", ");
+        return `${pillarTitle(pillars, m.pillar_id).split(" ")[0]}: ${refs}`;
+      })
+      .join(" · ");
+
+    const nameCell = job.url
+      ? el("a", { href: job.url, target: "_blank", rel: "noopener", text: job.name })
+      : el("span", { text: job.name });
+
+    return el("tr", {}, [
+      el("td", {}, [
+        nameCell,
+        el("div", {}, [
+          el("span", { className: `platform-badge ${job.platform}`, text: job.platform.replace("_", " ") }),
+          el("span", { className: "meta", text: ` ${job.type}` }),
+        ]),
+      ]),
+      el("td", { text: job.schedule_human ?? "—" }),
+      el("td", {
+        className: job.enabled ? "enabled-yes" : "enabled-no",
+        text: job.enabled ? "Active" : "Inactive",
+      }),
+      el("td", {}, pillarTags),
+      el("td", { className: "meta", text: rqSummary }),
+    ]);
+  });
+
+  root.replaceChildren(
+    el("table", { className: "cron-table" }, [
+      el("thead", {}, [
+        el("tr", {}, [
+          el("th", { text: "Job" }),
+          el("th", { text: "Schedule" }),
+          el("th", { text: "Status" }),
+          el("th", { text: "Pillars" }),
+          el("th", { text: "Research questions" }),
+        ]),
+      ]),
+      el("tbody", {}, rows),
+    ])
+  );
+}
+
+function renderAutomationFeeds(feeds, pillarColor) {
+  if (!feeds?.length) {
+    return el("p", { className: "meta", text: "No automations mapped to this pillar." });
+  }
+  return el(
+    "div",
+    {},
+    feeds.map((f) =>
+      el("div", { className: "cron-feed-card", style: `border-left: 3px solid ${pillarColor}` }, [
+        el("h4", { text: f.job_name }),
+        el("div", { className: "schedule", text: `${f.schedule_human} · ${f.enabled ? "Active" : "Inactive"}` }),
+        el("p", { className: "meta", text: f.rationale }),
+        el("p", {}, [
+          el("strong", { text: "Feeds questions: " }),
+          document.createTextNode(
+            (f.questions ?? []).map((q) => `Q${q.index + 1}`).join(", ") || "—"
+          ),
+        ]),
+        f.deliverable_ids?.length
+          ? el("p", { className: "meta", text: `Deliverables: ${f.deliverable_ids.join(", ")}` })
+          : null,
+        f.note ? el("p", { className: "meta", text: f.note }) : null,
+      ])
+    )
+  );
 }
 
 function renderDeliverables(deliverables) {
@@ -218,7 +342,13 @@ function renderPillarPanel(pillar, hidden) {
   panel.appendChild(el("h2", { text: pillar.title }));
 
   panel.appendChild(el("h3", { text: "Research questions" }));
-  panel.appendChild(renderResearchQuestions(pillar.research_questions ?? []));
+  panel.appendChild(
+    el("p", { className: "meta", text: "Chips show which cron jobs feed each question." })
+  );
+  panel.appendChild(renderResearchQuestions(pillar.question_automations ?? []));
+
+  panel.appendChild(el("h3", { text: "Cron jobs → this pillar" }));
+  panel.appendChild(renderAutomationFeeds(pillar.automation_feeds, pillar.color));
 
   panel.appendChild(el("h3", { text: "Deliverables" }));
   panel.appendChild(renderDeliverables(pillar.deliverables));
@@ -247,6 +377,8 @@ function renderPillarPanel(pillar, hidden) {
 function renderOpsData(data) {
   const b = data.baseline;
   const cards = [
+    { value: String(data.cron_job_count ?? 0), label: "Cron jobs mapped" },
+    { value: String(data.cron_enabled_count ?? 0), label: "Active automations" },
     { value: String(data.research_pillar_count ?? 4), label: "Research pillars" },
     { value: String(data.survey_respondents ?? "—"), label: "StS survey (N)" },
     { value: String(data.interviews ?? "—"), label: "StS interviews" },
@@ -345,7 +477,6 @@ function renderOpsData(data) {
 }
 
 function showPillar(pillarId, pillars) {
-  activePillarId = pillarId;
   renderPillarNav(pillars, (id) => showPillar(id, pillars), pillarId);
   for (const p of pillars) {
     const panel = document.getElementById(`pillar-${p.id}`);
@@ -363,7 +494,9 @@ async function loadDashboard() {
     `Generated ${new Date(data.generated_at).toLocaleString()} · ${data.disclaimer}`;
 
   document.getElementById("research-meta").textContent =
-    `${plan?.meta?.sts_advisory_group ?? "Research plan"} · Plan dated ${plan?.meta?.research_plan_date ?? "—"} · Wave 1 ${plan?.meta?.wave_status?.wave_1 ?? "—"} / Wave 2 ${plan?.meta?.wave_status?.wave_2 ?? "—"}`;
+    `${plan?.meta?.sts_advisory_group ?? "Research plan"} · Plan dated ${plan?.meta?.research_plan_date ?? "—"} · ${data.cron_enabled_count ?? 0}/${data.cron_job_count ?? 0} automations active`;
+
+  renderCronSchedule(data.cron_jobs, pillars);
 
   const panelsRoot = document.getElementById("pillar-panels");
   panelsRoot.replaceChildren();

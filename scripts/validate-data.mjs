@@ -35,6 +35,10 @@ const yamlValidations = [
     data: "data/research-plan.yaml",
     schema: "data/schemas/research-plan.schema.json",
   },
+  {
+    data: "data/cron-research-map.yaml",
+    schema: "data/schemas/cron-research-map.schema.json",
+  },
 ];
 
 let failed = false;

@@ -8,6 +8,24 @@
 **Machine-readable:** `data/research-plan.yaml`  
 **Dashboard:** https://techpolicycomms.github.io/un80-wp15-research/
 
+## Cron → research question mapping
+
+**Machine-readable:** `data/cron-research-map.yaml`  
+**Dashboard:** top panel **Research automation schedule** + per-pillar **Cron jobs → this pillar**
+
+| Job | Schedule | Pillars fed |
+|-----|----------|-------------|
+| Landscape monitor | Mon 06:00 UTC | Landscape, Barriers, Cases, Hub |
+| Social monitor | Wed 07:00 UTC | Landscape, Barriers, Cases, Hub |
+| Briefing compiler | 1st 08:00 UTC | Hub (all 7 RQs), Barriers, Landscape |
+| Webhook ingest | On demand | All pillars |
+| Daily digest | Daily 08:00 CEST | **Inactive** — Landscape, Hub, Barriers |
+| Pre-fetch (GitHub) | Mon 05:30 / Wed 06:30 UTC | Landscape, Cases |
+| Validate & dashboard (GitHub) | Push/PR | All pillars (publish) |
+| Digest email (GitHub) | Push digest file | Hub KPI distribution |
+
+Research questions show **job chips** in each pillar tab (e.g. Q1 fed by Landscape + Social + Pre-fetch).
+
 ## Four pillars
 
 | Pillar | Colour | Research focus | Key deliverables |

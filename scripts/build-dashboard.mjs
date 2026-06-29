@@ -20,6 +20,63 @@ const tap = yaml.parse(readFileSync(join(root, "data/tap-use-cases.yaml"), "utf8
 const tracker = yaml.parse(readFileSync(join(root, "data/action-tracker.yaml"), "utf8"));
 const overlap = yaml.parse(readFileSync(join(root, "data/overlap-signals.yaml"), "utf8"));
 const researchPlan = yaml.parse(readFileSync(join(root, "data/research-plan.yaml"), "utf8"));
+const cronMap = yaml.parse(readFileSync(join(root, "data/cron-research-map.yaml"), "utf8"));
+
+function enrichResearchPlanWithCrons(plan, jobs) {
+  const pillarById = Object.fromEntries(plan.pillars.map((p) => [p.id, p]));
+
+  for (const pillar of plan.pillars) {
+    pillar.automation_feeds = [];
+    pillar.question_automations = (pillar.research_questions ?? []).map((question, index) => ({
+      index,
+      question,
+      jobs: [],
+    }));
+  }
+
+  for (const job of jobs) {
+    for (const mapping of job.mappings ?? []) {
+      const pillar = pillarById[mapping.pillar_id];
+      if (!pillar) continue;
+
+      const questions = (mapping.research_question_refs ?? []).map((ref) => ({
+        index: ref,
+        text: pillar.research_questions?.[ref] ?? `Question ${ref + 1}`,
+      }));
+
+      pillar.automation_feeds.push({
+        job_id: job.id,
+        job_name: job.name,
+        platform: job.platform,
+        type: job.type,
+        schedule_human: job.schedule_human,
+        schedule_cron: job.schedule_cron,
+        enabled: job.enabled,
+        url: job.url,
+        note: job.note,
+        questions,
+        deliverable_ids: mapping.deliverable_ids ?? [],
+        rationale: mapping.rationale,
+      });
+
+      for (const ref of mapping.research_question_refs ?? []) {
+        const qa = pillar.question_automations?.[ref];
+        if (qa) {
+          qa.jobs.push({
+            id: job.id,
+            name: job.name,
+            enabled: job.enabled,
+            platform: job.platform,
+          });
+        }
+      }
+    }
+  }
+
+  return plan;
+}
+
+const enrichedPlan = enrichResearchPlanWithCrons(researchPlan, cronMap.jobs ?? []);
 
 let socialSignalCount = 0;
 let monitorMeta = {};
@@ -52,7 +109,10 @@ try {
 const dashboardData = {
   generated_at: new Date().toISOString(),
   disclaimer: "DRAFT — public secondary data only; not agreed UN position",
-  research_plan: researchPlan,
+  research_plan: enrichedPlan,
+  cron_jobs: cronMap.jobs ?? [],
+  cron_job_count: cronMap.jobs?.length ?? 0,
+  cron_enabled_count: cronMap.jobs?.filter((j) => j.enabled).length ?? 0,
   research_pillar_count: researchPlan.pillars?.length ?? 0,
   survey_respondents: researchPlan.survey_methodology?.respondents_completed,
   interviews: researchPlan.survey_methodology?.interviews,
