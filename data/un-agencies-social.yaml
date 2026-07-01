@@ -37,13 +37,13 @@ agencies:
     name: UN International Computing Centre
     tier: 1
     relevance: action_61
-    x_handle: UNICC
-    x_url: https://x.com/UNICC
-    facebook_url: https://www.facebook.com/UNICC.org
+    x_handle: unicc_ict
+    x_url: https://x.com/unicc_ict
+    facebook_url: https://www.facebook.com/unicc.ict
     linkedin_url: https://www.linkedin.com/company/unicc
     youtube_rss: null
     news_rss: https://www.unicc.org/feed/
-    notes: Primary shared ICT services provider
+    notes: Primary shared ICT services provider; official X/Facebook links verified from unicc.org on 2026-07-01
 
   - id: un-dco
     name: UN Office for Digital and Emerging Technology
