@@ -1,7 +1,7 @@
 meta:
-  last_updated: 2026-06-24
+  last_updated: 2026-07-01
   disclaimer: Public official posts only — DRAFT
-  total_signals: 30
+  total_signals: 35
 signals:
   - id: soc-2026-05-22-001
     date: 2026-05-22
@@ -382,9 +382,9 @@ signals:
     priority: high
     relevance: both
     summary: Official OICT Facebook post describes a Gartner Research Board UN
-      Partner Day focused on AI readiness, ICT governance, digital transformation,
-      process prioritization, scalable AI solutions, and coordinated UN ICT
-      governance.
+      Partner Day focused on AI readiness, ICT governance, digital
+      transformation, process prioritization, scalable AI solutions, and
+      coordinated UN ICT governance.
   - id: soc-2026-06-24-029
     date: 2026-06-24
     platform: facebook
@@ -400,8 +400,8 @@ signals:
     relevance: both
     summary: Official OICT Facebook post points to UN Open Source Week 2026,
       co-organized by ODET and OICT, with public materials on open source,
-      digital public infrastructure, AI, OSPOs, digital cooperation, and reusable
-      tools.
+      digital public infrastructure, AI, OSPOs, digital cooperation, and
+      reusable tools.
   - id: soc-2026-06-24-030
     date: 2026-06-24
     platform: facebook
@@ -414,6 +414,82 @@ signals:
       - Global Digital Compact
     priority: medium
     relevance: action_62
-    summary: Official ITU Facebook video promotes the 6-7 July Global Dialogue on
-      AI Governance in Geneva and links it to international cooperation and the
+    summary: Official ITU Facebook video promotes the 6-7 July Global Dialogue on AI
+      Governance in Geneva and links it to international cooperation and the
       Global Digital Compact.
+  - id: soc-2026-07-01-031
+    date: 2026-07-01
+    platform: news
+    agency: UN News (all topics)
+    title: Despite record $100 million shortfall, Palestine relief agency still ‘a
+      critical platform’ for Gaza recovery
+    url: https://news.un.org/feed/view/en/story/2026/06/1167845
+    matched_keywords:
+      - platform
+    priority: low
+    relevance: false_positive
+    summary: RSS keyword hit is not a WP15 platform signal; "platform" refers
+      generically to UNRWA as a recovery platform amid a funding shortfall.
+  - id: soc-2026-07-01-032
+    date: 2026-07-01
+    platform: news
+    agency: UN News (all topics)
+    title: Children are turning to AI for homework – and life advice
+    url: https://news.un.org/feed/view/en/story/2026/06/1167841
+    matched_keywords:
+      - artificial intelligence
+      - ai
+      - technology
+    priority: medium
+    relevance: action_62
+    summary: UN News/UNICEF item says children are adopting AI rapidly and urges
+      child-rights safeguards ahead of the Global Dialogue on AI Governance;
+      relevant background for Action 62 AI governance and TAP demand sensing.
+  - id: soc-2026-07-01-033
+    date: 2026-07-01
+    platform: news
+    agency: UN International Computing Centre
+    title: UNICC Contributes to UN Open Source Week 2026
+    url: https://www.unicc.org/news/2026/06/29/unicc-at-ospos2026/
+    matched_keywords:
+      - unicc
+      - digital cooperation
+      - artificial intelligence
+      - digital public infrastructure
+      - innovation
+    priority: high
+    relevance: both
+    summary: UNICC public news item on its contribution to UN Open Source Week 2026;
+      material to Action 61 shared ICT/open-source capacity and Action 62 AI/DPI
+      innovation themes.
+  - id: soc-2026-07-01-034
+    date: 2026-07-01
+    platform: news
+    agency: World Health Organization
+    title: WHO urges scale up of newborn screening to improve early detection and
+      care of birth defects
+    url: https://www.who.int/news/item/23-06-2026-who-urges-scale-up-of-newborn-screening-to-improve-early-detection-and-care-of-birth-defects
+    matched_keywords:
+      - ict
+    priority: low
+    relevance: false_positive
+    summary: RSS keyword hit is not a WP15 ICT signal; "ict" appears as a substring
+      inside words such as "defects" and "detection" in a newborn-screening
+      health story.
+  - id: soc-2026-07-01-035
+    date: 2026-07-01
+    platform: official_web
+    agency: UN Web TV / ODET / OICT
+    title: Open Source for AI and Emerging Technologies - UN Open Source Week 2026
+      (Part 1)
+    url: https://webtv.un.org/en/asset/k14/k14ej1ucqu
+    matched_keywords:
+      - artificial intelligence
+      - digital public infrastructure
+      - digital cooperation
+      - innovation
+    priority: medium
+    relevance: both
+    summary: Official UN Web TV recording of Open Source x AI Day frames open source
+      as a gateway to sustainable AI, capacity building, DPI, OSPOs, and Global
+      Digital Compact implementation; co-organized by ODET and OICT.
